@@ -1,44 +1,51 @@
+
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>NgocAnhBeo</title>
     <style>
-        p {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation: blink 2s infinite;
-            font-size: 69px;
+      body {
+        pointer-events: none;
+      }
+
+      p {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: blink 2s infinite;
+        font-size: 69px;
+      }
+
+      @keyframes blink {
+        0% {
+          color: red;
         }
 
-        @keyframes blink {
-            0% {
-                color: red;
-            }
-
-            25% {
-                color: blue;
-            }
-
-            50% {
-                color: yellow;
-            }
-
-            75% {
-                color: green;
-            }
-
-            100% {
-                color: red;
-            }
+        25% {
+          color: blue;
         }
+
+        50% {
+          color: yellow;
+        }
+
+        75% {
+          color: green;
+        }
+
+        100% {
+          color: red;
+        }
+      }
     </style>
-</head>
-
-<body>
+  </head>
+  <body>
     <p>Nguyễn Ngọc Anh Béo.</p>
-</body>
-
+  </body>
 </html>
+
