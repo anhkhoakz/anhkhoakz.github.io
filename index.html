@@ -1,9 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>NgocAnhBeo</title>
-    </head>
-    <body>
-        <p>Nguyễn Ngọc Anh Béo.</p>
-    </body>
+
+<head>
+    <title>NgocAnhBeo</title>
+    <style>
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                color: red;
+            }
+
+            25% {
+                color: blue;
+            }
+
+            50% {
+                color: yellow;
+            }
+
+            75% {
+                color: green;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>Nguyễn Ngọc Anh Béo.</p>
+</body>
+
 </html>
