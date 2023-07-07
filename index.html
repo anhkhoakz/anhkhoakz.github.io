@@ -6,59 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>It's Random!</title>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    #result {
-      font-size: 45px;
-    }
-  </style>
-  <script>
-    function getRandomInt(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
-    function rollDice() {
-      var numberDices = 3;
-      var startRand = 1;
-      var endRand = 600;
-      var sum = 0;
-
-      for (var i = 0; i < numberDices; i++) {
-        var n = getRandomInt(startRand, endRand);
-        if (n > 500)
-          sum += 6;
-        else if (n > 400)
-          sum += 5;
-        else if (n > 300)
-          sum += 4;
-        else if (n > 200)
-          sum += 3;
-        else if (n > 100)
-          sum += 2;
-        else
-          sum += 1;
-      }
-
-      var result = (sum % 2 === 0) ? "Chẵn" : "Lẻ";
-      document.getElementById("result").innerHTML = result;
-    }
-
-    setInterval(rollDice, 3000);
-  </script>
 
 </head>
 
 <body>
-  <h1>Random Result:</h1>
-  <p id="result"></p>
+    Hello World!
 </body>
 
 </html>
