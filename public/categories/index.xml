@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on anhkhoakz</title>
+    <link>https://anhkhoakz.dev/categories/</link>
+    <description>Recent content in Categories on anhkhoakz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <managingEditor>object_hurled356@simplelogin.com (anhkhoakz)</managingEditor>
+    <webMaster>object_hurled356@simplelogin.com (anhkhoakz)</webMaster>
+    <lastBuildDate>Thu, 11 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://anhkhoakz.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>browser</title>
+      <link>https://anhkhoakz.dev/categories/browser/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate><author>object_hurled356@simplelogin.com (anhkhoakz)</author>
+      <guid>https://anhkhoakz.dev/categories/browser/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    <item>
+      <title>privacy</title>
+      <link>https://anhkhoakz.dev/categories/privacy/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate><author>object_hurled356@simplelogin.com (anhkhoakz)</author>
+      <guid>https://anhkhoakz.dev/categories/privacy/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    <item>
+      <title>email</title>
+      <link>https://anhkhoakz.dev/categories/email/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate><author>object_hurled356@simplelogin.com (anhkhoakz)</author>
+      <guid>https://anhkhoakz.dev/categories/email/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>browser on anhkhoakz</title>
+    <link>https://anhkhoakz.dev/categories/browser/</link>
+    <description>Recent content in browser on anhkhoakz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <managingEditor>object_hurled356@simplelogin.com (anhkhoakz)</managingEditor>
+    <webMaster>object_hurled356@simplelogin.com (anhkhoakz)</webMaster>
+    <lastBuildDate>Thu, 11 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://anhkhoakz.dev/categories/browser/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Browsers for Daily Using</title>
+      <link>https://anhkhoakz.dev/blog/browsers-for-daily-using/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate><author>object_hurled356@simplelogin.com (anhkhoakz)</author>
+      <guid>https://anhkhoakz.dev/blog/browsers-for-daily-using/</guid>
+      <description>Gecko Engine Firefox, but hardened LibreWolf Mullvad Browser Blink Engine Ungoogled Chromium Brave Browser Conclusion From Wikipedia: Comparison of Browser Engines, there are 4 browser engines that have active status: WebKit, Blink, Gecko, and Goanna. In this blog, I&amp;rsquo;ll delve into the two most popular: Gecko (Firefox-based) and Blink (Chromium-based).&#xA;Gecko Engine Firefox, but hardened This is my first choice when it comes to a browser for privacy. I love the Firefox browser, but I don&amp;rsquo;t really like the way Mozilla develops it.</description>
+      <content:encoded><![CDATA[<ul>
+<li><a href="#gecko-engine">Gecko Engine</a>
+<ul>
+<li><a href="#firefox-but-hardened">Firefox, but hardened</a></li>
+<li><a href="#librewolf">LibreWolf</a></li>
+<li><a href="#mullvad-browser">Mullvad Browser</a></li>
+</ul>
+</li>
+<li><a href="#blink-engine">Blink Engine</a>
+<ul>
+<li><a href="#ungoogled-chromium">Ungoogled Chromium</a></li>
+<li><a href="#brave-browser">Brave Browser</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<p>From <a href="https://wikiless.org/wiki/Comparison_of_browser_engines?lang=en">Wikipedia: Comparison of Browser Engines,</a> there are 4 browser engines that have <strong>active</strong> status: WebKit, Blink, Gecko, and Goanna. In this blog, I&rsquo;ll delve into the two most popular: <a href="#gecko-engine">Gecko (Firefox-based)</a> and <a href="#blink-engine">Blink (Chromium-based)</a>.</p>
+<h2 id="gecko-engine">Gecko Engine</h2>
+<h3 id="firefox-but-hardened">Firefox, but hardened</h3>
+<p>This is my first choice when it comes to a browser for privacy. I love the Firefox browser, but I don&rsquo;t really like the way Mozilla develops it.</p>
+<p>You can download Firefox on <a href="https://www.mozilla.org/firefox/">Mozilla&rsquo;s website</a>. But I don&rsquo;t recommend it because of the <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1677497#c0">download token</a>.</p>
+<p>You can download it from <a href="https://ftp.mozilla.org/pub/firefox/releases/">Mozilla&rsquo;s FTP website</a>, by this way, you can choose any version of Firefox and download it without the token. You can decide whether the latest, extended support release, or EME-free version.</p>
+<p>The default Mozilla Firefox will come with a large amount of telemetry and add-ons, which you don&rsquo;t really love to use.</p>
+<p>For better privacy, you can config in <code>about:config</code> or use the <code>user.js</code> file, but it takes knowledge, time, and effort to review and make changes. So you will need a template to configure the browser.</p>
+<p>There are three levels of hardening Firefox:</p>
+<ol>
+<li>Easy: <a href="https://github.com/yokoffing/Betterfox">Betterfox</a></li>
+<li>Medium: <a href="https://github.com/arkenfox/user.js">arkenfox</a></li>
+<li>Hard: <a href="https://codeberg.org/Narsil/user.js/src/branch/main/desktop">Narsil</a></li>
+</ol>
+<p>It depends on you to select which one is appropriate. Betterfox provides a slight change to Firefox, which doesn&rsquo;t affect the your experience too much.</p>
+<p>On the other hand, Narsil provides the maximum privacy and security on Firefox, but it will change the way you use Firefox.</p>
+<p>If you want balance, choose arkenfox, it&rsquo;s the gold standard for Firefox.</p>
+<p>For comparison, you can use the PowerShell script <a href="https://github.com/claustromaniac/Compare-UserJS">Compare-UserJS</a> to pick the most appropriate for yourself.</p>
+<p>And because they&rsquo;re templates, they are not fit for your use case. So you&rsquo;ll need a <code>user-overrides.js</code> to have your own modifications; you can check out the documentation for this one at <a href="https://github.com/arkenfox/user.js/wiki/3.1-Overrides">the Arkenfox Wiki</a>.</p>
+<h3 id="librewolf">LibreWolf</h3>
+<p>Home page: <a href="https://librewolf.net/">LibreWolf</a></p>
+<p>Config file: <a href="https://codeberg.org/librewolf/settings/raw/branch/master/librewolf.cfg">librewolf.cfg</a></p>
+<p>This project brings a mindless way to use Firefox without worrying about how to configure it. It looks like Ungoogled Chromium to Google Chrome.</p>
+<p>But I have had some bad experiences when using it:</p>
+<ol>
+<li>It&rsquo;s not able to use 1Password biometrics because <a href="https://1password.community/discussion/comment/633723/#Comment_633723">it lacks a code signature</a>. But it can work well with Bitwarden or KeePassXC.</li>
+<li>Lacking of auto-update capacities raises a concern about security and <a href="https://wikiless.org/wiki/Zero-day_(computing)?lang=en">zero-day vulnerability</a>. But it can be fixed by using packet manager or using <a href="https://codeberg.org/ltguillaume/librewolf-winupdater">LibreWolf WinUpdater</a>.</li>
+</ol>
+<p>So if you want a mindless way to use Firefox, don&rsquo;t use 1Password, and don&rsquo;t need a built-in updater, LibreWolf will be the best for you.</p>
+<h3 id="mullvad-browser">Mullvad Browser</h3>
+<p>Home page: <a href="https://mullvad.net/en/browser">Mullvad Browser</a></p>
+<p>Modifications: <a href="https://mullvad.net/en/browser/hard-facts">Hard facts</a>.</p>
+<blockquote>
+<p>Mullvad Browser is a collaboration between Mullvad VPN and the Tor Project.</p>
+</blockquote>
+<p>This is the new one; I have not tried it yet, but it makes 0 connections in the initial. This should be a strong competitor to LibreWolf, comes with strong privacy and anti-fingerprinting features.</p>
+<p>It has 3 extensions built-in: uBlock Origin, NoScript, and Mullvad Browser Extension. It includes auto-updates and creating new identity features.</p>
+<h2 id="blink-engine">Blink Engine</h2>
+<h3 id="ungoogled-chromium">Ungoogled Chromium</h3>
+<p>Home page: <a href="https://ungoogled-software.github.io/">ungoogled-chromium</a></p>
+<p>Binary download: <a href="https://ungoogled-software.github.io/ungoogled-chromium-binaries/">Latest versions</a></p>
+<blockquote>
+<p>A lightweight approach to removing Google web service dependency</p>
+</blockquote>
+<p>This is Chromium, so it will provide you with a bunch of extensions that will make your life easier.</p>
+<p>It seems like this is the only browser based on chromiu, and I will recommend my friends use it. You just need to make some modifications, and it will work like Brave.</p>
+<p>You&rsquo;ll have to install <a href="https://github.com/NeverDecaf/chromium-web-store">an extension</a> to be able to install extensions from the Chrome Web Store.</p>
+<p>Here are some <code>chrome://flags</code> I use:</p>
+<ul>
+<li>#extension-mime-request-handling: <code>Always prompt for install</code></li>
+<li>#chrome-labs: <code>Disabled</code></li>
+</ul>
+<h3 id="brave-browser">Brave Browser</h3>
+<p>This is the most popular browser when you know the word <strong>privacy</strong>, and choose an alternative to Google Chrome.</p>
+<p>But it has a lot of issues and features that make me don&rsquo;t want to use it anymore:</p>
+<ol>
+<li>It has 7 connections when you first install it.</li>
+<li>They have sponsored ads on browsers.</li>
+<li>Brave Rewards needs a KYC account to use it.</li>
+</ol>
+<p>I used the Brave browser, but I&rsquo;m not happy with it anymore. Anything it provides is just a cut-off of some extensions. And if you have an extension, it will do better.</p>
+<p>However, anything is better than Chrome, and you can have <a href="https://www.privacyguides.org/en/desktop-browsers/#recommended-configuration_1">some configurations</a> to make Brave more private.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In conclusion, there is absolutely no such thing as the best browser for anything. It depends on you; it will only have a less bad browser. You can base your decision on my article; it is just something I gathered from the Internet. In my case, I&rsquo;ll recommend using <a href="#firefox-but-hardened">Firefox hardened</a> and <a href="#ungoogled-chromium">Ungoogled chromium</a> because they fit my needs. However, the ideal choice varies for each user, and the goal is to find a browser that meets their unique criteria.</p>
+<hr>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

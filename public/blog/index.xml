@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blog on anhkhoakz</title>
+    <link>https://anhkhoakz.dev/blog/</link>
+    <description>Recent content in Blog on anhkhoakz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <managingEditor>object_hurled356@simplelogin.com (anhkhoakz)</managingEditor>
+    <webMaster>object_hurled356@simplelogin.com (anhkhoakz)</webMaster>
+    <lastBuildDate>Tue, 16 Jan 2024 14:57:34 +0700</lastBuildDate>
+    <atom:link href="https://anhkhoakz.dev/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DeCloudflare Toolkit</title>
+      <link>https://anhkhoakz.dev/blog/decloudflare-toolkit/</link>
+      <pubDate>Tue, 16 Jan 2024 14:57:34 +0700</pubDate><author>object_hurled356@simplelogin.com (anhkhoakz)</author>
+      <guid>https://anhkhoakz.dev/blog/decloudflare-toolkit/</guid>
+      <description>Do not use Cloudflare solution, Period.&#xA;You can do better than that, right? Here&amp;rsquo;s how to remove Cloudflare subscriptions, plans, domains, or accounts. Want more customers? You know what to do. Hint is &amp;ldquo;above line&amp;rdquo;.&#xA;Hello, you wrote &amp;ldquo;We take your privacy seriously&amp;rdquo; but I got &amp;ldquo;Error 403 Forbidden Anonymous Proxy Not Allowed&amp;rdquo;. Why are you blocking Tor Or VPN? And why are you blocking temporary emails? Using Cloudflare will increase chances of an outage.</description>
+      <content:encoded><![CDATA[<hr>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Do not use Cloudflare solution, Period.</p>
+<ul>
+<li>You can do better than that, right? <a href="https://support.cloudflare.com/hc/en-us/articles/200167776-Removing-subscriptions-plans-domains-or-accounts">Here&rsquo;s how to remove Cloudflare subscriptions, plans, domains, or accounts.</a></li>
+</ul>
+</li>
+<li>
+<p>Want more customers? You know what to do. Hint is &ldquo;above line&rdquo;.</p>
+<ul>
+<li><a href="https://it.slashdot.org/story/19/02/19/0033255/stop-saying-we-take-your-privacy-and-security-seriously">Hello, you wrote &ldquo;We take your privacy seriously&rdquo; but I got &ldquo;Error 403 Forbidden Anonymous Proxy Not Allowed&rdquo;.</a> Why are you blocking Tor Or VPN? And why are you blocking temporary emails?</li>
+</ul>
+</li>
+<li>
+<p>Using Cloudflare will increase chances of an outage. Visitors can&rsquo;t access to your website if your server is down or Cloudflare is down.</p>
+<ul>
+<li><a href="https://www.ibtimes.com/cloudflare-down-not-working-sites-producing-504-gateway-timeout-errors-2618008">Did you really think Cloudflare never go down?</a>.</li>
+</ul>
+</li>
+<li>
+<p>Using Cloudflare to proxy your &ldquo;API service&rdquo;, &ldquo;software update server&rdquo; or &ldquo;RSS feed&rdquo; will harm your customer. A customer called you and said &ldquo;I can&rsquo;t use your API anymore&rdquo;, and you have no idea what is going on. Cloudflare can silently block your customer. Do you think it is okay?</p>
+<ul>
+<li>There are many RSS reader client and RSS reader online service. Why are you publishing RSS feed if you&rsquo;re not allowing people to subscribe?</li>
+</ul>
+</li>
+<li>
+<p>Do you need HTTPS certificate? Use &ldquo;Let&rsquo;s Encrypt&rdquo; or just buy it from CA Company.</p>
+</li>
+<li>
+<p>Do you need DNS server? Can&rsquo;t set up your own server? How about them:</p>
+<ul>
+<li><a href="https://dns.he.net/">Hurricane Electric Free DNS</a></li>
+<li><a href="https://dyn.com/dns/">Dyn.com</a></li>
+<li><a href="https://www.1984hosting.com/">1984 Hosting</a></li>
+<li>
+<table>
+<thead>
+<tr>
+<th><a href="https://freedns.afraid.org/">Afraid.Org (Admin delete your account if you use TOR)</a></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.1984hosting.com/">1984 Hosting</a></td>
+<td>No customer support</td>
+<td>Free</td>
+</tr>
+<tr>
+<td><a href="https://freedns.afraid.org/">Afraid.Org</a></td>
+<td>Admin will delete your account if you create one via Tor</td>
+<td>Free</td>
+</tr>
+<tr>
+<td><a href="https://dnsmadeeasy.com/">DNSMadeEasy</a></td>
+<td>Limited Queries per month</td>
+<td>Paid</td>
+</tr>
+<tr>
+<td><a href="https://dyn.com/dns/">Dyn.com</a></td>
+<td>-</td>
+<td>Paid</td>
+</tr>
+<tr>
+<td><a href="https://docs.hetzner.com/dns-console/dns/general/dns-overview/">Hetzner DNS</a></td>
+<td>-</td>
+<td>?</td>
+</tr>
+<tr>
+<td><a href="https://dns.he.net/">Hurricane Electric Free DNS</a></td>
+<td>-</td>
+<td>Free</td>
+</tr>
+<tr>
+<td><a href="https://luadns.com/">LuaDNS</a></td>
+<td>API supported</td>
+<td>Free</td>
+</tr>
+<tr>
+<td><a href="https://desec.io/">deSEC</a></td>
+<td>dynamic DNS &amp; API supported</td>
+<td>Free</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="why-x-is-not-included">Why X is not included</h2>
+<table>
+<thead>
+<tr>
+<th>X</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.namecheap.com/domains/freedns/">Namecheap DNS</a></td>
+<td>Using Cloudflare &amp; defended Cloudflare while discussion on Twitter.</td>
+</tr>
+<tr>
+<td><a href="https://selectel.ru/en/services/additional/dns/">Selectel DNS</a></td>
+<td>Using Cloudflare</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Looking for hosting service? Free only? How about them: <a href="http://vww6ybal4bd7szmgncyruucpgfkqahzddi37ktceo3ah7ngmcopnpyyd.onion/en/security/network-security/tor/onionservices-best-practices">Onion Service</a>, <a href="https://freewha.com/">Free Web Hosting Area</a>, <a href="https://www.autinv5q6en4gpf4.onion/services/website">Autistici/Inventati Web Site Hosting</a>, <a href="https://pages.github.com/">Github Pages</a>, <a href="https://surge.sh/">Surge</a></p>
+<ul>
+<li><a href="../subfiles/alternative/cloudflare.md">Alternatives to Cloudflare</a></li>
+</ul>
+</li>
+<li>
+<p>Are you using &ldquo;Cloudflare-ipfs.com&rdquo;? <a href="../PEOPLE.md">Do you know Cloudflare IPFS is bad?</a></p>
+</li>
+<li>
+<p>Install Web Application Firewall such as OWASP and Fail2Ban on your server and configure it properly.</p>
+<ul>
+<li>Blocking Tor is not a solution. Don&rsquo;t punish everyone just for small bad users.</li>
+</ul>
+</li>
+<li>
+<p>Redirect or block &ldquo;Cloudflare Warp&rdquo; users from accessing your website. And provide a reason if you can.</p>
+</li>
+</ul>
+<blockquote>
+<p>IP list: &ldquo;<a href="../cloudflare_inc/">Cloudflare’s current IP ranges</a>&rdquo;</p>
+</blockquote>
+<blockquote>
+<p>A: Just block them</p>
+</blockquote>
+
+
+
+
+
+<pre tabindex="0"><code>server {
+...
+deny 173.245.48.0/20;
+deny 103.21.244.0/22;
+deny 103.22.200.0/22;
+deny 103.31.4.0/22;
+deny 141.101.64.0/18;
+deny 108.162.192.0/18;
+deny 190.93.240.0/20;
+deny 188.114.96.0/20;
+deny 197.234.240.0/22;
+deny 198.41.128.0/17;
+deny 162.158.0.0/15;
+deny 104.16.0.0/12;
+deny 172.64.0.0/13;
+deny 131.0.72.0/22;
+deny 2400:cb00::/32;
+deny 2606:4700::/32;
+deny 2803:f800::/32;
+deny 2405:b500::/32;
+deny 2405:8100::/32;
+deny 2a06:98c0::/29;
+deny 2c0f:f248::/32;
+...
+}</code></pre><blockquote>
+<p>B: Redirect to warning page</p>
+</blockquote>
+
+
+
+
+
+<pre tabindex="0"><code>http {
+...
+geo $iscf {
+default 0;
+173.245.48.0/20 1;
+103.21.244.0/22 1;
+103.22.200.0/22 1;
+103.31.4.0/22 1;
+141.101.64.0/18 1;
+108.162.192.0/18 1;
+190.93.240.0/20 1;
+188.114.96.0/20 1;
+197.234.240.0/22 1;
+198.41.128.0/17 1;
+162.158.0.0/15 1;
+104.16.0.0/12 1;
+172.64.0.0/13 1;
+131.0.72.0/22 1;
+2400:cb00::/32 1;
+2606:4700::/32 1;
+2803:f800::/32 1;
+2405:b500::/32 1;
+2405:8100::/32 1;
+2a06:98c0::/29 1;
+2c0f:f248::/32 1;
+}
+...
+}
+
+server {
+...
+if ($iscf) {rewrite ^ https://example.com/cfwsorry.php;}
+...
+}
+
+&lt;?php
+header(&#39;HTTP/1.1 406 Not Acceptable&#39;);
+echo &lt;&lt;&lt;CFHTML
+Thank you for visiting ourwebsite.com!&lt;br /&gt;
+We are sorry, but we can&#39;t serve you because your connection is being intercepted by Cloudflare.&lt;br /&gt;
+&lt;a href=&#34;http://crimeflare.eu.org&#34;&gt;Please read why for more information&lt;/a&gt;.&lt;br /&gt;
+CFHTML;
+die();</code></pre><ul>
+<li>Set up Tor Onion Service or I2P insite if you believe in freedom and welcome anonymous users.</li>
+<li>Ask for advice from other Clearnet/Tor dual website operators and make anonymous friends!</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>Discord is using Cloudflare. Alternatives? We recommend <a href="https://f-droid.org/en/packages/org.briarproject.briar.android/"><strong>Briar</strong> (Android)</a>, <a href="https://ricochet.im/">Ricochet (PC)</a>, <a href="https://tox.chat/download.html">Tox + Tor (Android/PC)</a></p>
+<ul>
+<li>Briar includes Tor daemon so you don&rsquo;t have to install Orbot.</li>
+<li>Qwtch developers, Open Privacy, deleted stop_Cloudflare project from their git service without notice.</li>
+</ul>
+</li>
+<li>
+<p>If you use Debian GNU/Linux, or any derivative, subscribe: <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=831835">bug #831835</a>. And if you can, help verify the patch, and help the maintainer come to the right conclusion on whether it should be accepted.</p>
+</li>
+<li>
+<p>Always recommend these browsers.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Developer</th>
+<th>Support</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://ungoogled-software.github.io/ungoogled-chromium-binaries/">Ungoogled-Chromium</a></td>
+<td>Eloston</td>
+<td><a href="https://github.com/Eloston/ungoogled-chromium"> ? </a></td>
+<td>PC (Win, Mac, Linux) <em>!Tor</em></td>
+</tr>
+<tr>
+<td><a href="https://www.bromite.org/fdroid">Bromite</a></td>
+<td>Bromite</td>
+<td><a href="https://github.com/bromite/bromite/issues"> ? </a></td>
+<td>Android <em>!Tor</em></td>
+</tr>
+<tr>
+<td><a href="https://www.torproject.org/download/">Tor Browser</a></td>
+<td>Tor Project</td>
+<td><a href="https://support.torproject.org/"> ? </a></td>
+<td>PC (Win, Mac, Linux) <em>Tor</em></td>
+</tr>
+<tr>
+<td><a href="https://www.torproject.org/download/#android">Tor Browser Android</a></td>
+<td>Tor Project</td>
+<td><a href="https://support.torproject.org/"> ? </a></td>
+<td>Android_Tor_</td>
+</tr>
+<tr>
+<td><a href="https://itunes.apple.com/us/app/onion-browser/id519296448?mt=8">Onion Browser</a></td>
+<td>Mike Tigas</td>
+<td><a href="https://github.com/OnionBrowser/OnionBrowser/issues"> ? </a></td>
+<td>Apple iOS_Tor_</td>
+</tr>
+<tr>
+<td><a href="https://www.gnu.org/software/gnuzilla/">GNU/Icecat</a></td>
+<td>GNU</td>
+<td><a href="https://www.gnu.org/software/gnuzilla/"> ? </a></td>
+<td>PC (Linux)</td>
+</tr>
+<tr>
+<td><a href="https://f-droid.org/en/packages/org.gnu.icecat/">IceCatMobile</a></td>
+<td>GNU</td>
+<td><a href="https://lists.gnu.org/mailman/listinfo/bug-gnuzilla"> ? </a></td>
+<td>Android</td>
+</tr>
+<tr>
+<td><a href="https://iridiumbrowser.de/about/">Iridium Browser</a></td>
+<td>Iridium</td>
+<td><a href="https://github.com/iridium-browser/iridium-browser/"> ? </a></td>
+<td>PC (Win, Mac, Linux, OpenBSD)</td>
+</tr>
+</tbody>
+</table>
+<p>Other software&rsquo;s privacy is imperfect. This doesn&rsquo;t mean Tor browser is &ldquo;perfect&rdquo;.
+There is no 100% secure nor 100% private on the internet and technology.</p>
+<ul>
+<li>Don&rsquo;t want to use Tor? You can use any browser with Tor daemon.
+<ul>
+<li><a href="https://support.torproject.org/tbb/tbb-9/">Note that the Tor project don&rsquo;t like this.</a> Use Tor Browser if you are able to do so.</li>
+</ul>
+</li>
+<li><a href="../subfiles/chromium_tor.md">How to use Chromium with Tor</a></li>
+</ul>
+<p>Let&rsquo;s talk about other software&rsquo;s privacy.</p>
+<ul>
+<li>
+<p><a href="https://www.mozilla.org/en-US/firefox/organizations/">If you really need to use Firefox, pick &ldquo;Firefox ESR&rdquo;.</a></p>
+<ul>
+<li><a href="https://spyware.neocities.org/articles/firefox.html">Firefox - Spyware Watchdog</a></li>
+<li><a href="https://web.archive.org/web/20200423010026/https://reclaimthenet.org/firefox-rejects-free-speech-bans-free-speech-commenting-plugin-dissenter-from-its-extensions-gallery/">Firefox rejects free speech, bans free speech</a></li>
+<li><a href="https://old.reddit.com/r/firefox/comments/gutdiw/weve_got_work_to_do_the_mozilla_blog/fslbbb6/">&ldquo;100+ downvotes. It seems like asking a software company to stick to&hellip; software is just too much these days.&rdquo;</a></li>
+<li><a href="https://old.reddit.com/r/firefox/comments/jybx2w/uh_why_is_firefox_showing_me_sponsored_links_in/">Uh, why is Firefox showing me sponsored links in my URL bar?</a></li>
+<li><a href="https://digdeeper.neocities.org/ghost/mozilla.html">Mozilla - Devil Incarnate</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.robtex.com/dns-lookup/www.mozilla.org">Remember, Mozilla is using Cloudflare service.</a> <a href="https://www.theregister.co.uk/2018/03/21/mozilla_testing_dns_encryption/">They&rsquo;re also using Cloudflare&rsquo;s DNS service on their product.</a></p>
+</li>
+<li>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1426618">Mozilla officially rejected this ticket.</a></p>
+</li>
+<li>
+<p><a href="https://github.com/mozilla-mobile/focus-android/issues/1743">Firefox Focus is a joke.</a> <a href="https://github.com/mozilla-mobile/focus-android/issues/4210">They promised to turn off telemetry but they changed it.</a></p>
+</li>
+<li>
+<p><a href="https://github.com/mozilla-mobile/focus-android/issues/1743#issuecomment-345993097">PaleMoon/Basilisk developer loves Cloudflare.</a></p>
+<ul>
+<li><a href="https://reddit.com/r/privacytoolsIO/comments/cc808y/pale_moons_archive_server_hacked_and_spread/">Pale Moon&rsquo;s Archive Server hacked and spread malware for 18 Months</a></li>
+<li>He also hate Tor users - &ldquo;<a href="https://github.com/yacy/yacy_search_server/issues/314#issuecomment-565932097">Let it be hostile towards Tor. I think most sites should be hostile towards Tor considering its extremely high abuse factor.</a>&rdquo;</li>
+</ul>
+</li>
+<li>
+<p><a href="https://spyware.neocities.org/articles/waterfox.html">Waterfox have severe &ldquo;phones home&rdquo; problem</a></p>
+</li>
+<li>
+<p><a href="https://www.gnu.org/proprietary/malware-google.en.html">Google Chrome is a spyware.</a></p>
+<ul>
+<li><a href="https://spyware.neocities.org/articles/chrome.html">Google profiles your activity.</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://spyware.neocities.org/articles/iron.html">SRWare Iron make too many phones home connection.</a> It also connect to google domains.</p>
+</li>
+<li>
+<p><a href="https://www.bleepingcomputer.com/news/security/facebook-twitter-trackers-whitelisted-by-brave-browser/">Brave Browser whitelist Facebook/Twitter trackers.</a></p>
+<ul>
+<li><a href="https://spyware.neocities.org/articles/brave.html">Here&rsquo;s more issues.</a></li>
+<li><a href="https://twitter.com/cryptonator1337/status/1269594587716374528">binance affiliate ID</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.zdnet.com/article/microsoft-edge-lets-facebook-run-flash-code-behind-users-backs/">Microsoft Edge lets Facebook run Flash code behind users&rsquo; backs.</a></p>
+</li>
+<li>
+<p><a href="https://spyware.neocities.org/articles/vivaldi.html">Vivaldi does not respect your privacy.</a></p>
+</li>
+<li>
+<p><a href="https://spyware.neocities.org/articles/opera.html">Opera spyware level: Extremely High</a></p>
+</li>
+<li>
+<p>Apple iOS: <a href="https://www.gnu.org/proprietary/malware-apple.html">You shouldn&rsquo;t be using iOS at all, mainly because it is malware.</a></p>
+</li>
+</ul>
+<p>Therefore we recommend above table only. Nothing else.</p>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>&ldquo;Firefox Nightly&rdquo; will send debug-level information to Mozilla servers without opt-out method.</p>
+<ul>
+<li><a href="https://www.digwebinterface.com/?hostnames=www.mozilla.org%0D%0Amozilla.Cloudflare-dns.com&amp;type=&amp;ns=resolver&amp;useresolver=8.8.4.4&amp;nameservers=">Mozilla servers are behing Cloudflare</a></li>
+</ul>
+</li>
+<li>
+<p>It is possible to prohibit Firefox to connect to Mozilla servers.</p>
+<ul>
+<li><a href="https://github.com/mozilla/policy-templates/blob/master/README.md">Mozilla&rsquo;s policy-templates guide</a></li>
+<li>Keep in mind this trick might stop working in later version because Mozilla likes to whitelist themselves.</li>
+<li>Use firewall and DNS filter to block them completely.</li>
+</ul>
+</li>
+</ul>
+<p>&ldquo;<code>/distribution/policies.json</code>&rdquo;</p>
+
+
+
+
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="s2">&#34;WebsiteFilter&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="nt">&#34;Block&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="s2">&#34;*://*.mozilla.com/*&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="s2">&#34;*://*.mozilla.net/*&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="s2">&#34;*://*.mozilla.org/*&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="s2">&#34;*://webcompat.com/*&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="s2">&#34;*://*.firefox.com/*&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="s2">&#34;*://*.thunderbird.net/*&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="s2">&#34;*://*.cloudflare.com/*&#34;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="p">}</span><span class="err">,</span></span></span></code></pre></div><ul>
+<li>
+<p><del>Report a bug on mozilla&rsquo;s tracker, telling them not to use Cloudflare.</del> There was a bug report on bugzilla. Many people were posted their concern, however the bug was hidden by the admin in 2018.</p>
+</li>
+<li>
+<p>You can disable DoH in Firefox.</p>
+<ul>
+<li><a href="../subfiles/change-firefox-dns.md">Change default DNS provider of firefox</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://wiki.opennic.org/start">If you would like to use non-ISP DNS, consider using OpenNIC Tier2 DNS service or any of non-Cloudflare DNS services.</a></p>
+<ul>
+<li>Block Cloudflare with DNS. <a href="../subfiles/service/publicdns.md">Crimeflare DNS</a></li>
+</ul>
+</li>
+<li>
+<p>You can use Tor as DNS resolver. <a href="https://tor.stackexchange.com/">If you&rsquo;re not Tor expert, ask question here.</a></p>
+</li>
+</ul>
+<p><strong>How?</strong></p>
+<ol>
+<li>Download Tor and install it on your computer.</li>
+<li>Add this line to &ldquo;torrc&rdquo; file.
+DNSPort 127.0.0.1:53</li>
+<li>Restart Tor.</li>
+<li>Set your computer&rsquo;s DNS server to &ldquo;127.0.0.1&rdquo;.</li>
+</ol>
+<!-- raw HTML omitted -->
+<ul>
+<li>Tell others around you about the dangers of Cloudflare.</li>
+<li><a href="http://crimeflare.eu.org">Help improve this repository.</a>
+<ul>
+<li>Both the lists, the arguments against it and the details.</li>
+</ul>
+</li>
+<li><a href="http://crimeflare.eu.org">Document and make very public where things go wrong with Cloudflare (and similar companies), making sure to mention this repository when you do so</a> :)</li>
+<li>Get more people using Tor by default, so they can experience the web from the perspective of different parts of the world.</li>
+<li>Start groups, in social media and meatspace, dedicated to liberating the world from Cloudflare.</li>
+<li>Where appropriate, link to these groups on this repository - this can be a place for coordinating working together as groups.</li>
+<li><a href="../subfiles/alternative/cloudflare.md">Start a coop that can provide a meaningful non corporate alternative to Cloudflare.</a></li>
+<li>Let us know of any alternatives to help at least provide multiple layered defence against Cloudflare.</li>
+<li>If you are a Cloudflare customer, set your privacy settings and wait for them to violate them.
+<ul>
+<li><a href="https://twitter.com/thexpaw/status/1108424723233419264">Then bring them under anti-spam/privacy violation charges.</a></li>
+</ul>
+</li>
+<li>If you are in the United States of America and the website in question is a bank or an accountant, try to bring legal pressure under the Gramm–Leach–Bliley Act, or the Americans with Disabilities Act and report back to us how far you get.</li>
+<li>If the website is a government site, try to bring legal pressure under the 1st Amendment of the US Constitution.</li>
+<li>If you are EU citizen, contact the website to send your personal information under the General Data Protection Regulation. If they refuse to give you your information, that&rsquo;s a violation of the law.</li>
+<li>For companies that claim to offer service on their website try reporting them as &ldquo;false advertising&rdquo; to consumer protection organizations and BBB. Cloudflare websites are served by Cloudflare servers.</li>
+<li><a href="https://www.itu.int/en/ITU-T/Workshops-and-Seminars/20181218/Documents/Geoff_Huston_Presentation.pdf">The ITU suggest in the US context that Cloudflare is starting to get big enough that antitrust law might be brought down upon them.</a></li>
+<li>It&rsquo;s conceivable that the GNU GPL version 4 could include a provision against storing source code behind such a service, requiring for all GPLv4 and later programs that at least the source code is accessible via a medium that does not discriminate against Tor users.</li>
+<li><a href="../subfiles/service/altlink.md">Se vi uzas Mastodon bonvolu sekvi la konton Mitigator</a>.</li>
+</ul>
+<h3 id="comments">Comments</h3>
+<blockquote>
+<p>There is always hope in resistance.</p>
+<p>Resistance is fertile.</p>
+<p>Even some of the darker outcomes comes to be, the very act of resistance trains us to continue to destabilize the dystopic status quo that results.</p>
+<p>Resist!</p>
+</blockquote>
+<blockquote>
+<p>Someday, you&rsquo;ll understand why we wrote this.</p>
+</blockquote>
+<blockquote>
+<p>There isn&rsquo;t anything futuristic about this. We have already lost.</p>
+</blockquote>
+<hr>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Privacy In Budget</title>
+      <link>https://anhkhoakz.dev/blog/privacy-in-budget/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate><author>object_hurled356@simplelogin.com (anhkhoakz)</author>
+      <guid>https://anhkhoakz.dev/blog/privacy-in-budget/</guid>
+      <description>As a software engineering student, I love the beauty of tech, but I&amp;rsquo;m also afraid of it.&#xA;Technologies help us a lot in every aspect of life. But it also brings a data hunger from big tech companies.&#xA;But there is always a solution. You can get more privacy, so big companies can&amp;rsquo;t have information about you, or they have at least.&#xA;Web-browser You can opt out of Google Chrome by using Firefox and Ungoogled-chromium, I have a detailed review.</description>
+      <content:encoded><![CDATA[<p>As a software engineering student, I love the beauty of tech, but I&rsquo;m also afraid of it.</p>
+<p>Technologies help us a lot in every aspect of life. But it also brings a data hunger from big tech companies.</p>
+<p>But there is always a solution. You can get more privacy, so big companies can&rsquo;t have information about you, or they have at least.</p>
+<h2 id="web-browser">Web-browser</h2>
+<p>You can opt out of Google Chrome by using <a href="https://ftp.mozilla.org/pub/firefox/releases/">Firefox</a> and <a href="https://ungoogled-software.github.io/">Ungoogled-chromium</a>, I have a <a href="/blog/browsers-for-daily-using/">detailed review</a>.</p>
+<p>You have to separate your activities. Creating multiple profiles for multiple purposes is a good idea.</p>
+<h2 id="email">Email</h2>
+<p>I know that a lot of universities give Gmail accounts to their students. It&rsquo;s an easy way for them.</p>
+<p>You can&rsquo;t switch email services when using school email, but you can choose an alternative for personal purposes.</p>
+<p>You can check out <a href="https://tuta.com/">Tuta</a>, <a href="https://proton.me/">Proton</a>, <a href="https://skiff.com/">Skiff</a>.
+They have an easy way to register.</p>
+<p>If you want to have PGP by yourself, I strongly recommend it. You may look at <a href="https://disroot.org/">Disroot</a>, <a href="https://cock.li/">Cock.li</a>, <a href="https://www.autistici.org/">Autistici</a>, or even G-Mail with <a href="https://mailvelope.com/">Mailvelope</a></p>
+<p>You can check out the <a href="https://digdeeper.club/articles/email.xhtml">E-mail providers - which one to choose?</a> article from DigDeeper which can give you reviews and a lot of suggestions.</p>
+<p>You have to notice that you <strong>never</strong> use school email for personal work, creating accounts,&hellip;
+It&rsquo;s something about privacy and security:</p>
+<ol>
+<li>Some schools block emails outside the organization.</li>
+<li>They can delete your email accounts when you leave the university.</li>
+<li>An administrator can easily reset the password.</li>
+<li>They can gain unauthorized access to your email account.</li>
+</ol>
+<p>But you can choose the <em><strong>TrustNoOne</strong></em> plan by encrypting your email manually using PGP. The software you can use is <a href="https://gnupg.org/">The GNU Privacy Guard</a>.</p>
+<p>An email client would be nice: <a href="https://www.claws-mail.org/">Claws Mail</a>, <a href="https://neomutt.org/">NeoMutt</a>, and <a href="https://www.thunderbird.net/">ThunderBird</a> (which should be hardened for privacy concerns). Email clients will help you:</p>
+<ol>
+<li>Choose the program you like. Not depending on the provider&rsquo;s JavaScript.</li>
+<li>The mail client will remain constant. Prevent being served malicious JavaScript.</li>
+<li>POP3 allows you to keep control of your data in your hands.</li>
+<li>The variety of features.</li>
+<li>Support PGP properly.</li>
+</ol>
+<h2 id="real-time-messaging">Real-time messaging</h2>
+<p>Although Facebook Messenger, Viber, and WhatsApp come with a lot of features. But they are data-hungers, no matter how encrypted they are.
+Those encryptions can only protect you from attackers, not from those companies.</p>
+<p>You can switch to <a href="https://signal.org/">Signal</a>, it&rsquo;s an encrypted messaging platform that has a good reputation, doesn&rsquo;t store your messages, and is very easy to use.</p>
+<p>Persuading friends to switch to Signal is hard work, but if you try, you will notice how the data that those companies get from you will decrease.</p>
+<p>You can check out some alternatives like <a href="https://simplex.chat/">SimpleX Chat</a>, <a href="https://briarproject.org/">Briar</a>, <a href="https://getsession.org/">Session</a>, and <a href="https://element.io/">Element</a>.</p>
+<h2 id="password-manager">Password manager</h2>
+<p>I strongly recommend that you use a password manager. It&rsquo;s again something about privacy and security. It can help you avoid using the same passwords for multiple platforms, which will reduce the chance of being hacked.</p>
+<p>A password manager is good, but it&rsquo;s something about the company that developed that service. You should never use the built-in password manager in browsers; it&rsquo;s very easy to hack. The built-in password managers on Apple and Android devices are good, but they lack multi-platforms, which will lock you in their ecosystem.</p>
+<p>I will recommend using <a href="https://bitwarden.com/">Bitwarden</a>, it&rsquo;s free and open source. You can get their premium for only $10 a year.</p>
+<p>Some alternatives like: <a href="https://proton.me/pass">ProtonPass</a>, and <a href="https://keepass.info/">KeePass</a>.</p>
+<h2 id="operating-system">Operating System.</h2>
+<p>You can create a new user account that doesn&rsquo;t have root permission.</p>
+<p>Check out <a href="https://privacy.sexy/">privacy.sexy</a>, it&rsquo;ll help you turn off telemetry from the OS.</p>
+<p>You can also create multiple user accounts for multiple purposes, just like with a web browser.</p>
+<p>An online sync platform, a hard drive partition, or a USB will help you transfer files and data.</p>
+<p>Linux is the best for privacy, but not all of them. You can check out the <a href="https://www.privacyguides.org/en/desktop/">Desktop/PC article</a> and <a href="https://www.privacytools.io/os">Operating Systems</a> for more recommendations. Be aware of Ubuntu.</p>
+<p>The operating systems you are using on your phone are mostly iOS or Android. You can check out Graphene OS. For iOS devices, you don&rsquo;t have too many choices, but you can have some configurations.</p>
+<p>It doesn&rsquo;t matter which OS you&rsquo;re using; make sure that you have strong encryption on your device.</p>
+<p>For an external drive, like a self-host cloud, USB, or hard disk, you can use built-in encryption or third-party software like <a href="https://veracrypt.eu/">VeraCrypt</a>.</p>
+<h2 id="networking">Networking</h2>
+<p>You can use VPNs from Cloudflare (red flag), Proton, Mullvad (the best).
+It will prevent network administrators from looking for what you&rsquo;re doing by encrypting the data flow, creating a fake IP address, &hellip; But be cautious, because it will mark you as using a VPN.</p>
+<p>Using cellular data is not a bad option if you can&rsquo;t use a VPN; it will not replace a VPN, but it will protect you from hackers. But the service provider will know what you&rsquo;re doing.</p>
+<p>You can choose a DNS resolver from <a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls">Mullvad</a> or <a href="https://www.quad9.net/support/set-up-guides">Quad9</a>.</p>
+<p>For anything on the internet, you should stay away from Cloudflare. <a href="https://0xacab.org/dCF/deCloudflare">Here</a> is the reason. I&rsquo;ll guide you on how to reduce the amount of Cloudflare in soon.</p>
+<h2 id="software">Software</h2>
+<p>Using school software for school work and personal software for personal work only.</p>
+<p>Instead of using Office 365, you can check out <a href="https://www.libreoffice.org/">LibreOffice</a>.</p>
+<p>For sync files, you can use encryption cloud storage from Proton, Tresorit, Filen, pCloud, IceDrive,&hellip; But for the most affordable, you can encrypt your files before uploading by using <a href="https://cryptomator.org/">Cryptomator</a>, 7-zip, <a href="https://rclone.org/">rclone</a>,&hellip;</p>
+<p>You can also check FOSS (Free and Open Source Software) alternatives for every application you&rsquo;re using. And stay away from <a href="https://www.gnu.org/proprietary/proprietary.html">proprietary software</a>.</p>
+<p>For code development, you can check out <a href="https://vscodium.com/">VSCodium</a> to replace VSCode.</p>
+<p>Maybe it will get a long blog for software only.</p>
+<p>For more information, you can check out: <a href="https://www.opensourcealternative.to/">Open Source Alternative To</a> Using <code>https://alternativeto.net/software/YOURPRODUCTNAME/?license=opensource</code></p>
+<hr>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Browsers for Daily Using</title>
+      <link>https://anhkhoakz.dev/blog/browsers-for-daily-using/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate><author>object_hurled356@simplelogin.com (anhkhoakz)</author>
+      <guid>https://anhkhoakz.dev/blog/browsers-for-daily-using/</guid>
+      <description>Gecko Engine Firefox, but hardened LibreWolf Mullvad Browser Blink Engine Ungoogled Chromium Brave Browser Conclusion From Wikipedia: Comparison of Browser Engines, there are 4 browser engines that have active status: WebKit, Blink, Gecko, and Goanna. In this blog, I&amp;rsquo;ll delve into the two most popular: Gecko (Firefox-based) and Blink (Chromium-based).&#xA;Gecko Engine Firefox, but hardened This is my first choice when it comes to a browser for privacy. I love the Firefox browser, but I don&amp;rsquo;t really like the way Mozilla develops it.</description>
+      <content:encoded><![CDATA[<ul>
+<li><a href="#gecko-engine">Gecko Engine</a>
+<ul>
+<li><a href="#firefox-but-hardened">Firefox, but hardened</a></li>
+<li><a href="#librewolf">LibreWolf</a></li>
+<li><a href="#mullvad-browser">Mullvad Browser</a></li>
+</ul>
+</li>
+<li><a href="#blink-engine">Blink Engine</a>
+<ul>
+<li><a href="#ungoogled-chromium">Ungoogled Chromium</a></li>
+<li><a href="#brave-browser">Brave Browser</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<p>From <a href="https://wikiless.org/wiki/Comparison_of_browser_engines?lang=en">Wikipedia: Comparison of Browser Engines,</a> there are 4 browser engines that have <strong>active</strong> status: WebKit, Blink, Gecko, and Goanna. In this blog, I&rsquo;ll delve into the two most popular: <a href="#gecko-engine">Gecko (Firefox-based)</a> and <a href="#blink-engine">Blink (Chromium-based)</a>.</p>
+<h2 id="gecko-engine">Gecko Engine</h2>
+<h3 id="firefox-but-hardened">Firefox, but hardened</h3>
+<p>This is my first choice when it comes to a browser for privacy. I love the Firefox browser, but I don&rsquo;t really like the way Mozilla develops it.</p>
+<p>You can download Firefox on <a href="https://www.mozilla.org/firefox/">Mozilla&rsquo;s website</a>. But I don&rsquo;t recommend it because of the <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1677497#c0">download token</a>.</p>
+<p>You can download it from <a href="https://ftp.mozilla.org/pub/firefox/releases/">Mozilla&rsquo;s FTP website</a>, by this way, you can choose any version of Firefox and download it without the token. You can decide whether the latest, extended support release, or EME-free version.</p>
+<p>The default Mozilla Firefox will come with a large amount of telemetry and add-ons, which you don&rsquo;t really love to use.</p>
+<p>For better privacy, you can config in <code>about:config</code> or use the <code>user.js</code> file, but it takes knowledge, time, and effort to review and make changes. So you will need a template to configure the browser.</p>
+<p>There are three levels of hardening Firefox:</p>
+<ol>
+<li>Easy: <a href="https://github.com/yokoffing/Betterfox">Betterfox</a></li>
+<li>Medium: <a href="https://github.com/arkenfox/user.js">arkenfox</a></li>
+<li>Hard: <a href="https://codeberg.org/Narsil/user.js/src/branch/main/desktop">Narsil</a></li>
+</ol>
+<p>It depends on you to select which one is appropriate. Betterfox provides a slight change to Firefox, which doesn&rsquo;t affect the your experience too much.</p>
+<p>On the other hand, Narsil provides the maximum privacy and security on Firefox, but it will change the way you use Firefox.</p>
+<p>If you want balance, choose arkenfox, it&rsquo;s the gold standard for Firefox.</p>
+<p>For comparison, you can use the PowerShell script <a href="https://github.com/claustromaniac/Compare-UserJS">Compare-UserJS</a> to pick the most appropriate for yourself.</p>
+<p>And because they&rsquo;re templates, they are not fit for your use case. So you&rsquo;ll need a <code>user-overrides.js</code> to have your own modifications; you can check out the documentation for this one at <a href="https://github.com/arkenfox/user.js/wiki/3.1-Overrides">the Arkenfox Wiki</a>.</p>
+<h3 id="librewolf">LibreWolf</h3>
+<p>Home page: <a href="https://librewolf.net/">LibreWolf</a></p>
+<p>Config file: <a href="https://codeberg.org/librewolf/settings/raw/branch/master/librewolf.cfg">librewolf.cfg</a></p>
+<p>This project brings a mindless way to use Firefox without worrying about how to configure it. It looks like Ungoogled Chromium to Google Chrome.</p>
+<p>But I have had some bad experiences when using it:</p>
+<ol>
+<li>It&rsquo;s not able to use 1Password biometrics because <a href="https://1password.community/discussion/comment/633723/#Comment_633723">it lacks a code signature</a>. But it can work well with Bitwarden or KeePassXC.</li>
+<li>Lacking of auto-update capacities raises a concern about security and <a href="https://wikiless.org/wiki/Zero-day_(computing)?lang=en">zero-day vulnerability</a>. But it can be fixed by using packet manager or using <a href="https://codeberg.org/ltguillaume/librewolf-winupdater">LibreWolf WinUpdater</a>.</li>
+</ol>
+<p>So if you want a mindless way to use Firefox, don&rsquo;t use 1Password, and don&rsquo;t need a built-in updater, LibreWolf will be the best for you.</p>
+<h3 id="mullvad-browser">Mullvad Browser</h3>
+<p>Home page: <a href="https://mullvad.net/en/browser">Mullvad Browser</a></p>
+<p>Modifications: <a href="https://mullvad.net/en/browser/hard-facts">Hard facts</a>.</p>
+<blockquote>
+<p>Mullvad Browser is a collaboration between Mullvad VPN and the Tor Project.</p>
+</blockquote>
+<p>This is the new one; I have not tried it yet, but it makes 0 connections in the initial. This should be a strong competitor to LibreWolf, comes with strong privacy and anti-fingerprinting features.</p>
+<p>It has 3 extensions built-in: uBlock Origin, NoScript, and Mullvad Browser Extension. It includes auto-updates and creating new identity features.</p>
+<h2 id="blink-engine">Blink Engine</h2>
+<h3 id="ungoogled-chromium">Ungoogled Chromium</h3>
+<p>Home page: <a href="https://ungoogled-software.github.io/">ungoogled-chromium</a></p>
+<p>Binary download: <a href="https://ungoogled-software.github.io/ungoogled-chromium-binaries/">Latest versions</a></p>
+<blockquote>
+<p>A lightweight approach to removing Google web service dependency</p>
+</blockquote>
+<p>This is Chromium, so it will provide you with a bunch of extensions that will make your life easier.</p>
+<p>It seems like this is the only browser based on chromiu, and I will recommend my friends use it. You just need to make some modifications, and it will work like Brave.</p>
+<p>You&rsquo;ll have to install <a href="https://github.com/NeverDecaf/chromium-web-store">an extension</a> to be able to install extensions from the Chrome Web Store.</p>
+<p>Here are some <code>chrome://flags</code> I use:</p>
+<ul>
+<li>#extension-mime-request-handling: <code>Always prompt for install</code></li>
+<li>#chrome-labs: <code>Disabled</code></li>
+</ul>
+<h3 id="brave-browser">Brave Browser</h3>
+<p>This is the most popular browser when you know the word <strong>privacy</strong>, and choose an alternative to Google Chrome.</p>
+<p>But it has a lot of issues and features that make me don&rsquo;t want to use it anymore:</p>
+<ol>
+<li>It has 7 connections when you first install it.</li>
+<li>They have sponsored ads on browsers.</li>
+<li>Brave Rewards needs a KYC account to use it.</li>
+</ol>
+<p>I used the Brave browser, but I&rsquo;m not happy with it anymore. Anything it provides is just a cut-off of some extensions. And if you have an extension, it will do better.</p>
+<p>However, anything is better than Chrome, and you can have <a href="https://www.privacyguides.org/en/desktop-browsers/#recommended-configuration_1">some configurations</a> to make Brave more private.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In conclusion, there is absolutely no such thing as the best browser for anything. It depends on you; it will only have a less bad browser. You can base your decision on my article; it is just something I gathered from the Internet. In my case, I&rsquo;ll recommend using <a href="#firefox-but-hardened">Firefox hardened</a> and <a href="#ungoogled-chromium">Ungoogled chromium</a> because they fit my needs. However, the ideal choice varies for each user, and the goal is to find a browser that meets their unique criteria.</p>
+<hr>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>There is no privacy email</title>
+      <link>https://anhkhoakz.dev/blog/no-privacy-email/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate><author>object_hurled356@simplelogin.com (anhkhoakz)</author>
+      <guid>https://anhkhoakz.dev/blog/no-privacy-email/</guid>
+      <description>After reading blogs and watching videos, I&amp;rsquo;ve come to realize that email lacks inherent privacy and security features. Even if you host a personal OpenBSD email server in an undisclosed nuclear bunker with a crypto domain connected to Tor, your emails still traverse ISP networks and reside on third-party servers.&#xA;While it&amp;rsquo;s crucial to prioritize privacy and move away from mainstream providers like Google, achieving secure communication requires alternatives to traditional email protocols.</description>
+      <content:encoded><![CDATA[<hr>
+<p>After reading blogs and watching videos, I&rsquo;ve come to realize that email lacks inherent privacy and security features.
+Even if you host a personal OpenBSD email server in an undisclosed nuclear bunker with a crypto domain connected to Tor, your emails still traverse ISP networks and reside on third-party servers.</p>
+<p>While it&rsquo;s crucial to prioritize privacy and move away from mainstream providers like Google, achieving secure communication requires alternatives to traditional email protocols.
+Signal, Matrix, and similar platforms offer better options for long-term privacy and security compared to standard email services like Gmail and Outlook.</p>
+<p>It&rsquo;s important to acknowledge that trusting any company, regardless of claims about zero trust, encryption, or adherence to privacy laws, carries risks.
+Even with end-to-end encryption, companies can potentially compromise your security, making it essential to explore options beyond conventional email.</p>
+<p>For enhanced privacy, consider using <a href="https://signal.org/">Signal</a> or exploring alternatives.
+However, always exercise caution and, if needed, encrypt your emails using PGP and mail client add-ons like Enigmail.
+Remember, the cloud is essentially someone else&rsquo;s computer, emphasizing the need for personal responsibility in securing your communications.</p>
+<p>In conclusion, don&rsquo;t blindly trust any email provider&rsquo;s assurances of robust encryption or privacy.
+Consider employing Pretty Good Privacy (PGP) for email encryption or opt for messaging apps specifically designed for secure communication, such as Signal or Briar.</p>
+<p><a href="https://ssd.eff.org/module/why-metadata-matters">Why Metadata Matters</a>
+<a href="https://rightedition.com/2014/05/13/michael-hayden-gleefully-admits-kill-people-based-metadata/">Michael Hayden Gleefully Admits: We Kill People Based On Metadata </a></p>
+<hr>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>
