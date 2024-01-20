@@ -22,10 +22,9 @@ jobs:
           SSH_KEY=: op://Security/Codeberg2/private\ key
 
       - name: Mirroring to Codeberg
-        run: echo "$SSH_KEY"
         uses: pixta-dev/repository-mirroring-action@v1
         with:
           target_repo_url: 
             git@codeberg.org:anhkhoakz/anhkhoakz.github.io.git
           ssh_private_key: 
-            
+            $SSH_KEY
