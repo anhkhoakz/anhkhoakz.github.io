@@ -11,6 +11,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+
       - name: Load secrets 1Password
         uses: 
           1password/load-secrets-action/configure@v1
@@ -18,9 +19,10 @@ jobs:
           export-env: false
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_TOKEN }}
-          SSH_KEY=: op://Security/Codeberg2/private key
+          SSH_KEY=: op://Security/Codeberg2/private\ key
+
       - name: Mirroring to Codeberg
-        run: echo "$op://Security/Codeberg2/private key"
+        run: echo "$SSH_KEY"
         uses: pixta-dev/repository-mirroring-action@v1
         with:
           target_repo_url: 
