@@ -18,7 +18,7 @@ jobs:
           export-env: false
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_TOKEN }}
-          ssh_private_key: op://Security/Codeberg/key
+          ssh_private_key: op://Security/Codeberg/private key
       - name: Mirroring to Codeberg
         uses: pixta-dev/repository-mirroring-action@v1
         with:
