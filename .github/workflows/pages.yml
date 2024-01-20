@@ -22,7 +22,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify --gc --destination ../public --baseURL https://anhkhoakz.dev/
+        run: hugo --minify --gc --destination ../public --themesDir /themes/hugo-bearcub --baseURL https://anhkhoakz.dev/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
