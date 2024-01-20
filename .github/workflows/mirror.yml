@@ -3,27 +3,41 @@ name: Mirroring
 on: [push, delete]
 
 jobs:
-
   to_codeberg:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
-      - name: Load secrets 1Password
-        uses: 
-          1password/load-secrets-action/configure@v1
+      - uses: pixta-dev/repository-mirroring-action@v1
         with:
-          export-env: false
-        env:
-          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_TOKEN }}
-          SSH_KEY=: "op://Security/Codeberg2/private key"
+          target_repo_url:
+            git@codeberg.org:anhkhoakz/pages.git
+          ssh_private_key:
+            ${{ secrets.codeberg_ssh }}
 
-      - name: Mirroring to Codeberg
-        uses: pixta-dev/repository-mirroring-action@v1
+  to_gitlab:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
         with:
-          target_repo_url: 
-            git@codeberg.org:anhkhoakz/anhkhoakz.github.io.git
-          ssh_private_key: env.SSH_KEY
+          fetch-depth: 0
+      - uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:
+            git@gitlab.com:anhkhoakz/my-website.git
+          ssh_private_key:
+            ${{ secrets.gitlab_ssh }}
+
+  to_framagit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:
+            git@framagit.org:anhkhoakz/my-website.git
+          ssh_private_key:
+            ${{ secrets.framagit_ssh }}
