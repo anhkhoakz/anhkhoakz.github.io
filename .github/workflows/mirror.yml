@@ -16,11 +16,14 @@ jobs:
           1password/load-secrets-action/configure@v1
         with:
           export-env: false
+        env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_TOKEN }}
+          SSH_KEY=: op://Security/Codeberg2/private key
       - name: Mirroring to Codeberg
+        run: echo "$op://Security/Codeberg2/private key"
         uses: pixta-dev/repository-mirroring-action@v1
         with:
           target_repo_url: 
             git@codeberg.org:anhkhoakz/anhkhoakz.github.io.git
           ssh_private_key: 
-            "op://Security/Codeberg2/private key"
+            
