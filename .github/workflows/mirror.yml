@@ -6,18 +6,17 @@ jobs:
 
   to_codeberg:
     runs-on: ubuntu-latest
-    steps:                                              # <-- must use actions/checkout before mirroring!
-      - uses: actions/checkout@v3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: pixta-dev/repository-mirroring-action@v1
+      - name: Mirroring to Codeberg
+        uses: pixta-dev/repository-mirroring-action@v1
         with:
-          OP_SERVICE_ACCOUNT_TOKEN: 
-            ${{ secrets.OP_TOKEN }}
-          target_repo_url:
-            git@codeberg.org:anhkhoakz/anhkhoakz.github.io.git
-          ssh_private_key:                              # <-- use 'secrets' to pass credential information.
-            ${{ "op://Security/Codeberg/private key" }}
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_TOKEN }}
+          target_repo_url: git@codeberg.org:anhkhoakz/anhkhoakz.github.io.git
+          ssh_private_key: ${{ secrets.OP_CODEBERG_PRIVATE_KEY }}
       - name: Configure 1Password
         uses: 1password/load-secrets-action/configure@v1
         with:
@@ -25,18 +24,17 @@ jobs:
 
   to_gitlab:
     runs-on: ubuntu-latest
-    steps:                                              # <-- must use actions/checkout before mirroring!
-      - uses: actions/checkout@v3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: pixta-dev/repository-mirroring-action@v1
+      - name: Mirroring to GitLab
+        uses: pixta-dev/repository-mirroring-action@v1
         with:
-          OP_SERVICE_ACCOUNT_TOKEN: 
-            ${{ secrets.OP_TOKEN }}
-          target_repo_url:
-            git@gitlab.com:anhkhoakz/my-website.git
-          ssh_private_key:                              # <-- use 'secrets' to pass credential information.
-            ${{ "op://Security/GitLab/private key" }}
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_TOKEN }}
+          target_repo_url: git@gitlab.com:anhkhoakz/my-website.git
+          ssh_private_key: ${{ secrets.OP_GITLAB_PRIVATE_KEY }}
       - name: Configure 1Password
         uses: 1password/load-secrets-action/configure@v1
         with:
@@ -44,18 +42,17 @@ jobs:
 
   to_framagit:
     runs-on: ubuntu-latest
-    steps:                                              # <-- must use actions/checkout before mirroring!
-      - uses: actions/checkout@v3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: pixta-dev/repository-mirroring-action@v1
+      - name: Mirroring to Framagit
+        uses: pixta-dev/repository-mirroring-action@v1
         with:
-          OP_SERVICE_ACCOUNT_TOKEN: 
-            ${{ secrets.OP_TOKEN }}
-          target_repo_url:
-            git@framagit.org:anhkhoakz/my-website.git
-          ssh_private_key:                              # <-- use 'secrets' to pass credential information.
-            ${{ "op://Security/Framagit/private key" }}
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_TOKEN }}
+          target_repo_url: git@framagit.org:anhkhoakz/my-website.git
+          ssh_private_key: ${{ secrets.OP_FRAMAGIT_PRIVATE_KEY }}
       - name: Configure 1Password
         uses: 1password/load-secrets-action/configure@v1
         with:
