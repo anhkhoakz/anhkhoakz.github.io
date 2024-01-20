@@ -18,6 +18,10 @@ jobs:
             git@codeberg.org:anhkhoakz/anhkhoakz.github.io.git
           ssh_private_key:                              # <-- use 'secrets' to pass credential information.
             ${{ "op://Security/Codeberg/private key" }}
+      - name: Configure 1Password
+        uses: 1password/load-secrets-action/configure@v1
+        with:
+          service-account-token: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
 
   to_gitlab:
     runs-on: ubuntu-latest
@@ -33,6 +37,10 @@ jobs:
             git@gitlab.com:anhkhoakz/my-website.git
           ssh_private_key:                              # <-- use 'secrets' to pass credential information.
             ${{ "op://Security/GitLab/private key" }}
+      - name: Configure 1Password
+        uses: 1password/load-secrets-action/configure@v1
+        with:
+          service-account-token: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
 
   to_framagit:
     runs-on: ubuntu-latest
@@ -48,3 +56,7 @@ jobs:
             git@framagit.org:anhkhoakz/my-website.git
           ssh_private_key:                              # <-- use 'secrets' to pass credential information.
             ${{ "op://Security/Framagit/private key" }}
+      - name: Configure 1Password
+        uses: 1password/load-secrets-action/configure@v1
+        with:
+          service-account-token: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
