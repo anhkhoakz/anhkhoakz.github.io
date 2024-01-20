@@ -23,4 +23,4 @@ jobs:
           target_repo_url: 
             git@codeberg.org:anhkhoakz/anhkhoakz.github.io.git
           ssh_private_key: 
-            op://Security/Codeberg/private key
+            "op://Security/Codeberg2/private key"
