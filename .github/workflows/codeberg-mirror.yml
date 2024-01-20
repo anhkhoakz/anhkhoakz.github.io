@@ -1,9 +1,13 @@
-name: Codeberg Mirroring
+name: Mirroring
 
 on: [push, delete]
 
 jobs:
-  to_gitlab:
+
+  OP_SERVICE_ACCOUNT_TOKEN: 
+    ${{ secrets.OP_TOKEN }}
+
+  to_codeberg:
     runs-on: ubuntu-latest
     steps:                                              # <-- must use actions/checkout before mirroring!
       - uses: actions/checkout@v3
@@ -14,19 +18,34 @@ jobs:
           target_repo_url:
             git@codeberg.org:anhkhoakz/anhkhoakz.github.io.git
           ssh_private_key:                              # <-- use 'secrets' to pass credential information.
-            ${{ secrets.CODEBERG_SSH}}
+            ${{ "op://Security/Codeberg/private key" }}
 
-  to_codecommit:                                        # <-- different jobs are executed in parallel.
+  to_gitlab:
     runs-on: ubuntu-latest
-    steps:
+    steps:                                              # <-- must use actions/checkout before mirroring!
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - uses: pixta-dev/repository-mirroring-action@v1
         with:
+          OP_SERVICE_ACCOUNT_TOKEN: 
+            ${{ secrets.OP_TOKEN }}
           target_repo_url:
-            ssh://git-codecommit.<somewhere>.amazonaws.com/v1/repos/<target_repository_name>
-          ssh_private_key:
-            ${{ secrets.CODECOMMIT_SSH_PRIVATE_KEY }}
-          ssh_username:                                 # <-- (for codecommit) you need to specify ssh-key-id as ssh username.
-            ${{ secrets.CODECOMMIT_SSH_PRIVATE_KEY_ID }}
+            git@gitlab.com:anhkhoakz/my-website.git
+          ssh_private_key:                              # <-- use 'secrets' to pass credential information.
+            ${{ "op://Security/GitLab/private key" }}
+
+  to_framagit:
+    runs-on: ubuntu-latest
+    steps:                                              # <-- must use actions/checkout before mirroring!
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          OP_SERVICE_ACCOUNT_TOKEN: 
+            ${{ secrets.OP_TOKEN }}
+          target_repo_url:
+            git@framagit.org:anhkhoakz/my-website.git
+          ssh_private_key:                              # <-- use 'secrets' to pass credential information.
+            ${{ "op://Security/Framagit/private key" }}
