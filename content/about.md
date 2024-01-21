@@ -27,6 +27,8 @@ Thank you for visiting!
 ## Code Repository Hosting
 
 - [Codeberg](https://codeberg.org/anhkhoakz/)
+- [SourceHut](https://sr.ht/~anhkhoakz/)
+- [NotABug](https://notabug.org/anhkhoakz)
 - [Github](https://github.com/anhkhoakz/)
   
 ## Social Media
