@@ -41,3 +41,29 @@ jobs:
             git@framagit.org:anhkhoakz/my-website.git
           ssh_private_key:
             ${{ secrets.framagit_ssh }}
+
+  to_sourcehut:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:
+            git@git.sr.ht:~anhkhoakz/pages
+          ssh_private_key:
+            ${{ secrets.sourcehut_ssh }}
+
+  to_notabug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:
+            git@notabug.org:anhkhoakz/pages.git
+          ssh_private_key:
+            ${{ secrets.framagit_ssh }}
