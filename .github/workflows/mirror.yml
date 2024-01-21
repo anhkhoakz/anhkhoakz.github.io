@@ -66,4 +66,4 @@ jobs:
           target_repo_url:
             git@notabug.org:anhkhoakz/pages.git
           ssh_private_key:
-            ${{ secrets.framagit_ssh }}
+            ${{ secrets.notabug_ssh }}
