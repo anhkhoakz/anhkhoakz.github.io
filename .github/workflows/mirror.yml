@@ -67,3 +67,16 @@ jobs:
             git@notabug.org:anhkhoakz/pages.git
           ssh_private_key:
             ${{ secrets.notabug_ssh }}
+
+  to_disroot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:
+            git@git.disroot.org:anhkhoakz/pages.git
+          ssh_private_key:
+            ${{ secrets.disroot_ssh }}
