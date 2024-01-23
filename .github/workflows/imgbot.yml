@@ -1,19 +1,14 @@
-name: Auto Approve
+name: Auto approve
 
-on: pull_request
+on: pull_request_target
 
 jobs:
-  build:
+  auto-approve:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    if: github.actor == 'imgbot[bot]'
     steps:
-    - name: Auto Approve
-      uses: hmarr/auto-approve-action@v2.0.0
-      if: github.actor == 'imgbot[bot]'
-      with:
-        github-token: "${{ secrets.GITHUB_TOKEN }}"
-    - name: Merge
-      uses: squalrus/merge-bot@v0.2.0
-      if: github.actor == 'imgbot[bot]'
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        method: squash
+      - uses: hmarr/auto-approve-action@v3
+        with:
+          review-message: "Auto approved automated PR"
