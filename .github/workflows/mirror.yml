@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: pixta-dev/repository-mirroring-action@latest
+      - uses: pixta-dev/repository-mirroring-action@v1
         with:
           target_repo_url:
             git@codeberg.org:anhkhoakz/pages.git
@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: pixta-dev/repository-mirroring-action@latest
+      - uses: pixta-dev/repository-mirroring-action@v1
         with:
           target_repo_url:
             git@gitlab.com:anhkhoakz/my-website.git
@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: pixta-dev/repository-mirroring-action@latest
+      - uses: pixta-dev/repository-mirroring-action@v1
         with:
           target_repo_url:
             git@framagit.org:anhkhoakz/my-website.git
@@ -48,7 +48,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: pixta-dev/repository-mirroring-action@latest
+      - uses: pixta-dev/repository-mirroring-action@v1
         with:
           target_repo_url:
             git@git.sr.ht:~anhkhoakz/pages
@@ -61,7 +61,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: pixta-dev/repository-mirroring-action@latest
+      - uses: pixta-dev/repository-mirroring-action@v1
         with:
           target_repo_url:
             git@notabug.org:anhkhoakz/pages.git
@@ -74,7 +74,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: pixta-dev/repository-mirroring-action@latest
+      - uses: pixta-dev/repository-mirroring-action@v1
         with:
           target_repo_url:
             git@git.disroot.org:anhkhoakz/pages.git
@@ -87,7 +87,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: pixta-dev/repository-mirroring-action@latest
+      - uses: pixta-dev/repository-mirroring-action@v1
         with:
           target_repo_url:
             git@gitee.com:anhkhoakz/pages.git
