@@ -1,0 +1,90 @@
+name: Deploy to Neocities
+
+on:
+  # Daily build to catch any future-dated posts
+
+  schedule:
+    - cron: 0 13 * * *
+
+  # Build on pushes to the main branch only
+
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: deploy-to-neocities
+
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  deploy:
+    name: Build and deploy Hugo site
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # Install Hugo in the runner
+
+      - name: Hugo setup
+
+        uses: peaceiris/actions-hugo@v2.6.0
+
+        with:
+          hugo-version: "0.121.1"
+
+          extended: true
+
+      # Check out the source for the site
+
+      - name: Checkout
+
+        uses: actions/checkout@v4
+
+        with:
+          submodules: recursive
+
+      # Build the site with Hugo
+
+      - name: Build with Hugo
+
+        run: hugo --minify
+
+      # Copy my custom 404 page to not_found.html so it
+
+      # will be picked up by Neocities
+
+      # - name: Insert 404 page
+
+      #   run: |
+
+      #     cp public/404/index.html public/not_found.html
+
+      # Highlight code blocks with the Torchlight CLI
+
+      - name: Highlight with Torchlight
+
+        run: |
+
+          npm i @torchlight-api/torchlight-cli
+
+          npx torchlight
+
+      # Push the rendered site to Neocities and
+
+      # clean up any orphaned files
+
+      - name: Deploy to Neocities
+
+        uses: bcomnes/deploy-to-neocities@v1
+
+        with:
+          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+
+          cleanup: true
+
+          dist_dir: public

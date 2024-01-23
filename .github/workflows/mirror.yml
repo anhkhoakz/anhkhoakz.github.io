@@ -11,10 +11,8 @@ jobs:
           fetch-depth: 0
       - uses: pixta-dev/repository-mirroring-action@v1
         with:
-          target_repo_url:
-            git@codeberg.org:anhkhoakz/pages.git
-          ssh_private_key:
-            ${{ secrets.codeberg_ssh }}
+          target_repo_url: git@codeberg.org:anhkhoakz/pages.git
+          ssh_private_key: ${{ secrets.codeberg_ssh }}
 
   to_gitlab:
     runs-on: ubuntu-latest
@@ -24,10 +22,8 @@ jobs:
           fetch-depth: 0
       - uses: pixta-dev/repository-mirroring-action@v1
         with:
-          target_repo_url:
-            git@gitlab.com:anhkhoakz/my-website.git
-          ssh_private_key:
-            ${{ secrets.gitlab_ssh }}
+          target_repo_url: git@gitlab.com:anhkhoakz/my-website.git
+          ssh_private_key: ${{ secrets.gitlab_ssh }}
 
   to_framagit:
     runs-on: ubuntu-latest
@@ -37,10 +33,8 @@ jobs:
           fetch-depth: 0
       - uses: pixta-dev/repository-mirroring-action@v1
         with:
-          target_repo_url:
-            git@framagit.org:anhkhoakz/my-website.git
-          ssh_private_key:
-            ${{ secrets.framagit_ssh }}
+          target_repo_url: git@framagit.org:anhkhoakz/my-website.git
+          ssh_private_key: ${{ secrets.framagit_ssh }}
 
   to_sourcehut:
     runs-on: ubuntu-latest
@@ -50,10 +44,8 @@ jobs:
           fetch-depth: 0
       - uses: pixta-dev/repository-mirroring-action@v1
         with:
-          target_repo_url:
-            git@git.sr.ht:~anhkhoakz/pages
-          ssh_private_key:
-            ${{ secrets.sourcehut_ssh }}
+          target_repo_url: git@git.sr.ht:~anhkhoakz/pages
+          ssh_private_key: ${{ secrets.sourcehut_ssh }}
 
   to_notabug:
     runs-on: ubuntu-latest
@@ -63,10 +55,8 @@ jobs:
           fetch-depth: 0
       - uses: pixta-dev/repository-mirroring-action@v1
         with:
-          target_repo_url:
-            git@notabug.org:anhkhoakz/pages.git
-          ssh_private_key:
-            ${{ secrets.notabug_ssh }}
+          target_repo_url: git@notabug.org:anhkhoakz/pages.git
+          ssh_private_key: ${{ secrets.notabug_ssh }}
 
   to_disroot:
     runs-on: ubuntu-latest
@@ -76,10 +66,8 @@ jobs:
           fetch-depth: 0
       - uses: pixta-dev/repository-mirroring-action@v1
         with:
-          target_repo_url:
-            git@git.disroot.org:anhkhoakz/pages.git
-          ssh_private_key:
-            ${{ secrets.disroot_ssh }}
+          target_repo_url: git@git.disroot.org:anhkhoakz/pages.git
+          ssh_private_key: ${{ secrets.disroot_ssh }}
 
   to_gitee:
     runs-on: ubuntu-latest
@@ -89,7 +77,5 @@ jobs:
           fetch-depth: 0
       - uses: pixta-dev/repository-mirroring-action@v1
         with:
-          target_repo_url:
-            git@gitee.com:anhkhoakz/pages.git
-          ssh_private_key:
-            ${{ secrets.gitee_ssh }}
+          target_repo_url: git@gitee.com:anhkhoakz/pages.git
+          ssh_private_key: ${{ secrets.gitee_ssh }}
