@@ -1,0 +1,59 @@
+name: Deploy to Surge
+
+on:
+  # Daily build to catch any future-dated posts
+  schedule:
+    - cron: 0 0 * * *
+
+  # Build on pushes to the main branch only
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: deploy-to-Surge
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  deploy:
+    name: Build and deploy Hugo site
+    runs-on: ubuntu-latest
+
+    steps:
+      # Install Hugo in the runner
+      - name: Hugo setup
+        uses: peaceiris/actions-hugo@v2.6.0
+        with:
+          hugo-version: "0.121.1"
+          extended: true
+
+      # Check out the source for the site
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      # Build the site with Hugo
+      - name: Build with Hugo
+        run: hugo --minify
+
+      
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm install -g surge
+      - run: surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }} 
+
+
+# Push the rendered site to Surge and
+      # clean up any orphaned files
+      - name: Deploy to Surge
+        uses: bcomnes/deploy-to-Surge@v1
+        with:
+          api_token: ${{ secrets.Surge_API_TOKEN }}
+          cleanup: true
+          dist_dir: public
