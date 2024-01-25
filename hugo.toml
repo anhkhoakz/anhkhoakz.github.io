@@ -1,10 +1,10 @@
 # Basic config
-baseURL = "https://anhkhoakz.dev"
+baseURL = "https://www.anhkhoakz.dev"
 theme = "hugo-bearcub"
 defaultContentLanguage = "en"
 
 # Generate a nice robots.txt for SEO
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 # Setup syntax highlighting without inline styles. For more information about
 # why you'd want to avoid inline styles, see
