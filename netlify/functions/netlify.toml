@@ -1,0 +1,13 @@
+[[headers]]
+# Define which paths this specific [[headers]] block will cover.
+for = "/*"
+
+[headers.values]
+Content-Security-Policy = """default-src 'none', manifest-src 'self', font-src 'self', img-src 'self', style-src 'self', form-action 'none', frame-ancestors 'none', base-uri 'none', sandbox"""
+X-XSS-Protection = '1; mode=block'
+Strict-Transport-Security = """'max-age=31536000, includeSubDomains, preload' env=HTTPS"""
+X-Content-Type-Options = 'nosniff'
+Cache-Control = '''max-age=31536000, public, no-cache, no-store, must-revalidate'''
+Referrer-Policy = 'no-referrer'
+Feature-Policy = """microphone 'none', payment 'none', geolocation 'none', midi 'none', sync-xhr 'none', camera 'none', magnetometer 'none', gyroscope 'none'"""
+X-Frame-Options = "DENY"
