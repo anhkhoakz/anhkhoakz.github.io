@@ -1,19 +1,17 @@
-name: Deploy to Neocities
+name: Deploy pages
 
 on:
   # Daily build to catch any future-dated posts
-
   schedule:
     - cron: 0 0 * * *
 
   # Build on pushes to the main branch only
-
   push:
     branches:
       - main
 
 concurrency:
-  group: deploy-to-neocities
+  group: deploy-pages
 
   cancel-in-progress: true
 
@@ -29,7 +27,6 @@ jobs:
 
     steps:
       # Install Hugo in the runner
-
       - name: Hugo setup
         uses: peaceiris/actions-hugo@v2.6.0
         with:
@@ -37,13 +34,12 @@ jobs:
           extended: true
 
       # Check out the source for the site
-
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
 
-      # Build the site with Hugo
+      # Build the site with Hugo with baseURL https://anhkhoakz.neocities.org/
       - name: Build with Hugo
         run: hugo --minify --baseURL https://anhkhoakz.neocities.org/
 
@@ -55,11 +51,11 @@ jobs:
           cleanup: true
           dist_dir: public
 
-      # Build the site with Hugo
+      # Build the site with Hugo with baseURL https://anhkhoakz.surge.sh/
       - name: Build with Hugo
         run: hugo --minify --baseURL https://anhkhoakz.surge.sh/
 
-      # Push the rendered site to Surge 
+      # Push the rendered site to Surge
       - name: Deploy to Surge.sh
         uses: dswistowski/surge-sh-action@v1
         with:
