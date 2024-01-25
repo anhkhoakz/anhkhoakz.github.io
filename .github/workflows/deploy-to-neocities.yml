@@ -88,3 +88,11 @@ jobs:
           cleanup: true
 
           dist_dir: public
+
+      - name: Deploy to foo-bar.surge.sh
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: "anhkhoakz.surge.sh"
+          project: "public"
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
