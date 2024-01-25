@@ -66,7 +66,7 @@ jobs:
 
       # Push the site to Medium
       - name: Hugo To Medium
-        uses: imrushi/markdown-or-hugo-to-medium@v1
+        uses: imrushi/markdown-or-hugo-to-medium@v1.2.2
         with:
           markdownOrHugo: "hugo"
           replaceHyperlinkToLink: true
