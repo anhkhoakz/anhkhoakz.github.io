@@ -59,6 +59,7 @@ This project brings a mindless way to use Firefox without worrying about how to 
 
 But I have had some bad experiences when using it:
 1. It's not able to use 1Password biometrics because [it lacks a code signature](https://1password.community/discussion/comment/633723/#Comment_633723). But it can work well with Bitwarden or KeePassXC.
+     - I have the solution at: [Extending support for trusted web browsers](https://1password.community/discussion/140735/extending-support-for-trusted-web-browsers#latest).
 2. Lacking of auto-update capacities raises a concern about security and [zero-day vulnerability](https://wikiless.org/wiki/Zero-day_(computing)?lang=en). But it can be fixed by using packet manager or using [LibreWolf WinUpdater](https://codeberg.org/ltguillaume/librewolf-winupdater).
 
 So if you want a mindless way to use Firefox, don't use 1Password, and don't need a built-in updater, LibreWolf will be the best for you.
