@@ -63,15 +63,3 @@ jobs:
           project: "public"
           login: ${{ secrets.surge_login }}
           token: ${{ secrets.surge_token }}
-
-      # Push the site to Medium
-      - name: Hugo To Medium
-        uses: imrushi/markdown-or-hugo-to-medium@v1.2.2
-        with:
-          markdownOrHugo: "hugo"
-          replaceHyperlinkToLink: true
-          frontmatterFormat: "toml"
-          draft: false
-          canonicalRootUrl: "https://medium.com/@anhkhoakz/"
-          POST_DIR: "public"
-          ACCESS_TOKEN: ${{ secrets.MEDIUM_ACCESS_TOKEN }}
