@@ -3,11 +3,31 @@
 for = "/*"
 
 [headers.values]
-Content-Security-Policy = """default-src 'self', manifest-src 'self', font-src 'self', img-src 'self', style-src 'self', form-action 'none', frame-ancestors 'none', base-uri 'none', sandbox"""
+Content-Security-Policy = """
+    default-src 'self', 
+    manifest-src 'self', 
+    font-src 'self', 
+    img-src 'self', 
+    style-src 'self', 
+    frame-ancestors 'none',
+    form-action 'none', 
+    frame-ancestors 'none', 
+    base-uri 'none', 
+    sandbox
+"""
 X-XSS-Protection = '1; mode=block'
-Strict-Transport-Security: "max-age=63072000; includeSubDomains; preload"
+Strict-Transport-Security= "max-age=63072000; includeSubDomains; preload"
 X-Content-Type-Options = 'nosniff'
 Cache-Control: "public; max-age=259200"
-Referrer-Policy = 'no-referrer'
-Feature-Policy = """microphone 'none', payment 'none', geolocation 'none', midi 'none', sync-xhr 'none', camera 'none', magnetometer 'none', gyroscope 'none'"""
+Referrer-Policy = 'no-referrer-when-downgrade'
+Feature-Policy = """
+    microphone 'none', 
+    payment 'none', 
+    geolocation 'none', 
+    midi 'none', 
+    sync-xhr 'none', 
+    camera 'none', 
+    magnetometer 'none', 
+    gyroscope 'none'
+"""
 X-Frame-Options = "DENY"
