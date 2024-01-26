@@ -18,7 +18,7 @@ Content-Security-Policy = """
 X-XSS-Protection = '1; mode=block'
 Strict-Transport-Security= "max-age=63072000; includeSubDomains; preload"
 X-Content-Type-Options = 'nosniff'
-Cache-Control: "public; max-age=259200"
+Cache-Control= "public; max-age=259200"
 Referrer-Policy = 'no-referrer-when-downgrade'
 Feature-Policy = """
     microphone 'none', 
