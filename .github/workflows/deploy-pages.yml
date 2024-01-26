@@ -57,9 +57,9 @@ jobs:
 
       # Push the rendered site to Surge
       - name: Deploy to Surge.sh
-        uses: dswistowski/surge-sh-action@v1
+        uses: dswistowski/surge-sh-action@v.1.0.3
         with:
-          domain: "anhkhoakz.surge.sh"
+          domain: "https://anhkhoakz.surge.sh/"
           project: "public"
           login: ${{ secrets.surge_login }}
           token: ${{ secrets.surge_token }}
