@@ -16,6 +16,17 @@ author = "anhkhoakz"
 - [Blink Engine](#blink-engine)
   - [Ungoogled Chromium](#ungoogled-chromium)
   - [Brave Browser](#brave-browser)
+- [Extensions](#extensions)
+  - [uBlock Origin](#ublock-origin)
+  - [CanvasBlocker (If you disable resistfingeprinting)](#canvasblocker-if-you-disable-resistfingeprinting)
+  - [1Password or BitWarden](#1password-or-bitwarden)
+  - [Dark Reader](#dark-reader)
+  - [LanguageTool](#languagetool)
+  - [Greasemonkey](#greasemonkey)
+  - [LibRedirect](#libredirect)
+  - [Omnivore](#omnivore)
+  - [SimpleLogin](#simplelogin)
+  - [Skip Redirect](#skip-redirect)
 - [Conclusion](#conclusion)
 
 From [Wikipedia: Comparison of Browser Engines,](https://wikiless.org/wiki/Comparison_of_browser_engines?lang=en) there are 4 browser engines that have **active** status: WebKit, Blink, Gecko, and Goanna. In this blog, I'll delve into the two most popular: [Gecko (Firefox-based)](#gecko-engine) and [Blink (Chromium-based)](#blink-engine).
@@ -108,6 +119,24 @@ But it has a lot of issues and features that make me don't want to use it anymor
 I used the Brave browser, but I'm not happy with it anymore. Anything it provides is just a cut-off of some extensions. And if you have an extension, it will do better.
 
 However, anything is better than Chrome, and you can have [some configurations](https://www.privacyguides.org/en/desktop-browsers/#recommended-configuration_1) to make Brave more private.
+
+## Extensions
+
+### [uBlock Origin](https://addons.mozilla.org/firefox/addon/ublock-origin/)
+-  Blocking Mode: [Medium](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-medium-mode)
+-  Enable `AdGuard URL Tracking Protection`
+-  Import [➗ Actually Legitimate URL Shortener Tool](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)
+### [CanvasBlocker](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/) (If you disable resistfingeprinting)
+### Skip Redirect
+### 1Password or BitWarden
+### SimpleLogin
+### Firefox Multi-Account Containers
+### LibRedirect
+### Dark Reader
+### Greasemonkey
+### Omnivore
+### Linguist
+### LanguageTool
 
 ## Conclusion
 
