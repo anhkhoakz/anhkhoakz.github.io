@@ -52,7 +52,7 @@ dateFormat = "02-01-2006"
 # If your blog is multilingual but you haven't translated a page, this theme
 # will create a disabled link. By setting `hideUntranslated` to true, you can
 # have the theme simply not show any link
-hideUntranslated = false
+hideUntranslated = true
 
 # (EXPERIMENTAL) This theme is capable of dynamically generating social cards
 # for posts that don't have `images` defined in their front matter; By setting
