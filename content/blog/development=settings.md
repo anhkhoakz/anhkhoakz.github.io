@@ -3,28 +3,16 @@ title = 'Development=settings'
 description = ""
 date = 2024-01-31T14:54:57+07:00
 draft = true
-tags = []
+tags = [development]
 author = "anhkhoakz"
 +++
 
 ---
-- OS: MacOS
-- Packet Manager: HomeBrew (Alternative: Nix)
-- Code editor: 
-  - VSCode (Alternative: VSCodium)
-  - NeoVim with KickStart
-- pnpm (Alternative to npm)
-- Python
-- pip
-- iTerm2 (Alternative to Terminal)
-- Font: [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono/)
 
 # Operating System
 I'm using MacOS.
 
 For the packet manager, I use [HomeBrew](https://brew.sh/). It's an easy way to install packages and applications.
-You can check out [Nix: the package manager](https://nixos.org/download#nix-install-macos), it's more complicated but it's faster.
-
 I use [iTerm2](https://iterm2.com/) instead of default Terminal.
 I use Z shell with [Oh My Zsh](https://ohmyz.sh/) for Unix Shell.
 Theme: [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
@@ -54,7 +42,6 @@ If I need a tool to work with my university homework? I will choose VSCode for i
 
 My personal configuration file [anhkhoakz/kickstart.nvim](https://codeberg.org/anhkhoakz/kickstart.nvim) folked from [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim).
 
-
 Some my configurations: [keybindings.json](https://codeberg.org/anhkhoakz/Laboratory-Preparations/src/branch/main/src/keybindings.json), [settings.json](https://codeberg.org/anhkhoakz/Laboratory-Preparations/src/branch/main/src/settings.json)
 
 ## Integrated development environment
@@ -62,8 +49,11 @@ Some my configurations: [keybindings.json](https://codeberg.org/anhkhoakz/Labora
 For my big projects I will use the IDEs for the best workflow and less configurations, I will choose the JetBrain's products.
 
 # Some Alternatives
-I use [pnpm]() instead of npm for better performance. 
+I use [pnpm](https://pnpm.io/) instead of npm for better performance, and storage saving.
 
-If you take privacy seriously, you can have a look at [VSCodium]() to replace VSCode. It's fully open-source with telemetry-disabled by default.
+If you take privacy seriously, you can have a look at [VSCodium](https://vscodium.com/) to replace VSCode. It's fully open-source with telemetry-disabled by default.
+
+You can check out [Nix: the package manager](https://nixos.org/download#nix-install-macos), it's more complicated but it's faster.
+
 
 ---
