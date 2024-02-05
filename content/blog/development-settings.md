@@ -55,5 +55,11 @@ If you take privacy seriously, you can have a look at [VSCodium](https://vscodiu
 
 You can check out [Nix: the package manager](https://nixos.org/download#nix-install-macos), it's more complicated but it's faster.
 
+NeoVim configuration templates to [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim):
+- [LazyVim](https://github.com/LazyVim/LazyVim)
+- [LunarVim](https://github.com/lunarvim/lunarvim)
+- [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+- [NvChad](https://github.com/NvChad/NvChad)
+
 
 ---
