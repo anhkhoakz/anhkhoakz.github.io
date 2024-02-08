@@ -33,7 +33,7 @@ contentDir = "content"
 description = "This is a simple blog"
 
 # The path to your favicon
-favicon = "data:image/png;base64,"
+favicon = "./resources/_gen/images/favicon.svg"
 
 # These images will show up when services want to generate a preview of a link
 # to your site. Ignored if `generateSocialCard = true`. For more information
