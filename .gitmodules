@@ -1,0 +1,4 @@
+[submodule "themes/hugo-bearcub"]
+	path = themes/hugo-bearcub
+	url = https://github.com/anhkhoakz/hugo-bearcub
+	branch = style/herman
