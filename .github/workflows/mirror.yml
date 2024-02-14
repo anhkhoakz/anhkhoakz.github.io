@@ -29,26 +29,26 @@ jobs:
           target_repo_url: git@git.disroot.org:anhkhoakz/pages.git
           ssh_private_key: ${{ secrets.disroot_ssh }}
 
-      - name: Mirror to Framagit
-        uses: pixta-dev/repository-mirroring-action@v1
-        with:
-          target_repo_url: git@framagit.org:anhkhoakz/my-website.git
-          ssh_private_key: ${{ secrets.framagit_ssh }}
+      # - name: Mirror to Framagit
+      #   uses: pixta-dev/repository-mirroring-action@v1
+      #   with:
+      #     target_repo_url: git@framagit.org:anhkhoakz/my-website.git
+      #     ssh_private_key: ${{ secrets.framagit_ssh }}
 
-      - name: Mirror to Codeberg
-        uses: pixta-dev/repository-mirroring-action@v1
-        with:
-          target_repo_url: git@codeberg.org:anhkhoakz/pages.git
-          ssh_private_key: ${{ secrets.codeberg_ssh }}
+      # - name: Mirror to Codeberg
+      #   uses: pixta-dev/repository-mirroring-action@v1
+      #   with:
+      #     target_repo_url: git@codeberg.org:anhkhoakz/pages.git
+      #     ssh_private_key: ${{ secrets.codeberg_ssh }}
 
-      - name: Mirror to GitLab
-        uses: pixta-dev/repository-mirroring-action@v1
-        with:
-          target_repo_url: git@gitlab.com:anhkhoakz/my-website.git
-          ssh_private_key: ${{ secrets.gitlab_ssh }}
+      # - name: Mirror to GitLab
+      #   uses: pixta-dev/repository-mirroring-action@v1
+      #   with:
+      #     target_repo_url: git@gitlab.com:anhkhoakz/my-website.git
+      #     ssh_private_key: ${{ secrets.gitlab_ssh }}
 
-      - name: Mirror to Gitee
-        uses: pixta-dev/repository-mirroring-action@v1
-        with:
-          target_repo_url: git@gitee.com:anhkhoakz/pages.git
-          ssh_private_key: ${{ secrets.gitee_ssh }}
+      # - name: Mirror to Gitee
+      #   uses: pixta-dev/repository-mirroring-action@v1
+      #   with:
+      #     target_repo_url: git@gitee.com:anhkhoakz/pages.git
+      #     ssh_private_key: ${{ secrets.gitee_ssh }}
