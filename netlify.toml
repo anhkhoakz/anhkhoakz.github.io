@@ -4,7 +4,7 @@ for = "/*"
 
 [headers.values]
 Content-Security-Policy = """
-    default-src 'self', 
+    default-src 'none', 
     manifest-src 'self', 
     font-src 'self', 
     img-src 'self', 
@@ -14,12 +14,14 @@ Content-Security-Policy = """
     frame-ancestors 'none', 
     base-uri 'none', 
     sandbox
+    form-action 'none'
+    script-src 'strict-dynamic'
 """
 X-XSS-Protection = '1; mode=block'
 Strict-Transport-Security= "max-age=63072000; includeSubDomains; preload"
 X-Content-Type-Options = 'nosniff'
 Cache-Control= "public; max-age=259200"
-Referrer-Policy = 'no-referrer-when-downgrade'
+Referrer-Policy = 'no-referrer'
 Feature-Policy = """
     microphone 'none', 
     payment 'none', 
@@ -31,3 +33,4 @@ Feature-Policy = """
     gyroscope 'none'
 """
 X-Frame-Options = "DENY"
+Set-Cookie = "none"
