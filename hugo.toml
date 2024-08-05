@@ -39,7 +39,7 @@ favicon = "images/favicon.svg"
 # to your site. Ignored if `generateSocialCard = true`. For more information
 # about previews, see https://gohugo.io/templates/internal#twitter-cards and
 # https://gohugo.io/templates/internal#open-graph
-images = true
+images = false
 
 # This title is used as the site_name on the Hugo's internal opengraph
 # structured data template
