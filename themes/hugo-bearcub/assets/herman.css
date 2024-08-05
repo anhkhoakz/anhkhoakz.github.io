@@ -11,7 +11,7 @@ body {
     background: var(--color-light);
     color: var(--color-dark);
     padding: 4rem;
-    font-family: sans-serif;
+    font-family: Georgia, sans-serif;
     font-size: calc(var(--size) * 1.8);
     line-height: 1.5;
     min-height: 80vh;
