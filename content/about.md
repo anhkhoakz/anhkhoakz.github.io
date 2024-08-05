@@ -8,7 +8,7 @@ weight: 3
 
 Hi everyone,
 
-My name is Anh Khoa, a second-year student majoring in Software Engineering at Ton Duc Thang University.
+My name is Anh Khoa, a junior student majoring in Software Engineering at [Ton Duc Thang University](https://tdtu.edu.vn/).
 
 I am a fan of minimalism, stoicism, reading, programming, traveling, and adventure, and my philosophy of life is rooted in these principles. I strive to learn, grow, and improve in all aspects of my life, and I enjoy helping others and creating value for the community.
 
@@ -37,5 +37,15 @@ Thank you for visiting!
 # About this website
 
 This site draws inspiration from [BearBlog](https://bearblog.dev/), [MidNight](https://midnight.pub/), and [Best Motherf\*cking website](https://bestmotherfucking.website/). It is constructed using [Hugo](https://gohugo.io/) and features the [Bear Cub](https://themes.gohugo.io/themes/hugo-bearcub/) theme.
+
+## Why is it so basic?
+
+You can look at [Best Motherf\*cking website](https://bestmotherfucking.website/) for the reasons, I love them, here is keypoints:
+
+1. **Performance and Accessibility**: Websites have to load rapidly, work with all browsers and devices, and be simple to read.
+2. **Design Errors**: Usability is hampered by extremely intricate designs and low contrast typography.
+3. **Font**: It is considered antiquated and inefficient to load huge distant fonts.
+
+For **simpler phrase**: This website can load with any network conditions, or any devices.
 
 ---
