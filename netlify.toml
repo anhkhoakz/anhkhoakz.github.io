@@ -13,15 +13,13 @@ Content-Security-Policy = """
     form-action 'none',
     frame-ancestors 'none',
     base-uri 'none',
-    sandbox,
-    form-action 'none',
-    script-src 'strict-dynamic'
+    sandbox
 """
 X-XSS-Protection = '1; mode=block'
 Strict-Transport-Security= "max-age=63072000; includeSubDomains; preload"
 X-Content-Type-Options = 'nosniff'
 Cache-Control= "public; max-age=259200"
-Referrer-Policy = 'no-referrer'
+Referrer-Policy = 'no-referrer-when-downgrade'
 Feature-Policy = """
     microphone 'none', 
     payment 'none', 
