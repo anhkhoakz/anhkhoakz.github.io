@@ -21,13 +21,13 @@ X-Content-Type-Options = 'nosniff'
 Cache-Control= "public; max-age=259200"
 Referrer-Policy = 'no-referrer-when-downgrade'
 Feature-Policy = """
-    microphone 'none', 
-    payment 'none', 
-    geolocation 'none', 
-    midi 'none', 
-    sync-xhr 'none', 
-    camera 'none', 
-    magnetometer 'none', 
+    microphone 'none',
+    payment 'none',
+    geolocation 'none',
+    midi 'none',
+    sync-xhr 'none',
+    camera 'none',
+    magnetometer 'none',
     gyroscope 'none'
 """
 X-Frame-Options = "DENY"
