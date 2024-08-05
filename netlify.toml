@@ -4,15 +4,15 @@ for = "/*"
 
 [headers.values]
 Content-Security-Policy = """
-    default-src 'self', 
-    manifest-src 'self', 
-    font-src 'self', 
-    img-src 'self', 
-    style-src 'self', 
+    default-src 'self',
+    manifest-src 'self',
+    font-src 'self',
+    img-src 'self',
+    style-src 'self',
     frame-ancestors 'none',
-    form-action 'none', 
-    frame-ancestors 'none', 
-    base-uri 'none', 
+    form-action 'none',
+    frame-ancestors 'none',
+    base-uri 'none',
     sandbox,
     form-action 'none',
     script-src 'strict-dynamic'
@@ -33,4 +33,3 @@ Feature-Policy = """
     gyroscope 'none'
 """
 X-Frame-Options = "DENY"
-Set-Cookie = "none"
