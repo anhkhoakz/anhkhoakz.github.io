@@ -13,8 +13,8 @@ Content-Security-Policy = """
     form-action 'none', 
     frame-ancestors 'none', 
     base-uri 'none', 
-    sandbox
-    form-action 'none'
+    sandbox,
+    form-action 'none',
     script-src 'strict-dynamic'
 """
 X-XSS-Protection = '1; mode=block'
