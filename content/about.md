@@ -26,12 +26,13 @@ Thank you for visiting!
 
 ## Code Repository Hosting
 
-- [SourceHut](https://sr.ht/~anhkhoakz/)
-- [Codeberg](https://codeberg.org/anhkhoakz/)
-- [Github](https://github.com/anhkhoakz/)
-  
+-   [SourceHut](https://sr.ht/~anhkhoakz/)
+-   [Codeberg](https://codeberg.org/anhkhoakz/)
+-   [Github](https://github.com/anhkhoakz/)
+
 ## Social Media
-- [LinkedIn](https://linkedin.com/in/anhkhoakz/)
+
+-   [LinkedIn](https://linkedin.com/in/anhkhoakz/)
 
 # About this website
 

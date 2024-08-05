@@ -9,6 +9,7 @@ author = "anhkhoakz"
 +++
 
 ---
+
 After reading blogs and watching videos, I've come to realize that email lacks inherent privacy and security features.
 Even if you host a personal OpenBSD email server in an undisclosed nuclear bunker with a crypto domain connected to Tor, your emails still traverse ISP networks and reside on third-party servers.
 

@@ -24,7 +24,7 @@ I know that a lot of universities give Gmail accounts to their students. It's an
 
 You can't switch email services when using school email, but you can choose an alternative for personal purposes.
 
-You can check out [Tuta](https://tuta.com/), [Proton](https://proton.me/), [Skiff](https://skiff.com/). 
+You can check out [Tuta](https://tuta.com/), [Proton](https://proton.me/), [Skiff](https://skiff.com/).
 They have an easy way to register.
 
 If you want to have PGP by yourself, I strongly recommend it. You may look at [Disroot](https://disroot.org/), [Cock.li](https://cock.li/), [Autistici](https://www.autistici.org/), or even G-Mail with [Mailvelope](https://mailvelope.com/)
@@ -33,14 +33,16 @@ You can check out the [E-mail providers - which one to choose?](https://digdeepe
 
 You have to notice that you **never** use school email for personal work, creating accounts,...
 It's something about privacy and security:
+
 1. Some schools block emails outside the organization.
 2. They can delete your email accounts when you leave the university.
 3. An administrator can easily reset the password.
 4. They can gain unauthorized access to your email account.
 
-But you can choose the ***TrustNoOne*** plan by encrypting your email manually using PGP. The software you can use is [The GNU Privacy Guard](https://gnupg.org/). 
+But you can choose the **_TrustNoOne_** plan by encrypting your email manually using PGP. The software you can use is [The GNU Privacy Guard](https://gnupg.org/).
 
 An email client would be nice: [Claws Mail](https://www.claws-mail.org/), [NeoMutt](https://neomutt.org/), and [ThunderBird](https://www.thunderbird.net/) (which should be hardened for privacy concerns). Email clients will help you:
+
 1. Choose the program you like. Not depending on the provider's JavaScript.
 2. The mail client will remain constant. Prevent being served malicious JavaScript.
 3. POP3 allows you to keep control of your data in your hands.
@@ -49,10 +51,10 @@ An email client would be nice: [Claws Mail](https://www.claws-mail.org/), [NeoMu
 
 ## Real-time messaging
 
-Although Facebook Messenger, Viber, and WhatsApp come with a lot of features. But they are data-hungers, no matter how encrypted they are. 
+Although Facebook Messenger, Viber, and WhatsApp come with a lot of features. But they are data-hungers, no matter how encrypted they are.
 Those encryptions can only protect you from attackers, not from those companies.
 
-You can switch to [Signal](https://signal.org/), it's an encrypted messaging platform that has a good reputation, doesn't store your messages, and is very easy to use. 
+You can switch to [Signal](https://signal.org/), it's an encrypted messaging platform that has a good reputation, doesn't store your messages, and is very easy to use.
 
 Persuading friends to switch to Signal is hard work, but if you try, you will notice how the data that those companies get from you will decrease.
 
@@ -70,7 +72,7 @@ Some alternatives like: [ProtonPass](https://proton.me/pass), and [KeePass](http
 
 ## Operating System.
 
-You can create a new user account that doesn't have root permission. 
+You can create a new user account that doesn't have root permission.
 
 Check out [privacy.sexy](https://privacy.sexy/), it'll help you turn off telemetry from the OS.
 
@@ -82,13 +84,13 @@ Linux is the best for privacy, but not all of them. You can check out the [Deskt
 
 The operating systems you are using on your phone are mostly iOS or Android. You can check out Graphene OS. For iOS devices, you don't have too many choices, but you can have some configurations.
 
-It doesn't matter which OS you're using; make sure that you have strong encryption on your device. 
+It doesn't matter which OS you're using; make sure that you have strong encryption on your device.
 
 For an external drive, like a self-host cloud, USB, or hard disk, you can use built-in encryption or third-party software like [VeraCrypt](https://veracrypt.eu/).
 
 ## Networking
 
-You can use VPNs from Cloudflare (red flag), Proton, Mullvad (the best). 
+You can use VPNs from Cloudflare (red flag), Proton, Mullvad (the best).
 It will prevent network administrators from looking for what you're doing by encrypting the data flow, creating a fake IP address, ... But be cautious, because it will mark you as using a VPN.
 
 Using cellular data is not a bad option if you can't use a VPN; it will not replace a VPN, but it will protect you from hackers. But the service provider will know what you're doing.
@@ -114,4 +116,3 @@ Maybe it will get a long blog for software only.
 For more information, you can check out: [Open Source Alternative To](https://www.opensourcealternative.to/) Using `https://alternativeto.net/software/YOURPRODUCTNAME/?license=opensource`
 
 ---
-

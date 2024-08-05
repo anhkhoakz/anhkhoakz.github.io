@@ -8,25 +8,26 @@ author = "anhkhoakz"
 +++
 
 ---
+
 1. Alfred
 
-   This is an alternative for Spotlight in MacOS.
+    This is an alternative for Spotlight in MacOS.
+
 2. 1Password
    A password manager will improve productivity and security.
 3. AltTab
    I have a physical memory with `Alt Tab` function in Windows
 4. AppCleaner
-   
 5. DropOver
-9. Hidden Bar
+6. Hidden Bar
 7. EVKey
 8. HazeOver
-10. iTerm2
-11. Keka
-12. KeyboardCleanTool
-13. Mac Mouse Fix
-14. Maccy
-6. Espanso
+9. iTerm2
+10. Keka
+11. KeyboardCleanTool
+12. Mac Mouse Fix
+13. Maccy
+14. Espanso
 15. LuLu
 16. Microsoft Oficce
 17. OBS
@@ -42,10 +43,9 @@ author = "anhkhoakz"
 27. Firefox
 28. Tor Browser
 29. Tuta Mail Desktop
-27. ThunderBird
-30. Visual Studio Code  
-31. Zed
-32. Zim
-
+30. ThunderBird
+31. Visual Studio Code
+32. Zed
+33. Zim
 
 ---
