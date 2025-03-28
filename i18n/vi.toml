@@ -1,0 +1,14 @@
+[filtering-for]
+other = "Lọc theo"
+
+[no-posts]
+other = "Chưa có bài viết nào"
+
+[email-subject]
+other = "Trả lời "
+
+[email-reply]
+other = "Trả lời bài viết này qua email"
+
+[skip-link]
+other = "Chuyển đến nội dung chính"
