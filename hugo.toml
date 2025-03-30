@@ -33,7 +33,6 @@ description = "anhkhoakz personal blog"
 disableComments = false
 subtitle = "anhkhoakz personal blog"
 
-favicon = "images/favicon.png"
 
 # These images will show up when services want to generate a preview of a link
 # to your site. Ignored if `generateSocialCard = true`. For more information
@@ -73,6 +72,10 @@ name = "anhkhoakz"
 
 [params.contact]
 email = "dose_untie091@aleeas.com"
+
+[params.favicon]
+light = "images/favicon.png"
+dark = "images/favicon-dark.png"
 
 
 # Privacy settings
