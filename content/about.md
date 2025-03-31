@@ -2,6 +2,7 @@
 title: "About"
 menu: "main"
 weight: 3
+hideReply: true
 ---
 
 # About me
@@ -22,15 +23,17 @@ I hope you find this website helpful. I will try to update it with new articles 
 
 Thank you for visiting!
 
-[![littlelink](https://img.shields.io/badge/anhkhoakz-white?style=for-the-badge&logo=linktree&logoColor=black)](https://its-my.link/@anhkhoakz)
-
 ---
 
 ## Code Repository Hosting
 
-[![SourceHut](https://img.shields.io/badge/anhkhoakz-white?style=for-the-badge&logo=sourcehut&logoColor=black)](https://sr.ht/~anhkhoakz/)
+[![SourceHut](https://img.shields.io/badge/SourceHut-white?style=for-the-badge&logo=sourcehut&logoColor=black)](https://sr.ht/~anhkhoakz/)
 
-[![Github](https://img.shields.io/badge/anhkhoakz-white?style=for-the-badge&logo=github&logoColor=black)](https://github.com/anhkhoakz/)
+[![Codeberg](https://img.shields.io/badge/Codeberg-white?style=for-the-badge&logo=forgejo)](https://codeberg.org/anhkhoakz/)
+
+[![Framagit](https://img.shields.io/badge/Framagit-white?style=for-the-badge&logo=gitlab)](https://framagit.org/anhkhoakz)
+
+[![GitHub](https://img.shields.io/badge/GitHub-white?style=for-the-badge&logo=github&logoColor=black)](https://github.com/anhkhoakz)
 
 
 # About this website
@@ -51,5 +54,3 @@ For **simpler phrase**: This website can load with any network conditions, or an
 
 -   [NeoCities](https://anhkhoakz.neocities.org/)
 -   [Surge.sh](https://anhkhoakz.surge.sh/)
-
----
