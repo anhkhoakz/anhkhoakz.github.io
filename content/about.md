@@ -7,6 +7,8 @@ hideReply: true
 
 # About me
 
+{{< figure src="images/blogs/_index/avatar.png" alt="anhkhoakz.dev" loading="lazy" width=auto height=500 >}}
+
 Hi everyone,
 
 My name is Anh Khoa, a junior student majoring in Software Engineering at [Ton Duc Thang University](https://tdtu.edu.vn/).
