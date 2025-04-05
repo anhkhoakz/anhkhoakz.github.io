@@ -15,11 +15,11 @@ author = "anhkhoakz"
 - [DropOver](https://dropoverapp.com/): Dropover is a macOS utility that makes Drag and Drop easier. Stash, gather or move draggable content without having to open side-by-side windows.
 - [HazeOver](https://hazeover.com/): Turn distractions down and focus on your current task.
 - [Rectangle Pro](https://rectangleapp.com/pro): Superior window management on macOS.
-- [Stretchly](https://github.com/hovancik/stretchly):The break time reminder app.
+- [Stretchly](https://github.com/hovancik/stretchly): The break time reminder app.
 
 ## Development
 
-- [DataGrip](https://www.jetbrains.com/datagrip/):A powerful cross-platform tool for relational and NoSQL databases.
+- [DataGrip](https://www.jetbrains.com/datagrip/): A powerful cross-platform tool for relational and NoSQL databases.
 - [Docker](https://www.docker.com/): Develop faster. Run anywhere.
 - [insomnia](https://insomnia.rest/): Design, debug, test, and mock APIs locally, on Git, or cloud.
 - [iTerm2](https://iterm2.com/): iTerm2 is a terminal emulator for macOS that does amazing things.
@@ -37,7 +37,7 @@ high-performance collaboration with humans and AI.
 - [Pearcleaner](https://github.com/alienator88/Pearcleaner): A free, source-available and fair-code licensed mac app cleaner
 - [Ice](https://github.com/jordanbaird/Ice): Ice is a powerful menu bar management tool. While its primary function is hiding and showing menu bar items, it aims to cover a wide variety of additional features to make it one of the most versatile menu bar tools available.
 - [Shottr](https://shottr.cc/): Shottr is a tiny and fast mac screenshot tool with annotations, beautiful backgrounds, scrolling screenshots and cloud upload capabilities. Built with love and optimized for Apple silicon.
-- [Signal](https://signal.org/):Say "hello" to a different messaging experience. An unexpected focus on privacy, combined with all of the features you expect.
+- [Signal](https://signal.org/): Say "hello" to a different messaging experience. An unexpected focus on privacy, combined with all of the features you expect.
 - [Stremio](https://www.stremio.com/): Stremio offers a secure, modern and seamless entertainment experience.
 
 ---
