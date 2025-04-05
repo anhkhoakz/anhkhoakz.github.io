@@ -1,3 +1,26 @@
+{{- /*
+Renders a figure element with optional image, caption, and link.
+
+@param {string} [class] The class attribute of the figure element.
+@param {string} [src] The source URL of the image. Can be relative or absolute.
+@param {string} [alt] The alt text for the image. Defaults to the caption if not provided.
+@param {string} [caption] The caption text for the figure.
+@param {string} [title] The title text for the figure, rendered as a heading.
+@param {string} [link] A URL to wrap the image in an anchor tag.
+@param {string} [target] The target attribute for the link (e.g., "_blank").
+@param {string} [rel] The rel attribute for the link.
+@param {string} [width] The width attribute for the image.
+@param {string} [height] The height attribute for the image.
+@param {string} [loading] The loading attribute for the image (e.g., "lazy").
+@param {string} [attr] Attribution text for the image.
+@param {string} [attrlink] A URL for the attribution text.
+
+@returns {template.HTML}
+
+@example {{< figure src="image.jpg" caption="An example image">}}
+    @example {{< figure src="image.jpg" link="https://example.com" target="_blank">}}
+        */}}
+
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
   {{- if .Get "link" -}}
     <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>

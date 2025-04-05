@@ -61,8 +61,10 @@ a:hover {
 }
 
 img {
-    display: block;
-    max-width: 100%;
+	display: block;
+	border-radius: 0.5em;
+	max-width: 100%;
+	margin-block: calc(var(--spacing) / 2);
 }
 
 h1,

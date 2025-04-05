@@ -14,7 +14,7 @@
         {{ $style := print (default "herman" .Site.Params.themeStyle) ".css" |
         resources.Get | minify }}
 
-        <link href="{{ $style.RelPermalink }}" rel="stylesheet" integrity="sha512-1grMKlzKAy+xG79I7qfCNqq6CQFpGicMhBKEaF1FNt5COGbE5TL+qrDGL4Ol0KLIGyOlwqGZvCB9a0LSuTST/Q==" crossorigin="anonymous"/>
+        <link href="{{ $style.RelPermalink }}" rel="stylesheet" crossorigin="anonymous" />
 
         {{ if (.Page.Store.Get "hasCodeBlock") }} {{ $syntax := resources.Get
         "syntax.css" | minify }}
