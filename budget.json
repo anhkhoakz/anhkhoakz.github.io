@@ -1,0 +1,17 @@
+[
+	{
+		"path": "/*",
+		"resourceCounts": {
+			"all": 3,
+			"script": 1,
+			"stylesheet": 1,
+			"document": 1
+		},
+		"resourceSizes": {
+			"all": 7000,
+			"script": 4000,
+			"stylesheet": 1100,
+			"document": 2000
+		}
+	}
+]
