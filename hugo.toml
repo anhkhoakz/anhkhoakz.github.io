@@ -38,7 +38,7 @@ subtitle = "anhkhoakz personal blog"
 # to your site. Ignored if `generateSocialCard = true`. For more information
 # about previews, see https://gohugo.io/templates/internal#twitter-cards and
 # https://gohugo.io/templates/internal#open-graph
-images = ["images/share.png"]
+images = ["images/share.webp"]
 
 dateFormat = "02/01/06"
 
@@ -74,8 +74,8 @@ name = "anhkhoakz"
 email = "dose_untie091@aleeas.com"
 
 [params.favicon]
-light = "images/favicon.png"
-dark = "images/favicon-dark.png"
+light = "images/favicon.webp"
+dark = "images/favicon-dark.webp"
 
 
 # Privacy settings

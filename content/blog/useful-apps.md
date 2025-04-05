@@ -1,5 +1,5 @@
 +++
-title = ' Useful Apps'
+title = 'Useful  Apps'
 description = "Useful apps for macOS"
 date = 2024-02-14T06:05:22+07:00
 draft = false

@@ -31,6 +31,8 @@ Renders a figure element with optional image, caption, and link.
   {{- if not $u.IsAbs -}}
     {{- with or (.Page.Resources.Get $u.Path) (resources.Get $u.Path) -}}
       {{- $src = .RelPermalink -}}
+    {{- else -}}
+    {{- $src = printf "/%s" $u.Path -}}
     {{- end -}}
   {{- end -}}
 

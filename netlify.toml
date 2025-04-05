@@ -3,7 +3,7 @@ for = "/*"
 [headers.values]
 Access-Control-Allow-Origin = "*"
 Cache-Control = '''
-max-age=604800,
+max-age=31536000,
 public'''
 Permissions-Policy = '''
 microphone=(),
