@@ -7,7 +7,7 @@ hideReply: true
 
 # About me
 
-{{< figure src="images/avatar.webp" alt="anhkhoakz.dev"  width=auto height=500 >}}
+{{< figure src="images/avatar.webp" alt="anhkhoakz.dev"  width=auto height=500 class="rounded" loading="lazy" >}}
 
 Hello everyone!
 
