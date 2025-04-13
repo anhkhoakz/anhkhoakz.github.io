@@ -1,9 +1,11 @@
 +++
-title = 'Useful  Apps'
+title = 'Useful MacOS Apps'
 description = "Useful apps for macOS"
 date = 2024-02-14T06:05:22+07:00
 draft = false
-tags = []
+tags = [
+"macos"
+]
 author = "anhkhoakz"
 +++
 
@@ -22,16 +24,15 @@ author = "anhkhoakz"
 - [DataGrip](https://www.jetbrains.com/datagrip/): A powerful cross-platform tool for relational and NoSQL databases.
 - [Docker](https://www.docker.com/): Develop faster. Run anywhere.
 - [insomnia](https://insomnia.rest/): Design, debug, test, and mock APIs locally, on Git, or cloud.
-- [iTerm2](https://iterm2.com/): iTerm2 is a terminal emulator for macOS that does amazing things.
+- [iTerm2](https://github.com/gnachman/iTerm2): iTerm2 is a terminal emulator for macOS that does amazing things.
 - [Visual Studio Code](https://code.visualstudio.com/): Your code editor. Redefined with AI.
-- [Zed](https://zed.dev/): Zed is a next-generation code editor designed for
-high-performance collaboration with humans and AI.
+- [Zed](https://github.com/zed-industries/zed): Zed is a next-generation code editor designed for high-performance collaboration with humans and AI.
 
 ## Utilities
 
 - [1Password](https://1password.com/): 1Password is so much more than a password manager.
 - [OpenKey](https://github.com/tuyenvm/OpenKey): Vietnamese Input for macOS, Windows and Linux - Bộ gõ Tiếng Việt nguồn mở đa nền tảng.
-- [Keka](https://www.keka.io/en/): the macOS file archiver.
+- [Keka](https://github.com/aonez/Keka): the macOS file archiver.
 - [KeyboardCleanTool](https://folivora.ai/keyboardcleantool): KeyboardCleanTool is a super simple little tool which blocks all Keyboard and TouchBar input.
 - [Mac Mouse Fix](https://macmousefix.com/): Make Your $10 Mouse Better Than an Apple Trackpad!
 - [Pearcleaner](https://github.com/alienator88/Pearcleaner): A free, source-available and fair-code licensed mac app cleaner
