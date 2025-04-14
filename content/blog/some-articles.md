@@ -25,18 +25,10 @@ You Are NOT Dumb, You Just Lack the Prerequisites - [url
 Building software to last forever - [url
 ](https://herman.bearblog.dev/building-software-to-last-forever/)
 
-<!-- {{< figure
-  src="https://gohugo.io/images/qr/qr_a0c5b37fba11001a.png"
-  alt="A photograph of Zion National Park"
-  link="https://www.nps.gov/zion/index.htm"
-  caption="Zion National Park"
-  class="ma0 w-75"
->}} -->
-
 
 ## Videos
 
-{{< youtube SbUkmysgXFs  >}}
+You Suck at Investing. - [url](https://youtu.be/SbUkmysgXFs)
 
 
 ---
