@@ -25,6 +25,11 @@ You Are NOT Dumb, You Just Lack the Prerequisites - [url
 Building software to last forever - [url
 ](https://herman.bearblog.dev/building-software-to-last-forever/)
 
+Semantic Versioning 2.0.0 - [url](https://semver.org)
+
+Conventional Commits - [url](https://www.conventionalcommits.org/en/v1.0.0/)
+
+A successful Git branching model - [url](https://nvie.com/posts/a-successful-git-branching-model/)
 
 ## Videos
 
