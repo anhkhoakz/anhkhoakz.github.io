@@ -25,7 +25,6 @@ You Are NOT Dumb, You Just Lack the Prerequisites - [url
 Building software to last forever - [url
 ](https://herman.bearblog.dev/building-software-to-last-forever/)
 
-
 ## Videos
 
 You Suck at Investing. - [url](https://youtu.be/SbUkmysgXFs)
