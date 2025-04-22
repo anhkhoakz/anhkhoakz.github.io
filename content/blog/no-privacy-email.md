@@ -32,6 +32,6 @@ In conclusion, don't blindly trust any email provider's assurances of robust enc
 Consider employing Pretty Good Privacy (PGP) for email encryption or opt for messaging apps specifically designed for secure communication, such as Signal or Briar.
 
 [Why Metadata Matters](https://ssd.eff.org/module/why-metadata-matters)
-[Michael Hayden Gleefully Admits: We Kill People Based On Metadata ](https://rightedition.com/2014/05/13/michael-hayden-gleefully-admits-kill-people-based-metadata/)
+[Michael Hayden Gleefully Admits: We Kill People Based On Metadata](https://rightedition.com/2014/05/13/michael-hayden-gleefully-admits-kill-people-based-metadata/)
 
 ---

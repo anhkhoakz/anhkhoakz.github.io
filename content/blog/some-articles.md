@@ -19,15 +19,12 @@ author = "anhkhoakz"
 
 ## Blogs
 
-You Are NOT Dumb, You Just Lack the Prerequisites - [url
-](https://lelouch.dev/blog/you-are-probably-not-dumb/)
+You Are NOT Dumb, You Just Lack the Prerequisites - [url](https://lelouch.dev/blog/you-are-probably-not-dumb/)
 
-Building software to last forever - [url
-](https://herman.bearblog.dev/building-software-to-last-forever/)
+Building software to last forever - [url](https://herman.bearblog.dev/building-software-to-last-forever/)
 
 ## Videos
 
 You Suck at Investing. - [url](https://youtu.be/SbUkmysgXFs)
-
 
 ---

@@ -74,7 +74,7 @@ I will recommend using [Bitwarden](https://bitwarden.com/), it's free and open s
 
 Some alternatives like: [ProtonPass](https://proton.me/pass), [KeePass](https://keepass.info/), [1Password](https://1password.com/).
 
-## Operating System.
+## Operating System
 
 You can create a new user account that doesn't have root permission.
 
@@ -119,6 +119,6 @@ Maybe it will get a long blog for software only.
 
 For more information, you can check out: [Open Source Alternative To](https://www.opensourcealternative.to/) Using `https://alternativeto.net/software/YOURPRODUCTNAME/?license=opensource`
 
-[^1]: E-mail providers - which one to choose?, https://digdeeper.club/articles/email.xhtml (last visited Jan. 13, 2024).
-[^2]: deCloudflare, https://0xacab.org/dCF/deCloudflare (last visited Jan. 13, 2024).
-[^3]: Proprietary Software Is Often Malware, https://www.gnu.org/proprietary/proprietary.html (last visited Jan. 13, 2024).
+[^1]: E-mail providers - which one to choose?, <https://digdeeper.club/articles/email.xhtml> (last visited Jan. 13, 2024).
+[^2]: deCloudflare, <https://0xacab.org/dCF/deCloudflare> (last visited Jan. 13, 2024).
+[^3]: Proprietary Software Is Often Malware, <https://www.gnu.org/proprietary/proprietary.html> (last visited Jan. 13, 2024).

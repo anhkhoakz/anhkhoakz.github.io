@@ -105,8 +105,8 @@ You'll have to install [chromium-web-store extension](https://github.com/NeverDe
 
 Here are some `chrome://flags` I use:
 
--   #extension-mime-request-handling: `Always prompt for install`
--   #chrome-labs: `Disabled`
+- #extension-mime-request-handling: `Always prompt for install`
+- #chrome-labs: `Disabled`
 
 ### Brave Browser
 
@@ -127,38 +127,38 @@ However, anything is better than Chrome, and you can have [some configurations](
 
 ## Extensions
 
--   [uBlock Origin](https://addons.mozilla.org/firefox/addon/ublock-origin/) (Blocking Mode: Medium; AdGuard URL Tracking Protection; [➗ Actually Legitimate URL Shortener Tool](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt))
+- [uBlock Origin](https://addons.mozilla.org/firefox/addon/ublock-origin/) (Blocking Mode: Medium; AdGuard URL Tracking Protection; [➗ Actually Legitimate URL Shortener Tool](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt))
 
--   [CanvasBlocker](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/) (If you disable resistfingeprinting)
+- [CanvasBlocker](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/) (If you disable resistfingeprinting)
 
--   Skip Redirect
+- Skip Redirect
 
--   1Password or BitWarden
+- 1Password or BitWarden
 
--   SimpleLogin
+- SimpleLogin
 
--   Firefox Multi-Account Containers
+- Firefox Multi-Account Containers
 
--   LibRedirect
+- LibRedirect
 
--   Dark Reader
+- Dark Reader
 
--   Greasemonkey
+- Greasemonkey
 
--   Omnivore
+- Omnivore
 
--   Linguist
+- Linguist
 
--   LanguageTool
+- LanguageTool
 
 ## Conclusion
 
 In conclusion, there is absolutely no such thing as the best browser for anything. It depends on you; it will only have a less bad browser. You can base your decision on my article; it is just something I gathered from the Internet. In my case, I'll recommend using [Firefox hardened](#firefox-but-hardened) and [Ungoogled chromium](#ungoogled-chromium) because they fit my needs. However, the ideal choice varies for each user, and the goal is to find a browser that meets their unique criteria.
 
-[^1]: Comparison of browser engines, https://en.wikipedia.org/w/index.php?title=Comparison_of_browser_engines&oldid=1251699906 (last visited Jan. 11, 2024).
-[^2]: 1Password and the LibreWolf browser, https://1password.community/discussion/comment/633723/#Comment_633723 (last visited Jan. 11, 2024).
-[^3]: Web Browser telemetry - 2021 edition, Brave, https://sizeof.cat/post/web-browser-telemetry/#brave (last visited Jan. 11, 2024).
-[^4]: Brave’s Use of Referral Codes, https://github.com/brave/brave-browser/wiki/Brave%E2%80%99s-Use-of-Referral-Codes (last visited Jan. 11, 2024).
-[^5]: [meta] Support download token, https://bugzilla.mozilla.org/show_bug.cgi?id=1677497#c0 (last visited Jan. 11, 2024).
-[^6]: Extending support for trusted web browsers, https://1password.community/discussion/140735/extending-support-for-trusted-web-browsers#latest (last visited Jan. 11, 2024).
-[^7]: Zero-day vulnerability,https://en.wikipedia.org/w/index.php?title=Zero-day_vulnerability&lang=en, (last visited Jan. 11, 2024).
+[^1]: Comparison of browser engines, <https://en.wikipedia.org/w/index.php?title=Comparison_of_browser_engines&oldid=1251699906> (last visited Jan. 11, 2024).
+[^2]: 1Password and the LibreWolf browser, <https://1password.community/discussion/comment/633723/#Comment_633723> (last visited Jan. 11, 2024).
+[^3]: Web Browser telemetry - 2021 edition, Brave, <https://sizeof.cat/post/web-browser-telemetry/#brave> (last visited Jan. 11, 2024).
+[^4]: Brave’s Use of Referral Codes, <https://github.com/brave/brave-browser/wiki/Brave%E2%80%99s-Use-of-Referral-Codes> (last visited Jan. 11, 2024).
+[^5]: [meta] Support download token, <https://bugzilla.mozilla.org/show_bug.cgi?id=1677497#c0> (last visited Jan. 11, 2024).
+[^6]: Extending support for trusted web browsers, <https://1password.community/discussion/140735/extending-support-for-trusted-web-browsers#latest> (last visited Jan. 11, 2024).
+[^7]: Zero-day vulnerability,<https://en.wikipedia.org/w/index.php?title=Zero-day_vulnerability&lang=en>, (last visited Jan. 11, 2024).

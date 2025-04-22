@@ -11,11 +11,9 @@ author = "anhkhoakz"
 > [!reminder]
 > Tư duy phản biện trong viết
 > What Why When How Who
-
 > **Disclaimer**: This is a personal opinion at 29/01/2025, and it is not intended to be a guide or a rule.
 
-
-# Rust-based
+## Rust-based
 
 High performance comparable to that of C and C++ is offered by Rust, which also guarantees memory safety and guards against common bugs and security flaws.
 
@@ -27,17 +25,17 @@ Active community: Rust fans encourage the language's advancement and consistentl
 
 Adoption by large firms: Rust is being utilized more frequently in important and well-known projects thanks to support from large tech companies, which further validates its dependability and capabilities.
 
-# Privacy focused
+## Privacy focused
 
 Your privacy has never been more important in the current era of digital data exploitation, but many people think it is already hopeless. It's not. You must be concerned about your privacy since it is at risk. Power is what privacy is all about, and it is crucial that this power is in the proper hands.
 
 In the end, privacy is about human information, which is significant since we know that human knowledge gives people power. The laws governing information about us must be important to us if we want to be genuine, contented, and free humans. Information is the foundation of so much of our contemporary culture. You rely on information when you vote, purchase online, read the news, look something up, ask for directions, and pretty much do anything else. In an information-based culture, privacy is important since our information is important.
 
-# Secure
+## Secure
 
 Not much to say, which software you would like to use if it is not secure?
 
-# Lightweight
+## Lightweight
 
 As above, not much to say, who would like to use a software that consumes a lot of resources? But if you want me to give you a **why**, here you go:
 
@@ -60,7 +58,7 @@ Maintenance: Generally speaking, lightweight software needs less upgrades and ma
 
 Cost-Effectiveness: It may be less expensive to create and maintain lightweight software. It frequently necessitates less time and resources for development, which might result in lesser expenses for the developer and the final consumer.
 
-# Open Source
+## Open Source
 
 > Free software means that the software's users have freedom. (The issue is not about price.) We developed the GNU operating system so that users can have freedom in their computing.
 
@@ -82,20 +80,14 @@ Long-term Sustainability: Open source projects can outlive their original creato
 
 [Building software to last forever](https://herman.bearblog.dev/building-software-to-last-forever/)
 
-# In-development
+## In-development
 
-# Native
+## Native
 
-# High customization
+## High customization
 
-# Easy to use
+## Easy to use
 
-# Beautiful UI
-
-
-
-
-
-
+## Beautiful UI
 
 ---
