@@ -1,10 +1,11 @@
-# www.anhkhoakz.dev
+# <www.anhkhoakz.dev>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bf652528-ca92-4a17-89e1-1ea9e8d24bc0/deploy-status)](https://app.netlify.com/sites/anhkhoakz/deploys)
 [![Deploy Mirror Pages](https://github.com/anhkhoakz/anhkhoakz.github.io/actions/workflows/deploy-mirror-pages.yaml/badge.svg)](https://github.com/anhkhoakz/anhkhoakz.github.io/actions/workflows/deploy-mirror-pages.yaml)
 [![Git Mirroring](https://github.com/anhkhoakz/anhkhoakz.github.io/actions/workflows/git-mirror.yaml/badge.svg)](https://github.com/anhkhoakz/anhkhoakz.github.io/actions/workflows/git-mirror.yaml)
 
 ## Overview
+
 This repository hosts the content, workflows, and themes for [anhkhoakz.dev](https://www.anhkhoakz.dev/). It includes:
 
 - **Content**: Blog posts, articles, and other written materials.
@@ -12,9 +13,47 @@ This repository hosts the content, workflows, and themes for [anhkhoakz.dev](htt
 - **Themes**: Custom Hugo themes for the website.
 
 ## Features
+
 - **Continuous Deployment**: Automatically deploys updates to Netlify.
 - **Mirror Pages**: Keeps mirror pages in sync across platforms.
 - **Git Mirroring**: Ensures repositories are mirrored across multiple Git hosting services.
 
+## Getting Started
+
+1. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/anhkhoakz/anhkhoakz.github.io.git
+   cd anhkhoakz.github.io
+   ```
+
+2. **Install [Hugo](https://gohugo.io/getting-started/installing/):**
+
+   ```sh
+   # MacOS
+   brew install hugo
+   # Ubuntu
+   sudo apt install hugo
+   # Windows
+   choco install hugo -confirm
+
+3. **Run the local server:**
+
+   ```sh
+   hugo server
+   ```
+
+   Visit [http://localhost:1313](http://localhost:1313) to view the site locally.
+
 ## How to Contribute
+
 Feel free to open issues or submit pull requests to improve the content or functionality of this repository.
+
+## License
+
+This project is licensed under the CC-BY-4.0 License. See the [LICENSE](LICENSE) file for details.
+
+## Credits
+
+- Built with [Hugo](https://gohugo.io/)
+- Theme: [Bear Cub](https://github.com/clente/hugo-bearcub)
