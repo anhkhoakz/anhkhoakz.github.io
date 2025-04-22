@@ -26,6 +26,7 @@ If you choose a very strong password, you'll be exposed if the services you use 
 ## How strong a password should be?
 
 There are rules that you have to consider:
+
 | Aspect| Old Rules| New Rules|
 |-------|----------|----------|
 | Password Formula| Mix of upper and lower case, numbers, special characters, etc. | Focus on length for strength.|
@@ -40,10 +41,10 @@ So a good password is a password have a well length, no change, and no hints. So
 A password manager is a tool that creates and stores unique passwords for you, so you can use many passwords on different sites and services without having to memorize them.
 Password managers are tools that can:
 
--   Generate strong passwords that a human being would be unlikely to guess.
--   Store several passwords (and responses to security questions) safely.
--   Protect your passwords with a single master password (or passphrase).
--   Sync passwords between your devices, so you can access these complex passwords from anywhere (optional).
+- Generate strong passwords that a human being would be unlikely to guess.
+- Store several passwords (and responses to security questions) safely.
+- Protect your passwords with a single master password (or passphrase).
+- Sync passwords between your devices, so you can access these complex passwords from anywhere (optional).
 
 ## Why you need it?
 
@@ -53,17 +54,17 @@ Because generating a strong password is a time-consuming and remember them is no
 
 It depends on which password manager you use. I think a good password manager should be:
 
--   AES-256 bit encryption
--   End-to-end encryption
--   Privacy
--   Security features
--   Multi-factor authentication
--   Good reputation
--   Cross-platforms
--   Open-source
--   Audited
--   Free (optional)
--   Cloud (optional)
+- AES-256 bit encryption
+- End-to-end encryption
+- Privacy
+- Security features
+- Multi-factor authentication
+- Good reputation
+- Cross-platforms
+- Open-source
+- Audited
+- Free (optional)
+- Cloud (optional)
 
 ## Which password manager should I use?
 
@@ -85,16 +86,16 @@ Bitwarden offers a free US or European cloud-hosted service as well as the abili
 
 **Minimum Requirements**
 
--   End-to-end encryption.
--   Documented encryption and securities practices.
--   Audited from a reputable, and independent third-party.
--   Non-essential telemetry must be optional.
--   Not collect more personal identifiable information than is necessary for billing purposes.
+- End-to-end encryption.
+- Documented encryption and securities practices.
+- Audited from a reputable, and independent third-party.
+- Non-essential telemetry must be optional.
+- Not collect more personal identifiable information than is necessary for billing purposes.
 
 **Best-case**
 
--   Telemetry should be disabled by default.
--   Open-source and easily seft-hostable.
+- Telemetry should be disabled by default.
+- Open-source and easily seft-hostable.
 
 ## Videos
 
@@ -102,7 +103,7 @@ Bitwarden offers a free US or European cloud-hosted service as well as the abili
 
 ## References
 
-https://blog.1password.com/password-manager/
-https://ssd.eff.org/module/creating-strong-passwords/
+<https://blog.1password.com/password-manager/>
+<https://ssd.eff.org/module/creating-strong-passwords/>
 
 [How to make passwords more secure](https://youtu.be/xUp5S0nBnfc/)

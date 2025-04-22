@@ -37,10 +37,13 @@ You can configure Firefox yourself by entering `about:config` into the address b
 4. Create a new profile and ensure it's marked as `Default Profile: yes`.
 5. Copy the `Root Directory` and exit Firefox.
 6. Navigate to your profile directory and delete all contents from the new profile:
+
 ```sh
 cd /path/to/your/profile && rm -r *
 ```
+
 7. Copy the `user.js` file into the profile folder:
+
     ```sh
     cp /path/to/user.js /path/to/your/profile
     ```
@@ -53,9 +56,9 @@ You can customize it by editing the `user.js` file directly or creating a `user-
 
 Here are some configurations I recommend for anyone using arkenfox:
 
--   `extensions.pocket.enabled`: `False`
--   `identity.fxaccounts.enabled`: `False`
--   `browser.preferences.moreFromMozilla`: `False`
+- `extensions.pocket.enabled`: `False`
+- `identity.fxaccounts.enabled`: `False`
+- `browser.preferences.moreFromMozilla`: `False`
 
 I'm currently using arkenfox for ease of use. You can check out my [`user-overrides.js`](https://paste.sr.ht/~anhkhoakz/928da4827f209d1963c125669e842a4e1ee3876a). However, as I mentioned, it will only fit my needs.
 
