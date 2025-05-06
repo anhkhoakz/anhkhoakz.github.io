@@ -1,6 +1,6 @@
 # <www.anhkhoakz.dev>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/bf652528-ca92-4a17-89e1-1ea9e8d24bc0/deploy-status)](https://app.netlify.com/sites/anhkhoakz/deploys)
+[![Netlify Status](https://img.shields.io/netlify/bf652528-ca92-4a17-89e1-1ea9e8d24bc0?style=for-the-badge&logo=netlify&color=%2300C7B7)](https://app.netlify.com/sites/anhkhoakz/deploys)
 [![Deploy Mirror Pages](https://github.com/anhkhoakz/anhkhoakz.github.io/actions/workflows/deploy-mirror-pages.yaml/badge.svg)](https://github.com/anhkhoakz/anhkhoakz.github.io/actions/workflows/deploy-mirror-pages.yaml)
 [![Git Mirroring](https://github.com/anhkhoakz/anhkhoakz.github.io/actions/workflows/git-mirror.yaml/badge.svg)](https://github.com/anhkhoakz/anhkhoakz.github.io/actions/workflows/git-mirror.yaml)
 
@@ -27,7 +27,7 @@ This repository hosts the content, workflows, and themes for [anhkhoakz.dev](htt
    cd anhkhoakz.github.io
    ```
 
-2. **Install [Hugo](https://gohugo.io/getting-started/installing/):**
+2. **Install [Hugo](https://gohugo.io/installation/):**
 
    ```sh
    # MacOS

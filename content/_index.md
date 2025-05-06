@@ -4,7 +4,7 @@ menu: "main"
 weight: 1
 ---
 
-# anhkhoakz.dev
+## anhkhoakz.dev
 
 This is a simple website made for my blogging habit.
 

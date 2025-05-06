@@ -5,7 +5,7 @@ weight: 3
 hideReply: true
 ---
 
-# About me
+## About me
 
 {{< figure src="images/avatar.webp" alt="anhkhoakz.dev"  width=auto height=500 class="rounded" loading="lazy" >}}
 
@@ -27,7 +27,7 @@ Thanks for visiting!
 
 ---
 
-## Code Repository Hosting
+### Code Repository Hosting
 
 [![SourceHut](https://img.shields.io/badge/SourceHut-white?style=for-the-badge&logo=sourcehut&logoColor=black)](https://sr.ht/~anhkhoakz/)
 
@@ -37,12 +37,11 @@ Thanks for visiting!
 
 [![GitHub](https://img.shields.io/badge/GitHub-white?style=for-the-badge&logo=github&logoColor=black)](https://github.com/anhkhoakz)
 
-
-# About this website
+## About this website
 
 This site draws inspiration from [BearBlog](https://bearblog.dev/), [MidNight](https://midnight.pub/), and [Best Motherf\*cking website](https://bestmotherfucking.website/). It is constructed using [Hugo](https://gohugo.io/) and features the [Bear Cub](https://themes.gohugo.io/themes/hugo-bearcub/) theme.
 
-## Why is it so basic?
+### Why is it so basic?
 
 You can look at [Best Motherf\*cking website](https://bestmotherfucking.website/) for the reasons, I love them, here is keypoints:
 
@@ -54,5 +53,11 @@ For **simpler phrase**: This website can load with any network conditions, or an
 
 ## Mirror Pages
 
--   [NeoCities](https://anhkhoakz.neocities.org/)
--   [Surge.sh](https://anhkhoakz.surge.sh/)
+- [NeoCities](https://anhkhoakz.neocities.org/)
+- [Surge.sh](https://anhkhoakz.surge.sh/)
+
+## Sponsor me
+
+{{< rawhtml >}}
+<iframe src="https://github.com/sponsors/anhkhoakz/card" title="Sponsor anhkhoakz" height="225" width="600" style="border: 0;"></iframe>
+{{< /rawhtml >}}
