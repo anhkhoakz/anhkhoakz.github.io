@@ -5,7 +5,7 @@ date = 2024-02-14T06:05:22+07:00
 draft = false
 tags = [ "macos", "apps" ]
 author = "anhkhoakz"
-
+lastmod = 2025-05-08T06:08:00+07:00
 +++
 
 ---
@@ -24,6 +24,7 @@ This is a collection of helpful macOS programs that I use every day. There are f
 - [HazeOver](https://hazeover.com/): ($5.99) Turn distractions down and focus on your current task.
 - [Rectangle Pro](https://rectangleapp.com/pro): ($9.99) Superior window management on macOS.
 - [Stretchly](https://github.com/hovancik/stretchly): (FOSS) The break time reminder app.
+- [Shottr](https://shottr.cc/): ($12) Shottr is a tiny and fast mac screenshot tool with annotations, beautiful backgrounds, scrolling screenshots and cloud upload capabilities.
 
 ## Development
 
@@ -32,8 +33,8 @@ This is a collection of helpful macOS programs that I use every day. There are f
 - [httpie](https://httpie.io/): (FOSS) User-friendly cURL replacement (command-line HTTP client).
 - [iTerm2](https://github.com/gnachman/iTerm2): (FOSS) iTerm2 is a terminal emulator for macOS that does amazing things.
 - [Visual Studio Code](https://code.visualstudio.com/): (FOSS) Your code editor. Redefined with AI.
+- [Cursor](https://www.cursor.com/): (Freemium) AI-powered coding assistant.
 - [Zed](https://github.com/zed-industries/zed): (FOSS) Zed is a next-generation code editor designed for high-performance collaboration with humans and AI.
-- [Shottr](https://shottr.cc/): ($12) Shottr is a tiny and fast mac screenshot tool with annotations, beautiful backgrounds, scrolling screenshots and cloud upload capabilities.
 - [SnippetLab](https://www.renfei.org/snippets-lab/): ($0) Keep Your Code At Your Fingertips.
 - [Termius](https://termius.com/): ($10) Modern SSH Client.
 - [Git Tower](https://www.git-tower.com/pricing/mac): ($69) The most powerful Git client for Mac and Windows.
@@ -49,6 +50,62 @@ This is a collection of helpful macOS programs that I use every day. There are f
 - [Ice](https://github.com/jordanbaird/Ice): (FOSS) Ice is a powerful menu bar management tool.
 - [Signal](https://signal.org/): (FOSS) Say "hello" to a different messaging experience.
 - [Stremio](https://www.stremio.com/): (FOSS) Stremio offers a secure, modern and seamless entertainment experience.
+
+## Casks
+
+- [biome](https://github.com/biomejs/biome): A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP.
+- [btop](https://github.com/aristocratos/btop): A monitor of resources
+- [bun](https://bun.sh/): A fast, all-in-one JavaScript runtime.
+- [Clop](https://github.com/FuzzyIdeas/Clop): Clipboard optimizer for macOS.
+- [deno](https://deno.com/): A secure runtime for JavaScript and TypeScript.
+- [dotenv-linter](https://github.com/dotenv-linter/dotenv-linter):⚡️Lightning-fast linter for .env files. Written in Rust 🦀
+- [eza](https://github.com/eza-community/eza): A modern alternative to ls
+- [fastfetch](https://github.com/fastfetch-cli/fastfetch): A maintained, feature-rich and performance oriented, neofetch like system information tool
+- [fd](https://github.com/sharkdp/fd): A simple, fast and user-friendly alternative to 'find'
+- [fnm](https://github.com/Schniz/fnm): 🚀 Fast and simple Node.js version manager, built in Rust
+- [folderify](https://github.com/lindenlab/folderify): A tool to convert a flat folder structure into a nested folder structure.
+- [fzf](https://github.com/junegunn/fzf): A command-line fuzzy finder written in Go
+- [git](https://git-scm.com/): A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+- [git-cliff](https://github.com/orhun/git-cliff): A highly customizable changelog tool that makes changelog easy.
+- [git-delta](https://github.com/dandavison/delta): A syntax-highlighting pager for git, diff, grep, and blame output
+- [git-flow-avh](https://github.com/petervanderdoes/gitflow-avh): AVH Edition of the git extensions to provide high-level repository operations for Vincent Driessen's branching model
+- [git-toolbelt](https://github.com/nvie/git-toolbelt/tree/main): A suite of useful Git commands that aid with scripting or every day command line usage
+- [httpie](https://httpie.io/): A command line HTTP client.
+- [hugo](https://gohugo.io/): A fast and flexible static site generator that's perfect for personal, organization, or business sites.
+- [hyperfine](https://github.com/sharkdp/hyperfine): A command-line benchmarking tool.
+- [jq](https://github.com/jqlang/jq): Command-line JSON processor
+- [jql](https://github.com/yamafaktory/jql): A JSON Query Language CLI tool
+- [just](https://github.com/casey/just): 🤖 Just a command runner
+- [lazydocker](https://github.com/jesseduffield/lazydocker): The lazier way to manage everything docker
+- [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli): MarkdownLint Command Line Interface
+- [mdbook](https://github.com/rust-lang/mdBook): Create book from markdown files. Like Gitbook but implemented in Rust
+- [minify](https://github.com/tdewolff/minify): Go minifiers for web formats
+- [neovim](https://neovim.io/): Vim-fork focused on extensibility and usability
+- [numbat](https://github.com/sharkdp/numbat/tree/master): A statically typed programming language for scientific computations with first class support for physical dimensions and units
+- pandoc
+- pyenv
+- q
+- rclone
+- redis
+- ripgrep
+- ruff
+- sd
+- shellcheck
+- shellharden
+- starship
+- stow
+- taplo
+- thefuck
+- tlrc
+- tmux
+- tree-sitter
+- uutils-coreutils
+- uv
+- yazi
+- yt-dlp
+- zadark
+- zoxide
+- zsh-autosuggestions
 
 ## Visual Studio Code Extensions
 

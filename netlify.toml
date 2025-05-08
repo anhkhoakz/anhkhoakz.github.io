@@ -1,11 +1,11 @@
 [[headers]]
-for = "/*"
+    for = "/*"
 [headers.values]
-Access-Control-Allow-Origin = "*"
-Cache-Control = '''
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = '''
 max-age=31536000,
 public'''
-Permissions-Policy = '''
+    Permissions-Policy = '''
 microphone=(),
 payment=(),
 geolocation=(),
@@ -14,14 +14,16 @@ sync-xhr=(),
 camera=(),
 magnetometer=(),
 gyroscope=()'''
-# Content-Security-Policy = '''
-# default-src 'self' img.shields.io youtube.com youtube-nocookie.com;
-# script-src 'self' 'unsafe-inline' 'unsafe-eval';
-# style-src 'self' 'unsafe-inline';
-# '''
-# Content-Security-Policy = "none"
-Referrer-Policy = "strict-origin-when-cross-origin"
-Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-X-Content-Type-Options = "nosniff"
-X-Frame-Options = "DENY"
-X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = '''
+default-src 'self';
+img-src 'self' img.shields.io data: https: http:;
+script-src 'self' 'unsafe-inline' https://www.youtube.com https://www.youtube-nocookie.com;
+style-src 'self' 'unsafe-inline';
+frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+'''
+    # Content-Security-Policy = "none"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
