@@ -58,7 +58,7 @@ A collection of rules for handling branches in a Git repository is known as the 
 ## Tools
 
 - **[Git](https://git-scm.com/)** (of course?): Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
-- **[nvie/gitflow](https://github.com/nvie/gitflow)**: Git extensions to provide high-level repository operations for Vincent Driessen's branching model.
+- **[petervanderdoes/gitflow-avh](https://github.com/petervanderdoes/gitflow-avh)**: AVH Edition of the git extensions to provide high-level repository operations for Vincent Driessen's branching model.
 - **[lisawolderiksen/git-commit-template.md](https://gist.github.com/lisawolderiksen/a7b99d94c92c6671181611be1641c733)**: A template for writing commit messages that follow the Conventional Commits specification.
 - **[semantic-release](https://semantic-release.gitbook.io/semantic-release/)**: Semantic-release automates the whole package release workflow including: determining the next version number, generating the release notes, and publishing the package.
 - **[actions/semantic-pull-request](https://github.com/marketplace/actions/semantic-pull-request)**: This is a GitHub Action that ensures that your pull request titles match the Conventional Commits spec. Typically, this is used in combination with a tool like semantic-release to automate releases.
