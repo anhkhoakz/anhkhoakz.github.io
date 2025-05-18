@@ -6,7 +6,7 @@ default: help
 
 # usage information
 help:
-    @echo "Usage: just [command]"
+    @echo "Usage: just [recipe]"
 
 # install dependencies
 setup:
@@ -31,31 +31,17 @@ build: test
     hugo build
     hugo --minify
 
-# copy binaries or artifacts to system path
-install: build
-    @echo "Installing binary/artifacts..."
-
-# remove installed binaries/artifacts
-uninstall:
-    @echo "Uninstalling binary/artifacts..."
-    # Override with language-specific uninstall commands:
-    @echo "Please edit the 'uninstall' recipe to uninstall your project."
-
 # remove build artifacts
 clean:
     @echo "Cleaning build artifacts..."
-    # Override with language-specific clean commands:
-    # e.g., rm -rf node_modules dist, cargo clean, etc.
-    @echo "Please edit the 'clean' recipe to clean your project."
-
-# publish package to registry
-publish: test
-    @echo "Publishing package..."
+    rm -rf public
+    rm site.tar.gz
+    rm -rf .hugo_build.lock
 
 # publish to sr.ht
 publish-srht: build
     @echo "Publishing to sr.ht..."
-    trash site.tar.gz
+    @just clean
     tar -C public -cvz . > site.tar.gz
     if ! command -v hut &> /dev/null; then
         echo "hut could not be found, please install it."
