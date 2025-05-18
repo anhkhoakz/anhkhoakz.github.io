@@ -1,91 +1,104 @@
 name: Deploy mirror pages
 
 on:
-    schedule:
-        - cron: 0 0 * * *
-    push:
-        branches:
-            - main
+  schedule:
+    - cron: 0 0 * * *
+  push:
+    branches:
+      - main
 
 concurrency:
-    group: deploy-pages
-    cancel-in-progress: true
+  group: deploy-pages
+  cancel-in-progress: true
 
 defaults:
-    run:
-        shell: bash
+  run:
+    shell: bash
 
 jobs:
-    deploy:
-        name: Build and deploy Hugo site
-        runs-on: ubuntu-latest
+  deploy:
+    name: Build and deploy Hugo site
+    runs-on: ubuntu-latest
 
+    steps:
+      # Check out the source for the site
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
 
-        steps:
-            # Check out the source for the site
-            - name: Checkout
-              uses: actions/checkout@v4
-              with:
-                  submodules: recursive
-                  fetch-depth: 0
+      # Install Hugo in the runner
+      - name: Hugo setup
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "latest"
 
-            # Install Hugo in the runner
-            - name: Hugo setup
-              uses: peaceiris/actions-hugo@v3
-              with:
-                  hugo-version: "latest"
+      # Clean up static folder
+      - name: Clean static folder
+        run: |
+          rm -f static/_redirects
+          rm -rf static/faker static/tdt static/links
 
-            # Clean up static folder
-            - name: Clean static folder
-              run: |
-                  rm -f static/_redirects
-                  rm -rf static/faker static/tdt static/links
+      # Build and deploy to Pages
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          enablement: true
+        continue-on-error: true
 
-            # Build and deploy to Pages
-            - name: Setup Pages
-              id: pages
-              uses: actions/configure-pages@v5
-              with:
-                  token: ${{ secrets.GITHUB_TOKEN }}
-                  enablement: true
-              continue-on-error: true
+      - name: Build and deploy to Pages
+        run: hugo --gc --minify --baseURL https://anhkhoakz.github.io/
+        continue-on-error: true
 
-            - name: Build and deploy to Pages
-              run: hugo --gc --minify --baseURL https://anhkhoakz.github.io/
-              continue-on-error: true
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+        continue-on-error: true
 
-            - name: Upload artifact
-              uses: actions/upload-pages-artifact@v3
-              with:
-                  path: ./public
-              continue-on-error: true
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
 
-            - name: Deploy to GitHub Pages
-              id: deployment
-              uses: actions/deploy-pages@v4
-              continue-on-error: true
+      # Build and deploy to Neocities
+      - name: Build and deploy to Neocities
+        run: hugo --gc --minify --baseURL https://anhkhoakz.neocities.org/
+        continue-on-error: true
+      - name: Deploy to Neocities
+        uses: bcomnes/deploy-to-neocities@v2
+        with:
+          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+          cleanup: true
+          dist_dir: public
+        continue-on-error: true
 
-            # Build and deploy to Neocities
-            - name: Build and deploy to Neocities
-              run: hugo --gc --minify --baseURL https://anhkhoakz.neocities.org/
-              continue-on-error: true
-            - name: Deploy to Neocities
-              uses: bcomnes/deploy-to-neocities@v2
-              with:
-                  api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-                  cleanup: true
-                  dist_dir: public
-              continue-on-error: true
+      # Build and deploy to Surge
+      - name: Build and deploy to Surge
+        run: hugo --gc --minify --baseURL https://anhkhoakz.surge.sh/
+        continue-on-error: true
+      - name: Deploy to Surge.sh
+        uses: dswistowski/surge-sh-action@v.1.0.3
+        with:
+          domain: "https://anhkhoakz.surge.sh/"
+          project: "public"
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
+        continue-on-error: true
 
-            # Build and deploy to Surge
-            - name: Build and deploy to Surge
-              run: hugo --gc --minify --baseURL https://anhkhoakz.surge.sh/
-              continue-on-error: true
-            - name: Deploy to Surge.sh
-              uses: dswistowski/surge-sh-action@v.1.0.3
-              with:
-                  domain: "https://anhkhoakz.surge.sh/"
-                  project: "public"
-                  login: ${{ secrets.surge_login }}
-                  token: ${{ secrets.surge_token }}
-              continue-on-error: true
+      # Build and deploy to anhkhoakz.srht.site
+      # - name: Build and deploy to srht
+      #   run: hugo --gc --minify --baseURL https://anhkhoakz.srht.site/
+      #   continue-on-error: true
+      # - name: Build srht cli
+      #   run: |
+      #     git clone https://git.sr.ht/~xenrox/hut
+      #     cd hut
+      #     make
+      #     sudo make install
+      #     tar -C public -cvz . > site.tar.gz
+      #     hut pages publish -d anhkhoakz.srht.site site.tar.gz
+      #   continue-on-error: true

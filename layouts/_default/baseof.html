@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
-    <head>
-        <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {{- partial "favicon.html" . -}}
-        <title>
-            {{- block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{
-            .Site.Title }}{{- end }}
-        </title>
-        {{- partial "seo_tags.html" . -}}
 
-        {{ $style := print (default "herman" .Site.Params.themeStyle) ".css" |
-        resources.Get | minify }}
+<head>
+    <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link href="{{ $style.RelPermalink }}" rel="stylesheet" crossorigin="anonymous" />
+    <!-- Resource hints for faster connections -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 
-        {{ if (.Page.Store.Get "hasCodeBlock") }} {{ $syntax := resources.Get
-        "syntax.css" | minify }}
-        <link href="{{ $syntax.RelPermalink }}" rel="stylesheet" />
-        {{ end }} {{ with .Params.style }} {{ $extra := resources.Get . | minify
-        }}
-        <link href="{{ $extra.RelPermalink }}" rel="stylesheet" />
-        {{ end }} {{ with .OutputFormats.Get "rss" -}} {{ printf `
-        <link rel="%s" type="%s" href="%s" title="%s" />
-        ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}}
+    {{- partial "favicon.html" . -}}
+    <title>
+        {{- block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{
+        .Site.Title }}{{- end }}
+    </title>
+    {{- partial "seo_tags.html" . -}}
 
-        <!-- A partial to be overwritten by the user.
+    {{ $style := print (default "herman" .Site.Params.themeStyle) ".css" |
+    resources.Get | minify }}
+
+    <!-- Preload critical CSS with highest priority -->
+    <link rel="preload" href="{{ $style.RelPermalink }}" as="style" fetchpriority="high" />
+    <link href="{{ $style.RelPermalink }}" rel="stylesheet" crossorigin="anonymous" />
+
+    {{ if (.Page.Store.Get "hasCodeBlock") }} {{ $syntax := resources.Get
+    "syntax.css" | minify }}
+    <link rel="preload" href="{{ $syntax.RelPermalink }}" as="style" fetchpriority="low" />
+    <link href="{{ $syntax.RelPermalink }}" rel="stylesheet" media="print" onload="this.media='all'" />
+    {{ end }} {{ with .Params.style }} {{ $extra := resources.Get . | minify
+    }}
+    <link rel="preload" href="{{ $extra.RelPermalink }}" as="style" fetchpriority="low" />
+    <link href="{{ $extra.RelPermalink }}" rel="stylesheet" media="print" onload="this.media='all'" />
+    {{ end }} {{ with .OutputFormats.Get "rss" -}} {{ printf `
+    <link rel="%s" type="%s" href="%s" title="%s" />
+    ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}}
+
+    <!-- A partial to be overwritten by the user.
   Simply place a custom_head.html into
   your local /layouts/partials-directory -->
-        {{- partial "custom_head.html" . -}}
-    </head>
+    {{- partial "custom_head.html" . -}}
+</head>
 
-    <body>
-        <header>{{- partial "header.html" . -}}</header>
-        <main id="main-content">{{- block "main" . }}{{- end }}</main>
-        <footer>{{- partial "footer.html" . -}}</footer>
+<body>
+    <header>{{- partial "header.html" . -}}</header>
+    <main id="main-content">{{- block "main" . }}{{- end }}</main>
+    <footer>{{- partial "footer.html" . -}}</footer>
 
-        <!-- A partial to be overwritten by the user.
+    <!-- A partial to be overwritten by the user.
   Simply place a custom_body.html into
   your local /layouts/partials-directory -->
-        {{- partial "custom_body.html" . -}}
-    </body>
+    {{- partial "custom_body.html" . -}}
+</body>
+
 </html>

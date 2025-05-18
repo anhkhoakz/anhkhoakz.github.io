@@ -11,74 +11,76 @@ enableRobotsTXT = true
 
 [markup]
 [markup.highlight]
-  lineNos = true
-  lineNumbersInTable = false
-  noClasses = true
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
 
 [languages]
 [languages.en]
-  LanguageCode = "en-US"
-  contentDir = "content"
-  languageName = "en-US 🇺🇸"
-  title = "anhkhoakz"
+    LanguageCode = "en-US"
+    contentDir = "content"
+    languageName = "en-US 🇺🇸"
+    title = "anhkhoakz"
+[languages.en.params]
+    reading_speed = 200
 
 [params]
-  description = "anhkhoakz personal blog"
-  disableComments = false
-  subtitle = "anhkhoakz personal blog"
-  images = ["images/share.webp"]
-  dateFormat = "02/01/06"
-  hideUntranslated = true
-  theme = "hugo-bearcub"
-  themeStyle = "herman"
-  generateSocialCard = false
+    description = "anhkhoakz personal blog"
+    disableComments = false
+    subtitle = "anhkhoakz personal blog"
+    images = ["images/share.webp"]
+    dateFormat = "02/01/06"
+    hideUntranslated = true
+    theme = "hugo-bearcub"
+    themeStyle = "herman"
+    generateSocialCard = false
 
 [params.social]
-  github = "anhkhoakz"
+    github = "anhkhoakz"
 
 [params.author]
-  email = "dose_untie091@aleeas.com"
-  name = "anhkhoakz"
+    email = "dose_untie091@aleeas.com"
+    name = "anhkhoakz"
 
 [params.contact]
-  email = "dose_untie091@aleeas.com"
+    email = "dose_untie091@aleeas.com"
 
 [params.favicon]
-  light = "images/favicon.webp"
-  dark = "images/favicon-dark.webp"
+    light = "images/favicon.webp"
+    dark = "images/favicon-dark.webp"
 
 [privacy]
 [privacy.disqus]
-  disable = true
+    disable = true
 [privacy.googleAnalytics]
-  disable = true
-  respectDoNotTrack = true
+    disable = true
+    respectDoNotTrack = true
 [privacy.instagram]
-  disable = true
-  simple = true
+    disable = true
+    simple = true
 [privacy.vimeo]
-  disable = true
-  enableDNT = true
-  simple = true
+    disable = true
+    enableDNT = true
+    simple = true
 [privacy.x]
-  disable = true
-  enableDNT = true
-  simple = true
+    disable = true
+    enableDNT = true
+    simple = true
 [privacy.youTube]
-  disable = false
-  privacyEnhanced = true
-  simple = true
+    disable = false
+    privacyEnhanced = true
+    simple = true
 
 [pagination]
-  disableAliases = false
-  pagerSize = 10
-  path = 'page'
+    disableAliases = false
+    pagerSize = 10
+    path = 'page'
 
 [security]
 [security.http]
-  methods = ["(?i)GET"]
-  urls = [".*"]
+    methods = ["(?i)GET"]
+    urls = [".*"]
 
 [services]
 [services.rss]
-  limit = -1
+    limit = -1

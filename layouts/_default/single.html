@@ -20,12 +20,12 @@
 {{ end }}
 
 {{ if not .Params.hideReply }}
-    {{ with .Site.Params.author.email }}
-    <p>
-        <a href='mailto:{{ . }}?subject={{ i18n "email-subject" }} {{ default $.Site.Title $.Page.Title }}'>
-            {{ i18n "email-reply" }} ↪
-        </a>
-    </p>
-    {{ end }}
+{{ with .Site.Params.author.email }}
+<p>
+    <a href='mailto:{{ . }}?subject={{ i18n "email-subject" }} {{ default $.Site.Title $.Page.Title }}'>
+        {{ i18n "email-reply" }} ↪
+    </a>
+</p>
+{{ end }}
 {{ end }}
 {{ end }}
