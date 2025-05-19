@@ -58,6 +58,4 @@ For **simpler phrase**: This website can load with any network conditions, or an
 
 ## Sponsor me
 
-{{< rawhtml >}}
-<iframe src="https://github.com/sponsors/anhkhoakz/card" title="Sponsor anhkhoakz" height="225" width="600" style="border: 0;"></iframe>
-{{< /rawhtml >}}
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/anhkhoakz?style=for-the-badge&logo=github&logoColor=black&labelColor=white&color=1a8fe3)](https://github.com/sponsors/anhkhoakz)
