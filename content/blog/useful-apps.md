@@ -5,7 +5,7 @@ date = 2024-02-14T06:05:22+07:00
 draft = false
 tags = [ "macos", "apps" ]
 author = "anhkhoakz"
-lastmod = 2025-05-08T06:08:00+07:00
+lastmod = 2025-05-19T06:08:00+07:00
 +++
 
 ---
@@ -82,30 +82,26 @@ This is a collection of helpful macOS programs that I use every day. There are f
 - [minify](https://github.com/tdewolff/minify): Go minifiers for web formats
 - [neovim](https://neovim.io/): Vim-fork focused on extensibility and usability
 - [numbat](https://github.com/sharkdp/numbat/tree/master): A statically typed programming language for scientific computations with first class support for physical dimensions and units
-- pandoc
-- pyenv
-- q
-- rclone
-- redis
-- ripgrep
-- ruff
-- sd
-- shellcheck
-- shellharden
-- starship
-- stow
-- taplo
-- thefuck
-- tlrc
-- tmux
-- tree-sitter
-- uutils-coreutils
-- uv
-- yazi
-- yt-dlp
-- zadark
-- zoxide
-- zsh-autosuggestions
+- [pandoc](https://pandoc.org/): A universal document converter
+- [pyenv](https://github.com/pyenv/pyenv): Simple Python version management
+- [rclone](https://rclone.org/): Rclone is a command-line program to manage files on cloud storage.
+- [ripgrep](https://github.com/BurntSushi/ripgrep): ripgrep recursively searches directories for a regex pattern while respecting your gitignore.
+- [ruff](https://github.com/astral-sh/ruff): An extremely fast Python linter and code formatter, written in Rust.
+- [shellcheck](https://github.com/koalaman/shellcheck): ShellCheck, a static analysis tool for shell scripts
+- [starship](https://github.com/starship/starship): ☄🌌️ The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+- [GNU Stow](https://www.gnu.org/software/stow/): GNU Stow is a symlink farm manager which takes distinct sets of software and/or data located in separate directories on the filesystem, and makes them all appear to be installed in a single directory tree.
+- [taplo](https://github.com/tamasfe/taplo): A TOML toolkit written in Rust
+- [thefuck](https://github.com/nvbn/thefuck): Magnificent app which corrects your previous console command
+- [tlrc](https://github.com/tldr-pages/tlrc): A tldr client written in Rust
+- [zellij](https://github.com/zellij-org/zellij/): A terminal workspace with batteries included
+- [tree-sitter](https://github.com/tree-sitter/tree-sitter): An incremental parsing system for programming tools
+- [uutils-coreutils](https://github.com/uutils/coreutils): Cross-platform Rust rewrite of the GNU coreutils
+- [uv](https://github.com/astral-sh/uv): An extremely fast Python package and project manager, written in Rust.
+- [yazi](https://github.com/sxyazi/yazi): 💥 Blazing fast terminal file manager written in Rust, based on async I/O
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp): A feature-rich command-line audio/video downloader
+- [zadark](https://github.com/quaric/zadark): ZaDark is an extension that helps you enable Dark Mode for Zalo PC and Web. ZaDark is available on Windows, macOS, Chrome, Safari, Edge and Firefox.
+- [zoxide](https://github.com/ajeetdsouza/zoxide): A smarter cd command. Supports all major shells.
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): Fish-like autosuggestions for zsh
 
 ## Visual Studio Code Extensions
 

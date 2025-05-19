@@ -90,15 +90,17 @@ jobs:
         continue-on-error: true
 
       # Build and deploy to anhkhoakz.srht.site
-      # - name: Build and deploy to srht
-      #   run: hugo --gc --minify --baseURL https://anhkhoakz.srht.site/
-      #   continue-on-error: true
-      # - name: Build srht cli
-      #   run: |
-      #     git clone https://git.sr.ht/~xenrox/hut
-      #     cd hut
-      #     make
-      #     sudo make install
-      #     tar -C public -cvz . > site.tar.gz
-      #     hut pages publish -d anhkhoakz.srht.site site.tar.gz
-      #   continue-on-error: true
+      - name: Build and deploy to sourcehut
+        run: hugo --gc --minify --baseURL https://anhkhoakz.srht.site/
+        continue-on-error: true
+      - name: Build sourcehut cli
+        run: |
+          git clone https://git.sr.ht/~xenrox/hut
+          cd hut
+          make
+          sudo make install
+      - name: Deploy to sourcehut
+        run: |
+          tar -C public -cvz . > site.tar.gz
+          hut pages publish -d anhkhoakz.srht.site site.tar.gz
+        continue-on-error: true
