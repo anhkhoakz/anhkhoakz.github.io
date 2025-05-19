@@ -93,7 +93,10 @@ jobs:
       - name: Build and deploy to sourcehut
         run: hugo --gc --minify --baseURL https://anhkhoakz.srht.site/
         continue-on-error: true
-      - name: Build sourcehut cli
+      - name: Install scdoc
+        run: |
+          sudo apt-get -y install scdoc
+      - name: Install sourcehut cli
         run: |
           git clone https://git.sr.ht/~xenrox/hut
           cd hut
