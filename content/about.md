@@ -54,7 +54,9 @@ For **simpler phrase**: This website can load with any network conditions, or an
 ## Mirror Pages
 
 - [NeoCities](https://anhkhoakz.neocities.org/)
-- [Surge.sh](https://anhkhoakz.surge.sh/)
+- [Surge.sh](https://anhkhoakz.surge.sh/) (deprecated)
+- [GitHub Pages](https://anhkhoakz.github.io/)
+- [SourceHut Pages](https://anhkhoakz.srht.site/)
 
 ## Sponsor me
 
