@@ -1,8 +1,8 @@
 # <www.anhkhoakz.dev>
 
-![Netlify Status](https://img.shields.io/netlify/bf652528-ca92-4a17-89e1-1ea9e8d24bc0?style=for-the-badge&logo=netlify&color=%2300C7B7)
-![Deploy Mirror Pages](https://img.shields.io/github/actions/workflow/status/anhkhoakz/anhkhoakz.github.io/deploy-mirror-pages.yaml?branch=main&style=for-the-badge&label=git%20mirror)
-![Git Mirroring](https://img.shields.io/github/actions/workflow/status/anhkhoakz/anhkhoakz.github.io/git-mirror.yaml?branch=main&style=for-the-badge&label=git%20mirror)
+![Netlify Status](https://img.shields.io/netlify/bf652528-ca92-4a17-89e1-1ea9e8d24bc0?style=for-the-badge&logo=netlify)
+![Deploy Mirror Pages](https://img.shields.io/github/actions/workflow/status/anhkhoakz/anhkhoakz.github.io/deploy-mirror-pages.yaml?branch=main&style=for-the-badge&label=pages%20mirror)
+![Git Mirroring](https://img.shields.io/github/actions/workflow/status/anhkhoakz/anhkhoakz.github.io/git-mirror.yaml?branch=main&style=for-the-badge&label=git%20mirror&logo=git)
 ![License](https://img.shields.io/github/license/anhkhoakz/anhkhoakz.github.io?style=for-the-badge)
 
 ## Overview
@@ -18,6 +18,8 @@ This repository hosts the content, workflows, and themes for [anhkhoakz.dev](htt
 - **Continuous Deployment**: Automatically deploys updates to Netlify.
 - **Mirror Pages**: Keeps mirror pages in sync across platforms.
 - **Git Mirroring**: Ensures repositories are mirrored across multiple Git hosting services.
+
+![PageSpeed Insights](https://i.imgur.com/HcsbDn9.png)
 
 ## Getting Started
 
