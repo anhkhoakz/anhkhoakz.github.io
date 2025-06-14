@@ -17,7 +17,6 @@ This is a collection of helpful macOS programs that I use every day. There are f
 - **FOSS**: Software that is both free (as in freedom) and open-source
 - **Freemium**: Business model and software licensing scheme in which the basic form of a product is free of charge, and access to additional features requires payment
 
-
 ## Productivity
 
 - [Alfred](https://www.alfredapp.com/): (£59) Alfred is an award-winning app for macOS which boosts your efficiency with hotkeys, keywords, text expansion and more.
