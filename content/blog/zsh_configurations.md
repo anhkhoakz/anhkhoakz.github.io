@@ -496,6 +496,7 @@ when I start a new terminal session, and it is much faster than before.
 
 - [Speed Matters: How I Optimized My ZSH Startup to Under 70ms](https://santacloud.dev/posts/optimizing-zsh-startup-performance)
 - [Comparison of ZSH frameworks and plugin managers](https://gist.github.com/laggardkernel/4a4c4986ccdcaf47b91e8227f9868ded)
+- [Improving Zsh Performance](https://www.dribin.org/dave/blog/archives/2024/01/01/zsh-performance/)
 
 ## Footnotes
 
