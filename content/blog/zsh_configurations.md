@@ -21,7 +21,7 @@ Yes, I've watched a lot of videos about Oh My ZSH, and I've tried it.
 But I've found that it's too heavy for my use case.
 
 The motivation for me to optimize my ZSH configuration comes
-that after I read the Speed Matters: How I Optimized My ZSH Startup to Under 70ms[^4] gist, I found that
+that after I read the Speed Matters: How I Optimized My ZSH Startup to Under 70ms[^4].
 
 ## Initial Configuration
 
