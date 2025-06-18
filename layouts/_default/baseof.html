@@ -24,7 +24,7 @@
 
     <!-- Preload critical CSS with highest priority -->
     <link rel="preload" href="{{ $style.RelPermalink }}" as="style" fetchpriority="high" />
-    <link href="{{ $style.RelPermalink }}" rel="stylesheet" crossorigin="anonymous" />
+    <link href="{{ $style.RelPermalink }}" rel="stylesheet" />
 
     {{ if (.Page.Store.Get "hasCodeBlock") }} {{ $syntax := resources.Get
     "syntax.css" | minify }}
