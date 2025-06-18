@@ -1,29 +1,27 @@
 +++
 title = 'ZSH Configurations'
-description = "My ZSH configurations"
+description = "ZSH Configuration Optimization Guide"
 date = 2025-06-14T23:58:05+07:00
 draft = false
-tags = ["zsh", "configuration"]
+tags = ["zsh", "optimization"]
 author = "anhkhoakz"
 +++
 
 ---
 
-## Choosing a framework
+## Framework Selection and Initial Assessment
 
 There are many frameworks for ZSH, and I've tried a few of them.
 
-- Oh My ZSH[^1]
-- Prezto[^2]
-- zsh4humans[^3]
+- Oh My ZSH [^1]
+- Prezto [^2]
+- zsh4humans [^3]
 
 Yes, I've watched a lot of videos about Oh My ZSH, and I've tried it.
 But I've found that it's too heavy for my use case.
 
 The motivation for me to optimize my ZSH configuration comes
-that after I read the Speed Matters: How I Optimized My ZSH Startup to Under 70ms[^4].
-
-## Initial Configuration
+that after I read the Speed Matters: How I Optimized My ZSH Startup to Under 70ms [^4].
 
 `.zshrc` file is the main configuration file for ZSH.
 
@@ -36,7 +34,7 @@ export POWERSHELL_TELEMETRY_OPTOUT=1
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
-export PATH="$PATH:$HOME/.pubcache/bin:/Applications/Docker.app/Contents/Resources/bin/:/bin:$HOME/.gem/bin:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$HOME/.composer/vendor/bin:/opt/homebrew/opt/uutils-coreutils/libexec/uubin:/Users/anhkhoakz/Library/Application Suppo$BUN_INSTALLrt/fnm"
+export PATH="$PATH:$HOME/.pubcache/bin:/Applications/Docker.app/Contents/Resources/bin/:/bin:$HOME/.gem/bin:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$HOME/.composer/vendor/bin:/opt/homebrew/opt/uutils-coreutils/libexec/uubin:/$HOME/Library/Application Support/fnm"
 export CHROME_EXECUTABLE="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
 export BUN_INSTALL="$HOME/.bun"
 export ANDROID_HOME="$HOME/Library/Android/sdk"
@@ -133,49 +131,57 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'osx' \
   'git' \
-  'eza' \
+  'eza'
 ```
 
 And you know what? This has the significant poor performance:
 
-```bash
-creates_tty=0
-has_compsys=1
-has_syntax_highlighting=1
-has_autosuggestions=1
-has_git_prompt=1
-first_prompt_lag_ms=137.08
-first_command_lag_ms=195.358
-command_lag_ms=66.017
-input_lag_ms=10.483
-exit_time_ms=64.467
-```
+ZSH-bench results:
 
-If you search how to benchmark zsh startup, you'll find the following command snippet:
+| Feature/Metric           | Initial       |
+|--------------------------|:--------------:|
+| creates_tty              |       0        |
+| has_compsys              |       1        |
+| has_syntax_highlighting  |       1        |
+| has_autosuggestions      |       1        |
+| has_git_prompt           |       1        |
+| first_prompt_lag_ms      |    137.08      |
+| first_command_lag_ms     |    195.358     |
+| command_lag_ms           |    66.017      |
+| input_lag_ms             |    10.483      |
+| exit_time_ms             |    64.467      |
 
-```bash
-time zsh -lic "exit"
-```
+Where:
 
-This metric is shown as exit_time_ms when using `zsh-bench` tool.
+|name|  meaning |
+| -- | -- |
+|creates tty| the shell creates its own TTY by invoking tmux or screen|
+|has compsys| the shell initializes compsys—the "new" completion system—by invoking compinit|
+|has syntax highlighting| user input (the command line) is highlighted by zsh-syntax-highlighting|
+|has autosuggestions| suggestions for command completions are offered automatically by zsh-autosuggestions|
+|has git prompt| git branch is displayed in prompt|
+| first prompt lag (ms) | from the start of the shell to the moment prompt appears on the screen |
+| first command lag (ms) | from the start of the shell to the moment the first interactive command starts executing |
+| command lag (ms) | from pressing Enter on an empty command line to the moment the next prompt appears; the same as zsh-prompt-benchmark (my project) |
+| input lag (ms) | from pressing a regular key to the moment the corresponding character appears on the command line; this test is performed when the current command line is already fairly long |
+| exit time (ms) | how long it takes to execute zsh -lic "exit"; this value is meaningless as far as measuring interactive shell latencies goes |
 
-This metric is unnecessary for the benchmarking process.
-You can refer to the How not to benchmark[^5]
+You can refer to the How not to benchmark [^5]
 
-The raw zsh config with `--no-rcs` is:
+The raw zsh loadtime with `--no-rcs` is:
 
-```bash
-creates_tty=0
-has_compsys=0
-has_syntax_highlighting=0
-has_autosuggestions=0
-has_git_prompt=0
-first_prompt_lag_ms=17.993
-first_command_lag_ms=18.115
-command_lag_ms=0.063
-input_lag_ms=0.288
-exit_time_ms=17.049
-```
+| Feature/Metric           | --no-rcs       |
+|--------------------------|:--------------:|
+| creates_tty              |       0        |
+| has_compsys              |       0        |
+| has_syntax_highlighting  |       0        |
+| has_autosuggestions      |       0        |
+| has_git_prompt           |       0        |
+| first_prompt_lag_ms      |    17.993      |
+| first_command_lag_ms     |    18.115      |
+| command_lag_ms           |     0.063      |
+| input_lag_ms             |     0.288      |
+| exit_time_ms             |    17.049      |
 
 This is the baseline, the "ideal" metric for the zsh startup time.
 
@@ -187,18 +193,18 @@ command lag, input lag, and exit time.
 I'm going to determine whether the prezto or my configurations
 slow down the zsh startup time.
 
-Feature/Metric |  Disable Prezto | Disable My Configurations
---- | --- | ---
-creates_tty | 0 | 0
-has_compsys | 0 | 1
-has_syntax_highlighting | 0 | 1
-has_autosuggestions | 0 | 1
-has_git_prompt | 1 | 0
-first_prompt_lag_ms | 102.529 | 52.73
-first_command_lag_ms | 102.731 | 63.196
-command_lag_ms | 61.759 | 10.302
-input_lag_ms | 0.223 | 10.099
-exit_time_ms | 43.516 | 37.033
+| Feature/Metric           | Disable Prezto | Disable My Configurations |
+|--------------------------|:--------------:|:-------------------------:|
+| creates_tty              |       0        |            0              |
+| has_compsys              |       0        |            1              |
+| has_syntax_highlighting  |       0        |            1              |
+| has_autosuggestions      |       0        |            1              |
+| has_git_prompt           |       1        |            0              |
+| first_prompt_lag_ms      |    102.529     |         52.73             |
+| first_command_lag_ms     |    102.731     |        63.196             |
+| command_lag_ms           |     61.759     |        10.302             |
+| input_lag_ms             |     0.223      |        10.099             |
+| exit_time_ms             |    43.516      |        37.033             |
 
 So I can conclude that my configurations are the main reason
 that slows down the zsh startup time.
@@ -269,9 +275,7 @@ export LS_COLORS="$(<"$LS_COLORS_CACHE")"
 unset LS_COLORS_CACHE
 ```
 
-Refer to [Speed Matters: How I Optimized My ZSH Startup to Under 70ms](https://santacloud.dev/posts/optimizing-zsh-startup-performance/#zsource)
-
-I will use the `zsource()` function to source the file instead of the `source` command.
+I will use the `zsource()` [^4] function to source the file instead of the `source` command.
 
 ```bash
 function zsource() {
@@ -323,18 +327,32 @@ zstyle ':prezto:load' pmodule \
 
 ## Results
 
- Feature/Metric            | Before         | After
----------------------------|:--------------:|:-------
- creates_tty               | 0              | 0
- has_compsys               | 1              | 1
- has_syntax_highlighting   | 1              | 1
- has_autosuggestions       | 1              | 1
- has_git_prompt            | 1              | 1
- first_prompt_lag_ms       | 137.08         | 20.285
- first_command_lag_ms      | 195.358        | 149.823
- command_lag_ms            | 66.017         | 13.901
- input_lag_ms              | 10.483         | 12.753
- exit_time_ms              | 64.467         | 62.953
+ |Feature/Metric            | Before         | After  |
+ |--------------------------|:--------------:|:------:|
+ |creates_tty               | 0              | 0      |
+ |has_compsys               | 1              | 1      |
+ |has_syntax_highlighting   | 1              | 1      |
+ |has_autosuggestions       | 1              | 1      |
+ |has_git_prompt            | 1              | 1      |
+ |first_prompt_lag_ms       | 137.08         | 20.285 |
+ |first_command_lag_ms      | 195.358        | 149.823|
+ |command_lag_ms            | 66.017         | 13.901 |
+ |input_lag_ms              | 10.483         | 12.753 |
+ |exit_time_ms              | 64.467         | 62.953 |
+
+ zmodload zsh/zprof | zprof result:
+
+| #  | calls | time   | self   | % time | self | % self | name                                                                 |
+|----|-------|--------|--------|--------|------|--------|----------------------------------------------------------------------|
+| 1  |   5   | 33.42  |  6.68  | 65.30% | 17.60| 34.39% | pmodload                                                             |
+| 2  |   1   | 11.26  | 11.26  | 21.99% |  7.67| 14.99% | (anon) [$HOME/.cache/p10k-instant-prompt-anhkhoakz.zsh:3] |
+| 3  |   1   |  6.29  |  6.29  | 12.29% |  6.29| 12.29% | compinit                                                             |
+| 4  |   1   |  5.43  |  5.43  | 10.62% |  5.38| 10.52% | _zsh_highlight_load_highlighters                                     |
+| 5  |   1   |  5.49  |  5.49  | 10.73% |  5.26| 10.27% | (anon) [$HOME/powerlevel10k/powerlevel10k.zsh-theme:50]   |
+
+All features are **still available**, but the startup time is **significantly reduced**.
+
+First prompt lag is **85.20%** faster, first command lag is 23.31% faster, command lag is **78.94%** faster, input lag is 21.65% slower, exit time is 2.35% faster.
 
  My final `.zshrc` file is:
 
@@ -422,8 +440,6 @@ alias ghg='gh gist'
 alias gbi='git branch | fzf | cut -c 3- | xargs git checkout'
 alias tldri='tldr --list | fzf | xargs tldr'
 alias hyperfine="${aliases[hyperfine]:-hyperfine} --min-runs 50 --warmup 3 --shell none"
-alias zsh_bench='/Users/anhkhoakz/CodeVault/ShellScripts/src/apps/zsh-bench/zsh-bench'
-alias human_bench='/Users/anhkhoakz/CodeVault/ShellScripts/src/apps/zsh-bench/human-bench'
 
 # ------------------------------
 # Functions
@@ -481,7 +497,7 @@ zsource ~/powerlevel10k/powerlevel10k.zsh-theme
  still has some overhead, but it's much better than the initial
  configuration.
 
-[Speed Matters: How I Optimized My ZSH Startup to Under 70ms](https://santacloud.dev/posts/optimizing-zsh-startup-performance) indicate that how they
+santacloud.dev [^4] indicate that how they
 optimize their ZSH startup time to under 70ms which is `exit_time_ms` metric in this measure (63 ms). I also optimize
 other metrics like `first_prompt_lag_ms`, `first_command_lag_ms`, `command_lag_ms`, and `input_lag_ms`.
 
@@ -494,9 +510,9 @@ when I start a new terminal session, and it is much faster than before.
 
 ## References
 
-- [Speed Matters: How I Optimized My ZSH Startup to Under 70ms](https://santacloud.dev/posts/optimizing-zsh-startup-performance)
 - [Comparison of ZSH frameworks and plugin managers](https://gist.github.com/laggardkernel/4a4c4986ccdcaf47b91e8227f9868ded)
 - [Improving Zsh Performance](https://www.dribin.org/dave/blog/archives/2024/01/01/zsh-performance/)
+- [Zsh benchmark for differences configs](https://docs.google.com/spreadsheets/d/e/2PACX-1vTyPZw11siFrMQEVjtU7NNs8AAYz6WU2p62nn3QX4hidlTbOYkDTzJVdSrZ93NoeoDhrsiKwbTYD-_F/pubhtml)
 
 ## Footnotes
 
@@ -514,4 +530,4 @@ when I start a new terminal session, and it is much faster than before.
 
 [^7]: [nvm](https://github.com/nvm-sh/nvm): Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions
 
-[^8]: [vivid](https://github.com/sharkdp/vivid): A themeable LS_COLORS generator with a rich filetype datebase
+[^8]: [vivid](https://github.com/sharkdp/vivid): A themeable LS_COLORS generator with a rich filetype database
