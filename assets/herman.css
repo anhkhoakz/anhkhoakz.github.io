@@ -157,6 +157,20 @@ pre code {
 	-moz-text-size-adjust: 100%;
 }
 
+code span[style*="user-select:none"] {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.line-number {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
 table {
 	width: 100%;
 }
