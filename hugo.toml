@@ -13,7 +13,7 @@ enableRobotsTXT = true
 [markup.highlight]
     lineNos = true
     lineNumbersInTable = false
-    noClasses = true
+    noClasses = false
 
 [languages]
 [languages.en]
@@ -31,8 +31,6 @@ enableRobotsTXT = true
     images = ["images/share.webp"]
     dateFormat = "02/01/06"
     hideUntranslated = true
-    theme = "hugo-bearcub"
-    themeStyle = "herman"
     generateSocialCard = false
 
 [params.social]
