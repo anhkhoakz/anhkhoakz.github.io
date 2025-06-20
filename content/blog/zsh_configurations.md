@@ -38,7 +38,7 @@ export PATH="$PATH:$HOME/.pubcache/bin:/Applications/Docker.app/Contents/Resourc
 export CHROME_EXECUTABLE="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
 export BUN_INSTALL="$HOME/.bun"
 export ANDROID_HOME="$HOME/Library/Android/sdk"
-export NODE_COMPILE_CACHE=~/.cache/nodejs-compile-cache
+export NODE_COMPILE_CACHE=$HOME/.cache/nodejs-compile-cache
 export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
 export PATH="/opt/homebrew/opt/uutils-coreutils/libexec/uubin:$PATH"
 export FNM_PATH="$HOME/Library/Application Support/fnm"
@@ -233,8 +233,8 @@ export LS_COLORS="$(<"$LS_COLORS_CACHE")"
 unset LS_COLORS_CACHE
 ```
 
-I will use the `zsource()` [Speed Matters: How I Optimized My ZSH Startup to Under 70ms](https://santacloud.dev/posts/optimizing-zsh-startup-performance/#zsource:~:text=It%E2%80%99s%20about%20protecting%20flow.) function to source the file instead of the
-`source` command.
+I will use the `zsource()` function [Speed Matters: How I Optimized My ZSH Startup to Under 70ms](https://santacloud.dev/posts/optimizing-zsh-startup-performance/#zsource:~:text=It%E2%80%99s%20about%20protecting%20flow.)
+to source the file instead of the `source` command.
 
 ```bash
 function zsource() {
@@ -247,15 +247,34 @@ function zsource() {
 }
 ```
 
+If you installed fzf using Homebrew, you maybe have the
+`$HOME/.fzf.zsh` file, which is the fzf completion and key bindings.
+We now just source it using the `zsource()` function.
+
+```bash
+zsource $HOME/.fzf.zsh
+```
+
+You can do the same for zoxide completion and key bindings.
+
+```bash
+if [[ ! -f $HOME/.zoxide.zsh ]]; then
+  zoxide init --cmd=cd zsh > $HOME/.zoxide.zsh
+fi
+zsource $HOME/.zoxide.zsh
+```
+
 ### Optimization 4: Change the prompt from `starship` to `powerlevel10k`
 
 Although prezto offer the `prompt` module which come with some
 predefined themes including `powerlevel10k`, I prefer to use
 download the `powerlevel10k` theme and use it directly.
 
+Don't use zsource for instant prompt [powerlevel10k instant prompt docs](https://github.com/romkatv/powerlevel10k/blob/36f3045d69d1ba402db09d09eb12b42eebe0fa3b/README.md?plain=1#L1047C1-L1048)
+
 ```bash
 # eval "$(starship init zsh)"
-# Start of the file || Don't use zsource for instant prompt [powerlevel10k instant prompt docs](https://github.com/romkatv/powerlevel10k/blob/36f3045d69d1ba402db09d09eb12b42eebe0fa3b/README.md?plain=1#L1047C1-L1048)
+# Start of the file
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -263,8 +282,8 @@ fi
 ### Something here ...
 
 # End of the file
-zsource ~/powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || zsource ~/.p10k.zsh
+zsource $HOME/powerlevel10k/powerlevel10k.zsh-theme
+zsource $HOME/.p10k.zsh
 ```
 
 ### Optimization 5: Remove modules that you don't use
@@ -279,13 +298,19 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'utility' \
   'completion' \
-  'autosuggestions' \
   'osx' \
   'git' \
-  'zsh-syntax-highlighting'
+  'syntax-highlighting' \
+  'autosuggestions'
 ```
 
+### Optimization 6: Strip down some features
+
+Using ZSH_AUTOSUGGEST_MANUAL_REBIND: This can be a big boost to performance, but you'll need to handle re-binding yourself if any of the widget lists change or if you or another plugin wrap any of the autosuggest widgets [zsh-users/zsh-autosuggestions/#disabling-automatic-widget-re-binding](https://github.com/zsh-users/zsh-autosuggestions?tab=readme-ov-file#disabling-automatic-widget-re-binding)
+
 ## Results
+
+Here is a table after applying all the optimizations, I run the `zsh-bench` again
 
  |Feature/Metric            | Before         | After  |
  |--------------------------|:--------------:|:------:|
@@ -294,27 +319,39 @@ zstyle ':prezto:load' pmodule \
  |has_syntax_highlighting   | 1              | 1      |
  |has_autosuggestions       | 1              | 1      |
  |has_git_prompt            | 1              | 1      |
- |first_prompt_lag_ms       | 137.08         | 20.285 |
- |first_command_lag_ms      | 195.358        | 149.823|
- |command_lag_ms            | 66.017         | 13.901 |
- |input_lag_ms              | 10.483         | 12.753 |
- |exit_time_ms              | 64.467         | 62.953 |
+ |first_prompt_lag_ms       | 137.08         | 11.209 |
+ |first_command_lag_ms      | 195.358        | 136.614|
+ |command_lag_ms            | 66.017         | 4.054  |
+ |input_lag_ms              | 10.483         | 11.397 |
+ |exit_time_ms              | 64.467         | 44.407 |
 
- zmodload zsh/zprof | zprof result:
+zmodload zsh/zprof | zprof result:
 
-| #  | calls | time   | self   | % time | self | % self | name                                                                 |
-|----|-------|--------|--------|--------|------|--------|----------------------------------------------------------------------|
-| 1  |   5   | 33.42  |  6.68  | 65.30% | 17.60| 34.39% | pmodload                                                             |
-| 2  |   1   | 11.26  | 11.26  | 21.99% |  7.67| 14.99% | (anon) $HOME/.cache/p10k-instant-prompt-anhkhoakz.zsh:3 |
-| 3  |   1   |  6.29  |  6.29  | 12.29% |  6.29| 12.29% | compinit                                                             |
-| 4  |   1   |  5.43  |  5.43  | 10.62% |  5.38| 10.52% | _zsh_highlight_load_highlighters                                     |
-| 5  |   1   |  5.49  |  5.49  | 10.73% |  5.26| 10.27% | (anon) $HOME/powerlevel10k/powerlevel10k.zsh-theme:50   |
+```text
+num  calls                time                       self            name
+-----------------------------------------------------------------------------------
+ 1)   21          34.41     1.64   80.96%     16.14     0.77   37.98%  zsource
+ 2)    1           8.09     8.09   19.04%      5.49     5.49   12.92%  (anon) [$HOME/.cache/p10k-instant-prompt-anhkhoakz.zsh:3]
+ 3)    5          21.58     4.32   50.76%      4.49     0.90   10.56%  pmodload
+ 4)    1           3.77     3.77    8.87%      3.77     3.77    8.87%  compinit
+ 5)    1           3.03     3.03    7.12%      2.76     2.76    6.50%  (anon) [$HOME/powerlevel10k/powerlevel10k.zsh-theme:50]
+ 6)    1           2.04     2.04    4.81%      1.83     1.83    4.31%  _zsh_highlight_load_highlighters
+ 7)    9           1.78     0.20    4.19%      1.78     0.20    4.19%  (anon) [$HOME/.zprezto/init.zsh:109]
+ 8)    1           2.59     2.59    6.09%      1.30     1.30    3.05%  _p9k_preinit
+ 9)    1           1.04     1.04    2.44%      1.04     1.04    2.44%  (anon) [$HOME/.cache/p10k-instant-prompt-anhkhoakz.zsh:597]
+10)    1           1.03     1.03    2.43%      1.02     1.02    2.41%  _zsh_highlight__function_callable_p
+11)    1           0.86     0.86    2.03%      0.80     0.80    1.88%  (anon) [$HOME/.p10k.zsh:21]
+12)    3           0.54     0.18    1.28%      0.51     0.17    1.20%  add-zle-hook-widget
+```
 
 All features are **still available**, but the startup time is
 **significantly reduced**.
 
-First prompt lag is **85.20%** faster, first command lag is 23.31% faster,
-command lag is **78.94%** faster, input lag is 21.65% slower, exit time is 2.35% faster.
+- first prompt lag is 12.2 times faster.
+- first command lag is 1.43 times faster.
+- command lag is 16.28 times faster.
+- input lag is 1.087 times slower.
+- exit time is 1.45 times faster.
 
  My final `.zshrc` file is:
 
@@ -323,25 +360,18 @@ function zsource() {
   local file=$1
   local zwc="${file}.zwc"
   if [[ -f "$file" && (! -f "$zwc" || "$file" -nt "$zwc") ]]; then
+    # echo "Compiling $file..."
     zcompile "$file"
   fi
+  # echo "Sourcing $file..."
   source "$file"
 }
-
-LS_COLORS_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/LS_COLORS_nord"
-
-if [[ ! -f "$LS_COLORS_CACHE" ]]; then
-  vivid generate nord > "$LS_COLORS_CACHE"
-fi
-
-export LS_COLORS="$(<"$LS_COLORS_CACHE")"
-unset LS_COLORS_CACHE
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Source Prezto.
+# Prezto Initialization
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   zsource "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
@@ -372,27 +402,21 @@ export FZF_CTRL_R_OPTS="
 export FZF_CTRL_T_OPTS="
   --walker-skip .git,node_modules,target"
 
-function fnm() {
-  unset -f fnm
-  eval "$(fnm env --use-on-cd --shell zsh)"
-  fnm "$@"
-}
+# Start Aliases and Functions
 
-# Aliases and Functions
-# ...
-# End of Aliases and Functions
+# Your aliases and functions go here
 
-# ------------------------------
-# Shell Integration
-# ------------------------------
+# End Aliases and Functions
 
-zsource <(fzf --zsh)
-eval "$(zoxide init --cmd=cd zsh)"
+zsource $HOME/.fzf.zsh
+zsource $HOME/.zoxide.zsh
 . "$HOME/.cargo/env"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-zsource ~/powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || zsource ~/.p10k.zsh
+# To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
+zsource $HOME/powerlevel10k/powerlevel10k.zsh-theme
+zsource $HOME/.p10k.zsh
+
+unfunction zsource
  ```
 
 This is the final result of my ZSH configuration. Although it
@@ -405,6 +429,8 @@ metric in this measure (63 ms). I also optimize
 other metrics like `first_prompt_lag_ms`, `first_command_lag_ms`,
 `command_lag_ms`, and `input_lag_ms`.
 
+## Conclusion
+
 ### Do it waste my time?
 
 Yes, it does. Those optimizations take me a few days to figure out,
@@ -412,6 +438,15 @@ reading a lot of articles, and testing different
 configurations. But it is worth it. I can feel the difference
 when I start a new terminal session, and it is much faster than before.
 > [It’s about protecting flow](https://santacloud.dev/posts/optimizing-zsh-startup-performance/#zsource:~:text=It%E2%80%99s%20about%20protecting%20flow.)
+
+### Meaningless changes
+
+- Remove shell functions
+- Change to fast syntax highlighting
+- Deferred initialization
+- Disable prezto
+- Using boring colors
+- Disable git prompt
 
 ## References
 

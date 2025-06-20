@@ -20,7 +20,7 @@ test: lint
     @echo "Running tests..."
 
 # compile or package the project
-build: test
+build:
     @echo "Building project..."
     hugo build
     hugo --minify
