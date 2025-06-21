@@ -312,18 +312,10 @@ Using ZSH_AUTOSUGGEST_MANUAL_REBIND: This can be a big boost to performance, but
 
 Here is a table after applying all the optimizations, I run the `zsh-bench` again
 
- |Feature/Metric            | Before         | After  |
- |--------------------------|:--------------:|:------:|
- |creates_tty               | 0              | 0      |
- |has_compsys               | 1              | 1      |
- |has_syntax_highlighting   | 1              | 1      |
- |has_autosuggestions       | 1              | 1      |
- |has_git_prompt            | 1              | 1      |
- |first_prompt_lag_ms       | 137.08         | 11.209 |
- |first_command_lag_ms      | 195.358        | 136.614|
- |command_lag_ms            | 66.017         | 4.054  |
- |input_lag_ms              | 10.483         | 11.397 |
- |exit_time_ms              | 64.467         | 44.407 |
+| config  | compsys | syntax highlight | auto suggest | git prompt | first prompt lag | first cmd lag | cmd lag | input lag |
+|-|-:|-:|-:|-:|-:|-:|-:|-:|-:|
+| Before |  ✔️ | ✔️ | ✔️ | ✔️ | 274% 🔴 | 130% 🟠 | 660% 🔴 | 52% 🟡 |
+| After |  ✔️ | ✔️ | ✔️ | ✔️ | 24% 🟢 | 84% 🟡 | 40% 🟢 | 56% 🟡 |
 
 zmodload zsh/zprof | zprof result:
 
@@ -339,9 +331,9 @@ num  calls                time                       self            name
  7)    9           1.78     0.20    4.19%      1.78     0.20    4.19%  (anon) [$HOME/.zprezto/init.zsh:109]
  8)    1           2.59     2.59    6.09%      1.30     1.30    3.05%  _p9k_preinit
  9)    1           1.04     1.04    2.44%      1.04     1.04    2.44%  (anon) [$HOME/.cache/p10k-instant-prompt-anhkhoakz.zsh:597]
-10)    1           1.03     1.03    2.43%      1.02     1.02    2.41%  _zsh_highlight__function_callable_p
-11)    1           0.86     0.86    2.03%      0.80     0.80    1.88%  (anon) [$HOME/.p10k.zsh:21]
-12)    3           0.54     0.18    1.28%      0.51     0.17    1.20%  add-zle-hook-widget
+1)     1           1.03     1.03    2.43%      1.02     1.02    2.41%  _zsh_highlight__function_callable_p
+2)     1           0.86     0.86    2.03%      0.80     0.80    1.88%  (anon) [$HOME/.p10k.zsh:21]
+3)     3           0.54     0.18    1.28%      0.51     0.17    1.20%  add-zle-hook-widget
 ```
 
 All features are **still available**, but the startup time is
