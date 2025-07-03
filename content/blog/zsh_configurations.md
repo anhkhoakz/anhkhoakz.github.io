@@ -2,7 +2,7 @@
 title = 'ZSH Configurations'
 description = "ZSH Configuration Optimization Guide"
 date = 2025-06-14T23:58:05+07:00
-draft = false
+draft = true
 tags = ["zsh", "optimization"]
 author = "anhkhoakz"
 +++
