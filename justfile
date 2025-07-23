@@ -13,7 +13,7 @@ setup:
 # check code style and quality
 lint:
     @echo "Running linter..."
-    markdownlint content/
+    markdownlint --fix content/
 
 # run tests
 test: lint
@@ -28,9 +28,9 @@ build:
 # remove build artifacts
 clean:
     @echo "Cleaning build artifacts..."
-    rm -rf public
-    rm site.tar.gz
-    rm -rf .hugo_build.lock
+    -rm -rf public
+    -rm site.tar.gz
+    -rm -rf .hugo_build.lock
 
 # publish to sr.ht
 publish-srht: build
@@ -43,3 +43,7 @@ new_content content_name:
     @echo "Creating new content..."
     @hugo new content/blog/{{ content_name }}.md
     @echo "Content created successfully."
+
+edit:
+        # using fzf to select and pass to nvim
+        fd --extension=md --full-path content/blog | fzf | xargs nvim

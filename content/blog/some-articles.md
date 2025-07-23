@@ -23,6 +23,10 @@ You Are NOT Dumb, You Just Lack the Prerequisites - [url](https://lelouch.dev/bl
 
 Building software to last forever - [url](https://herman.bearblog.dev/building-software-to-last-forever/)
 
+Principles of bad software design - [url](https://digdeeper.club/articles/design.xhtml)
+
+Best practices for writing code comments - [url](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/)
+
 ## Videos
 
 You Suck at Investing. - [url](https://youtu.be/SbUkmysgXFs)

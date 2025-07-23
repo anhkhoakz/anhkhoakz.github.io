@@ -14,9 +14,7 @@ This is a collection of helpful macOS programs that I use every day. There are
 free, premium, and freemium options available. I'll do my best to maintain this
 list current.
 
-
 ## Terms
-
 
 - **FOSS**: Software that is both free (as in freedom) and open-source
 
@@ -24,9 +22,7 @@ list current.
 form of a product is free of charge, and access to additional features requires
 payment
 
-
 ## Productivity
-
 
 - [Alfred](https://www.alfredapp.com/): (£59) Alfred is an award-winning app for
 macOS which boosts your efficiency with hotkeys, keywords, text expansion and
@@ -48,9 +44,7 @@ reminder app.
 tool with annotations, beautiful backgrounds, scrolling screenshots and cloud
 upload capabilities.
 
-
 ## Development
-
 
 - [DataGrip](https://www.jetbrains.com/datagrip/): ($99) A powerful
 cross-platform tool for relational and NoSQL databases.
@@ -77,9 +71,7 @@ Your Fingertips.
 - [Git Tower](https://www.git-tower.com/pricing/mac): ($69) The most powerful
 Git client for Mac and Windows.
 
-
 ## Utilities
-
 
 - [1Password](https://1password.com/): ($2.99/month) 1Password is so much more
 than a password manager.
@@ -108,9 +100,7 @@ experience.
 - [Stremio](https://www.stremio.com/): (FOSS) Stremio offers a secure, modern
 and seamless entertainment experience.
 
-
 ## Casks
-
 
 - [biome](https://github.com/biomejs/biome): A toolchain for web projects, aimed
 to provide functionalities to maintain them. Biome offers formatter and linter,
@@ -125,6 +115,7 @@ usable via CLI and LSP.
 - [deno](https://deno.com/): A secure runtime for JavaScript and TypeScript.
 
 -
+
 [dotenv-linter](https://github.com/dotenv-linter/dotenv-linter):⚡️Lightning-fast
 linter for .env files. Written in Rust 🦀
 
@@ -252,12 +243,9 @@ Supports all major shells.
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions):
 Fish-like autosuggestions for zsh
 
-
 ## Visual Studio Code Extensions
 
-
 ### Javascript & Typescript
-
 
 - [xabikos.JavaScriptSnippets](https://marketplace.visualstudio.com/items/?itemName=xabikos.JavaScriptSnippets):
 Code snippets for JavaScript in ES6 syntax.
@@ -267,6 +255,5 @@ Display import/require package size in the editor
 
 - [biomejs.biome](https://marketplace.visualstudio.com/items/?itemName=biomejs.biome):
 Toolchain of the web
-
 
 ---

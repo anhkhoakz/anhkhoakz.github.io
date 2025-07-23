@@ -11,33 +11,24 @@ author = "anhkhoakz"
 
 ## Semantic Versioning
 
-
 {{<figure src="images/blogs/wtf-is-git/semver.webp" alt="Semantic Versioning"
 caption="Semantic Versioning">}}
-
 
 The three-part version number `MAJOR.MINOR.PATCH` is used by the software
 versioning system known as Semantic Versioning (SemVer).  The meaning of each
 component of the version number is distinct:
 
+- **MAJOR** version is used for incompatible API modifications.
 
-- **MAJOR** version is used for incompatible API modifications, the
-
-
-- **MINOR** version is used for backwards-compatible functionality additions,
-and the
-
+- **MINOR** version is used for backwards-compatible functionality additions.
 
 - **PATCH** version is used for backwards-compatible bug fixes.
 
-
 ## Conventional Commits
-
 
 A specification for creating consistent commit messages is called Conventional
 Commits. It offers a set of guidelines for crafting readable and intelligible
 commit messages. A standard commit message has the following structure:
-
 
 ```plaintext
 <type>[optional scope]: <description>
@@ -64,13 +55,10 @@ resolved, may be included in the optional footer or footers.
 - **optional footer**: Additional information that may be relevant to the
 commit, such as links to related issues or pull requests.
 
-
 ## Git Branching Model
-
 
 {{<figure src="images/blogs/wtf-is-git/git-flow.webp" alt="Git Branching Model"
 caption="Git Branching Model">}}
-
 
 A collection of rules for handling branches in a Git repository is known as the
 Git Branching Model.  It offers an organized method for branching and merging,
@@ -78,7 +66,6 @@ which facilitates the management of code updates and releases.  There are
 various kinds of branches in the model:
 
  The primary branch containing the code that is ready for production is called
-
 
 - **master**: This branch ought to be deployable and stable at all times.
 
@@ -101,21 +88,17 @@ integrated back into develop.
 - **chore**: Branches for standard operations that don't impact the operation of
 the application.
 
-
 ## Tools
-
 
 - **[Git](https://git-scm.com/)** (of course?): Git is a free and open source
 distributed version control system designed to handle everything from small to
 very large projects with speed and efficiency.
 
--
-**[petervanderdoes/gitflow-avh](https://github.com/petervanderdoes/gitflow-avh)**:
+- **[petervanderdoes/gitflow-avh](https://github.com/petervanderdoes/gitflow-avh)**:
 AVH Edition of the git extensions to provide high-level repository operations
 for Vincent Driessen's branching model.
 
--
-**[lisawolderiksen/git-commit-template.md](https://gist.github.com/lisawolderiksen/a7b99d94c92c6671181611be1641c733)**:
+- **[lisawolderiksen/git-commit-template.md](https://gist.github.com/lisawolderiksen/a7b99d94c92c6671181611be1641c733)**:
 A template for writing commit messages that follow the Conventional Commits
 specification.
 
@@ -124,32 +107,24 @@ Semantic-release automates the whole package release workflow including:
 determining the next version number, generating the release notes, and
 publishing the package.
 
--
-**[actions/semantic-pull-request](https://github.com/marketplace/actions/semantic-pull-request)**:
+- **[actions/semantic-pull-request](https://github.com/marketplace/actions/semantic-pull-request)**:
 This is a GitHub Action that ensures that your pull request titles match the
 Conventional Commits spec. Typically, this is used in combination with a tool
 like semantic-release to automate releases.
 
-
 ### Resources
-
 
 Semantic Versioning 2.0.0 - [url](https://semver.org)
 
-
 Conventional Commits - [url](https://www.conventionalcommits.org/en/v1.0.0/)
-
 
 A successful Git branching model -
 [url](https://nvie.com/posts/a-successful-git-branching-model/)
 
-
 Using git-flow to automate your git branching workflow -
 [url](https://jeffkreeftmeijer.com/git-flow/)
 
-
 Gitflow workflow -
 [url](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
-
 
 ---
