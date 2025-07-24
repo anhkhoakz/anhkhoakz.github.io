@@ -1,26 +1,18 @@
 # list available commands
-default: help
+_default: _help
     @just --list
 
 # usage information
-help:
+_help:
     @echo "Usage: just [recipe]"
-
-# install dependencies
-setup:
-    @echo "Installing dependencies..."
 
 # check code style and quality
 lint:
     @echo "Running linter..."
     markdownlint --fix content/
 
-# run tests
-test: lint
-    @echo "Running tests..."
-
 # compile or package the project
-build:
+build: clean
     @echo "Building project..."
     hugo build
     hugo --minify
@@ -35,15 +27,20 @@ clean:
 # publish to sr.ht
 publish-srht: build
     @echo "Publishing to sr.ht..."
-    @just clean
     tar -C public -cvz . > site.tar.gz
     hut pages publish -d anhkhoakz.srht.site site.tar.gz
 
+# create a new post
 new_content content_name:
     @echo "Creating new content..."
     @hugo new content/blog/{{ content_name }}.md
     @echo "Content created successfully."
 
+# edit a post
 edit:
-        # using fzf to select and pass to nvim
         fd --extension=md --full-path content/blog | fzf | xargs nvim
+
+# Dev mode
+dev:
+    hugo server
+    open http://localhost:1313

@@ -92,4 +92,77 @@ password is compromised.
 A modern authentication is Passkeys, which is a combination of password and
 fingerprint.
 
+## Browser
+
+By default, MacOS has Safari, and Windows has Edge. But seriously, you
+shouldn't use them.
+
+I recommend you to use Firefox, and follow my instruction from
+[How I Configure Firefox]({{< relref "how-i-configure-firefox.md" >}}).
+
+Forks of Firefox: [LibreWolf](https://librewolf.net/),
+[Mullvad Browser](https://mullvad.net/en/browser)
+
+Another option is [Brave](https://brave.com/). But it comes with a lot of
+cryptocurrency-things, so you have to modified it a lot.
+
+Forks of Chrome:
+[ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium)
+
+### Extensions
+
+- [uMatrix](https://github.com/gorhill/uMatrix)
+- [uBlock Origin](https://github.com/gorhill/uBlock) (less features than
+uMatrix but easy to use)
+- Filter lists:
+  - You need to read each filter list carefully, and you should know what it
+  does.
+  - Recommended: [DandelionSprout/LegitimateURLShortener](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)
+- [Decentraleyes](https://git.synz.io/Synzvato/decentraleyes)
+
+## DNS
+
+I will recommend you some DNS servers:
+
+- [Cloudflare](https://1.1.1.1/)
+- [Mullvad](https://mullvad.net/en/help/dns-over-https-and-dns-over-tls)
+- [AdGuard](https://adguard-dns.io/en/public-dns.html)
+
+## Email
+
+Please avoid using Gmail.
+
+Some name of providers:
+
+- [Disroot](https://disroot.org)
+- [Autistici](https://www.autistici.org)
+- [Cork.li](https://cock.li/)
+- [ProtonMail](https://proton.me/mail)
+- [Tuta](https://tuta.com)
+
+I have a big question mark on ProtonMail, and Tuta, because those don't allow
+you to use your own email client, which is potientially inject a JavaScript to
+steal your credentials.
+
+For existing emails, you can use [Mailvelope](https://mailvelope.com) or set
+a forwarding email.
+
+For masking emails, you can use [SimpleLogin](https://simplelogin.io),
+[AnonAddy](https://addy.io), or [33Mail](https://33mail.com).
+
+## Communication
+
+Just use [Signal](https://signal.org), [Telegram](https://telegram.org) is
+considered as a popular one, but I'm not sure if it is really safe.
+
+## File sharing
+
+You can use [Nextcloud](https://nextcloud.com) or [Send](https://send.vis.ee/),
+another instance of Send is [SkySend](https://ch.skysend.ch/).
+
+## Note taking
+
+You can use [Standard Notes](https://standardnotes.com/) or
+[Notesnook](https://notesnook.com/)
+
 ---
