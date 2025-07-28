@@ -44,12 +44,25 @@ reminder app.
 tool with annotations, beautiful backgrounds, scrolling screenshots and cloud
 upload capabilities.
 
+- [Clop](https://lowtechguys.com/clop/): ($15) Image, video, PDF and clipboard
+optimiser. Copy large, paste small, send fast.
+
+## Privacy & Security
+
+- [LuLu](https://github.com/objective-see/LuLu): (FOSS) LuLu is the free
+open-source macOS firewall.
+
+- [OverSight](https://github.com/objective-see/OverSight): (FOSS) OverSight
+monitors a mac's mic and webcam, alerting the user when the internal mic is
+activated, or whenever a process accesses the webcam.
+
+- [KnockKnock](https://github.com/objective-see/KnockKnock): (FOSS) Like
+AutoRuns ...but for macOS!
+
 ## Development
 
-- [DataGrip](https://www.jetbrains.com/datagrip/): ($99) A powerful
-cross-platform tool for relational and NoSQL databases.
-
-- [Docker](https://www.docker.com/): (Freemium) Develop faster. Run anywhere.
+- [Podman](https://github.com/containers/podman): (FOSS) A tool for managing OCI containers and
+pods.
 
 - [xh](https://github.com/ducaale/xh): (FOSS) Friendly and fast tool for sending
 HTTP requests.
@@ -65,11 +78,6 @@ Redefined with AI.
 
 - [SnippetLab](https://www.renfei.org/snippets-lab/): ($0) Keep Your Code At
 Your Fingertips.
-
-- [Termius](https://termius.com/): ($10) Modern SSH Client.
-
-- [Git Tower](https://www.git-tower.com/pricing/mac): ($69) The most powerful
-Git client for Mac and Windows.
 
 ## Utilities
 
@@ -110,12 +118,6 @@ usable via CLI and LSP.
 
 - [bun](https://bun.sh/): A fast, all-in-one JavaScript runtime.
 
-- [Clop](https://github.com/FuzzyIdeas/Clop): Clipboard optimizer for macOS.
-
-- [deno](https://deno.com/): A secure runtime for JavaScript and TypeScript.
-
--
-
 [dotenv-linter](https://github.com/dotenv-linter/dotenv-linter):⚡️Lightning-fast
 linter for .env files. Written in Rust 🦀
 
@@ -140,20 +142,13 @@ Go
 control system designed to handle everything from small to very large projects
 with speed and efficiency.
 
-- [git-cliff](https://github.com/orhun/git-cliff): A highly customizable
-changelog tool that makes changelog easy.
-
-- [git-delta](https://github.com/dandavison/delta): A syntax-highlighting pager
-for git, diff, grep, and blame output
-
-- [git-flow-avh](https://github.com/petervanderdoes/gitflow-avh): AVH Edition of
-the git extensions to provide high-level repository operations for Vincent
-Driessen's branching model
+- [git-delta](https://github.com/dandavison/delta): A syntax-highlighting pager for git, diff, grep, and blame output
 
 - [git-toolbelt](https://github.com/nvie/git-toolbelt/tree/main): A suite of
 useful Git commands that aid with scripting or every day command line usage
 
-- [httpie](https://httpie.io/): A command line HTTP client.
+- [git-extras](https://github.com/tj/git-extras): GIT utilities -- repo summary,
+repl, changelog population, author commit percentages and more
 
 - [hugo](https://gohugo.io/): A fast and flexible static site generator that's
 perfect for personal, organization, or business sites.
@@ -163,8 +158,6 @@ tool.
 
 - [jq](https://github.com/jqlang/jq): Command-line JSON processor
 
-- [jql](https://github.com/yamafaktory/jql): A JSON Query Language CLI tool
-
 - [just](https://github.com/casey/just): 🤖 Just a command runner
 
 - [lazydocker](https://github.com/jesseduffield/lazydocker): The lazier way to
@@ -173,20 +166,11 @@ manage everything docker
 - [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli):
 MarkdownLint Command Line Interface
 
-- [mdbook](https://github.com/rust-lang/mdBook): Create book from markdown
-files. Like Gitbook but implemented in Rust
-
 - [minify](https://github.com/tdewolff/minify): Go minifiers for web formats
 
 - [neovim](https://neovim.io/): Vim-fork focused on extensibility and usability
 
-- [numbat](https://github.com/sharkdp/numbat/tree/master): A statically typed
-programming language for scientific computations with first class support for
-physical dimensions and units
-
 - [pandoc](https://pandoc.org/): A universal document converter
-
-- [pyenv](https://github.com/pyenv/pyenv): Simple Python version management
 
 - [rclone](https://rclone.org/): Rclone is a command-line program to manage
 files on cloud storage.
@@ -200,18 +184,12 @@ code formatter, written in Rust.
 - [shellcheck](https://github.com/koalaman/shellcheck): ShellCheck, a static
 analysis tool for shell scripts
 
-- [starship](https://github.com/starship/starship): ☄🌌️ The minimal,
-blazing-fast, and infinitely customizable prompt for any shell!
-
 - [GNU Stow](https://www.gnu.org/software/stow/): GNU Stow is a symlink farm
 manager which takes distinct sets of software and/or data located in separate
 directories on the filesystem, and makes them all appear to be installed in a
 single directory tree.
 
 - [taplo](https://github.com/tamasfe/taplo): A TOML toolkit written in Rust
-
-- [thefuck](https://github.com/nvbn/thefuck): Magnificent app which corrects
-your previous console command
 
 - [tlrc](https://github.com/tldr-pages/tlrc): A tldr client written in Rust
 
@@ -227,9 +205,6 @@ rewrite of the GNU coreutils
 - [uv](https://github.com/astral-sh/uv): An extremely fast Python package and
 project manager, written in Rust.
 
-- [yazi](https://github.com/sxyazi/yazi): 💥 Blazing fast terminal file manager
-written in Rust, based on async I/O
-
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp): A feature-rich command-line
 audio/video downloader
 
@@ -239,9 +214,6 @@ Chrome, Safari, Edge and Firefox.
 
 - [zoxide](https://github.com/ajeetdsouza/zoxide): A smarter cd command.
 Supports all major shells.
-
-- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions):
-Fish-like autosuggestions for zsh
 
 ## Visual Studio Code Extensions
 

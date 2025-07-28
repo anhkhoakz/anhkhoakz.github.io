@@ -1,0 +1,13 @@
+{{- /*
+Renders a video element.
+
+@param {string} [src] The source URL of the image. Can be relative or absolute.
+@param {string} [alt] The alt text for the image. Defaults to the caption if not provided.
+
+@returns {template.HTML}
+
+@example {{< video src="https://lowtechguys.com/static/video/screenshot-copy-optimise-paste-in-email.mp4">}}
+
+    */}}
+
+    <video src='{{ .Get " src" }}' autoplay muted loop loading="lazy" playsinline>
