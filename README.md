@@ -17,7 +17,8 @@ This repository hosts the content, workflows, and themes for [anhkhoakz.dev](htt
 
 - **Continuous Deployment**: Automatically deploys updates to Netlify.
 - **Mirror Pages**: Keeps mirror pages in sync across platforms.
-- **Git Mirroring**: Ensures repositories are mirrored across multiple Git hosting services.
+- **Git Mirroring**: Ensures repositories are mirrored across multiple Git
+  hosting services.
 
 ![PageSpeed Insights](https://i.imgur.com/HcsbDn9.png)
 
@@ -25,36 +26,41 @@ This repository hosts the content, workflows, and themes for [anhkhoakz.dev](htt
 
 1. **Clone the repository:**
 
-   ```sh
-   git clone https://github.com/anhkhoakz/anhkhoakz.github.io.git
-   cd anhkhoakz.github.io
-   ```
+      ```sh
+      git clone https://github.com/anhkhoakz/anhkhoakz.github.io.git
+      cd anhkhoakz.github.io
+      ```
 
 2. **Install [Hugo](https://gohugo.io/installation/):**
 
-   ```sh
-   # MacOS
-   brew install hugo
-   # Ubuntu
-   sudo apt install hugo
-   # Windows
-   choco install hugo -confirm
+      ```sh
+      # MacOS
+      brew install hugo
+      # Ubuntu
+      sudo apt install hugo
+      # Windows
+      choco install hugo -confirm
+
+      ```
 
 3. **Run the local server:**
 
-   ```sh
-   hugo server
-   ```
+      ```sh
+      hugo server
+      ```
 
-   Visit [http://localhost:1313](http://localhost:1313) to view the site locally.
+Visit [http://localhost:1313](http://localhost:1313) to view the site
+locally.
 
 ## How to Contribute
 
-Feel free to open issues or submit pull requests to improve the content or functionality of this repository.
+Feel free to open issues or submit pull requests to improve the content or
+functionality of this repository.
 
 ## License
 
-This project is licensed under the CC-BY-4.0 License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the CC-BY-4.0 License. See the [LICENSE](LICENSE)
+file for details.
 
 ## Credits
 
