@@ -17,45 +17,70 @@ this operating system.
 ### MacOS
 
 - **Apple ID**: You can bypass the prompt to sign in to Apple ID, but it
-prevents you from using AppStore, iTunes, and iCloud,... It is NOT required to
-download & install system update, and install apps from outside the AppStore.
+  prevents you from using AppStore, iTunes, and iCloud,... It is NOT required to
+  download & install system update, and install apps from outside the AppStore.
 
 - **FileVault**: This step is to apply full-disk encryption to your MacBook.
-You can keep the recovery key on iCloud, or let device display 24-digit which
-you will copy it, store on encrypted container.
+  You can keep the recovery key on iCloud, or let device display 24-digit which
+  you will copy it, store on encrypted container.
 
 - **AntiVirus**: I personally don't use AntiVirus, but I'm not against it.
 
 - **HomeBrew**: You can install homebrew follow instructions on their
-[website](https://brew.sh/). After that, enter this commands:
-`brew analytics off`
+  [website](https://brew.sh/). After that, enter this commands:
+  `brew analytics off`
 
 - **AntiMalware**: I recommend you to use
-[KnockKnock](https://objective-see.org/products/knockknock.html)
-to scan your MacBook for malware.
+  [KnockKnock](https://objective-see.org/products/knockknock.html)
+  to scan your MacBook for malware.
+
+{{<figure src="images/blogs/privacy-digital-life/knockknock.webp" >}}
+
+After install, allow their permissions and "Start Scan". If you see anything
+process that you don't want it to run, just move it to Trash or rename it.
 
 - **Firewall**: I recommend you to use
-[LuLu](https://objective-see.org/products/lulu.html)
+  [LuLu](https://objective-see.org/products/lulu.html)
+
+The built-in firewall of MacOS only block incomming connections, it's good, but
+it will not conver all cases.
+
+Each time your applications which make an outgoing connections, it will prompt
+you like this image.
+
+{{<figure src="images/blogs/privacy-digital-life/lulu-01.webp" >}}
+
+You will manually choose if it should connect to network. For example: You
+install a calculator and LuLu prompt you to allow outgoing connections? That's
+weird.
 
 - **Camera & Microphone**: I recommend you to use
-[OverSight](https://objective-see.org/products/oversight.html)
+  [OverSight](https://objective-see.org/products/oversight.html)
+
+This app is simple, each time an app use your camera or microphone, it will
+prompt you like this image.
+
+{{<figure src="images/blogs/privacy-digital-life/oversight.webp" >}}
+
+You can have options to allow or block it. Which I think pretty useful for
+online meeting too.
 
 - **Verify the structure of the system files**: You can use
-[Onyx](https://www.titanium-software.fr/en/onyx.html)
+  [Onyx](https://www.titanium-software.fr/en/onyx.html)
 
 ### Windows
 
 - Windows Defender: I recommend you to use Windows Defender which is
-pre-installed on Windows.
+  pre-installed on Windows.
 
 - Please don't use [CCleaner](https://www.ccleaner.com/), you can use
-[BleachBit](https://www.bleachbit.org/) instead.
+  [BleachBit](https://www.bleachbit.org/) instead.
 
 - Disable Telemetry: You can disable telemetry by using
-[O&O ShutUp10](https://oo-software.com/en/)
+  [O&O ShutUp10](https://oo-software.com/en/)
 
 - Uninstall software: Using
-[Bulk Crap Uninstaller](https://www.bcuninstaller.com/).
+  [Bulk Crap Uninstaller](https://www.bcuninstaller.com/).
 
 ## Password
 
@@ -113,11 +138,11 @@ Forks of Chrome:
 
 - [uMatrix](https://github.com/gorhill/uMatrix)
 - [uBlock Origin](https://github.com/gorhill/uBlock) (less features than
-uMatrix but easy to use)
+  uMatrix but easy to use)
 - Filter lists:
-  - You need to read each filter list carefully, and you should know what it
-  does.
-  - Recommended: [DandelionSprout/LegitimateURLShortener](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)
+     - You need to read each filter list carefully, and you should know what it
+       does.
+     - Recommended: [DandelionSprout/LegitimateURLShortener](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)
 - [Decentraleyes](https://git.synz.io/Synzvato/decentraleyes)
 
 ## DNS
@@ -147,8 +172,8 @@ steal your credentials.
 For existing emails, you can use [Mailvelope](https://mailvelope.com) or set
 a forwarding email.
 
-For masking emails, you can use [SimpleLogin](https://simplelogin.io),
-[AnonAddy](https://addy.io), or [33Mail](https://33mail.com).
+For masking emails, I currenly use [SimpleLogin](https://simplelogin.io), or you
+can choose [AnonAddy](https://addy.io)
 
 ## Communication
 

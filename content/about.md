@@ -7,9 +7,6 @@ hideReply: true
 
 ## About me
 
-{{< figure src="images/avatar.webp" alt="anhkhoakz.dev"  width=auto height=500
-class="rounded" loading="lazy" >}}
-
 Hello everyone!
 
 My name is Anh Khoa, and I’m a junior student studying Software Engineering at
@@ -69,13 +66,13 @@ website](https://bestmotherfucking.website/) for the reasons, I love them, here
 is keypoints:
 
 1. **Performance and Accessibility**: Websites have to load rapidly, work with
-all browsers and devices, and be simple to read.
+   all browsers and devices, and be simple to read.
 
 2. **Design Errors**: Usability is hampered by extremely intricate designs and
-low contrast typography.
+   low contrast typography.
 
 3. **Font**: It is considered antiquated and inefficient to load huge distant
-fonts.
+   fonts.
 
 For **simpler phrase**: This website can load with any network conditions, or
 any devices.
