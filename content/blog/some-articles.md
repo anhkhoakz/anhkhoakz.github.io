@@ -30,5 +30,8 @@ Best practices for writing code comments - [url](https://stackoverflow.blog/2021
 ## Videos
 
 You Suck at Investing. - [url](https://youtu.be/SbUkmysgXFs)
+100+ Linux Things you Need to Know - [url](https://youtu.be/LKCVKw9CzFo)
+Why Some Projects Use Multiple Programming Languages - [url](https://youtu.be/XJC5WB2Bwrc)
+10 Things I Regret About Node.js - Ryan Dahl - JSConf EU - [url](https://youtu.be/M3BM9TB-8yA)
 
 ---
