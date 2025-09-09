@@ -1,24 +1,45 @@
 name: Git Mirroring
 
-on: [push, delete]
+on:
+        push:
+        delete:
+        workflow_dispatch:
+
+concurrency:
+        group: git-mirroring
+        cancel-in-progress: true
+
+permissions:
+        contents: read
 
 jobs:
         mirror_repositories:
                 runs-on: ubuntu-latest
+                timeout-minutes: 15
                 steps:
                         - name: Checkout code
-                          uses: actions/checkout@v4
+                          uses: actions/checkout@v5
                           with:
                                   fetch-depth: 0
 
                         - name: Mirror to SourceHut
+                          id: srht
                           uses: pixta-dev/repository-mirroring-action@v1
                           with:
                                   target_repo_url: git@git.sr.ht:~anhkhoakz/pages
                                   ssh_private_key: ${{ secrets.sourcehut_ssh }}
+                          continue-on-error: true
 
                         - name: Mirror to Disroot
+                          id: disroot
                           uses: pixta-dev/repository-mirroring-action@v1
                           with:
                                   target_repo_url: git@git.disroot.org:anhkhoakz/pages.git
                                   ssh_private_key: ${{ secrets.disroot_ssh }}
+                          continue-on-error: true
+
+                        - name: Fail if all mirrors failed
+                          if: ${{ steps.srht.outcome == 'failure' && steps.disroot.outcome == 'failure' }}
+                          run: |
+                                  echo "All mirroring targets failed" >&2
+                                  exit 1

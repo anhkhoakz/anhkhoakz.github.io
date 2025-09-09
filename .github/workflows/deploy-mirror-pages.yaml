@@ -4,6 +4,7 @@ on:
         push:
                 branches:
                         - main
+        workflow_dispatch:
 
 concurrency:
         group: deploy-pages
@@ -17,10 +18,14 @@ jobs:
         deploy:
                 name: Build and deploy Hugo site
                 runs-on: ubuntu-latest
+                timeout-minutes: 30
                 permissions:
                         contents: read
                         pages: write
                         id-token: write
+                environment:
+                        name: github-pages
+                        url: ${{ steps.deployment.outputs.page_url }}
 
                 steps:
                         # Check out the source for the site
@@ -44,6 +49,7 @@ jobs:
                           uses: peaceiris/actions-hugo@v3
                           with:
                                   hugo-version: "latest"
+                                  extended: true
 
                         # Clean up static folder
                         - name: Clean static folder
@@ -56,6 +62,14 @@ jobs:
                           run: hugo --gc --minify --destination public
                           env:
                                   HUGO_BASEURL: https://anhkhoakz.github.io/
+
+                        # Upload build output as a generic artifact for debugging/backup
+                        - name: Upload build artifact
+                          uses: actions/upload-artifact@v4
+                          with:
+                                  name: hugo-public
+                                  path: ./public
+                                  if-no-files-found: error
 
                         # Setup Pages
                         - name: Setup Pages
