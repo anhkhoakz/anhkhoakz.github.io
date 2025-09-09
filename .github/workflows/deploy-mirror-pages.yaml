@@ -105,12 +105,13 @@ jobs:
                         # Deploy to Sourcehut
                         - name: Deploy to Sourcehut
                           run: |
+                                  # Download the correct binary for Linux x86_64
                                   curl -sSL \
                                     https://github.com/anhkhoakz/hut/releases/download/v0.7.0/hut.tar.gz \
                                     | tar -xz hut hut.bash hut.fish hut.zsh doc/
                                   install -m 755 hut /usr/local/bin/hut
                                   tar -C public -cvz . > site.tar.gz
-                                  ./hut pages publish -d anhkhoakz.srht.site site.tar.gz
+                                  hut pages publish -d anhkhoakz.srht.site site.tar.gz
                           env:
                                   HUGO_BASEURL: https://anhkhoakz.srht.site/
                                   SRHT_ACCESS_TOKEN: ${{ secrets.SRHT_TOKEN }}
