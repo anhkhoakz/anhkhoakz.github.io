@@ -105,9 +105,9 @@ jobs:
                         # Deploy to Sourcehut
                         - name: Deploy to Sourcehut
                           run: |
-                                  latest="$(curl -s "https://api.github.com/repos/anhkhoakz/hut/releases/latest" | jq -r '.name')"
-                                  curl -sSL \
-                                    https://github.com/anhkhoakz/hut/releases/download/$latest/hut-hut-linux-amd64
+                                  curl --continue-at - --location --progress-bar \
+                                    --remote-name --remote-time \
+                                    https://github.com/anhkhoakz/hut/releases/download/v0.8.0/hut-hut-linux-amd64
                                   install -m 755 hut-hut-linux-amd64 /usr/local/bin/hut
                                   tar -C public -cvz . > site.tar.gz
                                   hut pages publish -d anhkhoakz.srht.site site.tar.gz
