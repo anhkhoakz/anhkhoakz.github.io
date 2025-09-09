@@ -105,10 +105,10 @@ jobs:
                         # Deploy to Sourcehut
                         - name: Deploy to Sourcehut
                           run: |
-                                  # Download the correct binary for Linux x86_64
+                                  latest="$(curl -s "https://api.github.com/repos/anhkhoakz/hut/releases/latest" | jq -r '.name')"
                                   curl -sSL \
-                                    https://github.com/anhkhoakz/hut/releases/download/v0.8.0/hut-hut-linux-amd64
-                                  install -m 755 hut-hut-linux-386 /usr/local/bin/hut
+                                    https://github.com/anhkhoakz/hut/releases/download/$latest/hut-hut-linux-amd64
+                                  install -m 755 hut-hut-linux-amd64 /usr/local/bin/hut
                                   tar -C public -cvz . > site.tar.gz
                                   hut pages publish -d anhkhoakz.srht.site site.tar.gz
                           env:
