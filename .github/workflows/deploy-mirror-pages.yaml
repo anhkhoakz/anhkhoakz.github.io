@@ -109,6 +109,9 @@ jobs:
                                     --remote-name --remote-time \
                                     https://github.com/anhkhoakz/hut/releases/download/v0.8.0/hut-hut-linux-amd64
                                   install -m 755 hut-hut-linux-amd64 /usr/local/bin/hut
+                                  mkdir -p ~/.config/hut
+                                  umask 077
+                                  printf 'instance "sr.ht" {\n    access-token "%s"\n}\n' "$SRHT_ACCESS_TOKEN" > ~/.config/hut/config
                                   tar -C public -cvz . > site.tar.gz
                                   hut pages publish -d anhkhoakz.srht.site site.tar.gz
                           env:
