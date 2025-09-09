@@ -17,6 +17,10 @@ jobs:
         deploy:
                 name: Build and deploy Hugo site
                 runs-on: ubuntu-latest
+                permissions:
+                        contents: read
+                        pages: write
+                        id-token: write
 
                 steps:
                         # Check out the source for the site
