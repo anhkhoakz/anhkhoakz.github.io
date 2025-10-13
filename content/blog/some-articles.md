@@ -27,6 +27,8 @@ Principles of bad software design - [url](https://digdeeper.club/articles/design
 
 Best practices for writing code comments - [url](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/)
 
+Start Here — Everyday Commentary - [url](https://www.everydaycommentary.com/start-here)
+
 ## Videos
 
 You Suck at Investing. - [url](https://youtu.be/SbUkmysgXFs)
@@ -36,5 +38,7 @@ You Suck at Investing. - [url](https://youtu.be/SbUkmysgXFs)
 Why Some Projects Use Multiple Programming Languages - [url](https://youtu.be/XJC5WB2Bwrc)
 
 10 Things I Regret About Node.js - Ryan Dahl - JSConf EU - [url](https://youtu.be/M3BM9TB-8yA)
+
+Leatherman ARC Sheath Build - [url](https://www.youtube.com/shorts/ZZzA4TSI7pI)
 
 ---

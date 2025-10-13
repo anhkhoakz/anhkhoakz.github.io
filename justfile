@@ -42,6 +42,4 @@ edit:
 
 # Dev mode
 dev:
-    hugo server
-    sleep 3
-    open http://localhost:1313
+    hugo server --openBrowser

@@ -5,7 +5,7 @@
     {{ end }}
 
     <ul class="blog-posts">
-        {{ range .Pages }}
+        {{ range where .Pages "Params.unlisted" "!=" true }}
         <li>
             <span>
                 <i>
@@ -28,9 +28,7 @@
     {{ if not .Data.Singular }}
     <div>
         {{ range .Site.Taxonomies.tags }}
-        <a class="blog-tags" href="{{ .Page.RelPermalink }}"
-            >#{{ lower .Page.Title }}</a
-        >
+        <a class="blog-tags" href="{{ .Page.RelPermalink }}">#{{ lower .Page.Title }}</a>
         {{ end }}
     </div>
     {{ end }}

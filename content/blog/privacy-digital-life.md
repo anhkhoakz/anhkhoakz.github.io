@@ -3,6 +3,7 @@ title = 'Privacy Digital Life'
 description = ""
 date = 2025-07-23T11:42:20+07:00
 draft = false
+unlisted = false
 tags = []
 author = "anhkhoakz"
 +++
@@ -140,9 +141,9 @@ Forks of Chrome:
 - [uBlock Origin](https://github.com/gorhill/uBlock) (less features than
   uMatrix but easy to use)
 - Filter lists:
-     - You need to read each filter list carefully, and you should know what it
+  - You need to read each filter list carefully, and you should know what it
        does.
-     - Recommended: [DandelionSprout/LegitimateURLShortener](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)
+  - Recommended: [DandelionSprout/LegitimateURLShortener](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)
 - [Decentraleyes](https://git.synz.io/Synzvato/decentraleyes)
 
 ## DNS
