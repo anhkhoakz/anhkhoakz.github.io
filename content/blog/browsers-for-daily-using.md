@@ -103,7 +103,7 @@ But I have had some bad experiences when using it:
 1. It's not able to use 1Password biometrics because it lacks a code signature
 [^2]. But it can work well with Bitwarden or KeePassXC.
 
-    - I have the solution at: Extending support for trusted web browsers [^6].
+   - I have the solution at: Extending support for trusted web browsers [^6].
 
 2. Lacking of auto-update capacities raises a concern about security and
 zero-day vulnerability [^7]. But it can be fixed by using packet manager or

@@ -15,7 +15,7 @@ author = "anhkhoakz"
 caption="Semantic Versioning">}}
 
 The three-part version number `MAJOR.MINOR.PATCH` is used by the software
-versioning system known as Semantic Versioning (SemVer).  The meaning of each
+versioning system known as Semantic Versioning (SemVer). The meaning of each
 component of the version number is distinct:
 
 - **MAJOR** version is used for incompatible API modifications.
@@ -61,8 +61,8 @@ commit, such as links to related issues or pull requests.
 caption="Git Branching Model">}}
 
 A collection of rules for handling branches in a Git repository is known as the
-Git Branching Model.  It offers an organized method for branching and merging,
-which facilitates the management of code updates and releases.  There are
+Git Branching Model. It offers an organized method for branching and merging,
+which facilitates the management of code updates and releases. There are
 various kinds of branches in the model:
 
  The primary branch containing the code that is ready for production is called
@@ -71,18 +71,18 @@ various kinds of branches in the model:
 
  The branch where development takes place is called
 
-- **develop**:  Before being made public, features are merged into this branch.
+- **develop**: Before being made public, features are merged into this branch.
 
-- **feature**: New features have their own branches.  When finished, they are
+- **feature**: New features have their own branches. When finished, they are
 integrated back into develop.
 
  The branches used to get ready for a new production release are referred to as
-**release**.  They enable preparation and last-minute repairs.
+**release**. They enable preparation and last-minute repairs.
 
-- **hotfix**: Branches made to promptly fix production-related problems.  Both
+- **hotfix**: Branches made to promptly fix production-related problems. Both
 master and develop have been integrated back into them.
 
-- **bugfix**: Code bugs are fixed using branches.  When finished, they are
+- **bugfix**: Code bugs are fixed using branches. When finished, they are
 integrated back into develop.
 
 - **chore**: Branches for standard operations that don't impact the operation of

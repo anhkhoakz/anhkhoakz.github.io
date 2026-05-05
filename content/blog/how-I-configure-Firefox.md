@@ -6,6 +6,7 @@ draft = false
 tags = []
 author = "anhkhoakz"
 +++
+
 ---
 
 I've recommended to all of you [Browsers for Daily Using]({{< relref
@@ -35,11 +36,11 @@ bar, but I'll make it easier for you.
 
 1. Download a `user.js`. You can choose:
 
-    - **Easy**: [Betterfox](https://github.com/yokoffing/Betterfox/)
+   - **Easy**: [Betterfox](https://github.com/yokoffing/Betterfox/)
 
-    - **Medium**: [arkenfox](https://github.com/arkenfox/user.js/)
+   - **Medium**: [arkenfox](https://github.com/arkenfox/user.js/)
 
-    - **Hard**: [Narsil](https://git.nixnet.services/Narsil/desktop_user.js/)
+   - **Hard**: [Narsil](https://git.nixnet.services/Narsil/desktop_user.js/)
 
     You can download it using `git clone`, `curl -O`, or by clicking the
 `Download` button. Downloading a single `user.js` file is sufficient, but

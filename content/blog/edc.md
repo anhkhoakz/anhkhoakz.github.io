@@ -28,7 +28,7 @@ My current EDC include:
 - A Leonardo Cosmos [wallet](https://www.leonardo.vn/products/vi-cosmos-outlet).
 - Bic lighter.
 - Gear Aid [Heroclip](https://www.gearaid.com/products/heroclip-small) Small
-- Leatherman [Wave® Plus](https://www.leatherman.com/collections/everyday-essentials/products/wave)
+- Fullsize pilers-based Leatherman [Wave® Plus](https://www.leatherman.com/collections/everyday-essentials/products/wave)
 - tomtoc Explorer-T21 [Sling Bag](https://www.tomtoc.com/products/explorer-t21-sling-bag-s) S
 
 ## What is EDC?
@@ -39,6 +39,12 @@ items that are consistently carried on person every day [^1].
 ## What is BIFT?
 
 BIFL stands for **B**uy **I**t **F**or **L**ife
+
+## Maintenance Leatherman
+
+<https://img.youtube.com/vi/_z3HuJ8N-LI/maxresdefault.jpg>
+
+Replace by this tutorial <https://youtu.be/z88k1Iu9L0c>
 
 ## Resources
 

@@ -92,50 +92,50 @@ And you know what? This has the significant poor performance:
 
 ZSH-bench results:
 
-| Feature/Metric           | Initial       |
-|--------------------------|:--------------:|
-| creates_tty              |       0        |
-| has_compsys              |       1        |
-| has_syntax_highlighting  |       1        |
-| has_autosuggestions      |       1        |
-| has_git_prompt           |       1        |
-| first_prompt_lag_ms      |    137.08      |
-| first_command_lag_ms     |    195.358     |
-| command_lag_ms           |    66.017      |
-| input_lag_ms             |    10.483      |
-| exit_time_ms             |    64.467      |
+| Feature/Metric          | Initial |
+| ----------------------- | :-----: |
+| creates_tty             |    0    |
+| has_compsys             |    1    |
+| has_syntax_highlighting |    1    |
+| has_autosuggestions     |    1    |
+| has_git_prompt          |    1    |
+| first_prompt_lag_ms     | 137.08  |
+| first_command_lag_ms    | 195.358 |
+| command_lag_ms          | 66.017  |
+| input_lag_ms            | 10.483  |
+| exit_time_ms            | 64.467  |
 
 Where:
 
-|name|  meaning |
-| -- | -- |
-|creates tty| the shell creates its own TTY by invoking tmux or screen|
-|has compsys| the shell initializes compsys—the "new" completion system—by invoking compinit|
-|has syntax highlighting| user input (the command line) is highlighted by zsh-syntax-highlighting|
-|has autosuggestions| suggestions for command completions are offered automatically by zsh-autosuggestions|
-|has git prompt| git branch is displayed in prompt|
-| first prompt lag (ms) | from the start of the shell to the moment prompt appears on the screen |
-| first command lag (ms) | from the start of the shell to the moment the first interactive command starts executing |
-| command lag (ms) | from pressing Enter on an empty command line to the moment the next prompt appears; the same as zsh-prompt-benchmark (my project) |
-| input lag (ms) | from pressing a regular key to the moment the corresponding character appears on the command line; this test is performed when the current command line is already fairly long |
-| exit time (ms) | how long it takes to execute zsh -lic "exit"; this value is meaningless as far as measuring interactive shell latencies goes |
+| name                    | meaning                                                                                                                                                                        |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| creates tty             | the shell creates its own TTY by invoking tmux or screen                                                                                                                       |
+| has compsys             | the shell initializes compsys—the "new" completion system—by invoking compinit                                                                                                 |
+| has syntax highlighting | user input (the command line) is highlighted by zsh-syntax-highlighting                                                                                                        |
+| has autosuggestions     | suggestions for command completions are offered automatically by zsh-autosuggestions                                                                                           |
+| has git prompt          | git branch is displayed in prompt                                                                                                                                              |
+| first prompt lag (ms)   | from the start of the shell to the moment prompt appears on the screen                                                                                                         |
+| first command lag (ms)  | from the start of the shell to the moment the first interactive command starts executing                                                                                       |
+| command lag (ms)        | from pressing Enter on an empty command line to the moment the next prompt appears; the same as zsh-prompt-benchmark (my project)                                              |
+| input lag (ms)          | from pressing a regular key to the moment the corresponding character appears on the command line; this test is performed when the current command line is already fairly long |
+| exit time (ms)          | how long it takes to execute zsh -lic "exit"; this value is meaningless as far as measuring interactive shell latencies goes                                                   |
 
 You can refer to the [How not to benchmark](https://github.com/romkatv/zsh-bench?tab=readme-ov-file#how-not-to-benchmark)
 
 The raw zsh loadtime with `--no-rcs` is:
 
-| Feature/Metric           | --no-rcs       |
-|--------------------------|:--------------:|
-| creates_tty              |       0        |
-| has_compsys              |       0        |
-| has_syntax_highlighting  |       0        |
-| has_autosuggestions      |       0        |
-| has_git_prompt           |       0        |
-| first_prompt_lag_ms      |    17.993      |
-| first_command_lag_ms     |    18.115      |
-| command_lag_ms           |     0.063      |
-| input_lag_ms             |     0.288      |
-| exit_time_ms             |    17.049      |
+| Feature/Metric          | --no-rcs |
+| ----------------------- | :------: |
+| creates_tty             |    0     |
+| has_compsys             |    0     |
+| has_syntax_highlighting |    0     |
+| has_autosuggestions     |    0     |
+| has_git_prompt          |    0     |
+| first_prompt_lag_ms     |  17.993  |
+| first_command_lag_ms    |  18.115  |
+| command_lag_ms          |  0.063   |
+| input_lag_ms            |  0.288   |
+| exit_time_ms            |  17.049  |
 
 This is the baseline, the "ideal" metric for the zsh startup time.
 
@@ -147,18 +147,18 @@ command lag, input lag, and exit time.
 I'm going to determine whether the prezto or my configurations
 slow down the zsh startup time.
 
-| Feature/Metric           | Disable Prezto | Disable My Configurations |
-|--------------------------|:--------------:|:-------------------------:|
-| creates_tty              |       0        |            0              |
-| has_compsys              |       0        |            1              |
-| has_syntax_highlighting  |       0        |            1              |
-| has_autosuggestions      |       0        |            1              |
-| has_git_prompt           |       1        |            0              |
-| first_prompt_lag_ms      |    102.529     |         52.73             |
-| first_command_lag_ms     |    102.731     |        63.196             |
-| command_lag_ms           |     61.759     |        10.302             |
-| input_lag_ms             |     0.223      |        10.099             |
-| exit_time_ms             |    43.516      |        37.033             |
+| Feature/Metric          | Disable Prezto | Disable My Configurations |
+| ----------------------- | :------------: | :-----------------------: |
+| creates_tty             |       0        |             0             |
+| has_compsys             |       0        |             1             |
+| has_syntax_highlighting |       0        |             1             |
+| has_autosuggestions     |       0        |             1             |
+| has_git_prompt          |       1        |             0             |
+| first_prompt_lag_ms     |    102.529     |           52.73           |
+| first_command_lag_ms    |    102.731     |          63.196           |
+| command_lag_ms          |     61.759     |          10.302           |
+| input_lag_ms            |     0.223      |          10.099           |
+| exit_time_ms            |     43.516     |          37.033           |
 
 So I can conclude that my configurations are the main reason
 that slows down the zsh startup time.
@@ -312,10 +312,10 @@ Using ZSH_AUTOSUGGEST_MANUAL_REBIND: This can be a big boost to performance, but
 
 Here is a table after applying all the optimizations, I run the `zsh-bench` again
 
-| config  | compsys | syntax highlight | auto suggest | git prompt | first prompt lag | first cmd lag | cmd lag | input lag |
-|-|-:|-:|-:|-:|-:|-:|-:|-:|-:|
-| Before |  ✔️ | ✔️ | ✔️ | ✔️ | 274% 🔴 | 130% 🟠 | 660% 🔴 | 52% 🟡 |
-| After |  ✔️ | ✔️ | ✔️ | ✔️ | 24% 🟢 | 84% 🟡 | 40% 🟢 | 56% 🟡 |
+| config | compsys | syntax highlight | auto suggest | git prompt | first prompt lag | first cmd lag | cmd lag | input lag |
+| ------ | ------: | ---------------: | -----------: | ---------: | ---------------: | ------------: | ------: | --------: |
+| Before |      ✔️ |               ✔️ |           ✔️ |         ✔️ |          274% 🔴 |       130% 🟠 | 660% 🔴 |    52% 🟡 |
+| After  |      ✔️ |               ✔️ |           ✔️ |         ✔️ |           24% 🟢 |        84% 🟡 |  40% 🟢 |    56% 🟡 |
 
 zmodload zsh/zprof | zprof result:
 
