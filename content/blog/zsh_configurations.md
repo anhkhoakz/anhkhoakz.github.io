@@ -1,10 +1,10 @@
 +++
-title = 'ZSH Configurations'
-description = "ZSH Configuration Optimization Guide"
+author = "anhkhoakz"
 date = 2025-06-14T23:58:05+07:00
+description = "ZSH Configuration Optimization Guide"
 draft = true
 tags = ["zsh", "optimization"]
-author = "anhkhoakz"
+title = 'ZSH Configurations'
 +++
 
 ---
@@ -14,14 +14,17 @@ author = "anhkhoakz"
 There are many frameworks for ZSH, and I've tried a few of them.
 
 - Oh My ZSH [Unleash your terminal like never before](https://ohmyz.sh/)
-- Prezto [The configuration framework for Zsh](https://github.com/sorin-ionescu/prezto)
-- zsh4humans [A turnkey configuration for Zsh](https://github.com/romkatv/zsh4humans/tree/v5)
+- Prezto
+  [The configuration framework for Zsh](https://github.com/sorin-ionescu/prezto)
+- zsh4humans
+  [A turnkey configuration for Zsh](https://github.com/romkatv/zsh4humans/tree/v5)
 
 Yes, I've watched a lot of videos about Oh My ZSH, and I've tried it.
 But I've found that it's too heavy for my use case.
 
-The motivation for me to optimize my ZSH configuration comes
-that after I read the [Speed Matters: How I Optimized My ZSH Startup to Under 70ms](https://santacloud.dev/posts/optimizing-zsh-startup-performance).
+The motivation for me to optimize my ZSH configuration comes that
+after I read the
+[Speed Matters: How I Optimized My ZSH Startup to Under 70ms](https://santacloud.dev/posts/optimizing-zsh-startup-performance).
 
 `.zshrc` file is the main configuration file for ZSH.
 
@@ -66,8 +69,8 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 ```
 
-`.preztorc` file is the configuration file for Prezto. Here is a list of
-Prezto modules that I use:
+`.preztorc` file is the configuration file for Prezto.
+Here is a list of Prezto modules that I use:
 
 ```bash
 zstyle ':prezto:load' pmodule \
@@ -88,7 +91,8 @@ zstyle ':prezto:load' pmodule \
   'eza'
 ```
 
-And you know what? This has the significant poor performance:
+And you know what?
+This has the significant poor performance:
 
 ZSH-bench results:
 
@@ -120,7 +124,8 @@ Where:
 | input lag (ms)          | from pressing a regular key to the moment the corresponding character appears on the command line; this test is performed when the current command line is already fairly long |
 | exit time (ms)          | how long it takes to execute zsh -lic "exit"; this value is meaningless as far as measuring interactive shell latencies goes                                                   |
 
-You can refer to the [How not to benchmark](https://github.com/romkatv/zsh-bench?tab=readme-ov-file#how-not-to-benchmark)
+You can refer to the
+[How not to benchmark](https://github.com/romkatv/zsh-bench?tab=readme-ov-file#how-not-to-benchmark)
 
 The raw zsh loadtime with `--no-rcs` is:
 
@@ -139,13 +144,13 @@ The raw zsh loadtime with `--no-rcs` is:
 
 This is the baseline, the "ideal" metric for the zsh startup time.
 
-So I'm trying to reduce the first prompt lag, first command lag,
-command lag, input lag, and exit time.
+So I'm trying to reduce the first prompt lag, first command lag, command lag,
+input lag, and exit time.
 
 ## Optimization Steps
 
-I'm going to determine whether the prezto or my configurations
-slow down the zsh startup time.
+I'm going to determine whether the prezto
+or my configurations slow down the zsh startup time.
 
 | Feature/Metric          | Disable Prezto | Disable My Configurations |
 | ----------------------- | :------------: | :-----------------------: |
@@ -163,12 +168,13 @@ slow down the zsh startup time.
 So I can conclude that my configurations are the main reason
 that slows down the zsh startup time.
 
-### Optimization 1: Remove virtual environment variables
+### Optimization 1: Remove Virtual Environment Variables
 
-I use fnm to manage Node.js versions, and it sets some
-environment variables. Although the [fnm](https://github.com/Schniz/fnm) is considered as faster than
-[nvm](https://github.com/nvm-sh/nvm). But I'm not using it frequently, and it adds
-some overhead, so I can remove it from the startup time.
+I use fnm to manage Node.js versions, and it sets some environment variables.
+Although the [fnm](https://github.com/Schniz/fnm) is considered
+as faster than [nvm](https://github.com/nvm-sh/nvm).
+But I'm not using it frequently, and it adds some overhead,
+so I can remove it from the startup time.
 
 ```bash
 # if [ -d "$FNM_PATH" ]; then
@@ -180,11 +186,12 @@ some overhead, so I can remove it from the startup time.
 You can do the same for other virtual environment managers like `pyenv`,
 `rbenv`, etc.
 
-### Optimization 2: Remove homebrew completions
+### Optimization 2: Remove Homebrew Completions
 
-I love the homebrew completions, although it adds some overhead
-to the zsh startup time. So I choose to keep it, but it also
-predefined in prezto in [modules/completion/init.zsh](https://github.com/sorin-ionescu/prezto/blob/6e564503f1c5e6ddba2bcf5d9065e5872ca207d2/modules/completion/init.zsh#L18C1-L26C3).
+I love the homebrew completions,
+although it adds some overhead to the zsh startup time.
+So I choose to keep it, but it also predefined in prezto in
+[modules/completion/init.zsh](https://github.com/sorin-ionescu/prezto/blob/6e564503f1c5e6ddba2bcf5d9065e5872ca207d2/modules/completion/init.zsh#L18C1-L26C3).
 
 ```bash
 fpath=(${0:h}/external/src $fpath)
@@ -197,12 +204,13 @@ if (( $+commands[brew] )); then
 fi
 ```
 
-But it is keg-only brewed (a formula is keg-only if it is
-not symlinked into Homebrew’s prefix). But I want more suggestions, so I edit
-that completion file to add the homebrew completions path.
+But it is keg-only brewed
+(a formula is keg-only if it is not symlinked into Homebrew’s prefix).
+But I want more suggestions,
+so I edit that completion file to add the homebrew completions path.
 
-I also doesn't need the `zsh-completions` formula, so I remove it from the
-completions path too.
+I also doesn't need the `zsh-completions` formula,
+so I remove it from the completions path too.
 
 ```bash
 # fpath=(${0:h}/external/src $fpath)
@@ -214,11 +222,10 @@ if (( $+commands[brew] )); then
 fi
 ```
 
-### Optimization 3: Cache some files
+### Optimization 3: Cache Some Files
 
-I love the [vivid](https://github.com/sharkdp/vivid) tool to
-generate the LS_COLORS, but it takes some time to generate
-the colors every time I start zsh.
+I love the [vivid](https://github.com/sharkdp/vivid) tool to generate the
+LS_COLORS, but it takes some time to generate the colors every time I start zsh.
 So I cache the output of the `vivid generate` command in a file
 and source it in the `.zshrc` file.
 
@@ -233,7 +240,8 @@ export LS_COLORS="$(<"$LS_COLORS_CACHE")"
 unset LS_COLORS_CACHE
 ```
 
-I will use the `zsource()` function [Speed Matters: How I Optimized My ZSH Startup to Under 70ms](https://santacloud.dev/posts/optimizing-zsh-startup-performance/#zsource:~:text=It%E2%80%99s%20about%20protecting%20flow.)
+I will use the `zsource()` function
+[Speed Matters: How I Optimized My ZSH Startup to Under 70ms](https://santacloud.dev/posts/optimizing-zsh-startup-performance/#zsource:~:text=It%E2%80%99s%20about%20protecting%20flow.)
 to source the file instead of the `source` command.
 
 ```bash
@@ -247,8 +255,8 @@ function zsource() {
 }
 ```
 
-If you installed fzf using Homebrew, you maybe have the
-`$HOME/.fzf.zsh` file, which is the fzf completion and key bindings.
+If you installed fzf using Homebrew, you maybe have the `$HOME/.fzf.zsh` file,
+which is the fzf completion and key bindings.
 We now just source it using the `zsource()` function.
 
 ```bash
@@ -264,13 +272,14 @@ fi
 zsource $HOME/.zoxide.zsh
 ```
 
-### Optimization 4: Change the prompt from `starship` to `powerlevel10k`
+### Optimization 4: Change the Prompt from `starship` to `powerlevel10k`
 
-Although prezto offer the `prompt` module which come with some
-predefined themes including `powerlevel10k`, I prefer to use
-download the `powerlevel10k` theme and use it directly.
+Although prezto offer the `prompt` module
+which come with some predefined themes including `powerlevel10k`,
+I prefer to use download the `powerlevel10k` theme and use it directly.
 
-Don't use zsource for instant prompt [powerlevel10k instant prompt docs](https://github.com/romkatv/powerlevel10k/blob/36f3045d69d1ba402db09d09eb12b42eebe0fa3b/README.md?plain=1#L1047C1-L1048)
+Don't use zsource for instant prompt
+[powerlevel10k instant prompt docs](https://github.com/romkatv/powerlevel10k/blob/36f3045d69d1ba402db09d09eb12b42eebe0fa3b/README.md?plain=1#L1047C1-L1048)
 
 ```bash
 # eval "$(starship init zsh)"
@@ -286,7 +295,7 @@ zsource $HOME/powerlevel10k/powerlevel10k.zsh-theme
 zsource $HOME/.p10k.zsh
 ```
 
-### Optimization 5: Remove modules that you don't use
+### Optimization 5: Remove Modules That You Don't Use
 
 You can disable some modules that you don't use in the `.preztorc` file.
 Here are the modules that I use:
@@ -304,13 +313,17 @@ zstyle ':prezto:load' pmodule \
   'autosuggestions'
 ```
 
-### Optimization 6: Strip down some features
+### Optimization 6: Strip Down Some Features
 
-Using ZSH_AUTOSUGGEST_MANUAL_REBIND: This can be a big boost to performance, but you'll need to handle re-binding yourself if any of the widget lists change or if you or another plugin wrap any of the autosuggest widgets [zsh-users/zsh-autosuggestions/#disabling-automatic-widget-re-binding](https://github.com/zsh-users/zsh-autosuggestions?tab=readme-ov-file#disabling-automatic-widget-re-binding)
+Using ZSH_AUTOSUGGEST_MANUAL_REBIND: This can be a big boost to performance,
+but you'll need to handle re-binding yourself if any of the widget lists change
+or if you or another plugin wrap any of the autosuggest widgets
+[zsh-users/zsh-autosuggestions/#disabling-automatic-widget-re-binding](https://github.com/zsh-users/zsh-autosuggestions?tab=readme-ov-file#disabling-automatic-widget-re-binding)
 
 ## Results
 
-Here is a table after applying all the optimizations, I run the `zsh-bench` again
+Here is a table after applying all the optimizations,
+I run the `zsh-bench` again
 
 | config | compsys | syntax highlight | auto suggest | git prompt | first prompt lag | first cmd lag | cmd lag | input lag |
 | ------ | ------: | ---------------: | -----------: | ---------: | ---------------: | ------------: | ------: | --------: |
@@ -336,8 +349,8 @@ num  calls                time                       self            name
 3)     3           0.54     0.18    1.28%      0.51     0.17    1.20%  add-zle-hook-widget
 ```
 
-All features are **still available**, but the startup time is
-**significantly reduced**.
+All features are **still available**,
+but the startup time is **significantly reduced**.
 
 - first prompt lag is 12.2 times faster.
 - first command lag is 1.43 times faster.
@@ -345,10 +358,10 @@ All features are **still available**, but the startup time is
 - input lag is 1.087 times slower.
 - exit time is 1.45 times faster.
 
- My final `.zshrc` file is:
+  My final `.zshrc` file is:
 
- ```bash
-function zsource() {
+  ```bash
+  function zsource() {
   local file=$1
   local zwc="${file}.zwc"
   if [[ -f "$file" && (! -f "$zwc" || "$file" -nt "$zwc") ]]; then
@@ -357,81 +370,83 @@ function zsource() {
   fi
   # echo "Sourcing $file..."
   source "$file"
-}
+  }
 
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+  fi
 
-# Prezto Initialization
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  # Prezto Initialization
+  if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   zsource "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+  fi
 
-# ------------------------------
-# Environment Variables
-# ------------------------------
-export POWERSHELL_TELEMETRY_OPTOUT=1
-export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_NO_AUTO_UPDATE=1
-export DOTNET_CLI_TELEMETRY_OPTOUT=1
-export ZSH_DISABLE_COMPFIX=1
+  # ------------------------------
+  # Environment Variables
+  # ------------------------------
+  export POWERSHELL_TELEMETRY_OPTOUT=1
+  export HOMEBREW_NO_ANALYTICS=1
+  export HOMEBREW_NO_AUTO_UPDATE=1
+  export DOTNET_CLI_TELEMETRY_OPTOUT=1
+  export ZSH_DISABLE_COMPFIX=1
 
-# Prepend uutils-coreutils to prioritize its commands over macOS defaults
-export PATH="/opt/homebrew/opt/uutils-coreutils/libexec/uubin:$PATH"
-export PATH="$PATH:$HOME/.pubcache/bin"
-export PATH="$PATH:/bin"
-export PATH="$PATH:$HOME/.gem/bin"
-export PATH="$PATH:$HOME/.composer/vendor/bin"
-export PATH="$PATH:$HOME/Library/Application Support/fnm"
-export PATH="$PATH:$HOME/.bun/bin"
-export PATH="$PATH:$HOME/.local/share/nvim/lazy-rocks/hererocks/bin"
-export CHROME_EXECUTABLE="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
-export BUN_INSTALL="$HOME/.bun"
-export NODE_COMPILE_CACHE=$HOME/.cache/nodejs-compile-cache
-export FZF_CTRL_R_OPTS="
+  # Prepend uutils-coreutils to prioritize its commands over macOS defaults
+  export PATH="/opt/homebrew/opt/uutils-coreutils/libexec/uubin:$PATH"
+  export PATH="$PATH:$HOME/.pubcache/bin"
+  export PATH="$PATH:/bin"
+  export PATH="$PATH:$HOME/.gem/bin"
+  export PATH="$PATH:$HOME/.composer/vendor/bin"
+  export PATH="$PATH:$HOME/Library/Application Support/fnm"
+  export PATH="$PATH:$HOME/.bun/bin"
+  export PATH="$PATH:$HOME/.local/share/nvim/lazy-rocks/hererocks/bin"
+  export CHROME_EXECUTABLE="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
+  export BUN_INSTALL="$HOME/.bun"
+  export NODE_COMPILE_CACHE=$HOME/.cache/nodejs-compile-cache
+  export FZF_CTRL_R_OPTS="
   --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'"
-export FZF_CTRL_T_OPTS="
+  export FZF_CTRL_T_OPTS="
   --walker-skip .git,node_modules,target"
 
-# Start Aliases and Functions
+  # Start Aliases and Functions
 
-# Your aliases and functions go here
+  # Your aliases and functions go here
 
-# End Aliases and Functions
+  # End Aliases and Functions
 
-zsource $HOME/.fzf.zsh
-zsource $HOME/.zoxide.zsh
-. "$HOME/.cargo/env"
+  zsource $HOME/.fzf.zsh
+  zsource $HOME/.zoxide.zsh
+  . "$HOME/.cargo/env"
 
-# To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
-zsource $HOME/powerlevel10k/powerlevel10k.zsh-theme
-zsource $HOME/.p10k.zsh
+  # To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
+  zsource $HOME/powerlevel10k/powerlevel10k.zsh-theme
+  zsource $HOME/.p10k.zsh
 
-unfunction zsource
- ```
+  unfunction zsource
+  ```
 
-This is the final result of my ZSH configuration. Although it
-still has some overhead, but it's much better than the initial
-configuration.
+This is the final result of my ZSH configuration.
+Although it still has some overhead,
+but it's much better than the initial configuration.
 
-[santacloud.dev](https://santacloud.dev/posts/optimizing-zsh-startup-performance) indicate that how they
-optimize their ZSH startup time to under 70ms which is `exit_time_ms`
-metric in this measure (63 ms). I also optimize
-other metrics like `first_prompt_lag_ms`, `first_command_lag_ms`,
-`command_lag_ms`, and `input_lag_ms`.
+[santacloud.dev](https://santacloud.dev/posts/optimizing-zsh-startup-performance)
+indicate that how they optimize their ZSH startup time to under 70ms
+which is `exit_time_ms` metric in this measure (63 ms).
+I also optimize other metrics like `first_prompt_lag_ms`,
+`first_command_lag_ms`, `command_lag_ms`, and `input_lag_ms`.
 
 ## Conclusion
 
-### Do it waste my time?
+### Do It Waste My Time?
 
-Yes, it does. Those optimizations take me a few days to figure out,
-reading a lot of articles, and testing different
-configurations. But it is worth it. I can feel the difference
-when I start a new terminal session, and it is much faster than before.
+Yes, it does.
+Those optimizations take me a few days to figure out, reading a lot of articles,
+and testing different configurations.
+But it is worth it.
+I can feel the difference when I start a new terminal session,
+and it is much faster than before.
 > [It’s about protecting flow](https://santacloud.dev/posts/optimizing-zsh-startup-performance/#zsource:~:text=It%E2%80%99s%20about%20protecting%20flow.)
 
-### Meaningless changes
+### Meaningless Changes
 
 - Remove shell functions
 - Change to fast syntax highlighting

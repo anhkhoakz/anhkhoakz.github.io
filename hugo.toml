@@ -1,84 +1,394 @@
 #:schema https://json.schemastore.org/hugo.json
 
-baseURL = 'https://www.anhkhoakz.dev/'
-copyright = 'anhkhoakz'
-defaultContentLanguage = 'en'
-languageCode = 'en-us'
-title = 'anhkhoakz personal blog'
-enableEmoji = true
+baseURL = "https://www.anhkhoakz.dev/"
+title = "anhkhoakz"
+copyright = "© anhkhoakz"
 
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+languageCode = "en-US"
+timeZone = "Asia/Ho_Chi_Minh"
+
+enableEmoji = true
+enableGitInfo = true
 enableRobotsTXT = true
 
-[markup]
-[markup.highlight]
-    lineNos = true
-    lineNumbersInTable = false
-    noClasses = false
+buildDrafts = false
+buildExpired = false
+buildFuture = false
+cleanDestinationDir = true
+disableHugoGeneratorInject = true
+disablePathToLower = false
+enableMissingTranslationPlaceholders = false
+hasCJKLanguage = false
+panicOnWarning = false
+printI18nWarnings = false
+printPathWarnings = true
+printUnusedTemplates = false
+relativeURLs = false
+canonifyURLs = false
+removePathAccents = true
+summaryLength = 40
+titleCaseStyle = "none"
+timeout = "120s"
 
-[languages]
-[languages.en]
-    LanguageCode = "en-US"
-    contentDir = "content"
-    languageName = "en-US 🇺🇸"
-    title = "anhkhoakz"
-[languages.en.params]
-    reading_speed = 200
+# Change this to ['blog'] or ['posts', 'notes'] if your content sections differ.
+mainSections = ["blog"]
 
-[params]
-    description = "anhkhoakz personal blog"
-    disableComments = false
-    subtitle = "anhkhoakz personal blog"
-    images = ["images/share.webp"]
-    dateFormat = "02/01/06"
-    hideUntranslated = true
-    generateSocialCard = false
-
-[params.social]
-    github = "anhkhoakz"
-
-[params.author]
-    email = "dose_untie091@aleeas.com"
-    name = "anhkhoakz"
-
-[params.contact]
-    email = "dose_untie091@aleeas.com"
-
-[params.favicon]
-    light = "images/favicon.webp"
-    dark = "images/favicon-dark.webp"
-
-[privacy]
-[privacy.disqus]
-    disable = true
-[privacy.googleAnalytics]
-    disable = true
-    respectDoNotTrack = true
-[privacy.instagram]
-    disable = true
-    simple = true
-[privacy.vimeo]
-    disable = true
-    enableDNT = true
-    simple = true
-[privacy.x]
-    disable = true
-    enableDNT = true
-    simple = true
-[privacy.youTube]
-    disable = false
-    privacyEnhanced = true
-    simple = true
+[frontmatter]
+date = ["date", "publishdate", ":filename", ":default"]
+expiryDate = ["expirydate", "unpublishdate"]
+lastmod = [":git", "lastmod", "modified", ":fileModTime", ":default"]
+publishDate = ["publishdate", "pubdate", "date"]
 
 [pagination]
-    disableAliases = false
-    pagerSize = 10
-    path = 'page'
+disableAliases = true
+pagerSize = 10
+path = "page"
 
-[security]
+[outputs]
+home = ["html", "rss", "atom"]
+page = ["html"]
+section = ["html", "rss", "atom"]
+taxonomy = ["html", "rss", "atom"]
+term = ["html", "rss", "atom"]
+
+[mediaTypes."application/atom+xml"]
+suffixes = ["xml"]
+
+[outputFormats.atom]
+baseName = "atom"
+mediaType = "application/atom+xml"
+noUgly = true
+
+[sitemap]
+changefreq = ""
+disable = false
+filename = "sitemap.xml"
+priority = -1
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+[minify]
+disableCSS = false
+disableHTML = false
+disableJS = false
+disableJSON = false
+disableSVG = false
+disableXML = false
+minifyOutput = true
+
+[minify.tdewolff.html]
+keepComments = false
+keepDefaultAttrVals = true
+keepDocumentTags = true
+keepEndTags = true
+keepQuotes = false
+keepConditionalComments = true
+keepWhitespace = false
+
+[minify.tdewolff.js]
+keepVarNames = false
+version = 2022
+
+[build]
+noJSConfigInAssets = false
+useResourceCacheWhen = "fallback"
+
+[build.buildStats]
+# Set true only if you purge/tree-shake CSS with Tailwind/PostCSS.
+enable = false
+disableClasses = false
+disableIDs = false
+disableTags = false
+
+[[build.cacheBusters]]
+source = '(postcss|tailwind)\.config\.(js|cjs|mjs|ts)'
+target = "(css|styles|scss|sass)"
+
+[[build.cacheBusters]]
+source = 'assets/.*\.(js|ts|jsx|tsx)'
+target = "js"
+
+[[build.cacheBusters]]
+source = 'assets/.*\.(css|scss|sass)'
+target = "(css|styles|scss|sass)"
+
+[caches.assets]
+dir = ":resourceDir/_gen"
+maxAge = -1
+
+[caches.images]
+dir = ":resourceDir/_gen"
+maxAge = -1
+
+[caches.getresource]
+dir = ":cacheDir/:project"
+maxAge = "24h"
+
+[caches.misc]
+dir = ":cacheDir/:project"
+maxAge = "24h"
+
+[caches.modules]
+dir = ":cacheDir/modules"
+maxAge = -1
+
+[caches.modulegitinfo]
+dir = ":cacheDir/modules"
+maxAge = "24h"
+
+[caches.modulequeries]
+dir = ":cacheDir/modules"
+maxAge = "24h"
+
+# Only relevant when using resources.GetRemote.
+[HTTPCache]
+respectCacheControlNoStoreInRequest = true
+respectCacheControlNoStoreInResponse = true
+
+[HTTPCache.cache.for]
+includes = ["https://**"]
+excludes = ["http://**"]
+
+[[HTTPCache.polls]]
+disable = false
+low = "1h"
+high = "24h"
+
+[HTTPCache.polls.for]
+includes = ["https://**"]
+excludes = ["http://**"]
+
+[imaging]
+anchor = "Smart"
+bgColor = "ffffff"
+resampleFilter = "Lanczos"
+
+[imaging.avif]
+compression = "lossy"
+encoderSpeed = 6
+hint = "photo"
+quality = 58
+
+[imaging.exif]
+disableDate = true
+disableLatLong = true
+excludeFields = ".*"
+includeFields = ""
+
+[imaging.jpeg]
+quality = 82
+
+[imaging.webp]
+compression = "lossy"
+hint = "photo"
+method = 4
+quality = 82
+useSharpYuv = true
+
+[markup]
+defaultMarkdownHandler = "goldmark"
+
+[markup.goldmark]
+duplicateResourceFiles = false
+
+[markup.goldmark.extensions]
+definitionList = true
+linkify = true
+linkifyProtocol = "https"
+strikethrough = true
+table = true
+taskList = true
+
+[markup.goldmark.extensions.extras.delete]
+enable = false
+
+[markup.goldmark.extensions.extras.insert]
+enable = false
+
+[markup.goldmark.extensions.extras.mark]
+enable = true
+
+[markup.goldmark.extensions.extras.subscript]
+enable = false
+
+[markup.goldmark.extensions.extras.superscript]
+enable = true
+
+[markup.goldmark.extensions.footnote]
+enable = true
+backlinkHTML = "&#x21a9;&#xfe0e;"
+enableAutoIDPrefix = false
+
+[markup.goldmark.extensions.passthrough]
+enable = false
+
+[markup.goldmark.extensions.passthrough.delimiters]
+block = []
+inline = []
+
+[markup.goldmark.extensions.typographer]
+disable = false
+
+[markup.goldmark.parser]
+autoDefinitionTermID = true
+autoHeadingID = true
+autoIDType = "github"
+wrapStandAloneImageWithinParagraph = true
+
+[markup.goldmark.parser.attribute]
+block = true
+title = true
+
+[markup.goldmark.renderHooks.image]
+useEmbedded = "fallback"
+
+[markup.goldmark.renderHooks.link]
+useEmbedded = "fallback"
+
+[markup.goldmark.renderer]
+hardWraps = false
+unsafe = false
+xhtml = false
+
+[markup.highlight]
+anchorLineNos = true
+codeFences = true
+guessSyntax = false
+lineAnchors = "L"
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = false
+noClasses = false
+tabWidth = 4
+wrapperClass = "highlight"
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+ordered = false
+
+[related]
+includeNewer = true
+threshold = 70
+toLower = false
+
+[[related.indices]]
+name = "keywords"
+weight = 100
+type = "basic"
+applyFilter = false
+cardinalityThreshold = 0
+pattern = ""
+toLower = false
+
+[[related.indices]]
+name = "tags"
+weight = 90
+type = "basic"
+applyFilter = false
+cardinalityThreshold = 0
+pattern = ""
+toLower = false
+
+[[related.indices]]
+name = "series"
+weight = 80
+type = "basic"
+applyFilter = false
+cardinalityThreshold = 0
+pattern = ""
+toLower = false
+
+[[related.indices]]
+name = "categories"
+weight = 70
+type = "basic"
+applyFilter = false
+cardinalityThreshold = 0
+pattern = ""
+toLower = false
+
+[[related.indices]]
+name = "date"
+weight = 10
+type = "basic"
+applyFilter = false
+cardinalityThreshold = 0
+pattern = "200601"
+toLower = false
+
+[languages.en]
+contentDir = "content"
+direction = "ltr"
+disabled = false
+label = "English"
+locale = "en-US"
+title = "anhkhoakz"
+weight = 1
+
+[languages.en.params]
+reading_speed = 220
+
+[params]
+description = "anhkhoakz personal blog"
+disableComments = false
+subtitle = "anhkhoakz personal blog"
+images = ["images/share.webp"]
+dateFormat = "02 Jan 2006"
+hideUntranslated = true
+generateSocialCard = true
+
+[params.social]
+github = "anhkhoakz"
+
+[params.author]
+email = "dose_untie091@aleeas.com"
+name = "anhkhoakz"
+
+[params.contact]
+email = "dose_untie091@aleeas.com"
+
+[params.favicon]
+light = "images/favicon.webp"
+dark = "images/favicon-dark.webp"
+
+[privacy.disqus]
+disable = true
+
+[privacy.googleAnalytics]
+disable = true
+respectDoNotTrack = true
+
+[privacy.instagram]
+disable = true
+simple = true
+
+[privacy.vimeo]
+disable = true
+enableDNT = true
+simple = true
+
+[privacy.x]
+disable = true
+enableDNT = true
+simple = true
+
+[privacy.youTube]
+disable = false
+privacyEnhanced = true
+
 [security.http]
-    methods = ["(?i)GET"]
-    urls = [".*"]
+methods = ["(?i)GET"]
+urls = [
+  "(?i)^https://[a-z0-9]",
+  '! ^https?://\d+\.',
+  "! (?i)localhost",
+  "! (?i)^https?://[^/?#]*@",
+]
 
-[services]
 [services.rss]
-    limit = -1
+limit = 50

@@ -1,11 +1,11 @@
 +++
-title = 'Services'
-description = ""
-date = 2025-09-29T09:06:17+07:00
-draft = false
-unlisted = true
-tags = []
 author = "anhkhoakz"
+date = 2025-09-29T09:06:17+07:00
+description = ""
+draft = false
+tags = []
+title = 'Services'
+unlisted = true
 +++
 
 ---
@@ -39,7 +39,7 @@ A collection of services that I use and recommend.
 
 [Rentry](https://rentry.co)
 
-## Send files
+## Send Files
 
 [SkySend](https://ch.skysend.ch/)
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+<html lang="{{ with .Site.Language.Locale }}{{ . }}{{ else }}en-US{{ end }}">
 
 <head>
     <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
@@ -35,6 +35,9 @@
     <link rel="preload" href="{{ $extra.RelPermalink }}" as="style" fetchpriority="low" />
     <link href="{{ $extra.RelPermalink }}" rel="stylesheet" media="print" onload="this.media='all'" />
     {{ end }} {{ with .OutputFormats.Get "rss" -}} {{ printf `
+    <link rel="%s" type="%s" href="%s" title="%s" />
+    ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}}
+    {{ with .OutputFormats.Get "atom" -}} {{ printf `
     <link rel="%s" type="%s" href="%s" title="%s" />
     ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}}
 

@@ -1,32 +1,32 @@
 +++
-title = 'Useful MacOS Apps'
-description = "Useful apps for macOS"
-date = 2024-02-14T06:05:22+07:00
-draft = false
-tags = [ "macos", "apps" ]
 author = "anhkhoakz"
+date = 2024-02-14T06:05:22+07:00
+description = "Useful apps for macOS"
+draft = false
 lastmod = 2025-05-19T06:08:00+07:00
+tags = [ "macos", "apps" ]
+title = 'Useful MacOS Apps'
 +++
 
 ---
 
-This is a collection of helpful macOS programs that I use every day. There are
-free, premium, and freemium options available. I'll do my best to maintain this
-list current.
+This is a collection of helpful macOS programs that I use every day.
+There are free, premium, and freemium options available.
+I'll do my best to maintain this list current.
 
 ## Terms
 
 - **FOSS**: Software that is both free (as in freedom) and open-source
 
 - **Freemium**: Business model and software licensing scheme in which the basic
-form of a product is free of charge, and access to additional features requires
-payment
+form of a product is free of charge,
+and access to additional features requires payment
 
 ## Productivity
 
 - [Alfred](https://www.alfredapp.com/): (£59) Alfred is an award-winning app for
-macOS which boosts your efficiency with hotkeys, keywords, text expansion and
-more.
+macOS which boosts your efficiency with hotkeys, keywords,
+text expansion and more.
 
 - [DropOver](https://dropoverapp.com/): ($6.99) Dropover is a macOS utility that
 makes Drag and Drop easier.
@@ -41,11 +41,12 @@ management on macOS.
 reminder app.
 
 - [Shottr](https://shottr.cc/): ($12) Shottr is a tiny and fast mac screenshot
-tool with annotations, beautiful backgrounds, scrolling screenshots and cloud
-upload capabilities.
+tool with annotations, beautiful backgrounds,
+scrolling screenshots and cloud upload capabilities.
 
 - [Clop](https://lowtechguys.com/clop/): ($15) Image, video, PDF and clipboard
-optimiser. Copy large, paste small, send fast.
+optimiser.
+Copy large, paste small, send fast.
 
 ## Privacy & Security
 
@@ -53,22 +54,24 @@ optimiser. Copy large, paste small, send fast.
 open-source macOS firewall.
 
 - [OverSight](https://github.com/objective-see/OverSight): (FOSS) OverSight
-monitors a mac's mic and webcam, alerting the user when the internal mic is
-activated, or whenever a process accesses the webcam.
+monitors a mac's mic and webcam,
+alerting the user when the internal mic is activated,
+or whenever a process accesses the webcam.
 
 - [KnockKnock](https://github.com/objective-see/KnockKnock): (FOSS) Like
 AutoRuns ...but for macOS!
 
 ## Development
 
-- [Podman](https://github.com/containers/podman): (FOSS) A tool for managing OCI containers and
-pods.
+- [Podman](https://github.com/containers/podman):
+(FOSS) A tool for managing OCI containers and pods.
 
 - [xh](https://github.com/ducaale/xh): (FOSS) Friendly and fast tool for sending
 HTTP requests.
 
-- [Ghostty](https://github.com/ghostty-org/ghostty): (FOSS) 👻 Ghostty is a fast,
-feature-rich, and cross-platform terminal emulator that uses platform-native UI
+- [Ghostty](https://github.com/ghostty-org/ghostty):
+(FOSS) 👻 Ghostty is a fast, feature-rich,
+and cross-platform terminal emulator that uses platform-native UI
 and GPU acceleration.
 
 - [Visual Studio Code](https://code.visualstudio.com/): (FOSS) Your code editor.
@@ -90,8 +93,8 @@ macOS, Windows and Linux - Bộ gõ Tiếng Việt nguồn mở đa nền tảng
 - [Keka](https://github.com/aonez/Keka): (FOSS) The macOS file archiver.
 
 - [KeyboardCleanTool](https://folivora.ai/keyboardcleantool): ($0)
-KeyboardCleanTool is a super simple little tool which blocks all Keyboard and
-TouchBar input.
+KeyboardCleanTool is a super simple little tool which blocks all Keyboard
+and TouchBar input.
 
 - [Mac Mouse Fix](https://macmousefix.com/): ($2.99) Make Your $10 Mouse Better
 Than an Apple Trackpad!
@@ -111,15 +114,16 @@ and seamless entertainment experience.
 ## Casks
 
 - [biome](https://github.com/biomejs/biome): A toolchain for web projects, aimed
-to provide functionalities to maintain them. Biome offers formatter and linter,
-usable via CLI and LSP.
+to provide functionalities to maintain them.
+Biome offers formatter and linter, usable via CLI and LSP.
 
 - [btop](https://github.com/aristocratos/btop): A monitor of resources
 
 - [bun](https://bun.sh/): A fast, all-in-one JavaScript runtime.
 
 [dotenv-linter](https://github.com/dotenv-linter/dotenv-linter):⚡️Lightning-fast
-linter for .env files. Written in Rust 🦀
+linter for .env files.
+Written in Rust 🦀
 
 - [eza](https://github.com/eza-community/eza): A modern alternative to ls
 
@@ -142,7 +146,8 @@ Go
 control system designed to handle everything from small to very large projects
 with speed and efficiency.
 
-- [git-delta](https://github.com/dandavison/delta): A syntax-highlighting pager for git, diff, grep, and blame output
+- [git-delta](https://github.com/dandavison/delta):
+  A syntax-highlighting pager for git, diff, grep, and blame output
 
 - [git-toolbelt](https://github.com/nvie/git-toolbelt/tree/main): A suite of
 useful Git commands that aid with scripting or every day command line usage
@@ -209,8 +214,8 @@ project manager, written in Rust.
 audio/video downloader
 
 - [zadark](https://github.com/quaric/zadark): ZaDark is an extension that helps
-you enable Dark Mode for Zalo PC and Web. ZaDark is available on Windows, macOS,
-Chrome, Safari, Edge and Firefox.
+you enable Dark Mode for Zalo PC and Web.
+ZaDark is available on Windows, macOS, Chrome, Safari, Edge and Firefox.
 
 - [zoxide](https://github.com/ajeetdsouza/zoxide): A smarter cd command.
 Supports all major shells.

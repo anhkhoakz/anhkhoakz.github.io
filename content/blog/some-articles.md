@@ -1,33 +1,38 @@
 +++
-lastmod = 2025-01-19T19:00:00+07:00
-title = 'Some Articles'
-description = "Some blogs that I have read & video that I have watched"
-date = 2025-01-19T19:00:00+07:00
-draft = false
+author = "anhkhoakz"
 categories = [
     "blog",
     "video",
 ]
+date = 2025-01-19T19:00:00+07:00
+description = "Some blogs that I have read & video that I have watched"
+draft = false
+lastmod = 2025-01-19T19:00:00+07:00
 tags = [
     "read",
     "watch",
 ]
-author = "anhkhoakz"
+title = 'Some Articles'
 +++
 
 ---
 
 ## Blogs
 
-You Are NOT Dumb, You Just Lack the Prerequisites - [url](https://lelouch.dev/blog/you-are-probably-not-dumb/)
+You Are NOT Dumb, You Just Lack the Prerequisites -
+[url](https://lelouch.dev/blog/you-are-probably-not-dumb/)
 
-Building software to last forever - [url](https://herman.bearblog.dev/building-software-to-last-forever/)
+Building software to last forever -
+[url](https://herman.bearblog.dev/building-software-to-last-forever/)
 
-Principles of bad software design - [url](https://digdeeper.club/articles/design.xhtml)
+Principles of bad software design -
+[url](https://digdeeper.club/articles/design.xhtml)
 
-Best practices for writing code comments - [url](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/)
+Best practices for writing code comments -
+[url](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/)
 
-Start Here — Everyday Commentary - [url](https://www.everydaycommentary.com/start-here)
+Start Here — Everyday Commentary -
+[url](https://www.everydaycommentary.com/start-here)
 
 ## Videos
 
@@ -35,9 +40,11 @@ You Suck at Investing. - [url](https://youtu.be/SbUkmysgXFs)
 
 100+ Linux Things you Need to Know - [url](https://youtu.be/LKCVKw9CzFo)
 
-Why Some Projects Use Multiple Programming Languages - [url](https://youtu.be/XJC5WB2Bwrc)
+Why Some Projects Use Multiple Programming Languages -
+[url](https://youtu.be/XJC5WB2Bwrc)
 
-10 Things I Regret About Node.js - Ryan Dahl - JSConf EU - [url](https://youtu.be/M3BM9TB-8yA)
+10 Things I Regret About Node.js - Ryan Dahl - JSConf EU -
+[url](https://youtu.be/M3BM9TB-8yA)
 
 Leatherman ARC Sheath Build - [url](https://www.youtube.com/shorts/ZZzA4TSI7pI)
 

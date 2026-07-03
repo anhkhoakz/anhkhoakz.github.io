@@ -1,24 +1,23 @@
 +++
-title = 'EDC'
-description = "Everyday Carry"
-date = 2025-09-29
+author = "anhkhoakz"
 categories = [
     'edc',
     'multitool'
 ]
+date = 2025-09-29
+description = "Everyday Carry"
+draft = true
 tags = [
     'edc'
 ]
-author = "anhkhoakz"
-draft = true
+title = 'EDC'
 +++
 
 ## Initial Though
 
 I just discovered the things that called EDC, which make my life a lot change.
 
-{{<figure src="images/blogs/edc/my-edc.webp" alt="My current EDC image"
-caption="My current EDC">}}
+{{<figure src="images/blogs/edc/my-edc.webp" alt="My current EDC image" caption="My current EDC">}}
 
 I just relize that I just have EDC but I still really know that I have an EDC.
 
@@ -28,15 +27,18 @@ My current EDC include:
 - A Leonardo Cosmos [wallet](https://www.leonardo.vn/products/vi-cosmos-outlet).
 - Bic lighter.
 - Gear Aid [Heroclip](https://www.gearaid.com/products/heroclip-small) Small
-- Fullsize pilers-based Leatherman [Wave® Plus](https://www.leatherman.com/collections/everyday-essentials/products/wave)
-- tomtoc Explorer-T21 [Sling Bag](https://www.tomtoc.com/products/explorer-t21-sling-bag-s) S
+- Fullsize pilers-based Leatherman
+  [Wave® Plus](https://www.leatherman.com/collections/everyday-essentials/products/wave)
+- tomtoc Explorer-T21
+  [Sling Bag](https://www.tomtoc.com/products/explorer-t21-sling-bag-s) S
 
-## What is EDC?
+## What Is EDC?
 
-**E**very**d**ay **c**arry (EDC) or every-day carry is a collection of useful
-items that are consistently carried on person every day [^1].
+**E**very **d**ay **c**arry (EDC)
+or every-day carry is a collection of useful items
+that are consistently carried on person every day [^1].
 
-## What is BIFT?
+## What Is BIFT?
 
 BIFL stands for **B**uy **I**t **F**or **L**ife
 

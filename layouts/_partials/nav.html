@@ -2,15 +2,16 @@
 <a href="{{ .URL }}">{{ .Name }}</a>
 {{ end }}
 <a href='{{ absURL "index.xml" }}'>RSS</a>
+{{ with .Site.Home.OutputFormats.Get "atom" }}<a href="{{ .Permalink }}">Atom</a>{{ end }}
 
 <!-- Convert this page's translations into a dict -->
 {{ $translations := dict }} {{ range .Translations }} {{ $translations = merge
 $translations (dict .Language.Lang .) }} {{ end }}
 
 <!-- Create a link to every translation -->
-{{ range where .Site.Languages "Lang" "!=" .Page.Lang }} {{ with (index
+{{ range where hugo.Sites "Language.Lang" "!=" .Page.Language.Lang }} {{ with (index
 $translations .Lang) }}
-<a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+<a href="{{ .RelPermalink }}">{{ .Language.Label }}</a>
 {{ else }}
 <!-- The complicated setup was necessary to make a grayed out link -->
 {{ if not .Params.hideUntranslated }}

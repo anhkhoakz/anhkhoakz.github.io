@@ -1,10 +1,10 @@
 ---
-title: "Home"
 menu: "main"
+title: "Home"
 weight: 1
 ---
 
-## anhkhoakz.dev
+## Anhkhoakz.dev
 
 This is a simple website made for my blogging habit.
 

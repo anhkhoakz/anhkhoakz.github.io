@@ -1,0 +1,89 @@
+{{- /* Deprecate site.Author.email in favor of site.Params.author.email */}}
+{{- $authorEmail := "" }}
+{{- with site.Params.author }}
+  {{- if reflect.IsMap . }}
+    {{- with .email }}
+      {{- $authorEmail = . }}
+    {{- end }}
+  {{- end }}
+{{- else }}
+  {{- with site.Author.email }}
+    {{- $authorEmail = . }}
+    {{- warnf "The author key in site configuration is deprecated. Use params.author.email instead." }}
+  {{- end }}
+{{- end }}
+
+{{- /* Deprecate site.Author.name in favor of site.Params.author.name */}}
+{{- $authorName := "" }}
+{{- with site.Params.author }}
+  {{- if reflect.IsMap . }}
+    {{- with .name }}
+      {{- $authorName = . }}
+    {{- end }}
+  {{- else }}
+    {{- $authorName = . }}
+  {{- end }}
+{{- else }}
+  {{- with site.Author.name }}
+    {{- $authorName = . }}
+    {{- warnf "The author key in site configuration is deprecated. Use params.author.name instead." }}
+  {{- end }}
+{{- end }}
+
+{{- $pctx := . }}
+{{- if .IsHome }}{{ $pctx = .Site }}{{ end }}
+{{- $pages := slice }}
+{{- if or $.IsHome $.IsSection }}
+  {{- $pages = $pctx.RegularPages }}
+{{- else }}
+  {{- $pages = $pctx.Pages }}
+{{- end }}
+{{- $limit := .Site.Config.Services.RSS.Limit }}
+{{- if ge $limit 1 }}
+  {{- $pages = $pages | first $limit }}
+{{- end }}
+{{- $updated := .Date }}
+{{- if and $updated.IsZero (gt (len $pages) 0) }}
+  {{- $updated = (index $pages 0).Date }}
+{{- end }}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} on {{ end }}{{ .Site.Title }}{{ end }}</title>
+  <id>{{ .Permalink }}</id>
+  <link href="{{ .Permalink }}" rel="alternate" type="text/html" />
+  {{- with .OutputFormats.Get "atom" }}
+  <link href="{{ .Permalink }}" rel="self" type="{{ .MediaType.Type }}" />
+  {{- end }}
+  {{- if not $updated.IsZero }}
+  <updated>{{ $updated.Format "2006-01-02T15:04:05Z07:00" }}</updated>
+  {{- end }}
+  <subtitle>Recent content {{ if not .IsHome }}{{ with .Title }}in {{ . }} {{ end }}{{ end }}on {{ .Site.Title }}</subtitle>
+  {{- with $authorName }}
+  <author>
+    <name>{{ . }}</name>
+    {{- with $authorEmail }}
+    <email>{{ . }}</email>
+    {{- end }}
+  </author>
+  {{- end }}
+  {{- range $pages }}
+  <entry>
+    <title>{{ .Title }}</title>
+    <link href="{{ .Permalink }}" rel="alternate" type="text/html" />
+    <id>{{ .Permalink }}</id>
+    <updated>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}</updated>
+    {{- if not .PublishDate.IsZero }}
+    <published>{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}</published>
+    {{- end }}
+    {{- with .Params.author }}
+    <author><name>{{ . }}</name></author>
+    {{- else }}
+      {{- with $authorName }}
+    <author><name>{{ . }}</name></author>
+      {{- end }}
+    {{- end }}
+    <summary type="html">{{ .Summary | transform.XMLEscape | safeHTML }}</summary>
+    <content type="html">{{ .Content | transform.XMLEscape | safeHTML }}</content>
+  </entry>
+  {{- end }}
+</feed>

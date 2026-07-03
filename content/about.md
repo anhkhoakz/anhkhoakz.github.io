@@ -1,41 +1,44 @@
 ---
-title: "About"
-menu: "main"
-weight: 3
 hideReply: true
+menu: "main"
+title: "About"
+weight: 3
 ---
 
-## About me
+## About Me
 
 Hello everyone!
 
 My name is Anh Khoa, and I’m a junior student studying Software Engineering at
 [Ton Duc Thang University](https://tdtu.edu.vn/).
 
-I’m a big fan of minimalism, stoicism, reading, programming, traveling, and
-adventure. My life philosophy is based on these principles. I’m always learning,
-growing, and improving in all areas of my life. I love helping others and
-creating value for the community.
+I’m a big fan of minimalism, stoicism, reading, programming, traveling,
+and adventure.
+My life philosophy is based on these principles.
+I’m always learning, growing, and improving in all areas of my life.
+I love helping others and creating value for the community.
 
 I think minimalism is a great way to focus on the most important things in life.
-It helps us let go of the unnecessary and focus on what really matters, like
-time, health, and relationships. Stoicism is a philosophy that helps us become
-stronger and overcome challenges. It teaches us to accept what we can’t change
-and focus on what we can.
+It helps us let go of the unnecessary and focus on what really matters,
+like time, health, and relationships.
+Stoicism is a philosophy that helps us become stronger and overcome challenges.
+It teaches us to accept what we can’t change and focus on what we can.
 
-I believe reading is a fantastic way to learn and expand our knowledge. It helps
-us understand the world better and about ourselves. Programming is a great way
-to express our creativity. It helps us create new and useful things. Traveling
-and adventure are a great way to experience new things and learn about different
-cultures.
+I believe reading is a fantastic way to learn and expand our knowledge.
+It helps us understand the world better and about ourselves.
+Programming is a great way to express our creativity.
+It helps us create new and useful things.
+Traveling and adventure are a great way to experience new things
+and learn about different cultures.
 
-I think we can all make a difference in the world. We can help others by giving
-our time, talent, and money. We can create value for the community by
-participating in volunteer activities and community projects.
+I think we can all make a difference in the world.
+We can help others by giving our time, talent, and money.
+We can create value for the community by participating in volunteer activities
+and community projects.
 
-I hope you find this website helpful. I’ll try to keep it updated with new
-articles regularly. If you have any questions or feedback, please don’t hesitate
-to reach out.
+I hope you find this website helpful.
+I’ll try to keep it updated with new articles regularly.
+If you have any questions or feedback, please don’t hesitate to reach out.
 
 Thanks for visiting!
 
@@ -51,19 +54,20 @@ Thanks for visiting!
 
 [![GitHub](https://img.shields.io/badge/GitHub-white?style=for-the-badge&logo=github&logoColor=black)](https://github.com/anhkhoakz)
 
-## About this website
+## About This Website
 
 This site draws inspiration from [BearBlog](https://bearblog.dev/),
-[MidNight](https://midnight.pub/), and [Best Motherf\*cking
-website](https://bestmotherfucking.website/). It is constructed using
-[Hugo](https://gohugo.io/) and features the [Bear
-Cub](https://themes.gohugo.io/themes/hugo-bearcub/) theme.
+[MidNight](https://midnight.pub/),
+and [Best Motherf\*cking website](https://bestmotherfucking.website/).
+It is constructed using [Hugo](https://gohugo.io/)
+and features the [Bear Cub](https://themes.gohugo.io/themes/hugo-bearcub/)
+theme.
 
-### Why is it so basic?
+### Why Is It so Basic?
 
-You can look at [Best Motherf\*cking
-website](https://bestmotherfucking.website/) for the reasons, I love them, here
-is keypoints:
+You can look at
+[Best Motherf\*cking website](https://bestmotherfucking.website/) for the
+reasons, I love them, here is keypoints:
 
 1. **Performance and Accessibility**: Websites have to load rapidly, work with
    all browsers and devices, and be simple to read.
@@ -74,8 +78,8 @@ is keypoints:
 3. **Font**: It is considered antiquated and inefficient to load huge distant
    fonts.
 
-For **simpler phrase**: This website can load with any network conditions, or
-any devices.
+For **simpler phrase**: This website can load with any network conditions,
+or any devices.
 
 ## Mirror Pages
 
@@ -87,7 +91,6 @@ any devices.
 
 - [SourceHut Pages](https://anhkhoakz.srht.site/)
 
-## Sponsor me
+## Sponsor Me
 
-[![GitHub
-Sponsors](https://img.shields.io/github/sponsors/anhkhoakz?style=for-the-badge&logo=github&logoColor=black&labelColor=white&color=1a8fe3)](https://github.com/sponsors/anhkhoakz)
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/anhkhoakz?style=for-the-badge&logo=github&logoColor=black&labelColor=white&color=1a8fe3)](https://github.com/sponsors/anhkhoakz)
