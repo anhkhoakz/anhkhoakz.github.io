@@ -6,7 +6,7 @@ copyright = "© anhkhoakz"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
-languageCode = "en-US"
+locale = "en-US"
 timeZone = "Asia/Ho_Chi_Minh"
 
 enableEmoji = true
@@ -86,7 +86,7 @@ keepDefaultAttrVals = true
 keepDocumentTags = true
 keepEndTags = true
 keepQuotes = false
-keepConditionalComments = true
+keepspecialcomments = true
 keepWhitespace = false
 
 [minify.tdewolff.js]

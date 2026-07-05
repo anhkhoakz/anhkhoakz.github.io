@@ -106,20 +106,28 @@ for = "/robots.txt"
 Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
+for = "/atom.xml"
+
+[headers.values]
+Content-Type = "application/atom+xml; charset=utf-8"
+X-Content-Type-Options = "nosniff"
+Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
 for = "/sitemap.xml"
 
 [headers.values]
+Content-Type = "application/xml; charset=utf-8"
+X-Content-Type-Options = "nosniff"
 Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
 for = "/index.xml"
 
 [headers.values]
+Content-Type = "application/rss+xml; charset=utf-8"
+X-Content-Type-Options = "nosniff"
 Cache-Control = "public, max-age=3600, must-revalidate"
-
-# ─────────────────────────────────────────────────────────────
-# Hide source maps in production
-# ─────────────────────────────────────────────────────────────
 
 [[redirects]]
 from = "/js/*.map"
