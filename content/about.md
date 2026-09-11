@@ -2,6 +2,7 @@
 hideReply: true
 menu: "main"
 title: "About"
+description: "About Anh Khoa, a software engineering student writing about privacy, security, and practical technology."
 weight: 3
 ---
 
@@ -42,17 +43,16 @@ If you have any questions or feedback, please don’t hesitate to reach out.
 
 Thanks for visiting!
 
+For a shorter update, see my [now page]({{< relref "now" >}}).
+
 ---
 
 ### Code Repository Hosting
 
-[![SourceHut](https://img.shields.io/badge/SourceHut-white?style=for-the-badge&logo=sourcehut&logoColor=black)](https://sr.ht/~anhkhoakz/)
-
-[![Codeberg](https://img.shields.io/badge/Codeberg-white?style=for-the-badge&logo=forgejo)](https://codeberg.org/anhkhoakz/)
-
-[![Framagit](https://img.shields.io/badge/Framagit-white?style=for-the-badge&logo=gitlab)](https://framagit.org/anhkhoakz)
-
-[![GitHub](https://img.shields.io/badge/GitHub-white?style=for-the-badge&logo=github&logoColor=black)](https://github.com/anhkhoakz)
+You can find my public work on [SourceHut](https://sr.ht/~anhkhoakz/),
+[Codeberg](https://codeberg.org/anhkhoakz/),
+[Framagit](https://framagit.org/anhkhoakz), and
+[GitHub](https://github.com/anhkhoakz).
 
 ## About This Website
 
@@ -93,4 +93,4 @@ or any devices.
 
 ## Sponsor Me
 
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/anhkhoakz?style=for-the-badge&logo=github&logoColor=black&labelColor=white&color=1a8fe3)](https://github.com/sponsors/anhkhoakz)
+If this work is useful, you can support it through [GitHub Sponsors](https://github.com/sponsors/anhkhoakz).

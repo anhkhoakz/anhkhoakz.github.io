@@ -5,14 +5,17 @@ categories = [
     "browser",
 ]
 date = 2024-01-11
-description = ''
+description = 'A practical comparison of Firefox, LibreWolf, Mullvad Browser, Ungoogled Chromium, and Brave with privacy and security trade-offs.'
 tags = [
     'web-browser',
     'privacy',
     'security',
 ]
-title = 'Browsers for Daily Using'
+title = 'Browsers for Privacy and Everyday Use'
 +++
+
+This comparison supports the [privacy guide]({{< relref "privacy" >}})
+and the [security topic guide]({{< relref "security" >}}).
 
 - [Gecko Engine](#gecko-engine)
 

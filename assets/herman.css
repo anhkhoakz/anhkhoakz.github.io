@@ -233,7 +233,8 @@ h4 + h2, h4 + h3, h4 + h4 {
 .title {
 	text-decoration: none;
 }
-.title h1 {
+.title .site-title {
+	display: block;
 	font-size: calc(var(--size) * 3.4);
 	margin-top: calc(var(--spacing) / 2);
 }

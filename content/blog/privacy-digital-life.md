@@ -1,14 +1,17 @@
 +++
 author = "anhkhoakz"
 date = 2025-07-23T11:42:20+07:00
-description = ""
+description = "A practical digital privacy checklist covering operating systems, browsers, email, passwords, networking, and everyday habits."
 draft = false
 tags = []
-title = 'Privacy Digital Life'
+title = 'Digital Privacy: A Practical Checklist'
 unlisted = false
 +++
 
 ---
+
+This checklist is part of the [privacy guide]({{< relref "privacy" >}}).
+For account and communication risks, also see the [security topic guide]({{< relref "security" >}}).
 
 ## Operating System
 

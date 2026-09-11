@@ -1,1 +1,14 @@
-{{ define "main" }} {{ .Content }} {{ end }}
+{{ define "main" }}
+<section class="home-intro" aria-labelledby="home-title">
+    <h1 id="home-title">Privacy, Security &amp; Software Engineering</h1>
+    {{ .Content }}
+</section>
+<section aria-labelledby="topics-title">
+    <h2 id="topics-title">Explore the topics</h2>
+    <ul>
+        <li><a href="{{ "privacy/" | relURL }}">Privacy</a> — practical guidance for a more private digital life.</li>
+        <li><a href="{{ "security/" | relURL }}">Security</a> — threat-aware tools, habits, and trade-offs.</li>
+        <li><a href="{{ "software-engineering/" | relURL }}">Software engineering</a> — development workflows, Git, and developer tools.</li>
+    </ul>
+</section>
+{{ end }}

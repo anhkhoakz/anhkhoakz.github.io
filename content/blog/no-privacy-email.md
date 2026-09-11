@@ -5,13 +5,17 @@ categories = [
     'email'
 ]
 date = 2024-01-10
+description = "Why email cannot provide strong privacy by default, and when encrypted messaging or PGP may be a better fit."
 tags = [
     'email',
     'privacy',
     'security',
 ]
-title = 'There is no privacy email'
+title = 'Why Email Cannot Provide Strong Privacy by Default'
 +++
+
+This article belongs with the [privacy guide]({{< relref "privacy" >}})
+and [security topic guide]({{< relref "security" >}}).
 
 ---
 

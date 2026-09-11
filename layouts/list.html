@@ -1,9 +1,14 @@
 {{ define "main" }}
 <content>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+    <div class="section-intro">{{ . }}</div>
+    {{ end }}
     {{ if .Data.Singular }}
     <h3 class="blog-filter">{{ i18n "filtering-for" }} "{{ .Title }}"</h3>
     {{ end }}
 
+    {{ if .Pages }}
     <ul class="blog-posts">
         {{ range where .Pages "Params.unlisted" "!=" true }}
         <li>
@@ -21,11 +26,10 @@
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             {{ end }}
         </li>
-        {{ else }}
-        <li>{{ i18n "no-posts" }}</li>
         {{ end }}
     </ul>
-    {{ if not .Data.Singular }}
+    {{ end }}
+    {{ if and (not .Data.Singular) (eq .Section "blog") }}
     <div>
         {{ range .Site.Taxonomies.tags }}
         <a class="blog-tags" href="{{ .Page.RelPermalink }}">#{{ lower .Page.Title }}</a>

@@ -1,11 +1,13 @@
 +++
 author = "anhkhoakz"
 date = 2025-04-21T22:26:11+07:00
-description = ""
+description = "Git explained through semantic versioning, Conventional Commits, branching models, and practical release workflows."
 draft = false
 tags = []
-title = 'WTF Is Git'
+title = 'Git Explained: Versioning, Commits and Branching'
 +++
+
+This article is part of the [software engineering guide]({{< relref "software-engineering" >}}).
 
 ---
 

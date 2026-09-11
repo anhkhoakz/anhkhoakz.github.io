@@ -1,7 +1,7 @@
 #:schema https://json.schemastore.org/hugo.json
 
 baseURL = "https://www.anhkhoakz.dev/"
-title = "anhkhoakz"
+title = "Anh Khoa"
 copyright = "© anhkhoakz"
 
 defaultContentLanguage = "en"
@@ -327,27 +327,34 @@ direction = "ltr"
 disabled = false
 label = "English"
 locale = "en-US"
-title = "anhkhoakz"
+title = "Anh Khoa"
 weight = 1
 
 [languages.en.params]
 reading_speed = 220
 
 [params]
-description = "anhkhoakz personal blog"
+description = "Anh Khoa's personal technical blog about privacy, security, and software engineering."
 disableComments = false
-subtitle = "anhkhoakz personal blog"
+subtitle = "Privacy, Security & Software Engineering"
 images = ["images/share.webp"]
 dateFormat = "02 Jan 2006"
 hideUntranslated = true
-generateSocialCard = true
+generateSocialCard = false
 
 [params.social]
 github = "anhkhoakz"
 
 [params.author]
 email = "dose_untie091@aleeas.com"
-name = "anhkhoakz"
+name = "Anh Khoa"
+url = "https://www.anhkhoakz.dev/"
+sameAs = [
+    "https://github.com/anhkhoakz",
+    "https://sr.ht/~anhkhoakz/",
+    "https://codeberg.org/anhkhoakz",
+    "https://framagit.org/anhkhoakz",
+]
 
 [params.contact]
 email = "dose_untie091@aleeas.com"

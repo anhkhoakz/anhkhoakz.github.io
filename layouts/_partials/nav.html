@@ -1,5 +1,5 @@
 {{ range .Site.Menus.main.ByWeight }}
-<a href="{{ .URL }}">{{ .Name }}</a>
+<a href="{{ .URL }}">{{ if eq .URL "/" }}Home{{ else }}{{ .Name }}{{ end }}</a>
 {{ end }}
 <a href='{{ absURL "index.xml" }}'>RSS</a>
 {{ with .Site.Home.OutputFormats.Get "atom" }}<a href="{{ .Permalink }}">Atom</a>{{ end }}

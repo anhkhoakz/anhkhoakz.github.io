@@ -1,7 +1,7 @@
 +++
 author = "anhkhoakz"
 date = 2024-08-05T12:49:31+07:00
-description = ""
+description = "A short profile and the current focus of Anh Khoa's technical blog."
 draft = false
 tags = []
 title = 'Now'

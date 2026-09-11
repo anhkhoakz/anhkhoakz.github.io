@@ -1,13 +1,14 @@
 ---
 menu: "main"
-title: "Home"
+title: "Privacy, Security & Software Engineering"
+description: "Anh Khoa's personal technical blog about privacy, security, and software engineering."
 weight: 1
 ---
 
-## Anhkhoakz.dev
+Anh Khoa writes about privacy, security, software engineering, Linux, macOS,
+open-source software, and developer tools.
 
-This is a simple website made for my blogging habit.
-
-I write about privacy, security, and technology.
+The goal is practical, evidence-aware guidance that keeps a minimal,
+performance-first, and privacy-first approach.
 
 ---

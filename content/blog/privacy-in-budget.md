@@ -5,12 +5,16 @@ categories = [
 "password-manager", "operating-system", "networking"
 ]
 date = 2024-01-13
+description = "Practical ways to improve online privacy on a limited budget, from browsers and email to passwords and device settings."
 tags = [
     "privacy", "security", "software", "web-browser", "email", "messaging",
 "password-manager", "operating-system", "networking"
 ]
-title = 'Privacy In Budget'
+title = 'How to Improve Online Privacy on a Budget'
 +++
+
+This article is part of the [privacy guide]({{< relref "privacy" >}}),
+with practical steps that fit different budgets and threat models.
 
 As a software engineering student, I love the beauty of tech,
 but I'm also afraid of it.

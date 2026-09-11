@@ -1,11 +1,14 @@
 +++
 author = "anhkhoakz"
 date = 2024-01-15T10:47:43+07:00
-description = "Some tips to configure Firefox"
+description = "A practical Firefox privacy configuration guide covering profiles, user.js, overrides, updates, and extensions."
 draft = false
 tags = []
-title = 'How I Configure Firefox'
+title = 'How I Configure Firefox for Privacy'
 +++
+
+This is a supporting guide for the [privacy topic]({{< relref "privacy" >}})
+and its [security notes]({{< relref "security" >}}).
 
 ---
 

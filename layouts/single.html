@@ -1,15 +1,16 @@
 {{ define "main" }}
-{{ if not .Params.menu }}
 <h1>{{ .Title }}</h1>
-<p class="byline">
+{{ if or (not .Date.IsZero) .Params.author }}<p class="byline">
+    {{ if not .Date.IsZero }}
     <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
         {{ .Date.Format (default "2006-01-02" (or .Site.Params.dateFormat "")) }}
     </time>
-    {{ with .Params.author }}· {{ . }}{{ end }}
+    {{ end }}
+    {{ with .Params.author }}{{ if not $.Date.IsZero }}· {{ end }}{{ $.Site.Params.author.name }}{{ end }}
 </p>
 {{ end }}
 
-<content class="{{ if eq .File.BaseFileName "phone-cooler" }}phone-cooler-post{{ end }}"> {{ .Content }} </content>
+<article class="{{ if eq .File.BaseFileName "phone-cooler" }}phone-cooler-post{{ end }}"> {{ .Content }} </article>
 
 {{ with .GetTerms "tags" }}
 <p>

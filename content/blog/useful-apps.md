@@ -1,12 +1,15 @@
 +++
 author = "anhkhoakz"
 date = 2024-02-14T06:05:22+07:00
-description = "Useful apps for macOS"
+description = "A maintained list of useful macOS apps for productivity, privacy, and software development, including free and paid options."
 draft = false
 lastmod = 2025-05-19T06:08:00+07:00
 tags = [ "macos", "apps" ]
-title = 'Useful MacOS Apps'
+title = 'Useful macOS Apps for Productivity, Privacy and Developers'
 +++
+
+This maintained list supports the [software engineering guide]({{< relref "software-engineering" >}})
+with tools that fit a developer-oriented macOS workflow.
 
 ---
 
