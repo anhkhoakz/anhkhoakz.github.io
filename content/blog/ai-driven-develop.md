@@ -12,6 +12,6 @@ unlisted = false
 
 # AI Driven Development
 
-##
+This draft collects notes on using AI tools in the development workflow.
 
 ---

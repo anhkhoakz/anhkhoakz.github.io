@@ -77,7 +77,7 @@ disableHTML = false
 disableJS = false
 disableJSON = false
 disableSVG = false
-disableXML = true
+disableXML = false
 minifyOutput = true
 
 [minify.tdewolff.html]

@@ -17,7 +17,7 @@ title = 'EDC'
 
 I just discovered the things that called EDC, which make my life a lot change.
 
-{{<figure src="images/blogs/edc/my-edc.webp" alt="My current EDC image" caption="My current EDC">}}
+![My current EDC](/images/blogs/edc/my-edc.webp)
 
 I just relize that I just have EDC but I still really know that I have an EDC.
 

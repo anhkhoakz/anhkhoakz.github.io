@@ -42,6 +42,8 @@ and [Blink (Chromium-based)](#blink-engine).
 
 ## Gecko Engine
 
+This section covers the Firefox-based browsers I trust most for privacy.
+
 ### Firefox, but Hardened
 
 This is my first choice when it comes to a browser for privacy.
@@ -138,6 +140,8 @@ It includes auto-updates and creating new identity features.
 
 ## Blink Engine
 
+This section covers Chromium-based options and where they fit in my setup.
+
 ### Ungoogled Chromium
 
 Home page: [ungoogled-chromium](https://ungoogled-software.github.io/)
@@ -191,6 +195,9 @@ to make Brave more private.
 
 ### Throium
 
+Throium is the last browser in this roundup,
+and it is included for completeness.
+
 ## Extensions
 
 - [uBlock Origin](https://addons.mozilla.org/firefox/addon/ublock-origin/)
@@ -236,20 +243,12 @@ and the goal is to find a browser that meets their unique criteria.
 <https://en.wikipedia.org/w/index.php?title=Comparison_of_browser_engines&oldid=1251699906>
 (last visited Jan. 11, 2024).
 
-[^2]: 1Password and the LibreWolf browser,
-<https://1password.community/discussion/comment/633723/#Comment_633723>
-(last visited Jan. 11, 2024).
-
-[^3]: Web Browser telemetry - 2021 edition, Brave,
-<https://sizeof.cat/post/web-browser-telemetry/#brave>
-(last visited Jan. 11, 2024).
-
-[^4]: Brave’s Use of Referral Codes,
-<https://github.com/brave/brave-browser/wiki/Brave%E2%80%99s-Use-of-Referral-Codes>
-(last visited Jan. 11, 2024).
-
 [^5]: [meta] Support download token,
 <https://bugzilla.mozilla.org/show_bug.cgi?id=1677497#c0>
+(last visited Jan. 11, 2024).
+
+[^2]: 1Password and the LibreWolf browser,
+<https://1password.community/discussion/comment/633723/#Comment_633723>
 (last visited Jan. 11, 2024).
 
 [^6]: Extending support for trusted web browsers,
@@ -258,4 +257,12 @@ and the goal is to find a browser that meets their unique criteria.
 
 [^7]: Zero-day
 vulnerability,<https://en.wikipedia.org/w/index.php?title=Zero-day_vulnerability&lang=en>,
+(last visited Jan. 11, 2024).
+
+[^3]: Web Browser telemetry - 2021 edition, Brave,
+<https://sizeof.cat/post/web-browser-telemetry/#brave>
+(last visited Jan. 11, 2024).
+
+[^4]: Brave’s Use of Referral Codes,
+<https://github.com/brave/brave-browser/wiki/Brave%E2%80%99s-Use-of-Referral-Codes>
 (last visited Jan. 11, 2024).

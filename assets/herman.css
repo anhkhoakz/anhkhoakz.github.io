@@ -190,6 +190,25 @@ li + li {
 	margin-block-start: var(--spacing);
 }
 
+.phone-cooler-post li.task-list-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.8rem;
+	list-style: none;
+	padding-inline-start: 0;
+}
+
+.phone-cooler-post li.task-list-item > input[type="checkbox"] {
+	flex: 0 0 auto;
+	inline-size: 1.2em;
+	block-size: 1.2em;
+	margin-block-start: 0.2em;
+}
+
+.phone-cooler-post li.task-list-item > p {
+	margin: 0;
+}
+
 blockquote {
 	padding-inline-start: var(--spacing);
 	border-inline-start: 0.2em solid var(--color-primary-r);

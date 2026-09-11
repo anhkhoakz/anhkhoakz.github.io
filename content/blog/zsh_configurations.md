@@ -330,7 +330,7 @@ I run the `zsh-bench` again
 | Before |      ✔️ |               ✔️ |           ✔️ |         ✔️ |          274% 🔴 |       130% 🟠 | 660% 🔴 |    52% 🟡 |
 | After  |      ✔️ |               ✔️ |           ✔️ |         ✔️ |           24% 🟢 |        84% 🟡 |  40% 🟢 |    56% 🟡 |
 
-zmodload zsh/zprof | zprof result:
+`zmodload zsh/zprof` and the `zprof` result:
 
 ```text
 num  calls                time                       self            name
@@ -435,6 +435,9 @@ I also optimize other metrics like `first_prompt_lag_ms`,
 `first_command_lag_ms`, `command_lag_ms`, and `input_lag_ms`.
 
 ## Conclusion
+
+The final configuration keeps the same shell setup
+while trimming startup overhead.
 
 ### Do It Waste My Time?
 

@@ -123,6 +123,8 @@ chmod +x ./updater.sh
 
 ### Step 5: Restart Firefox
 
+Restart Firefox now so the updated preferences and extensions load cleanly.
+
 ### Step 6: Install Essential Extensions
 
 Here are some essential extensions I recommend:

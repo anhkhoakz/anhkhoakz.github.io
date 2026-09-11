@@ -1,134 +1,118 @@
 name: Deploy mirror pages
-
 on:
-        push:
-                branches:
-                        - main
-        workflow_dispatch:
-
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 concurrency:
-        group: deploy-pages
-        cancel-in-progress: true
-
+  group: deploy-pages
+  cancel-in-progress: true
 defaults:
-        run:
-                shell: bash
-
+  run:
+    shell: bash
 jobs:
-        deploy:
-                name: Build and deploy Hugo site
-                runs-on: ubuntu-latest
-                timeout-minutes: 30
-                permissions:
-                        contents: read
-                        pages: write
-                        id-token: write
-                environment:
-                        name: github-pages
-                        url: ${{ steps.deployment.outputs.page_url }}
-
-                steps:
-                        # Check out the source for the site
-                        - name: Checkout
-                          uses: actions/checkout@v5
-                          with:
-                                  submodules: recursive
-                                  fetch-depth: 0
-
-                        # Cache Hugo modules
-                        - name: Cache Hugo modules
-                          uses: actions/cache@v4
-                          with:
-                                  path: /tmp/hugo_cache
-                                  key: ${{ runner.os }}-hugo-${{ hashFiles('**/go.mod') }}
-                                  restore-keys: |
-                                          ${{ runner.os }}-hugo-
-
-                        # Install Hugo in the runner
-                        - name: Hugo setup
-                          uses: peaceiris/actions-hugo@v3
-                          with:
-                                  hugo-version: "latest"
-                                  extended: true
-
-                        # Clean up static folder
-                        - name: Clean static folder
-                          run: |
-                                  rm -f static/_redirects
-                                  rm -rf static/faker static/tdt static/links
-
-                        # Build Hugo site once
-                        - name: Build Hugo site
-                          run: hugo --gc --minify --destination public
-                          env:
-                                  HUGO_BASEURL: https://anhkhoakz.github.io/
-
-                        # Upload build output as a generic artifact for debugging/backup
-                        - name: Upload build artifact
-                          uses: actions/upload-artifact@v4
-                          with:
-                                  name: hugo-public
-                                  path: ./public
-                                  if-no-files-found: error
-
-                        # Setup Pages
-                        - name: Setup Pages
-                          id: pages
-                          uses: actions/configure-pages@v5
-                          with:
-                                  token: ${{ secrets.GH_TOKEN }}
-                                  enablement: true
-                          continue-on-error: true
-
-                        # Upload artifact for GitHub Pages
-                        - name: Upload artifact
-                          uses: actions/upload-pages-artifact@v4
-                          with:
-                                  path: ./public
-                          continue-on-error: true
-
-                        # Deploy to GitHub Pages
-                        - name: Deploy to GitHub Pages
-                          id: deployment
-                          uses: actions/deploy-pages@v4
-                          continue-on-error: true
-
-                        # Deploy to Neocities
-                        - name: Deploy to Neocities
-                          uses: bcomnes/deploy-to-neocities@v3
-                          with:
-                                  api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
-                                  cleanup: true
-                                  dist_dir: public
-                          env:
-                                  HUGO_BASEURL: https://anhkhoakz.neocities.org/
-                          continue-on-error: true
-
-                        # Deploy to Surge
-                        - name: Deploy to Surge.sh
-                          uses: dswistowski/surge-sh-action@v1
-                          with:
-                                  domain: https://anhkhoakz.surge.sh/
-                                  project: public
-                                  login: ${{ secrets.SURGE_LOGIN }}
-                                  token: ${{ secrets.SURGE_TOKEN }}
-                          env:
-                                  HUGO_BASEURL: https://anhkhoakz.surge.sh/
-                          continue-on-error: true
-
-                        # Deploy to Sourcehut
-                        - name: Deploy to Sourcehut
-                          run: |
-                                  curl --continue-at - --location --progress-bar \
-                                    --remote-name --remote-time \
-                                    https://github.com/anhkhoakz/hut/releases/download/v0.8.0/hut-hut-linux-amd64
-                                  install -m 755 hut-hut-linux-amd64 /usr/local/bin/hut
-                                  mkdir -p ~/.config/hut
-                                  umask 077
-                                  printf 'instance "sr.ht" {\n    access-token "%s"\n}\n' "$SRHT_ACCESS_TOKEN" > ~/.config/hut/config
-                                  tar -C public -cvz . > site.tar.gz
-                                  hut pages publish -d anhkhoakz.srht.site site.tar.gz
-                          env:
-                                  HUGO_BASEURL: https://anhkhoakz.srht.site/
-                                  SRHT_ACCESS_TOKEN: ${{ secrets.SRHT_TOKEN }}
-                          continue-on-error: true
+  deploy:
+    name: Build and deploy Hugo site
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # Check out the source for the site
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      # Cache Hugo modules
+      - name: Cache Hugo modules
+        uses: actions/cache@v4
+        with:
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugo-${{ hashFiles('**/go.mod') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-
+      # Install Hugo in the runner
+      - name: Hugo setup
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "latest"
+          extended: true
+      # Clean up static folder
+      - name: Clean static folder
+        run: |
+          rm -f static/_redirects
+          rm -rf static/faker static/tdt static/links
+      # Build Hugo site once
+      - name: Build Hugo site
+        run: hugo --gc --minify --destination public
+        env:
+          HUGO_BASEURL: https://anhkhoakz.github.io/
+      # Upload build output as a generic artifact for debugging/backup
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hugo-public
+          path: ./public
+          if-no-files-found: error
+      # Setup Pages
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          enablement: true
+        continue-on-error: true
+      # Upload artifact for GitHub Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./public
+        continue-on-error: true
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      # Deploy to Neocities
+      - name: Deploy to Neocities
+        uses: bcomnes/deploy-to-neocities@v3
+        with:
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+          cleanup: true
+          dist_dir: public
+        env:
+          HUGO_BASEURL: https://anhkhoakz.neocities.org/
+        continue-on-error: true
+      # Deploy to Surge
+      - name: Deploy to Surge.sh
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: https://anhkhoakz.surge.sh/
+          project: public
+          login: ${{ secrets.SURGE_LOGIN }}
+          token: ${{ secrets.SURGE_TOKEN }}
+        env:
+          HUGO_BASEURL: https://anhkhoakz.surge.sh/
+        continue-on-error: true
+      # Deploy to Sourcehut
+      - name: Deploy to Sourcehut
+        run: |
+          curl --continue-at - --location --progress-bar \
+            --remote-name --remote-time \
+            https://github.com/anhkhoakz/hut/releases/download/v0.8.0/hut-hut-linux-amd64
+          install -m 755 hut-hut-linux-amd64 /usr/local/bin/hut
+          mkdir -p ~/.config/hut
+          umask 077
+          printf 'instance "sr.ht" {\n    access-token "%s"\n}\n' "$SRHT_ACCESS_TOKEN" > ~/.config/hut/config
+          tar -C public -cvz . > site.tar.gz
+          hut pages publish -d anhkhoakz.srht.site site.tar.gz
+        env:
+          HUGO_BASEURL: https://anhkhoakz.srht.site/
+          SRHT_ACCESS_TOKEN: ${{ secrets.SRHT_TOKEN }}
+        continue-on-error: true

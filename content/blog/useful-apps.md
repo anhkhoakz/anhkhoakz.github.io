@@ -222,6 +222,8 @@ Supports all major shells.
 
 ## Visual Studio Code Extensions
 
+These are the extensions I keep coming back to in day-to-day work.
+
 ### Javascript & Typescript
 
 - [xabikos.JavaScriptSnippets](https://marketplace.visualstudio.com/items/?itemName=xabikos.JavaScriptSnippets):
