@@ -18,10 +18,13 @@ command = "hugo --gc --minify --buildDrafts --buildFuture --baseURL $DEPLOY_PRIM
 command = "hugo --gc --minify --baseURL $DEPLOY_PRIME_URL"
 
 [[headers]]
-for = "/index.xml"
+for = "/*"
 
 [headers.values]
-Content-Type = "application/xml; charset=utf-8"
+Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "DENY"
+Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[redirects]]
 from = "/js/*.map"
