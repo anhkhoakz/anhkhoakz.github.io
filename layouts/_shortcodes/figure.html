@@ -12,6 +12,7 @@ Renders a figure element with optional image, caption, and link.
 @param {string} [width] The width attribute for the image.
 @param {string} [height] The height attribute for the image.
 @param {string} [loading] The loading attribute for the image (e.g., "lazy").
+@param {string} [decoding] The decoding attribute for the image (e.g., "async").
 @param {string} [attr] Attribution text for the image.
 @param {string} [attrlink] A URL for the attribution text.
 
@@ -42,7 +43,8 @@ Renders a figure element with optional image, caption, and link.
     {{- end -}}
     {{- with .Get "width" }} width="{{ . }}"{{ end -}}
     {{- with .Get "height" }} height="{{ . }}"{{ end -}}
-    {{- with .Get "loading" }} loading="{{ . }}"{{ end -}}
+    loading="{{ default "lazy" (.Get "loading") }}"
+    decoding="{{ default "async" (.Get "decoding") }}"
   ><!-- Closing img tag -->
   {{- if .Get "link" }}</a>{{ end -}}
   {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}

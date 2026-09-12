@@ -1,3 +1,6 @@
+# Keep this aligned with netlify.toml and the local Hugo installation.
+HUGO_VERSION := "0.165.0"
+
 # list available commands
 _default: _help
     @just --list
@@ -11,11 +14,14 @@ lint:
     @echo "Running linter..."
     markdownlint --fix content/
 
+# verify the local Hugo version before running site commands
+check-hugo-version:
+    @hugo version | rg -q "v{{ HUGO_VERSION }}" || (echo "Expected Hugo v{{ HUGO_VERSION }}"; exit 1)
+
 # compile or package the project
-build: clean
+build: clean check-hugo-version
     @echo "Building project..."
-    hugo build
-    hugo --minify
+    hugo --gc --minify --enableGitInfo
 
 # remove build artifacts
 clean:
@@ -41,5 +47,5 @@ edit:
         fd --extension=md --full-path content/blog | fzf | xargs nvim
 
 # Dev mode
-dev:
+dev: check-hugo-version
     hugo server --openBrowser

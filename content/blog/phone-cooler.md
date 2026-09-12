@@ -13,7 +13,7 @@ unlisted = false
 This model prioritizes strong cooling output, a clear display,
 and a sturdy clamp mount.
 
-![TH28 Image](https://ae-pic-a1.aliexpress-media.com/kf/S62df07fa31d94699b1e427ddcc7c3157z.png_960x960.png_.avif)
+{{< figure src="https://ae-pic-a1.aliexpress-media.com/kf/S62df07fa31d94699b1e427ddcc7c3157z.png_960x960.png_.avif" alt="TH28 Image" width="960" height="960" loading="lazy" decoding="async" >}}
 
 ### Highlights
 
@@ -52,7 +52,7 @@ the phone’s back panel.
 This model balances strong cooling with a flexible mount
 and AI-assisted control.
 
-![TH12 Image](https://ae-pic-a1.aliexpress-media.com/kf/Sa8bba157bb9041dfb946b855aac7f0d7q.jpg_960x960q75.jpg_.avif)
+{{< figure src="https://ae-pic-a1.aliexpress-media.com/kf/Sa8bba157bb9041dfb946b855aac7f0d7q.jpg_960x960q75.jpg_.avif" alt="TH12 Image" width="960" height="960" loading="lazy" decoding="async" >}}
 
 ### 1. KIRI TH12 Overview and Accessories
 
@@ -128,7 +128,7 @@ delivered to the cooler.
 
 This is a strong budget pick focused on raw cooling and simple operation.
 
-![X30 Image](https://ae-pic-a1.aliexpress-media.com/kf/Sd7ce17f4e848439a92d0acbd1c415d26e.jpg_960x960q75.jpg_.avif)
+{{< figure src="https://ae-pic-a1.aliexpress-media.com/kf/Sd7ce17f4e848439a92d0acbd1c415d26e.jpg_960x960q75.jpg_.avif" alt="X30 Image" width="960" height="960" loading="lazy" decoding="async" >}}
 
 ### 1. PIVA X30 Design and Accessories
 
@@ -182,7 +182,7 @@ range.
 
 This version adds a clamp and keeps roughly the same performance profile.
 
-![B3 Image](https://ae-pic-a1.aliexpress-media.com/kf/S4056e61bdc49400dad4ababc8fb472b48.jpg_960x960q75.jpg_.avif)
+{{< figure src="https://ae-pic-a1.aliexpress-media.com/kf/S4056e61bdc49400dad4ababc8fb472b48.jpg_960x960q75.jpg_.avif" alt="B3 Image" width="960" height="960" loading="lazy" decoding="async" >}}
 
 ### 1. PIVA B3 Overview and Design
 
@@ -228,7 +228,7 @@ According to the original content,
 the **TH16, TH18, TH19, and TH25** differ mainly in appearance,
 while their features and overall performance are broadly similar.
 
-![TH25 Image](https://ae-pic-a1.aliexpress-media.com/kf/S5f71ea1d9aee420780061d7b5ffc03bfN.jpg_960x960q75.jpg_.avif)
+{{< figure src="https://ae-pic-a1.aliexpress-media.com/kf/S5f71ea1d9aee420780061d7b5ffc03bfN.jpg_960x960q75.jpg_.avif" alt="TH25 Image" width="960" height="960" loading="lazy" decoding="async" >}}
 
 ### 1. TH16-TH25 Overview and Accessories
 
@@ -298,7 +298,7 @@ The V2 version retains the foundation of the V1 and introduces several changes:
 
 This one targets budget buyers who want temperature readouts and AI control.
 
-![K6 Image](https://ae-pic-a1.aliexpress-media.com/kf/S2b501300704e4586bed231818a39bc99e.jpg_960x960q75.jpg_.avif)
+{{< figure src="https://ae-pic-a1.aliexpress-media.com/kf/S2b501300704e4586bed231818a39bc99e.jpg_960x960q75.jpg_.avif" alt="K6 Image" width="960" height="960" loading="lazy" decoding="async" >}}
 
 ### 1. K6 AI Overview and Design
 
@@ -632,7 +632,7 @@ and basic cooling needs.
 
 ## JS85
 
-![JS85 Image](https://ae-pic-a1.aliexpress-media.com/kf/S98caf448d60749d99080186dfd3fafd3M.jpg_960x960q75.jpg_.avif)
+{{< figure src="https://ae-pic-a1.aliexpress-media.com/kf/S98caf448d60749d99080186dfd3fafd3M.jpg_960x960q75.jpg_.avif" alt="JS85 Image" width="960" height="960" loading="lazy" decoding="async" >}}
 
 This battery-powered cooler trades weight for cable-free operation.
 
