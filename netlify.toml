@@ -125,7 +125,7 @@ Cache-Control = "public, max-age=3600, must-revalidate"
 for = "/index.xml"
 
 [headers.values]
-Content-Type = "application/rss+xml; charset=utf-8"
+Content-Type = "application/xml; charset=utf-8"
 X-Content-Type-Options = "nosniff"
 Cache-Control = "public, max-age=3600, must-revalidate"
 
