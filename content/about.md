@@ -1,29 +1,28 @@
 ---
+description: "About Anh Khoa, a software engineering student writing about privacy, security, and practical technology."
 hideReply: true
 menu: "main"
 title: "About"
-description: "About Anh Khoa, a software engineering student writing about privacy, security, and practical technology."
 weight: 3
 ---
 
-## About Me
-
 Hello everyone!
 
-My name is Anh Khoa, and I’m a junior student studying Software Engineering at
-[Ton Duc Thang University](https://tdtu.edu.vn/).
+My name is Nguyễn Huỳnh Anh Khoa,
+I'm a graduate of [Ton Duc Thang University](https://tdtu.edu.vn/) with a degree
+in Software Engineering.
 
-I’m a big fan of minimalism, stoicism, reading, programming, traveling,
+I'm a big fan of minimalism, stoicism, reading, programming, traveling,
 and adventure.
 My life philosophy is based on these principles.
-I’m always learning, growing, and improving in all areas of my life.
+I'm always learning, growing, and improving in all areas of my life.
 I love helping others and creating value for the community.
 
 I think minimalism is a great way to focus on the most important things in life.
 It helps us let go of the unnecessary and focus on what really matters,
 like time, health, and relationships.
 Stoicism is a philosophy that helps us become stronger and overcome challenges.
-It teaches us to accept what we can’t change and focus on what we can.
+It teaches us to accept what we can't change and focus on what we can.
 
 I believe reading is a fantastic way to learn and expand our knowledge.
 It helps us understand the world better and about ourselves.
@@ -38,8 +37,8 @@ We can create value for the community by participating in volunteer activities
 and community projects.
 
 I hope you find this website helpful.
-I’ll try to keep it updated with new articles regularly.
-If you have any questions or feedback, please don’t hesitate to reach out.
+I'll try to keep it updated with new articles regularly.
+If you have any questions or feedback, please don't hesitate to reach out.
 
 Thanks for visiting!
 
@@ -47,12 +46,11 @@ For a shorter update, see my [now page]({{< relref "now" >}}).
 
 ---
 
-### Code Repository Hosting
+## Code Repository Hosting
 
 You can find my public work on [SourceHut](https://sr.ht/~anhkhoakz/),
 [Codeberg](https://codeberg.org/anhkhoakz/),
-[Framagit](https://framagit.org/anhkhoakz), and
-[GitHub](https://github.com/anhkhoakz).
+and [GitHub](https://github.com/anhkhoakz).
 
 ## About This Website
 
@@ -85,7 +83,7 @@ or any devices.
 
 - [NeoCities](https://anhkhoakz.neocities.org/)
 
-- [Surge.sh](https://anhkhoakz.surge.sh/) (deprecated)
+- [Surge.sh](https://anhkhoakz.surge.sh/)
 
 - [GitHub Pages](https://anhkhoakz.github.io/)
 
@@ -93,4 +91,5 @@ or any devices.
 
 ## Sponsor Me
 
-If this work is useful, you can support it through [GitHub Sponsors](https://github.com/sponsors/anhkhoakz).
+If this work is useful, you can support it through
+[GitHub Sponsors](https://github.com/sponsors/anhkhoakz).

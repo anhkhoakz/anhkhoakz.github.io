@@ -1,7 +1,7 @@
 ---
+description: "Anh Khoa's personal technical blog about privacy, security, and software engineering."
 menu: "main"
 title: "Privacy, Security & Software Engineering"
-description: "Anh Khoa's personal technical blog about privacy, security, and software engineering."
 weight: 1
 ---
 

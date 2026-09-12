@@ -8,8 +8,9 @@ tags = [ "macos", "apps" ]
 title = 'Useful macOS Apps for Productivity, Privacy and Developers'
 +++
 
-This maintained list supports the [software engineering guide]({{< relref "software-engineering" >}})
-with tools that fit a developer-oriented macOS workflow.
+This maintained list supports the [software engineering
+guide]({{< relref "software-engineering" >}}) with tools that fit a
+developer-oriented macOS workflow.
 
 ---
 

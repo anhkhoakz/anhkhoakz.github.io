@@ -244,28 +244,35 @@ and the goal is to find a browser that meets their unique criteria.
 
 [^1]: Comparison of browser engines,
 <https://en.wikipedia.org/w/index.php?title=Comparison_of_browser_engines&oldid=1251699906>
-(last visited Jan. 11, 2024).
+(last visited Jan.
+11, 2024).
 
 [^5]: [meta] Support download token,
 <https://bugzilla.mozilla.org/show_bug.cgi?id=1677497#c0>
-(last visited Jan. 11, 2024).
+(last visited Jan.
+11, 2024).
 
 [^2]: 1Password and the LibreWolf browser,
 <https://1password.community/discussion/comment/633723/#Comment_633723>
-(last visited Jan. 11, 2024).
+(last visited Jan.
+11, 2024).
 
 [^6]: Extending support for trusted web browsers,
 <https://1password.community/discussion/140735/extending-support-for-trusted-web-browsers#latest>
-(last visited Jan. 11, 2024).
+(last visited Jan.
+11, 2024).
 
 [^7]: Zero-day
 vulnerability,<https://en.wikipedia.org/w/index.php?title=Zero-day_vulnerability&lang=en>,
-(last visited Jan. 11, 2024).
+(last visited Jan.
+11, 2024).
 
 [^3]: Web Browser telemetry - 2021 edition, Brave,
 <https://sizeof.cat/post/web-browser-telemetry/#brave>
-(last visited Jan. 11, 2024).
+(last visited Jan.
+11, 2024).
 
-[^4]: Brave’s Use of Referral Codes,
+[^4]: Brave's Use of Referral Codes,
 <https://github.com/brave/brave-browser/wiki/Brave%E2%80%99s-Use-of-Referral-Codes>
-(last visited Jan. 11, 2024).
+(last visited Jan.
+11, 2024).

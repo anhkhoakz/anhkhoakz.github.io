@@ -2,7 +2,7 @@
 author = "anhkhoakz"
 date = 2026-07-13T08:00:00+07:00
 description = "Best Mid-Range and Budget Thermoelectric Phone Coolers Worth Buying"
-draft = false
+draft = true
 tags = []
 title = 'Phone Cooler'
 unlisted = false
@@ -33,7 +33,8 @@ and channels hot exhaust air toward both sides.
 
 The fan is fairly **loud** when operating at high power.
 Magnetic holding strength has been improved compared with the V2 version.
-The metal contact surface may **scratch the back** of a phone if used carelessly.
+The metal contact surface may **scratch the back** of a phone
+if used carelessly.
 Power consumption is high, so a reliable charger is required.
 A charger rated at **40 W or higher** is recommended,
 and low-capacity power banks should not be relied upon.
@@ -43,7 +44,7 @@ and low-capacity power banks should not be relied upon.
 Use a charger rated at **45 W or higher**,
 such as the CUKTECH 65 W or another model that supports USB **Power Delivery**.
 Apply PPF film or use the included metal plate to reduce the risk of scratching
-the phone’s back panel.
+the phone's back panel.
 
 ---
 
@@ -71,7 +72,7 @@ and may occasionally interfere with the screen while gaming.
 - Good overall build quality.
 - A thermally conductive silicone contact surface.
 - Airflow shielding prevents hot exhaust air from blowing directly onto the
-  user’s hands.
+  user's hands.
 - Magnetic holding strength is among the strongest in its price range.
 
 ### 3. KIRI TH12 Real-World Performance
@@ -139,7 +140,7 @@ This is a strong budget pick focused on raw cooling and simple operation.
 - Strong magnetic holding force.
 - Large LED assembly.
 - Reverse-airflow design helps prevent hot exhaust air from blowing onto the
-  user’s hands.
+  user's hands.
 
 ### 2. PIVA X30 Power and Features
 
@@ -240,7 +241,7 @@ while their features and overall performance are broadly similar.
 ### 2. TH16-TH25 Design
 
 - Styling inspired by the REDMAGIC Cooler 6 Pro.
-- Side airflow shields reduce hot air blowing onto the user’s hands.
+- Side airflow shields reduce hot air blowing onto the user's hands.
 - Well-finished USB-C port.
 - Two-in-one mounting system: clamp or magnetic attachment.
 - Weight of approximately **95 g**.
@@ -403,7 +404,7 @@ and low-cost performance.
 - Two-in-one clamp that can rotate to multiple angles.
 - Metal plate.
 - Protective PPF film to support magnetic attachment
-  and reduce potential damage to the phone’s back panel.
+  and reduce potential damage to the phone's back panel.
 
 ### 2. SL50SE Pro Design and Build Quality
 
@@ -531,7 +532,7 @@ with strong magnetic holding force.
 - Hard plastic housing.
 - Contact surface diameter of approximately **6 cm**.
 - Raised contact surface to improve heat transfer.
-- Strong magnetic holding force; according to the original author’s test,
+- Strong magnetic holding force; according to the original author's test,
   it can support an iPad mini.
 - Weight of approximately **52 g**.
 
@@ -713,8 +714,8 @@ but can still provide sufficient power for many thermoelectric phone coolers.
 - [ ] Use a charger and cable with an appropriate power rating.
 - [ ] Prevent condensation from flowing into the power port, circuitry, or fan.
 - [ ] For metal contact surfaces,
-      use PPF or another suitable protective layer to reduce the risk of scratching
-      the phone’s back panel.
+      use PPF or another suitable protective layer to reduce the risk of
+      scratching the phone's back panel.
 - [ ] Do not evaluate real-world cooling effectiveness solely from no-load
       temperature measurements.
 

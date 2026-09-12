@@ -53,13 +53,13 @@ It includes:
 
 Visit [http://localhost:1313](http://localhost:1313) to view the site locally.
 
-## Search Console readiness
+## Search Console Readiness
 
-After deploying, verify `https://www.anhkhoakz.dev/` in Google Search Console and
-submit the generated sitemap at
-`https://www.anhkhoakz.dev/sitemap.xml`. Use URL Inspection for the homepage,
-the three topic pages, and representative articles; this repository does not
-store Search Console credentials.
+After deploying, verify `https://www.anhkhoakz.dev/` in Google Search Console
+and submit the generated sitemap at `https://www.anhkhoakz.dev/sitemap.xml`.
+Use URL Inspection for the homepage, the three topic pages,
+and representative articles;
+this repository does not store Search Console credentials.
 
 ## How to Contribute
 

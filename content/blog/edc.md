@@ -60,6 +60,7 @@ Replace by this tutorial <https://youtu.be/z88k1Iu9L0c>
 
 [^1]: Everyday carry,
 <https://en.wikipedia.org/w/index.php?title=Everyday_carry&oldid=1312810453>
-(last visited Sep. 29, 2025).
+(last visited Sep.
+29, 2025).
 
 ---

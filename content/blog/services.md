@@ -3,8 +3,8 @@ author = "anhkhoakz"
 date = 2025-09-29T09:06:17+07:00
 description = "A personal list of online services and tools I use, with privacy and practical trade-offs in mind."
 draft = false
-sitemap = { disable = true }
 noindex = true
+sitemap = { disable = true }
 tags = []
 title = 'Services'
 unlisted = true

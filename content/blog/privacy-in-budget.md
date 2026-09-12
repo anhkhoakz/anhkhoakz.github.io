@@ -50,8 +50,8 @@ They have an easy way to register.
 
 If you want to have PGP by yourself, I strongly recommend it.
 You may look at [Disroot](https://disroot.org/), [Cock.li](https://cock.li/),
-[Autistici](https://www.autistici.org/), or even G-Mail with
-[Mailvelope](https://mailvelope.com/)
+[Autistici](https://www.autistici.org/),
+or even G-Mail with [Mailvelope](https://mailvelope.com/)
 
 You can check out the E-mail providers - which one to choose?
 [^1] article from [DigDeeper](https://digdeeper.club/)
@@ -109,8 +109,8 @@ Persuading friends to switch to Signal is hard work, but if you try,
 you will notice how the data that those companies get from you will decrease.
 
 You can check out some alternatives like [SimpleX Chat](https://simplex.chat/),
-[Briar](https://briarproject.org/), [Session](https://getsession.org/), and
-[Element](https://element.io/).
+[Briar](https://briarproject.org/), [Session](https://getsession.org/),
+and [Element](https://element.io/).
 
 ## Password Manager
 
@@ -161,8 +161,8 @@ It doesn't matter which OS you're using;
 make sure that you have strong encryption on your device.
 
 For an external drive, like a self-host cloud, USB, or hard disk,
-you can use built-in encryption or third-party software like
-[VeraCrypt](https://veracrypt.eu/).
+you can use built-in encryption
+or third-party software like [VeraCrypt](https://veracrypt.eu/).
 
 ## Networking
 
@@ -189,8 +189,8 @@ I'll guide you on how to reduce the amount of Cloudflare in soon.
 Using school software for school work and personal software
 for personal work only.
 
-Instead of using Office 365, you can check out
-[LibreOffice](https://www.libreoffice.org/).
+Instead of using Office 365,
+you can check out [LibreOffice](https://www.libreoffice.org/).
 
 For sync files, you can use encryption cloud storage from Proton, Tresorit,
 Filen, pCloud, IceDrive,...
@@ -213,10 +213,12 @@ For more information, you can check out:
 `https://alternativeto.net/software/YOURPRODUCTNAME/?license=opensource`
 
 [^1]: E-mail providers - which one to choose?,
-<https://digdeeper.club/articles/email.xhtml> (last visited Jan. 13, 2024).
+<https://digdeeper.club/articles/email.xhtml> (last visited Jan.
+13, 2024).
 
 [^2]: deCloudflare, <https://0xacab.org/dCF/deCloudflare> (last visited Jan. 13,
 2024).
 
 [^3]: Proprietary Software Is Often Malware,
-<https://www.gnu.org/proprietary/proprietary.html> (last visited Jan. 13, 2024).
+<https://www.gnu.org/proprietary/proprietary.html> (last visited Jan.
+13, 2024).

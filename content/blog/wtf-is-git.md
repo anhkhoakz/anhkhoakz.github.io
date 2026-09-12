@@ -7,7 +7,8 @@ tags = []
 title = 'Git Explained: Versioning, Commits and Branching'
 +++
 
-This article is part of the [software engineering guide]({{< relref "software-engineering" >}}).
+This article is part of the [software engineering
+guide]({{< relref "software-engineering" >}}).
 
 ---
 

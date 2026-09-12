@@ -205,7 +205,7 @@ fi
 ```
 
 But it is keg-only brewed
-(a formula is keg-only if it is not symlinked into Homebrew’s prefix).
+(a formula is keg-only if it is not symlinked into Homebrew's prefix).
 But I want more suggestions,
 so I edit that completion file to add the homebrew completions path.
 
@@ -429,8 +429,8 @@ Although it still has some overhead,
 but it's much better than the initial configuration.
 
 [santacloud.dev](https://santacloud.dev/posts/optimizing-zsh-startup-performance)
-indicate that how they optimize their ZSH startup time to under 70ms
-which is `exit_time_ms` metric in this measure (63 ms).
+indicate that how they optimize their ZSH startup time to under 70ms which is
+`exit_time_ms` metric in this measure (63 ms).
 I also optimize other metrics like `first_prompt_lag_ms`,
 `first_command_lag_ms`, `command_lag_ms`, and `input_lag_ms`.
 
@@ -447,7 +447,7 @@ and testing different configurations.
 But it is worth it.
 I can feel the difference when I start a new terminal session,
 and it is much faster than before.
-> [It’s about protecting flow](https://santacloud.dev/posts/optimizing-zsh-startup-performance/#zsource:~:text=It%E2%80%99s%20about%20protecting%20flow.)
+> [It's about protecting flow](https://santacloud.dev/posts/optimizing-zsh-startup-performance/#zsource:~:text=It%E2%80%99s%20about%20protecting%20flow.)
 
 ### Meaningless Changes
 
