@@ -28,7 +28,7 @@ for = "/*"
 [headers.values]
 Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
 Content-Security-Policy = "default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; frame-src 'none'; img-src 'self' data: https://ae-pic-a1.aliexpress-media.com; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self'; style-src 'self'; worker-src 'self'; upgrade-insecure-requests"
-# X-Content-Type-Options = "nosniff"
+X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
 Referrer-Policy = "no-referrer"
 Permissions-Policy = "accelerometer=(), ambient-light-sensor=(), autoplay=(), bluetooth=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(self), gamepad=(), geolocation=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), local-fonts=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), speaker-selection=(), storage-access=(), usb=(), web-share=(self), xr-spatial-tracking=()"
@@ -110,7 +110,7 @@ for = "/atom.xml"
 
 [headers.values]
 Content-Type = "application/atom+xml; charset=utf-8"
-X-Content-Type-Options = "nosniff"
+# X-Content-Type-Options = "nosniff"
 Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
@@ -118,7 +118,7 @@ for = "/sitemap.xml"
 
 [headers.values]
 Content-Type = "application/xml; charset=utf-8"
-X-Content-Type-Options = "nosniff"
+# X-Content-Type-Options = "nosniff"
 Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
@@ -126,7 +126,7 @@ for = "/index.xml"
 
 [headers.values]
 Content-Type = "application/xml; charset=utf-8"
-X-Content-Type-Options = "nosniff"
+# X-Content-Type-Options = "nosniff"
 Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[redirects]]
