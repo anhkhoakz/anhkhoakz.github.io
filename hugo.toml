@@ -334,7 +334,7 @@ weight = 1
 reading_speed = 220
 
 [params]
-description = "Anh Khoa's personal technical blog about privacy, security, and software engineering."
+description = "Anh Khoa's blog on privacy engineering, security engineering, and software development. Practical guidance for privacy-first, secure software systems."
 disableComments = false
 subtitle = "Privacy, Security & Software Engineering"
 images = ["images/share.webp"]

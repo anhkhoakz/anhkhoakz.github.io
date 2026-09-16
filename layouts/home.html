@@ -11,4 +11,19 @@
         <li><a href="{{ "software-engineering/" | relURL }}">Software engineering</a> — development workflows, Git, and developer tools.</li>
     </ul>
 </section>
+<section aria-labelledby="recent-title">
+    <h2 id="recent-title">Recent articles</h2>
+    {{ $posts := where .Site.RegularPages "Section" "blog" }}
+    {{ if $posts }}
+    <ul>
+        {{ range first 5 $posts }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+        </li>
+        {{ end }}
+    </ul>
+    <p><a href="{{ "blog/" | relURL }}">View all articles →</a></p>
+    {{ end }}
+</section>
 {{ end }}

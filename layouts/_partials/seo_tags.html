@@ -33,7 +33,10 @@
 <meta property="og:type" content="{{ if eq .Section "blog" }}article{{ else }}website{{ end }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:locale" content="{{ .Site.Language.Locale }}" />
-{{- with $image }}<meta property="og:image" content="{{ . }}" />{{ end }}
+{{- with $image }}<meta property="og:image" content="{{ . }}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+{{- end }}
 {{- if eq .Section "blog" }}
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
 {{ with .PublishDate }}<meta property="article:published_time" content="{{ .Format $iso8601 }}" />{{ end }}
