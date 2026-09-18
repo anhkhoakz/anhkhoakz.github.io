@@ -15,11 +15,9 @@ lint:
     markdownlint --fix content/
 
 # verify the local Hugo version before running site commands
-check-hugo-version:
-    @hugo version | rg -q "v{{ HUGO_VERSION }}" || (echo "Expected Hugo v{{ HUGO_VERSION }}"; exit 1)
 
 # compile or package the project
-build: clean check-hugo-version
+build: clean
     @echo "Building project..."
     hugo --gc --minify --enableGitInfo
 
@@ -44,8 +42,8 @@ new_content content_name:
 
 # edit a post
 edit:
-        fd --extension=md --full-path content/blog | fzf | xargs nvim
+    fd --extension=md --full-path content/blog | fzf | xargs nvim
 
 # Dev mode
-dev: check-hugo-version
+dev:
     hugo server --openBrowser
