@@ -13,6 +13,7 @@ Renders a figure element with optional image, caption, and link.
 @param {string} [height] The height attribute for the image.
 @param {string} [loading] The loading attribute for the image (e.g., "lazy").
 @param {string} [decoding] The decoding attribute for the image (e.g., "async").
+@param {string} [fetchpriority] The browser priority hint for an LCP-critical image.
 @param {string} [attr] Attribution text for the image.
 @param {string} [attrlink] A URL for the attribution text.
 
@@ -33,7 +34,7 @@ Renders a figure element with optional image, caption, and link.
     {{- with or (.Page.Resources.Get $u.Path) (resources.Get $u.Path) -}}
       {{- $src = .RelPermalink -}}
     {{- else -}}
-    {{- $src = printf "/%s" $u.Path -}}
+    {{- $src = $u.Path | relURL -}}
     {{- end -}}
   {{- end -}}
 
@@ -45,6 +46,7 @@ Renders a figure element with optional image, caption, and link.
     {{- with .Get "height" }} height="{{ . }}"{{ end -}}
     loading="{{ default "lazy" (.Get "loading") }}"
     decoding="{{ default "async" (.Get "decoding") }}"
+    {{- with .Get "fetchpriority" }} fetchpriority="{{ . }}"{{ end -}}
   ><!-- Closing img tag -->
   {{- if .Get "link" }}</a>{{ end -}}
   {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}

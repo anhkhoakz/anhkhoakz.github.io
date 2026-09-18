@@ -14,7 +14,7 @@ guide]({{< relref "software-engineering" >}}).
 
 ## Semantic Versioning
 
-![Semantic Versioning](/images/blogs/wtf-is-git/semver.webp)
+{{< figure src="/images/blogs/wtf-is-git/semver.webp" alt="Semantic Versioning" width="1000" height="600" >}}
 
 The three-part version number `MAJOR.MINOR.PATCH` is used by the software
 versioning system known as Semantic Versioning (SemVer).
@@ -62,7 +62,7 @@ commit, such as links to related issues or pull requests.
 
 ## Git Branching Model
 
-![Git Branching Model](/images/blogs/wtf-is-git/git-flow.webp)
+{{< figure src="/images/blogs/wtf-is-git/git-flow.webp" alt="Git Branching Model" width="1200" height="1600" >}}
 
 A collection of rules for handling branches in a Git repository is known
 as the Git Branching Model.

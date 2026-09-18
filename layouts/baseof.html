@@ -5,29 +5,20 @@
     <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; frame-src 'none'; img-src 'self' data: https://ae-pic-a1.aliexpress-media.com; manifest-src 'self'; media-src 'self'; object-src 'none'; script-src 'self'; style-src 'self'; worker-src 'self'; upgrade-insecure-requests" />
-
     {{- partial "favicon.html" . -}}
     <title>
         {{- block "title" . }}{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.subtitle }}{{ else }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}{{- end }}
     </title>
     {{- partial "seo_tags.html" . -}}
 
-    {{ $style := print (default "herman" .Site.Params.themeStyle) ".css" |
-    resources.Get | minify }}
+    {{- $style := print (default "herman" .Site.Params.themeStyle) ".css" | resources.Get | minify -}}
 
-    <!-- Preload critical CSS with highest priority -->
-    <link rel="preload" href="{{ $style.RelPermalink }}" as="style" fetchpriority="high" />
-    <link href="{{ $style.RelPermalink }}" rel="stylesheet" />
+    <style>{{ $style.Content | safeCSS }}</style>
 
-    {{ if (.Page.Store.Get "hasCodeBlock") }} {{ $syntax := resources.Get
-    "syntax.css" | minify }}
-    <link rel="preload" href="{{ $syntax.RelPermalink }}" as="style" fetchpriority="low" />
-    <link href="{{ $syntax.RelPermalink }}" rel="stylesheet" media="print" onload="this.media='all'" />
-    {{ end }} {{ with .Params.style }} {{ $extra := resources.Get . | minify
-    }}
-    <link rel="preload" href="{{ $extra.RelPermalink }}" as="style" fetchpriority="low" />
-    <link href="{{ $extra.RelPermalink }}" rel="stylesheet" media="print" onload="this.media='all'" />
+    {{- if in .RawContent "```" }}{{ $syntax := resources.Get "syntax.css" | minify | fingerprint }}
+    <link href="{{ $syntax.RelPermalink }}" rel="stylesheet" />
+    {{- end }}{{ with .Params.style }}{{ $extra := resources.Get . | minify | fingerprint }}
+    <link href="{{ $extra.RelPermalink }}" rel="stylesheet" />
     {{ end }} {{ with .OutputFormats.Get "rss" -}} {{ printf `
     <link rel="%s" type="%s" href="%s" title="%s" />
     ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}}

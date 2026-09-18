@@ -26,9 +26,6 @@
 	--radius-md: 0.8rem;
 	--radius-lg: 1.2rem;
 	--tap-target: 4.4rem;
-	--shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
-	--duration-fast: 160ms;
-	--duration-normal: 220ms;
 	scroll-behavior: smooth;
 }
 
@@ -120,11 +117,6 @@ a {
 	text-decoration-color: var(--color-primary-r);
 	text-decoration-thickness: 0.3ex;
 	text-underline-offset: 0.3ex;
-	transition:
-		color var(--duration-fast) ease,
-		text-decoration-thickness var(--duration-fast) ease,
-		background-color var(--duration-fast) ease,
-		box-shadow var(--duration-fast) ease;
 }
 
 a:hover {
@@ -158,13 +150,6 @@ img {
 /* Prevents layout shift while an image is loading, and dims it in until decoded */
 img[width][height] {
 	height: auto;
-}
-img {
-	opacity: 0;
-	animation: fade-in var(--duration-normal) ease forwards;
-}
-@keyframes fade-in {
-	to { opacity: 1; }
 }
 
 figure.rounded img {
@@ -273,7 +258,6 @@ pre code {
 	padding: var(--spacing);
 	overflow-x: auto;
 	border-radius: var(--radius-lg);
-	box-shadow: var(--shadow-sm);
 }
 
 code span[style*="user-select:none"],
@@ -378,10 +362,6 @@ figcaption > p {
 		animation-iteration-count: 1 !important;
 		scroll-behavior: auto !important;
 		transition-duration: 0.01ms !important;
-	}
-	img {
-		opacity: 1;
-		animation: none;
 	}
 }
 

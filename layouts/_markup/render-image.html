@@ -2,6 +2,7 @@
 {{- $height := index .Attributes "height" -}}
 {{- $loading := default "lazy" (index .Attributes "loading") -}}
 {{- $decoding := default "async" (index .Attributes "decoding") -}}
+{{- $fetchpriority := index .Attributes "fetchpriority" -}}
 <img src="{{ .Destination | safeURL }}"
   {{- with .PlainText }} alt="{{ . }}"{{ end -}}
   {{- with .Title }} title="{{ . }}"{{ end -}}
@@ -9,5 +10,6 @@
   {{- with $height }} height="{{ . }}"{{ end -}}
   loading="{{ $loading }}"
   decoding="{{ $decoding }}"
+  {{- with $fetchpriority }} fetchpriority="{{ . }}"{{ end -}}
 >
 {{- /* chomp trailing newline */ -}}

@@ -41,7 +41,7 @@ there is no way to achieve privacy within this operating system.
   [KnockKnock](https://objective-see.org/products/knockknock.html)
   to scan your MacBook for malware.
 
-![KnockKnock prompt](/images/blogs/privacy-digital-life/knockknock.webp)
+{{< figure src="/images/blogs/privacy-digital-life/knockknock.webp" alt="KnockKnock prompt" width="1408" height="812" >}}
 
 After install, allow their permissions and "Start Scan".
 If you see anything process that you don't want it to run,
@@ -56,7 +56,7 @@ but it will not conver all cases.
 Each time your applications which make an outgoing connections,
 it will prompt you like this image.
 
-![LuLu prompt](/images/blogs/privacy-digital-life/lulu-01.webp)
+{{< figure src="/images/blogs/privacy-digital-life/lulu-01.webp" alt="LuLu prompt" width="1330" height="859" >}}
 
 You will manually choose if it should connect to network.
 For example: You install a calculator
@@ -69,7 +69,7 @@ That's weird.
 This app is simple, each time an app use your camera or microphone,
 it will prompt you like this image.
 
-![OverSight prompt](/images/blogs/privacy-digital-life/oversight.webp)
+{{< figure src="/images/blogs/privacy-digital-life/oversight.webp" alt="OverSight prompt" width="1380" height="616" >}}
 
 You can have options to allow or block it.
 Which I think pretty useful for online meeting too.
