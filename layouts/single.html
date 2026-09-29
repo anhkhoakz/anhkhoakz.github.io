@@ -22,8 +22,12 @@
 
 {{ if not .Params.hideReply }}
 {{ with .Site.Params.author.email }}
+{{ $subject := printf "%s%s" (i18n "email-subject") (default $.Site.Title $.Page.Title) }}
+{{ $query := querify "subject" $subject }}
+{{ $query = replace $query "+" "%20" }}
+{{ $href := printf "mailto:%s?%s" . $query }}
 <p>
-    <a href='mailto:{{ . }}?subject={{ printf "%s%s" (i18n "email-subject") (default $.Site.Title $.Page.Title) | urlquery }}'>
+    <a href="{{ $href | safeURL }}">
         {{ i18n "email-reply" }} ↪
     </a>
 </p>

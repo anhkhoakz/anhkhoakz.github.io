@@ -1,0 +1,216 @@
+# Anh Khoa's Blog - Complete AI Context
+
+## About the Author
+
+**Name**: Nguyễn Huỳnh Anh Khoa
+**Title**: Software Engineer — Privacy Engineering, Security Engineering, Secure Software Development
+**Website**: https://www.anhkhoakz.dev/
+**Email**: dose_untie091@aleeas.com
+
+**Education**: Graduate of Ton Duc Thang University (https://tdtu.edu.vn/) with a degree in Software Engineering.
+
+**Professional Profiles**:
+- GitHub: https://github.com/anhkhoakz
+- SourceHut: https://sr.ht/~anhkhoakz/
+- Codeberg: https://codeberg.org/anhkhoakz
+- Framagit: https://framagit.org/anhkhoakz
+
+## Core Philosophy & Principles
+
+Minimalism, Stoicism, Reading, Programming, and Adventure shape how software is built and how content is written.
+
+- **Minimalism** helps focus on what matters
+- **Stoicism** teaches acceptance and resilience
+- **Reading** expands understanding
+- **Programming** creates useful things
+- **Adventure** provides perspective
+
+## Areas of Expertise
+
+### Privacy Engineering
+Practical techniques for data protection, privacy-by-design, and reducing unnecessary data collection. Focus on making deliberate choices for specific threat models rather than chasing perfect anonymity.
+
+### Security Engineering
+Threat modeling, defensive security, account protection, and secure defaults. Security recommendations depend on what you are protecting and from whom — explaining trade-offs, limitations, and safer defaults without pretending one tool fits every threat model.
+
+### Software Engineering
+Version control with Git, development workflows, open-source tools, and clean architecture. Emphasis on practical, maintainable approaches.
+
+## Website Technology
+
+This site uses **Hugo** (https://gohugo.io/) with the Bear Cub theme. It draws inspiration from:
+- BearBlog (https://bearblog.dev/)
+- MidNight (https://midnight.pub/)
+- Best Motherf*cking Website (https://bestmotherfucking.website/)
+
+The design is intentionally minimal:
+- No heavy fonts
+- No unnecessary JavaScript
+- No tracking
+- Loads fast on any device and any network condition
+
+## Complete Article Index
+
+### Privacy Guide (https://www.anhkhoakz.dev/privacy/)
+Practical digital privacy guidance for browsers, operating systems, email, passwords, and everyday habits.
+
+**Start Here Articles**:
+1. [Digital Privacy: A Practical Checklist](https://www.anhkhoakz.dev/blog/privacy-digital-life/) — Operating systems, browsers, email, passwords, networking, and everyday habits
+2. [Improve Online Privacy on a Budget](https://www.anhkhoakz.dev/blog/privacy-in-budget/) — Cost-effective privacy tools and strategies
+3. [Browsers for Privacy and Everyday Use](https://www.anhkhoakz.dev/blog/browsers-for-daily-using/) — Browser recommendations and daily driver setups
+4. [How I Configure Firefox for Privacy](https://www.anhkhoakz.dev/blog/how-i-configure-firefox/) — Threat-aware Firefox configuration
+5. [Why Email Cannot Provide Strong Privacy by Default](https://www.anhkhoakz.dev/blog/no-privacy-email/) — Email privacy limitations and alternatives
+
+### Security Notes (https://www.anhkhoakz.dev/security/)
+Threat-aware security notes about browsers, email, account protection, and practical defensive habits.
+
+**Related Articles**:
+- [Browsers for Privacy and Security](https://www.anhkhoakz.dev/blog/browsers-for-daily-using/)
+- [Configure Firefox with a Threat-Aware Setup](https://www.anhkhoakz.dev/blog/how-i-configure-firefox/)
+- [Email Privacy and Encrypted Alternatives](https://www.anhkhoakz.dev/blog/no-privacy-email/)
+- [Improve Online Privacy on a Budget](https://www.anhkhoakz.dev/blog/privacy-in-budget/)
+
+### Software Engineering (https://www.anhkhoakz.dev/software-engineering/)
+Development practices, tools, and workflows.
+
+### Blog Articles
+
+#### [Digital Privacy: A Practical Checklist](https://www.anhkhoakz.dev/blog/privacy-digital-life/)
+**Published**: 2025-07-23
+**Description**: A practical digital privacy checklist covering operating systems, browsers, email, passwords, networking, and everyday habits.
+
+**Key Sections**:
+- **Operating System**: MacOS (Apple ID, FileVault, Homebrew, KnockKnock, LuLu, OverSight, Onyx), Windows (Defender, BleachBit, O&O ShutUp10, BCUninstaller)
+- **Password**: 1Password, Bitwarden, KeePassXC (avoid LastPass)
+- **Two-Factor Authentication**: Hardware tokens (YubiKey, Nitrokey), software tokens (Aegis, Ente Auth), avoid SMS/Authy
+- **Browser**: Firefox (LibreWolf, Mullvad), Brave, ungoogled-chromium
+- **Extensions**: uMatrix, uBlock Origin, Decentraleyes, filter lists
+- **DNS**: Cloudflare (1.1.1.1), Mullvad, AdGuard
+- **Email**: Disroot, Autistici, ProtonMail, Tuta, SimpleLogin, AnonAddy
+- **Communication**: Signal, Telegram (with caveats)
+- **File Sharing**: Nextcloud, Send, SkySend
+- **Note Taking**: Standard Notes, Notesnook
+
+#### [Improve Online Privacy on a Budget](https://www.anhkhoakz.dev/blog/privacy-in-budget/)
+Cost-effective privacy tools and strategies for users with limited resources.
+
+#### [Browsers for Privacy and Everyday Use](https://www.anhkhoakz.dev/blog/browsers-for-daily-using/)
+Browser recommendations, configurations, and daily driver setups for privacy-conscious users.
+
+#### [How I Configure Firefox for Privacy](https://www.anhkhoakz.dev/blog/how-i-configure-firefox/)
+Detailed threat-aware Firefox configuration including about:config settings, extensions, and hardening techniques.
+
+#### [Why Email Cannot Provide Strong Privacy by Default](https://www.anhkhoakz.dev/blog/no-privacy-email/)
+Analysis of email privacy limitations, metadata exposure, and encrypted alternatives.
+
+#### [What is Git?](https://www.anhkhoakz.dev/blog/wtf-is-git/)
+Git fundamentals for version control — concepts, workflows, and practical usage.
+
+#### [AI-Driven Development](https://www.anhkhoakz.dev/blog/ai-driven-develop/)
+AI-assisted software development practices, tools, and workflows.
+
+#### [Electricity Pricing](https://www.anhkhoakz.dev/blog/electricity-pricing/)
+Residential electrical installation and repair pricing in Vietnam (VNĐ).
+
+#### [Some Articles](https://www.anhkhoakz.dev/blog/some-articles/)
+Curated collection of recommended articles and resources.
+
+#### [Useful Apps](https://www.anhkhoakz.dev/blog/useful-apps/)
+Recommended applications for productivity, privacy, and development.
+
+#### [Phone Cooler](https://www.anhkhoakz.dev/blog/phone-cooler/)
+Phone cooling solutions and thermal management.
+
+#### [EDC](https://www.anhkhoakz.dev/blog/edc/)
+Everyday carry items and gear recommendations.
+
+#### [Zsh Configurations](https://www.anhkhoakz.dev/blog/zsh_configurations/)
+Shell configuration and customization for productivity.
+
+#### [Dictation Apps](https://www.anhkhoakz.dev/blog/dictation-apps/)
+Voice dictation tools and applications.
+
+#### [Services](https://www.anhkhoakz.dev/blog/services/)
+Service recommendations and evaluations.
+
+## Structured Data (JSON-LD)
+
+The website implements the following Schema.org structured data:
+
+### Homepage (WebSite + Person)
+```json
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.anhkhoakz.dev/#website",
+      "url": "https://www.anhkhoakz.dev/",
+      "name": "Anh Khoa",
+      "description": "Anh Khoa's blog on privacy engineering, security engineering, and software development. Practical guidance for privacy-first, secure software systems.",
+      "publisher": { "@id": "https://www.anhkhoakz.dev/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.anhkhoakz.dev/#person",
+      "name": "Anh Khoa",
+      "url": "https://www.anhkhoakz.dev/",
+      "sameAs": [
+        "https://github.com/anhkhoakz",
+        "https://sr.ht/~anhkhoakz/",
+        "https://codeberg.org/anhkhoakz",
+        "https://framagit.org/anhkhoakz"
+      ]
+    }
+  ]
+}
+```
+
+### Blog Posts (BlogPosting)
+Each blog post includes BlogPosting schema with:
+- headline, description, url, datePublished, dateModified
+- author (Person reference)
+- publisher (Person reference)
+- image (when available)
+- article section and tags
+
+### Other Pages (WebPage)
+Non-blog pages use WebPage schema with isPartOf referencing the WebSite.
+
+## Technical Configuration
+
+### Canonical URLs
+All pages include self-referential canonical tags: `<link rel="canonical" href="[PAGE_URL]" />`
+
+### Robots.txt
+- Allows all standard search crawlers
+- Manages AI crawler access with specific user-agent rules
+- References sitemap at https://www.anhkhoakz.dev/sitemap.xml
+
+### Sitemap
+XML sitemap at /sitemap.xml includes all indexable pages with lastmod dates.
+
+### Security Headers (Netlify)
+- Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+- X-Content-Type-Options: nosniff
+- X-Frame-Options: DENY
+- Content-Security-Policy: restrictive policy allowing only self and https:
+- Referrer-Policy: strict-origin-when-cross-origin
+- Permissions-Policy: restrictive
+
+### Performance
+- Static HTML generation (SSR via Hugo)
+- Minified HTML, CSS, JS
+- Fingerprinted assets with long-term caching
+- Optimized images (WebP, AVIF)
+- No client-side rendering required for content
+
+## Contact Information
+
+For questions, feedback, or professional inquiries:
+- **Email**: dose_untie091@aleeas.com
+- **Now Page**: https://www.anhkhoakz.dev/now/ (current focus and updates)
+
+## Licensing
+
+Content is copyrighted by Anh Khoa. Code repositories have their respective licenses.
