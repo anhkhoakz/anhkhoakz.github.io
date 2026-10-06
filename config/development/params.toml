@@ -1,0 +1,16 @@
+# Development-only PWA settings: network-first strategies keep local edits
+# visible immediately (production keeps the module's cache-first defaults).
+[pwa]
+debug = true
+
+[pwa.caches.font]
+strategy = "network-first"
+
+[pwa.caches.image]
+strategy = "network-first"
+
+[pwa.caches.script]
+strategy = "network-first"
+
+[pwa.caches.style]
+strategy = "network-first"

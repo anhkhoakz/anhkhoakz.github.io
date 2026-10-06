@@ -1,5 +1,5 @@
 [outputs]
-home = ["ATOM", "HTML", "RSS", "llms", "llmsfull", "md"]
+home = ["ATOM", "HTML", "RSS", "llms", "llmsfull", "md", "Offline", "WebAppManifest"]
 page = ["ATOM", "HTML", "RSS", "md"]
 section = ["ATOM", "HTML", "RSS", "md"]
 taxonomy = ["ATOM", "HTML", "RSS", "md"]

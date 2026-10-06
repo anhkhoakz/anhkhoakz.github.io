@@ -1,2 +1,5 @@
 [[imports]]
 path = "github.com/gethugothemes/hugo-modules/llms-txt"
+
+[[imports]]
+path = "github.com/hugomods/pwa"

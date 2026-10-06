@@ -1,1 +1,11 @@
 {{/* Structured data is emitted by seo_tags.html so it stays page-specific and valid JSON. */}}
+
+{{/* Build sw.js (the module partial returns an inline registration script, but our CSP
+  only allows script-src 'self', so we discard that output and register via an external
+  fingerprinted script instead). The precache list is configured site-wide in
+  config/_default/params.toml so every page emits an identical service worker. */}}
+{{- $_ := partialCached "pwa/assets/sw" . -}}
+{{- $register := resources.FromString "sw-register.js" `if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+}` | minify | fingerprint }}
+<script src="{{ $register.RelPermalink }}" defer></script>

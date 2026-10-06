@@ -1,3 +1,18 @@
+# PWA settings for github.com/hugomods/pwa.
+[pwa]
+debug = false
+icon_path = "images/pwa/icon.png"
+icon_sizes = [192, 512]
+offline_image = "images/pwa/offline.png"
+
+# Extra URLs to precache when the service worker installs.
+[[pwa.precaches]]
+url = "/"
+
+[pwa.manifest]
+theme_color = "#fcfcfb"
+background_color = "#fcfcfb"
+
 [llms]
 # Set to false to disable /llms.txt generation
 generate_llms_txt = true
