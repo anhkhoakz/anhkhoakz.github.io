@@ -23,6 +23,15 @@
 /*.js
   Cache-Control: public, max-age=31536000, immutable
 
+# Service workers must never be cached immutably or updates won't be picked up.
+# Declared after /*.js so this rule wins for /sw.js.
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/manifest.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: public, max-age=0, must-revalidate
+
 /*.webp
   Cache-Control: public, max-age=31536000, immutable
 

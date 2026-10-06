@@ -1,38 +1,66 @@
 User-agent: *
 Allow: /
+Crawl-delay: 1
 Sitemap: {{ "sitemap.xml" | absURL }}
 
+# AI crawlers — allow the beneficial ones for GEO / AI search answers.
 User-agent: GPTBot
-Disallow: /
+Allow: /
+
 User-agent: ChatGPT-User
-Disallow: /
+Allow: /
+
 User-agent: Google-Extended
-Disallow: /
+Allow: /
+
 User-agent: PerplexityBot
-Disallow: /
+Allow: /
+
 User-agent: Amazonbot
-Disallow: /
+Allow: /
+
 User-agent: ClaudeBot
-Disallow: /
-User-agent: Omgilibot
-Disallow: /
-User-Agent: FacebookBot
-Disallow: /
-User-Agent: Applebot
-Disallow: /
+Allow: /
+
 User-agent: anthropic-ai
-Disallow: /
-User-agent: Bytespider
-Disallow: /
+Allow: /
+
 User-agent: Claude-Web
-Disallow: /
-User-agent: Diffbot
-Disallow: /
-User-agent: ImagesiftBot
-Disallow: /
+Allow: /
+
 User-agent: Omgilibot
-Disallow: /
+Allow: /
+
 User-agent: Omgili
-Disallow: /
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: ImagesiftBot
+Allow: /
+
 User-agent: YouBot
+Allow: /
+
+# SEO-spam / scraping bots — no value to readers or search.
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
 Disallow: /

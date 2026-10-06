@@ -16,7 +16,6 @@ enableRobotsTXT = true
 buildDrafts = false
 buildExpired = false
 buildFuture = false
-cleanDestinationDir = true
 disableHugoGeneratorInject = true
 disablePathToLower = false
 enableMissingTranslationPlaceholders = false
@@ -96,6 +95,12 @@ version = 2022
 [build]
 noJSConfigInAssets = false
 useResourceCacheWhen = "fallback"
+
+# Replaces the deprecated top-level cleanDestinationDir key (removed in Hugo 0.167).
+[build.cleanDestinationDir]
+enable = true
+keepFiles = ["{**/,}.{git,gitignore,gitattributes}"]
+keepDirs = ["{**/,}.*"]
 
 [build.buildStats]
 # Set true only if you purge/tree-shake CSS with Tailwind/PostCSS.

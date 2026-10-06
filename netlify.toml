@@ -3,7 +3,7 @@ command = "hugo --gc --minify --enableGitInfo"
 publish = "public"
 
 [build.environment]
-HUGO_VERSION = "0.165.0"
+HUGO_VERSION = "0.167.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 TZ = "Asia/Singapore"
@@ -50,6 +50,19 @@ Cache-Control = "public, max-age=31536000, immutable"
 for = "/*.js"
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
+
+# Service workers must never be cached immutably or updates won't be picked up.
+# Declared after /*.js so this rule wins for /sw.js.
+[[headers]]
+for = "/sw.js"
+[headers.values]
+Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+for = "/manifest.webmanifest"
+[headers.values]
+Content-Type = "application/manifest+json"
+Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
 for = "/*.webp"

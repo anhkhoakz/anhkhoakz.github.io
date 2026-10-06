@@ -36,6 +36,7 @@
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:locale" content="{{ .Site.Language.Locale }}" />
 {{- with $image }}<meta property="og:image" content="{{ . }}" />
+<meta property="og:image:alt" content="{{ $title }}" />
 <meta property="og:image:width" content="{{ $imageWidth }}" />
 <meta property="og:image:height" content="{{ $imageHeight }}" />
 {{- end }}
@@ -50,14 +51,14 @@
 <meta name="twitter:card" content="{{ if $image }}summary_large_image{{ else }}summary{{ end }}" />
 <meta name="twitter:title" content="{{ $title }}" />
 <meta name="twitter:description" content="{{ $description }}" />
-{{- with $image }}<meta name="twitter:image" content="{{ . }}" />{{ end }}
+{{- with $image }}<meta name="twitter:image" content="{{ . }}" />
+<meta name="twitter:image:alt" content="{{ $title }}" />{{ end }}
 
 {{- $person := dict "@type" "Person" "@id" $authorID "name" $authorName "url" .Site.Params.author.url "sameAs" .Site.Params.author.sameAs -}}
 {{- if .IsHome -}}
   {{- $website := dict "@type" "WebSite" "@id" (printf "%s#website" .Site.Home.Permalink) "url" .Site.Home.Permalink "name" .Site.Title "description" .Site.Params.description "publisher" (dict "@id" $authorID) -}}
-  {{- $localBusiness := dict "@type" "LocalBusiness" "@id" (printf "%s#localbusiness" .Site.Home.Permalink) "name" .Site.Title "description" .Site.Params.description "url" .Site.Home.Permalink "address" (dict "@type" "PostalAddress" "streetAddress" "Independent Developer" "addressLocality" "Digital" "addressRegion" "Global" "addressCountry" "US") "geo" (dict "@type" "GeoCoordinates" "latitude" "37.7749" "longitude" "-122.4194") "openingHours" "Mon-Sun 00:00-23:59" "sameAs" .Site.Params.author.sameAs "publisher" (dict "@id" $authorID) -}}
   {{- $breadcrumb := dict "@type" "BreadcrumbList" "@id" (printf "%s#breadcrumb" .Site.Home.Permalink) "itemListElement" (slice (dict "@type" "ListItem" "position" 1 "name" "Home" "item" .Site.Home.Permalink)) -}}
-  <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $website $person $localBusiness $breadcrumb) | jsonify | safeJS }}</script>
+  <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $website $person $breadcrumb) | jsonify | safeJS }}</script>
 {{- else if and (eq .Section "blog") .IsPage -}}
   {{- $article := dict "@context" "https://schema.org" "@type" "BlogPosting" "@id" (printf "%s#article" .Permalink) "mainEntityOfPage" (dict "@id" .Permalink) "headline" .Title "description" $description "url" .Permalink "datePublished" (.PublishDate.Format "2006-01-02T15:04:05-07:00") "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00") "author" (dict "@id" $authorID) "publisher" (dict "@id" $authorID) -}}
   {{- if $image }}{{ $article = merge $article (dict "image" $image) }}{{ end -}}

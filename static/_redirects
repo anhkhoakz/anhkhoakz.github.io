@@ -1,1 +1,3 @@
-/send https://www.anhkhoakz.dev/404.html
+# Legacy "/send" link used to point at the 404 page, which GSC flags as
+# "redirect to 404". Send it to the homepage instead.
+/send   /   301

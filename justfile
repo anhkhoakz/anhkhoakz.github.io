@@ -1,5 +1,5 @@
 # Keep this aligned with build.sh, static/_headers and the local Hugo installation.
-HUGO_VERSION := "0.165.0"
+HUGO_VERSION := "0.167.0"
 
 # list available commands
 _default: _help

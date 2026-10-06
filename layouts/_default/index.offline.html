@@ -1,0 +1,89 @@
+{{/* Site-styled override of the HugoMods PWA offline fallback page.
+  The module default uses javascript: hrefs, which our CSP (script-src 'self') blocks,
+  so this version uses plain links only. "Retry" uses href="" to re-request the
+  current URL through the service worker. */}}
+{{ $title := i18n "offline_title" }}
+<!DOCTYPE html>
+<html lang="{{ with .Site.Language.Locale }}{{ . }}{{ else }}en-US{{ end }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{- $title -}}</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --offline-bg: #fcfcfb;
+        --offline-fg: #1a1a1a;
+        --offline-muted: #5c5c5c;
+        --offline-primary: #1a8fe3;
+        --offline-border: #e3e3e0;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --offline-bg: #14151a;
+          --offline-fg: #ededed;
+          --offline-muted: #a1a1a1;
+          --offline-primary: #6cb8f5;
+          --offline-border: #2a2b31;
+        }
+      }
+      body {
+        display: flex;
+        min-height: 100vh;
+        margin: 0;
+        padding: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        background: var(--offline-bg);
+        color: var(--offline-fg);
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.6;
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.75rem;
+      }
+      p {
+        max-width: 32rem;
+        margin: 0;
+        color: var(--offline-muted);
+      }
+      nav {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0.5rem;
+      }
+      a {
+        padding: 0.5rem 1.25rem;
+        border: 1px solid var(--offline-border);
+        border-radius: 0.5rem;
+        color: var(--offline-fg);
+        text-decoration: none;
+      }
+      a.primary {
+        border-color: var(--offline-primary);
+        background: var(--offline-primary);
+        color: #fff;
+      }
+      a:focus-visible {
+        outline: 2px solid var(--offline-primary);
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>{{- $title -}}</h1>
+      <p>{{ i18n "offline_info" }}</p>
+      <nav>
+        <a class="primary" href="{{ relURL "/" }}">{{ i18n "home" }}</a>
+        <a href="">{{ i18n "try_again" }}</a>
+      </nav>
+    </main>
+  </body>
+</html>

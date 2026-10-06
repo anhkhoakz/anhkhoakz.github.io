@@ -6,8 +6,13 @@ icon_sizes = [192, 512]
 offline_image = "images/pwa/offline.png"
 
 # Extra URLs to precache when the service worker installs.
+# "/" gives instant offline access to the homepage; the manifest keeps the
+# install metadata available offline (the module precaches /offline/ itself).
 [[pwa.precaches]]
 url = "/"
+
+[[pwa.precaches]]
+url = "manifest.webmanifest"
 
 [pwa.manifest]
 theme_color = "#fcfcfb"
