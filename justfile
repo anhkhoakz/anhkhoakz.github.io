@@ -1,4 +1,4 @@
-# Keep this aligned with netlify.toml and the local Hugo installation.
+# Keep this aligned with build.sh, static/_headers and the local Hugo installation.
 HUGO_VERSION := "0.165.0"
 
 # list available commands

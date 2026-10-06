@@ -43,10 +43,10 @@ jobs:
         with:
           hugo-version: "latest"
           extended: true
-      # Clean up static folder
+      # Clean up static folder (Cloudflare Pages-only files, see static/_headers)
       - name: Clean static folder
         run: |
-          rm -f static/_redirects
+          rm -f static/_redirects static/_headers
           rm -rf static/faker static/tdt static/links
       # Build Hugo site once
       - name: Build Hugo site
