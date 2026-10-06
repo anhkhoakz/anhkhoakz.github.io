@@ -86,7 +86,7 @@ keepDefaultAttrVals = true
 keepDocumentTags = true
 keepEndTags = true
 keepQuotes = false
-keepspecialcomments = true
+keepSpecialComments = true
 keepWhitespace = false
 
 [minify.tdewolff.js]
@@ -104,15 +104,15 @@ disableClasses = false
 disableIDs = false
 disableTags = false
 
-[[build.cacheBusters]]
+[[build.cachebusters]]
 source = '(postcss|tailwind)\.config\.(js|cjs|mjs|ts)'
 target = "(css|styles|scss|sass)"
 
-[[build.cacheBusters]]
+[[build.cachebusters]]
 source = 'assets/.*\.(js|ts|jsx|tsx)'
 target = "js"
 
-[[build.cacheBusters]]
+[[build.cachebusters]]
 source = 'assets/.*\.(css|scss|sass)'
 target = "(css|styles|scss|sass)"
 
@@ -164,7 +164,7 @@ excludes = ["http://**"]
 
 [imaging]
 anchor = "Smart"
-bgColor = "ffffff"
+bgColor = "#ffffff"
 resampleFilter = "Lanczos"
 
 [imaging.avif]
@@ -352,10 +352,10 @@ email = "dose_untie091@aleeas.com"
 name = "Anh Khoa"
 url = "https://www.anhkhoakz.dev/"
 sameAs = [
-    "https://github.com/anhkhoakz",
-    "https://sr.ht/~anhkhoakz/",
-    "https://codeberg.org/anhkhoakz",
-    "https://framagit.org/anhkhoakz",
+  "https://github.com/anhkhoakz",
+  "https://sr.ht/~anhkhoakz/",
+  "https://codeberg.org/anhkhoakz",
+  "https://framagit.org/anhkhoakz",
 ]
 
 [params.contact]
@@ -365,7 +365,7 @@ email = "dose_untie091@aleeas.com"
 light = "images/favicon.webp"
 dark = "images/favicon-dark.webp"
 
-[privacy.disqus]
+[privacy.dispus]
 disable = true
 
 [privacy.googleAnalytics]
@@ -386,7 +386,12 @@ disable = true
 enableDNT = true
 simple = true
 
-[privacy.youTube]
+[privacy.twitter]
+disable = true
+enableDNT = true
+simple = true
+
+[privacy.youtube]
 disable = false
 privacyEnhanced = true
 

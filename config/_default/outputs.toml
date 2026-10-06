@@ -1,0 +1,6 @@
+[outputs]
+home = ["ATOM", "HTML", "RSS", "llms", "llmsfull", "md"]
+page = ["ATOM", "HTML", "RSS", "md"]
+section = ["ATOM", "HTML", "RSS", "md"]
+taxonomy = ["ATOM", "HTML", "RSS", "md"]
+term = ["ATOM", "HTML", "RSS", "md"]

@@ -693,13 +693,13 @@ and who accept the additional weight.
 
 ## Recommended Chargers
 
-- [CUKTECH 65 W]()
-- [CUKTECH CP3]()
-- [CUKTECH 30 W]()
-- [Starlink 65 W]()
-- [Vention 30 W]()
-- [Vention 65 W]()
-- [Vention 45 W]()
+- [CUKTECH 65 W](<>)
+- [CUKTECH CP3](<>)
+- [CUKTECH 30 W](<>)
+- [Starlink 65 W](<>)
+- [Vention 30 W](<>)
+- [Vention 65 W](<>)
+- [Vention 45 W](<>)
 
 According to the original content,
 Vention chargers cost less than CUKTECH models

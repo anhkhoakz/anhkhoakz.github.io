@@ -2,7 +2,7 @@
 author = "anhkhoakz"
 date = 2026-09-22T15:21:11+07:00
 description = ""
-draft = false
+draft = true
 tags = []
 title = 'Bảng giá lắp đặt điện gia dụng'
 unlisted = false
