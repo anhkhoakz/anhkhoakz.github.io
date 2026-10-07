@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "site-index",
+      "type": "skill-md",
+      "description": "Find and read content on anhkhoakz.dev — site index, full text, feeds and canonical URLs.",
+      "url": "https://anhkhoakz.dev/.well-known/agent-skills/site-index/SKILL.md",
+      "digest": "sha256:b5549f79670266f75f44b0b0f79bcfc9f942f187fdd2adc82ad60e26870b6a87"
+    },
+    {
+      "name": "api-discovery",
+      "type": "skill-md",
+      "description": "Discover and use the machine-readable and agent-facing endpoints published on anhkhoakz.dev.",
+      "url": "https://anhkhoakz.dev/.well-known/agent-skills/api-discovery/SKILL.md",
+      "digest": "sha256:16283d8380804522707a2ee77be3697f9141da345f73b355161ced46d1bbc5fc"
+    }
+  ]
+}

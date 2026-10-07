@@ -1,0 +1,19 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://anhkhoakz.dev/",
+      "service-desc": [
+        {
+          "href": "https://anhkhoakz.dev/openapi.json",
+          "type": "application/json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://anhkhoakz.dev/docs/",
+          "type": "text/html"
+        }
+      ]
+    }
+  ]
+}

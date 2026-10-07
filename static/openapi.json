@@ -1,0 +1,126 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "anhkhoakz.dev Content API",
+    "version": "1.0.0",
+    "summary": "Read-only access to the machine-readable content of anhkhoakz.dev",
+    "description": "A static, unauthenticated content API. Every operation is a plain GET that returns published site content in a machine-readable format. There is no write access, no authentication and no rate-limited endpoint: all routes are cached static assets.",
+    "license": { "name": "Content is CC BY-NC unless a post states otherwise" }
+  },
+  "servers": [{ "url": "https://anhkhoakz.dev", "description": "Production" }],
+  "tags": [
+    { "name": "content", "description": "Human and model readable site content" },
+    { "name": "discovery", "description": "Agent discovery documents" },
+    { "name": "syndication", "description": "Feeds and crawlers" }
+  ],
+  "paths": {
+    "/llms.txt": {
+      "get": {
+        "tags": ["content"],
+        "summary": "Site index for language models",
+        "description": "llms.txt site index: title, short description and a list of the important pages with links. Recommended entry point for agents.",
+        "operationId": "getLlmsTxt",
+        "responses": {
+          "200": {
+            "description": "A Markdown site index",
+            "content": {
+              "text/plain": { "schema": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "/llms-full.txt": {
+      "get": {
+        "tags": ["content"],
+        "summary": "Full site content as Markdown",
+        "description": "Concatenated Markdown of every published page and post.",
+        "operationId": "getLlmsFullTxt",
+        "responses": {
+          "200": {
+            "description": "Full site content",
+            "content": {
+              "text/plain": { "schema": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "/atom.xml": {
+      "get": {
+        "tags": ["syndication"],
+        "summary": "Atom feed of recent posts",
+        "operationId": "getAtomFeed",
+        "responses": {
+          "200": {
+            "description": "Atom 1.0 feed",
+            "content": {
+              "application/atom+xml": { "schema": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "/sitemap.xml": {
+      "get": {
+        "tags": ["syndication"],
+        "summary": "Sitemap with every canonical URL",
+        "operationId": "getSitemap",
+        "responses": {
+          "200": {
+            "description": "Sitemaps protocol XML",
+            "content": {
+              "application/xml": { "schema": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "/robots.txt": {
+      "get": {
+        "tags": ["syndication"],
+        "summary": "Crawler rules, AI bot rules and Content Signals",
+        "operationId": "getRobotsTxt",
+        "responses": {
+          "200": {
+            "description": "robots.txt per RFC 9309",
+            "content": {
+              "text/plain": { "schema": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/api-catalog": {
+      "get": {
+        "tags": ["discovery"],
+        "summary": "API catalog (RFC 9727)",
+        "description": "Linkset describing the APIs published on this origin.",
+        "operationId": "getApiCatalog",
+        "responses": {
+          "200": {
+            "description": "A linkset document",
+            "content": {
+              "application/linkset+json": { "schema": { "type": "object" } }
+            }
+          }
+        }
+      }
+    },
+    "/auth.md": {
+      "get": {
+        "tags": ["discovery"],
+        "summary": "Agent authentication and registration notes (Auth.md)",
+        "operationId": "getAuthMd",
+        "responses": {
+          "200": {
+            "description": "Markdown authentication guidance",
+            "content": {
+              "text/markdown": { "schema": { "type": "string" } }
+            }
+          }
+        }
+      }
+    }
+  }
+}

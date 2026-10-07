@@ -1,0 +1,16 @@
+{
+  "serverInfo": {
+    "name": "anhkhoakz.dev",
+    "version": "1.0.0"
+  },
+  "description": "Read-only MCP surface for anhkhoakz.dev: site index, recent posts and machine-readable discovery documents for a personal blog about privacy, security and software engineering.",
+  "url": "https://anhkhoakz.dev/mcp",
+  "transport": {
+    "type": "streamable-http"
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": true,
+    "prompts": false
+  }
+}

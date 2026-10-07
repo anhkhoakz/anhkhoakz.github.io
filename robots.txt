@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Content-Signal: ai-train=no, search=yes, ai-input=yes
 Sitemap: https://www.anhkhoakz.dev/sitemap.xml
 
 # AI Crawlers - Allow beneficial ones for GEO

@@ -40,3 +40,35 @@
 
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
+
+# Agent discovery links (RFC 8288, RFC 9727 section 3) — attached to every
+# response so any page can be the entry point. Later blocks only override the
+# header they name, so the security headers above are unaffected.
+/*
+  Link: </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json", </openapi.json>; rel="service-desc"; type="application/json", </docs/>; rel="service-doc"; type="text/html", </llms.txt>; rel="describedby"; type="text/plain"
+
+# Extension-less well-known files get an explicit media type (Cloudflare Pages
+# would otherwise serve them without one).
+/.well-known/api-catalog
+  Content-Type: application/linkset+json
+  Cache-Control: public, max-age=300, must-revalidate
+
+/.well-known/oauth-authorization-server
+  Content-Type: application/json
+  Cache-Control: public, max-age=300, must-revalidate
+
+/.well-known/oauth-protected-resource
+  Content-Type: application/json
+  Cache-Control: public, max-age=300, must-revalidate
+
+/.well-known/http-message-signatures-directory
+  Content-Type: application/jwk-set+json
+  Cache-Control: public, max-age=300, must-revalidate
+
+/auth.md
+  Content-Type: text/markdown; charset=utf-8
+  Cache-Control: public, max-age=300, must-revalidate
+
+# Declared after /*.js so this mutable script is not cached forever.
+/js/webmcp.js
+  Cache-Control: public, max-age=300, must-revalidate
