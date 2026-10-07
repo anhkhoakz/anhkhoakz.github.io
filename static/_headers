@@ -53,14 +53,6 @@
   Content-Type: application/linkset+json
   Cache-Control: public, max-age=300, must-revalidate
 
-/.well-known/oauth-authorization-server
-  Content-Type: application/json
-  Cache-Control: public, max-age=300, must-revalidate
-
-/.well-known/oauth-protected-resource
-  Content-Type: application/json
-  Cache-Control: public, max-age=300, must-revalidate
-
 /.well-known/http-message-signatures-directory
   Content-Type: application/jwk-set+json
   Cache-Control: public, max-age=300, must-revalidate

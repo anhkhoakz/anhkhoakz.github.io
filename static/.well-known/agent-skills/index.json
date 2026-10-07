@@ -13,7 +13,7 @@
       "type": "skill-md",
       "description": "Discover and use the machine-readable and agent-facing endpoints published on anhkhoakz.dev.",
       "url": "https://anhkhoakz.dev/.well-known/agent-skills/api-discovery/SKILL.md",
-      "digest": "sha256:16283d8380804522707a2ee77be3697f9141da345f73b355161ced46d1bbc5fc"
+      "digest": "sha256:0998a41e623360f29003b6fa4dfddbf2c44e815374e6c812889aab4b07a5c293"
     }
   ]
 }

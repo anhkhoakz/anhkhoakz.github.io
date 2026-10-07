@@ -44,14 +44,13 @@ Link: </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+j
 
 | Document | URL |
 | --- | --- |
-| Auth.md (authentication & registration) | [/auth.md](/auth.md) |
-| OAuth authorization server metadata | [/.well-known/oauth-authorization-server](/.well-known/oauth-authorization-server) |
-| OAuth protected resource metadata (RFC 9728) | [/.well-known/oauth-protected-resource](/.well-known/oauth-protected-resource) |
-| JWKS | [/.well-known/jwks.json](/.well-known/jwks.json) |
-| MCP server card | [/.well-known/mcp/server-card.json](/.well-known/mcp/server-card.json) |
-| A2A agent card | [/.well-known/agent-card.json](/.well-known/agent-card.json) |
+| Auth.md (authentication notes) | [/auth.md](/auth.md) |
 | Agent Skills discovery index | [/.well-known/agent-skills/index.json](/.well-known/agent-skills/index.json) |
 | Web Bot Auth key directory (RFC 9421) | [/.well-known/http-message-signatures-directory](/.well-known/http-message-signatures-directory) |
+
+This origin has no OAuth authorization server, no MCP server and no A2A
+agent endpoint, so no OAuth, MCP or A2A discovery documents are published —
+advertising endpoints that do not exist would waste an agent's round trips.
 
 ## Content preferences
 
@@ -66,5 +65,5 @@ attribution; training on it is not permitted.
 
 ## Authentication
 
-None is required — see [/auth.md](/auth.md) for credential use, scopes and
-registration details.
+None is required — see [/auth.md](/auth.md) for credential use and the
+supported (anonymous) access methods.

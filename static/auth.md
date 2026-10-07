@@ -1,16 +1,30 @@
 # auth.md
 
-Authentication and registration notes for automated agents interacting with
+Authentication notes for automated agents interacting with
 `https://anhkhoakz.dev`.
 
 ## Audience
 
 This origin is a **public, read-only personal site**. Every published
-resource — articles, feeds, `llms.txt`, the sitemap, the API catalog and the
-OpenAPI description — is served without credentials.
+resource — articles, feeds, `llms.txt`, the sitemap, the API catalog, the
+OpenAPI description and the discovery documents below — is served without
+credentials.
 
 **Agents do not need to authenticate to read this site.** No cookie, token or
-API key is required, and no endpoint returns `401` for anonymous requests.
+API key is required, no endpoint returns `401`, and nothing here issues
+credentials.
+
+## Supported methods
+
+| Method | When to use |
+| --- | --- |
+| `none` (anonymous) | Always. All content is public and cacheable; send no `Authorization` header. |
+| `manual` | Only if a private endpoint ever appears: request access through the site's public source repository. |
+
+There are **no registration or provisioning endpoints on this origin** — no
+user accounts, no client registration, no token endpoint. An agent that is
+asked to "register" here should report that the service needs no
+registration rather than attempting a flow.
 
 ## Endpoints
 
@@ -22,69 +36,25 @@ API key is required, and no endpoint returns `401` for anonymous requests.
 | Site index for models | `https://anhkhoakz.dev/llms.txt` |
 | Full content | `https://anhkhoakz.dev/llms-full.txt` |
 | Discovery docs | `https://anhkhoakz.dev/docs/` |
-| OAuth authorization server metadata | `https://anhkhoakz.dev/.well-known/oauth-authorization-server` |
-| Protected resource metadata (RFC 9728) | `https://anhkhoakz.dev/.well-known/oauth-protected-resource` |
-| JWKS | `https://anhkhoakz.dev/.well-known/jwks.json` |
+| Agent Skills index | `https://anhkhoakz.dev/.well-known/agent-skills/index.json` |
+| Web Bot Auth key directory (RFC 9421) | `https://anhkhoakz.dev/.well-known/http-message-signatures-directory` |
 
 ## Credential use
 
-- **Method:** none for public content.
-- **If a `401` is ever returned**, it will carry:
-  `WWW-Authenticate: Bearer resource_metadata="https://anhkhoakz.dev/.well-known/oauth-protected-resource"`
-  — fetch that document, follow `authorization_servers`, complete the flow and
-  send the resulting token as `Authorization: Bearer <token>`.
-- **Scopes:** the only advertised scope is `read`.
+- Send no credentials; if a future response ever returns `401`, honour the
+  `WWW-Authenticate` challenge it carries instead of guessing.
 - Never send credentials in query strings.
+- Respect `robots.txt`, including its `Content-Signal` directives.
 
-## Registration
+## Discovery
 
-<a id="registration"></a>
+Every HTML response on this origin advertises machine-readable entry points:
 
-This origin issues **no credentials for reading**: all content is public.
-The registration surface below is the anonymous, agent-initiated flow
-declared in the `agent_auth` block of the authorization server metadata
-([/.well-known/oauth-authorization-server](/.well-known/oauth-authorization-server)).
-
-**Supported registration method: `anonymous` → `api_key`**
-
-1. `POST https://anhkhoakz.dev/agent/auth` with
-   `Content-Type: application/x-www-form-urlencoded` and body
-   `type=anonymous&requested_credential_type=api_key&requested_scopes=read`
-   → returns a scoped credential plus a `claim_url`.
-2. Optional claim: `POST https://anhkhoakz.dev/agent/auth/claim` with
-   `claim_token` and the user's e-mail; the user confirms the one-time code
-   at `.../claim/complete`.
-3. Use the credential as `Authorization: Bearer <credential>`.
-4. Revocation is provider-driven: expect a `logout+jwt` POST to
-   `https://anhkhoakz.dev/agent/auth/revoke`, or simply drop the credential
-   on `401`.
-
-### Implementation status
-
-The registration endpoints (`/agent/auth*`) are declared for machine
-discovery but are **not yet implemented on this static origin** — they
-currently answer `404`. Nothing on this site requires a credential, so an
-agent never needs them to read content.
-
-## agent_auth
-
-```yaml
-agent_auth:
-  skill: https://anhkhoakz.dev/auth.md
-  register_uri: https://anhkhoakz.dev/agent/auth
-  claim_uri: https://anhkhoakz.dev/agent/auth/claim
-  revocation_uri: https://anhkhoakz.dev/agent/auth/revoke
-  identity_types_supported:
-    - anonymous
-  anonymous:
-    credential_types_supported:
-      - api_key
-  events_supported:
-    - https://schemas.workos.com/events/agent/auth/identity/assertion/revoked
+```http
+Link: </.well-known/api-catalog>; rel="api-catalog", </openapi.json>; rel="service-desc",
+      </docs/>; rel="service-doc", </llms.txt>; rel="describedby"
 ```
 
-## Revocation
-
-No tokens are issued by this origin today, so there is nothing to revoke.
-Should tokens be issued later, revocation will be advertised through
-`events_supported` in the authorization server metadata, as above.
+OAuth Protected Resource Metadata (RFC 9728) and authorization server
+metadata (RFC 8414) are deliberately **not** published: there is no
+protected resource and no authorization server on this origin to advertise.

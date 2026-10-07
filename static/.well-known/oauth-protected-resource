@@ -1,8 +1,0 @@
-{
-  "resource": "https://anhkhoakz.dev",
-  "authorization_servers": ["https://anhkhoakz.dev"],
-  "scopes_supported": ["read"],
-  "bearer_methods_supported": ["header"],
-  "jwks_uri": "https://anhkhoakz.dev/.well-known/jwks.json",
-  "documentation_url": "https://anhkhoakz.dev/auth.md"
-}

@@ -21,9 +21,9 @@ origin exposes, rather than reading its prose.
 3. **OpenAPI** — `GET /openapi.json` (OpenAPI 3.1) lists the read-only content
    operations: `/llms.txt`, `/llms-full.txt`, `/atom.xml`, `/sitemap.xml`,
    `/robots.txt`, `/.well-known/api-catalog`, `/auth.md`.
-4. **Auth** — `GET /auth.md` explains credential use. The site is public; no
-   token is required. Protected-resource metadata lives at
-   `/.well-known/oauth-protected-resource`.
+4. **Auth** — `GET /auth.md` explains credential use: none is required, and
+   this origin publishes no OAuth metadata because it has no protected
+   resource or authorization server.
 
 ## Conventions
 
