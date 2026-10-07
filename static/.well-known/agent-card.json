@@ -5,12 +5,8 @@
   "url": "https://anhkhoakz.dev/agent",
   "supportedInterfaces": [
     {
-      "serviceUrl": "https://anhkhoakz.dev/agent",
+      "url": "https://anhkhoakz.dev/agent",
       "transport": "jsonrpc"
-    },
-    {
-      "serviceUrl": "https://anhkhoakz.dev/agent",
-      "transport": "http"
     }
   ],
   "capabilities": {

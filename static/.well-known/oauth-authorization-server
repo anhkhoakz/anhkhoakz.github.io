@@ -9,5 +9,18 @@
   "code_challenge_methods_supported": ["S256"],
   "scopes_supported": ["read"],
   "subject_types_supported": ["public"],
-  "id_token_signing_alg_values_supported": ["ES256"]
+  "id_token_signing_alg_values_supported": ["ES256"],
+  "agent_auth": {
+    "skill": "https://anhkhoakz.dev/auth.md",
+    "register_uri": "https://anhkhoakz.dev/agent/auth",
+    "claim_uri": "https://anhkhoakz.dev/agent/auth/claim",
+    "revocation_uri": "https://anhkhoakz.dev/agent/auth/revoke",
+    "identity_types_supported": ["anonymous"],
+    "anonymous": {
+      "credential_types_supported": ["api_key"]
+    },
+    "events_supported": [
+      "https://schemas.workos.com/events/agent/auth/identity/assertion/revoked"
+    ]
+  }
 }

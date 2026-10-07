@@ -40,38 +40,51 @@ API key is required, and no endpoint returns `401` for anonymous requests.
 
 <a id="registration"></a>
 
-`register_uri: https://anhkhoakz.dev/auth.md#registration`
+This origin issues **no credentials for reading**: all content is public.
+The registration surface below is the anonymous, agent-initiated flow
+declared in the `agent_auth` block of the authorization server metadata
+([/.well-known/oauth-authorization-server](/.well-known/oauth-authorization-server)).
 
-Registration methods, in order of preference:
+**Supported registration method: `anonymous` → `api_key`**
 
-1. **`none` (public client)** — the default. Reading this site is anonymous;
-   no client registration, client secret or token is issued or needed.
-2. **`manual`** — if a private or write endpoint is ever exposed, request a
-   public client id by opening an issue on the site's source repository; the
-   issued client uses `token_endpoint_auth_method: none` with the
-   `client_credentials` grant and the `read` scope.
+1. `POST https://anhkhoakz.dev/agent/auth` with
+   `Content-Type: application/x-www-form-urlencoded` and body
+   `type=anonymous&requested_credential_type=api_key&requested_scopes=read`
+   → returns a scoped credential plus a `claim_url`.
+2. Optional claim: `POST https://anhkhoakz.dev/agent/auth/claim` with
+   `claim_token` and the user's e-mail; the user confirms the one-time code
+   at `.../claim/complete`.
+3. Use the credential as `Authorization: Bearer <credential>`.
+4. Revocation is provider-driven: expect a `logout+jwt` POST to
+   `https://anhkhoakz.dev/agent/auth/revoke`, or simply drop the credential
+   on `401`.
+
+### Implementation status
+
+The registration endpoints (`/agent/auth*`) are declared for machine
+discovery but are **not yet implemented on this static origin** — they
+currently answer `404`. Nothing on this site requires a credential, so an
+agent never needs them to read content.
 
 ## agent_auth
 
 ```yaml
 agent_auth:
-  skill: https://anhkhoakz.dev/.well-known/agent-skills/site-index/SKILL.md
-  register_uri: https://anhkhoakz.dev/auth.md#registration
-  registration_methods:
-    - type: none
-      description: Public read-only access; no registration or token required.
-      token_endpoint_auth_method: none
-      grant_type: client_credentials
-      scopes: [read]
-    - type: manual
-      description: Request a public client id via the site source repository issue tracker.
-      token_endpoint_auth_method: none
-      grant_type: client_credentials
-      scopes: [read]
+  skill: https://anhkhoakz.dev/auth.md
+  register_uri: https://anhkhoakz.dev/agent/auth
+  claim_uri: https://anhkhoakz.dev/agent/auth/claim
+  revocation_uri: https://anhkhoakz.dev/agent/auth/revoke
+  identity_types_supported:
+    - anonymous
+  anonymous:
+    credential_types_supported:
+      - api_key
+  events_supported:
+    - https://schemas.workos.com/events/agent/auth/identity/assertion/revoked
 ```
 
 ## Revocation
 
 No tokens are issued by this origin today, so there is nothing to revoke.
 Should tokens be issued later, revocation will be advertised through
-`events_supported` in the authorization server metadata.
+`events_supported` in the authorization server metadata, as above.
