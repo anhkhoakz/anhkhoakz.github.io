@@ -48,5 +48,6 @@ It loads fast on any device and any network condition.
 
 ## Contact
 
-If you have questions or feedback, reach out via email.
+If you have questions or feedback, reach out via [email](mailto:dose_untie091@aleeas.com). If you use PGP/GPG, here is my public key [Mailvelope KS](https://keys.mailvelope.com/pks/lookup?op=get&search=dose_untie091@aleeas.com) / [OpenPGP KS](https://keys.openpgp.org/search?q=dose_untie091@aleeas.com)
+
 For a shorter update, see my [now page](/now/).
